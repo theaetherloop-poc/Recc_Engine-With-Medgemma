@@ -130,7 +130,8 @@ def extract_phase1_phase2_data(data: Dict[str, Any]) -> Dict[str, Any]:
     current_supplements = supplements_section.get("current_supplements", [])
 
     # Create comma-separated string for rulesets that need string format
-    supplements_string = ",".join(current_supplements) if current_supplements else None
+    # Extract supplement names from the supplement objects (similar to medications pattern)
+    supplements_string = ",".join([supp.get('name', '') for supp in current_supplements if supp.get('name')]) if current_supplements else None
     
     # Wearable Devices
     wearable_devices = phase1_data.get("wearable_devices", {})

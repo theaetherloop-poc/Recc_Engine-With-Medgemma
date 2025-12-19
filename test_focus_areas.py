@@ -28,6 +28,8 @@ def load_test_data():
 
 def test_phase2_only():
     """Test Phase 2 rulesets only."""
+    import traceback
+
     print("\n" + "="*80)
     print("TESTING PHASE 2 FOCUS AREAS GENERATOR")
     print("="*80)
@@ -38,20 +40,34 @@ def test_phase2_only():
 
     print("\nRunning Phase 2 tool...")
     start_time = time.time()
-    result = tool._run(patient_and_blood_data=patient_and_blood_data)
-    end_time = time.time()
 
-    elapsed_ms = (end_time - start_time) * 1000
+    try:
+        result = tool._run(patient_and_blood_data=patient_and_blood_data)
+        end_time = time.time()
 
-    print("\n" + "="*80)
-    print("PHASE 2 MARKDOWN OUTPUT:")
-    print("="*80)
-    print(result)
+        elapsed_ms = (end_time - start_time) * 1000
 
-    print("\n" + "="*80)
-    print(f"⏱️  PHASE 2 EXECUTION TIME: {elapsed_ms:.2f} ms ({elapsed_ms/1000:.3f} seconds)")
-    print("="*80)
-    print("\n✅ Phase 2 test completed successfully!")
+        print("\n" + "="*80)
+        print("PHASE 2 MARKDOWN OUTPUT:")
+        print("="*80)
+        print(result)
+
+        print("\n" + "="*80)
+        print(f"⏱️  PHASE 2 EXECUTION TIME: {elapsed_ms:.2f} ms ({elapsed_ms/1000:.3f} seconds)")
+        print("="*80)
+        print("\n✅ Phase 2 test completed successfully!")
+    except Exception as e:
+        print("\n" + "="*80)
+        print("❌ ERROR OCCURRED - DETAILED TRACEBACK:")
+        print("="*80)
+        print(f"\nError Type: {type(e).__name__}")
+        print(f"Error Message: {str(e)}")
+        print("\n" + "-"*80)
+        print("FULL STACK TRACE:")
+        print("-"*80)
+        traceback.print_exc()
+        print("="*80)
+        raise
 
 
 def test_phase3_only():
