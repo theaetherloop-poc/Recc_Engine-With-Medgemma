@@ -1,0 +1,236 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "hello@drantonikachanel.com",
+        "phase_status": {
+          "id": "53afa542-1d8f-4fee-beb7-dd94e8910e74",
+          "user_id": "30ffc8c8-0f7a-4234-b698-32543d99f852",
+          "consult_id": "fd566f53-7ffe-47ae-971a-70c72418eb02",
+          "created_at": "2025-09-07T21:13:50.806755+00:00",
+          "updated_at": "2026-01-21T00:42:23.198285+00:00",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending",
+          "phase2_coaching_call": null,
+          "phase2_coaching_recorded_at": null
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": false,
+            "current_medications": []
+          },
+          "supplements": {
+            "has_supplements": false,
+            "current_supplements": []
+          },
+          "demographics": {
+            "age": 45,
+            "ancestry": [
+              "Pacific Islander"
+            ],
+            "weight_lbs": 120,
+            "height_feet": 5,
+            "height_inches": 1,
+            "ancestry_other": null,
+            "biological_sex": "Female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "none"
+            ],
+            "surgeries": "no",
+            "diagnoses_other": null,
+            "diagnoses_years": {}
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": false,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": false,
+            "selected_approaches": [
+              "tcm"
+            ],
+            "traditional_chinese_medicine": true
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 0,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "oral_health_issues": {
+              "gingivitis": false,
+              "tooth_pain": false,
+              "tmj_disorder": true,
+              "bleeding_gums": false,
+              "chewing_problems": false,
+              "other_dental_work": "no"
+            },
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "low_carb_keto,vegetarian",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "no",
+            "night_wake_frequency": 1,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": true,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": null
+          },
+          "systems_review": {
+            "digestive_symptoms": "none"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "never",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 3
+          },
+          "sunlight_exposure": {
+            "days_per_week": 3,
+            "average_minutes_per_day": "15"
+          },
+          "occupation_wellness": {
+            "job_title": "TCM Doctor",
+            "work_stress_level": 6
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": true
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": false
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "no"
+          },
+          "family_medical_history": {
+            "conditions_detail": null,
+            "has_family_history": false,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_details": "2010 lived in an apartment with mold. Had symptoms moved out after 1 year. Used essential oils and TCM",
+            "mold_exposure": true,
+            "exposure_details": "none",
+            "chemical_exposures": "none",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "concern_details": "I have recently been experiencing severe headaches, joint pain, hot flash, weight gain and broken sleep. I'm feeling very worried about my health and I don't buy insurance. I am looking for a way to get the support I need with out a large out of pocket expense. I'm a veteran and the VA does not cover hormonal health support.",
+              "menstrual_concerns": "yes"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "102 ug/dL",
+        "eGFR": "96.93 mL/min/1.73 m2",
+        "Gender": "Female",
+        "Albumin": "4 g/dL",
+        "Calcium": "8.4 mg/dL",
+        "Ferritin": "104.8 ng/mL",
+        "Order ID": 42,
+        "C-Peptide": "1.7 ng/mL",
+        "Test Date": "2025-12-15T14:54:33.192",
+        "Creatinine": "0.69 mg/dL",
+        "LH:FSH Ratio": "0.4",
+        "AST:ALT Ratio": "2.93 N/A",
+        "Total Protein": "7.8 g/dL",
+        "Triglycerides": "102 mg/dL",
+        "HDL Cholesterol": "54 mg/dL",
+        "Iron Saturation": "35 %",
+        "Lipoprotein (a)": "25.6 mg/dL",
+        "Total Bilirubin": "0.1 mg/dL",
+        "% Hemoglobin A1C": "6.1 %",
+        "ApoB:ApoA1 Ratio": "0.53",
+        "Daytime Cortisol": "11 ug/dL",
+        "Direct Bilirubin": "0.1 mg/dL",
+        "LDL-C:ApoB Ratio": "1.32",
+        "Total Biomarkers": 42,
+        "25-(OH) Vitamin D": "24 ng/mL",
+        "LDL-C:HDL-C Ratio": "2.11",
+        "Total Cholesterol": "188 mg/dL",
+        "BUN:Creatinine Ratio": "23.18",
+        "Estim. Avg Glu (eAG)": "128.37 mg/dL",
+        "High-Sensitivity CRP": "0.4 mg/L",
+        "Estradiol (Sensitive)": "48 pg/mL",
+        "Apolipoprotein B (APOB)": "86 mg/dL",
+        "Triglycerides:HDL Ratio": "1.88",
+        "VLDL Cholesterol (Calc)": "20.39 mg/dL",
+        "Luteinizing Hormone (LH)": "32.32 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "162 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "16 mg/dL",
+        "Alkaline Phosphatase (ALP)": "80 U/L",
+        "Calculated LDL-Cholesterol": "113.6 mg/dL",
+        "Total Cholesterol:HDL Ratio": "3.48",
+        "Alanine Aminotransferase (ALT)": "15 U/L",
+        "Aspartate Aminotransferase (AST)": "44 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "1.38 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "79.64 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "120.4 ug/dL",
+        "Unsaturated iron-binding capacity test (UIBC)": "187 ug/dL"
+      }
+    }
+  }
+]

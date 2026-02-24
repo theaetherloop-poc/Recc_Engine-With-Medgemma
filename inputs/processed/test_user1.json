@@ -1,0 +1,296 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user1@example.com",
+        "phase_status": {
+          "id": "a1b2c3d4-e5f6-4789-a012-345678901234",
+          "user_id": "b2c3d4e5-f6a7-4890-b123-456789012345",
+          "created_at": "2024-01-15T08:30:00Z",
+          "updated_at": "2024-01-28T16:45:22Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": true,
+            "known_allergies": [
+              {
+                "allergen": "peanuts",
+                "reaction": "Anaphylaxis and swelling",
+                "allergen_other": null
+              },
+              {
+                "allergen": "shellfish",
+                "reaction": "Vomiting and hives",
+                "allergen_other": null
+              },
+              {
+                "allergen": "penicillin",
+                "reaction": "Rash and difficulty breathing",
+                "allergen_other": null
+              }
+            ]
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Metformin",
+                "dose": "1000 mg",
+                "frequency": "Twice daily",
+                "purpose": "Type 2 diabetes management"
+              },
+              {
+                "name": "Lisinopril",
+                "dose": "20 mg",
+                "frequency": "Daily",
+                "purpose": "Hypertension control"
+              },
+              {
+                "name": "Atorvastatin",
+                "dose": "40 mg",
+                "frequency": "Daily",
+                "purpose": "High cholesterol management"
+              },
+              {
+                "name": "Omeprazole",
+                "dose": "20 mg",
+                "frequency": "Daily",
+                "purpose": "GERD and acid reflux"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "2000 IU",
+                "name": "Vitamin D3",
+                "purpose": "Vitamin D deficiency correction",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Omega-3",
+                "purpose": "Cardiovascular health support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Magnesium",
+                "purpose": "Muscle cramps and sleep support",
+                "frequency": "Before bedtime"
+              },
+              {
+                "dose": "100 mg",
+                "name": "CoQ10",
+                "purpose": "Heart health and energy",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 58,
+            "ancestry": [
+              "caucasian",
+              "northern_european"
+            ],
+            "weight_lbs": 198.5,
+            "height_feet": 5,
+            "height_inches": 10,
+            "ancestry_other": null,
+            "biological_sex": "male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "diabetes_non_insulin",
+              "high_blood_pressure",
+              "high_cholesterol",
+              "hiatal_hernia_reflux_disease"
+            ],
+            "surgeries": "Appendectomy in 1985, Gallbladder removal in 2010, Knee arthroscopy in 2018",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "diabetes_non_insulin": 2017,
+              "high_blood_pressure": 2014,
+              "high_cholesterol": 2016,
+              "hiatal_hernia_reflux_disease": 2019
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": true,
+            "apple_watch": false,
+            "other_device": "Garmin Forerunner 945",
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "functional_medicine",
+              "nutritional_therapy"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 3,
+              "caps_crowns": 6,
+              "root_canals": 2,
+              "gold_fillings": 1,
+              "silver_mercury_fillings": 4
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": 2019,
+            "mercury_fillings_removed": true
+          },
+          "dietary_habits": {
+            "diet_style": "Mediterranean with low-carb modifications",
+            "diet_style_other": "Modified Mediterranean for diabetes management",
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "Moderate snoring, sleep study recommended but not completed",
+            "night_wake_frequency": 2,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": true,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": 2
+          },
+          "systems_review": {
+            "digestive_symptoms": "heartburn"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "sometimes",
+              "typical_amount": "2-3 glasses of red wine per week, usually with dinner"
+            },
+            "tobacco": {
+              "quit_year": 2008,
+              "use_status": "quit",
+              "duration_category": ">_5_years"
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 5
+          },
+          "sunlight_exposure": {
+            "days_per_week": 6,
+            "average_minutes_per_day": "45-60 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Senior Financial Analyst",
+            "work_stress_level": 8
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": "Occasional tension headaches, typically stress-related, 1-2 times per month",
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": true,
+              "skin_condition_details": "Mild rosacea on cheeks and nose, managed with topical treatments"
+            },
+            "chronic_pain": {
+              "pain_details": "Chronic lower back pain from previous injury, managed with physical therapy and stretching",
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"diabetes\": [\"mother\", \"father\", \"grand-parent\"], \"heart_disease\": [\"father\", \"grand-parent\"], \"high_blood_pressure\": [\"mother\", \"father\"], \"high_cholesterol\": [\"father\", \"grand-parent\"], \"stroke\": [\"grand-parent\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Minimal - office environment, occasional exposure to cleaning products",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Initial gastrointestinal upset with Metformin that resolved after 2 weeks, mild muscle aches with Atorvastatin",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": "Slight decrease in energy and libido over past 2 years, considering testosterone testing",
+              "hormonal_concerns": "mild concerns"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "95 ug/dL",
+        "eGFR": "68 mL/min/1.73 m2",
+        "Gender": "male",
+        "Calcium": "9.6 mg/dL",
+        "Ferritin": "125 ng/mL",
+        "Order ID": 1001,
+        "C-Peptide": "2.8 ng/mL",
+        "Test Date": "2024-01-25T10:15:00Z",
+        "Creatinine": "1.1 mg/dL",
+        "LH:FSH Ratio": "1.4",
+        "AST:ALT Ratio": "0.85",
+        "Total Protein": "7.1 g/dL",
+        "Triglycerides": "145 mg/dL",
+        "HDL Cholesterol": "48 mg/dL",
+        "Lipoprotein (a)": "32 mg/dL",
+        "Total Bilirubin": "0.8 mg/dL",
+        "% Hemoglobin A1C": "6.8 %",
+        "ApoB:ApoA1 Ratio": "0.72",
+        "Daytime Cortisol": "14.5 ug/dL",
+        "Direct Bilirubin": "0.3 mg/dL",
+        "LDL-C:ApoB Ratio": "1.15",
+        "Total Biomarkers": 42,
+        "25-(OH) Vitamin D": "28 ng/mL",
+        "LDL-C:HDL-C Ratio": "2.8",
+        "Total Cholesterol": "198 mg/dL",
+        "BUN:Creatinine Ratio": "19",
+        "Estim. Avg Glu (eAG)": "154 mg/dL",
+        "High-Sensitivity CRP": "3.2 mg/L",
+        "Estradiol (Sensitive)": "22 pg/mL",
+        "Apolipoprotein B (APOB)": "108 mg/dL",
+        "Triglycerides:HDL Ratio": "3.0",
+        "VLDL Cholesterol (Calc)": "29 mg/dL",
+        "Luteinizing Hormone (LH)": "9.2 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "150 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "21 mg/dL",
+        "Alkaline Phosphatase (ALP)": "82 U/L",
+        "Calculated LDL-Cholesterol": "121 mg/dL",
+        "Total Cholesterol:HDL Ratio": "4.1",
+        "Alanine Aminotransferase (ALT)": "35 U/L",
+        "Aspartate Aminotransferase (AST)": "30 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "2.8 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "6.6 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "165 ug/dL"
+      }
+    }
+  }
+]

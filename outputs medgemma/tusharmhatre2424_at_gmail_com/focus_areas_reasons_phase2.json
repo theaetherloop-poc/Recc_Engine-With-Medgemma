@@ -1,0 +1,56 @@
+{
+  "CM": [
+    "Height:70",
+    "FamilyHistory:Dialysis",
+    "FamilyHistory:Diabetes Insulin",
+    "FamilyHistory:High Blood Pressure",
+    "Tobacco:Current smoker (2-5 years)",
+    "PhysicalActivity:2 days/wk (insufficient)",
+    "SleepHours:Adequate (6-8h)",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:Yes"
+  ],
+  "COG": [
+    "SnoringApnea:No"
+  ],
+  "DTX": [
+    "Alcohol:Consumption (low)"
+  ],
+  "IMM": [
+    "Diagnosis:tuberculosis",
+    "FamilyHistory:Diabetes Insulin",
+    "Sunlight:(low)",
+    "SleepHours:Adequate (6-8h)"
+  ],
+  "MITO": [
+    "PhysicalActivity:2 days/wk (insufficient)",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:GI symptoms (brain-gut axis)",
+    "ChronicPain:less Sleep multiplier"
+  ],
+  "SKN": [
+    "SkinHealth:Has skin issues"
+  ],
+  "STR": [
+    "Age:26",
+    "BMI:24.246326530612244",
+    "WorkStress:Stress (high)",
+    "SleepHours:Adequate (6-8h)",
+    "TroubleFallingAsleep:Yes",
+    "TroubleStayingAsleep:Yes (2x/night)",
+    "WakeFeelingRefreshed:No",
+    "SnoringApnea:No",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:GI symptoms (brain-gut axis)",
+    "ChronicPain:less Sleep multiplier",
+    "Headache:Frequent headaches/migraines"
+  ],
+  "HRM": [
+    "Sex:Male"
+  ],
+  "GA": [
+    "Diagnosis:kidney_stones",
+    "SleepHours:Adequate (6-8h)",
+    "DigestiveSymptoms:Heartburn"
+  ]
+}

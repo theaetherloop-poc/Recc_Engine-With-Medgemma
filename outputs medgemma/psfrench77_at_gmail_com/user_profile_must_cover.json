@@ -1,0 +1,53 @@
+{
+  "patient_id": "unknown",
+  "age": 77,
+  "sex": "female",
+  "biomarker_issues": [
+    "Iron (high)",
+    "Calcium (low)",
+    "AST:ALT Ratio (high)",
+    "Total Protein (low)",
+    "Bilirubin (low)",
+    "LDL-C:ApoB Ratio (low)",
+    "25-(OH) Vitamin D (low)",
+    "BUN:Creatinine Ratio (high)",
+    "High-Sensitivity CRP (high)",
+    "Triglyceride:HDL Ratio (high)",
+    "LH (high)",
+    "Blood Urea Nitrogen (high)",
+    "Aspartate Aminotransferase (high)",
+    "TSH (high)",
+    "FSH (high)",
+    "Dehydroepiandrosterone Sulfate (DHEA-S) (low)"
+  ],
+  "other_problems": [
+    "arthritis",
+    "fibromyalgia",
+    "highbloodpressure",
+    "overactivethyroid",
+    "Chronic pain",
+    "Trouble staying asleep",
+    "Dental: had all mercury fillings replaced",
+    "Mercury fillings",
+    "Diet: gluten_free,other",
+    "Recreational substance use",
+    "Frequent alcohol use",
+    "Family history: asthma",
+    "Family history: cancer",
+    "Family history: stroke",
+    "Family history: arthritis",
+    "Family history: claustrophobic",
+    "Family history: diabetes insulin",
+    "Family history: high cholesterol",
+    "Family history: overactive thyroid",
+    "Family history: high blood pressure",
+    "Childhood antibiotic use"
+  ],
+  "safety_constraints": [
+    "Med: Levothyroxine",
+    "Med: Losartn HCTZ",
+    "Med: Celecoxib",
+    "Med: omprezole"
+  ],
+  "total": 37
+}

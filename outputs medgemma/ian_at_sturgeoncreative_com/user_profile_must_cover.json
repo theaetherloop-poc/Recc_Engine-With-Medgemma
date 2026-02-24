@@ -1,0 +1,41 @@
+{
+  "patient_id": "unknown",
+  "age": 47,
+  "sex": "male",
+  "biomarker_issues": [
+    "Iron (high)",
+    "Ferritin (high)",
+    "Total Protein (high)",
+    "Iron Saturation (high)",
+    "Bilirubin (low)",
+    "HbA1c (high)",
+    "LDL-C:ApoB Ratio (low)",
+    "25-(OH) Vitamin D (low)",
+    "LDL:HDL Ratio (Calc.) (high)",
+    "Calculated Total Cholesterol (high)",
+    "BUN:Creatinine Ratio (high)",
+    "EAG (Calc.) (high)",
+    "High-Sensitivity CRP (low)",
+    "Triglyceride:HDL Ratio (high)",
+    "VLDL (Calculated) (high)",
+    "Blood Urea Nitrogen (high)",
+    "LDL Cholesterol (high)",
+    "Total Cholesterol:HDL Ratio (high)",
+    "Aspartate Aminotransferase (high)",
+    "SBHG (high)",
+    "Dehydroepiandrosterone Sulfate (DHEA-S) (low)"
+  ],
+  "other_problems": [
+    "Chronic pain",
+    "Skin issues",
+    "Digestive: bloating",
+    "Trouble staying asleep",
+    "Unrefreshing sleep",
+    "Possible sleep apnea",
+    "Mold exposure"
+  ],
+  "safety_constraints": [
+    "shellfish"
+  ],
+  "total": 28
+}

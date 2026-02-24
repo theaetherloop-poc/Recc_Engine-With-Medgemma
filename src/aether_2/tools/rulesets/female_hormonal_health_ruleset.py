@@ -89,7 +89,7 @@ class FemaleHormonalHealthRuleset:
         if current_medications and concern_details:
             concern_lower = concern_details.lower()
             for med in current_medications:
-                med_name = med.get('name', '').lower()
+                med_name = (med.get('name') or '').lower()
                 if any(keyword in med_name for keyword in self.HRT_KEYWORDS):
                     # Check for side effect keywords in concern details
                     side_effect_keywords = ['side effect', 'intolerance', 'reaction', 'adverse']
@@ -185,7 +185,7 @@ class FemaleHormonalHealthRuleset:
         if current_medications and concern_details:
             concern_lower = concern_details.lower()
             for med in current_medications:
-                med_name = med.get('name', '').lower()
+                med_name = (med.get('name') or '').lower()
                 if any(keyword in med_name for keyword in self.HRT_KEYWORDS):
                     benefit_keywords = ['improved', 'better', 'helped', 'relief', 'controlled']
                     if any(keyword in concern_lower for keyword in benefit_keywords):
@@ -203,7 +203,7 @@ class FemaleHormonalHealthRuleset:
             all_text = ""
             if current_medications:
                 for med in current_medications:
-                    all_text += med.get('name', '').lower() + " "
+                    all_text += (med.get('name') or '').lower() + " "
             if skin_condition_details:
                 all_text += skin_condition_details.lower()
 

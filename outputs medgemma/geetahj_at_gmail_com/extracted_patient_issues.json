@@ -1,0 +1,203 @@
+{
+  "status": "success",
+  "total_issues": 29,
+  "demographics": {
+    "age": 50,
+    "sex": "Female",
+    "ancestry": [
+      "South Asian"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Iron",
+      "status": "high",
+      "value": 200.0,
+      "unit": "mcg/dL"
+    },
+    {
+      "name": "Calcium",
+      "status": "low",
+      "value": 8.6,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "C-peptide",
+      "status": "low",
+      "value": 0.94,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "AST:ALT Ratio",
+      "status": "high",
+      "value": 2.31,
+      "unit": "unknown"
+    },
+    {
+      "name": "Total Protein",
+      "status": "high",
+      "value": 8.1,
+      "unit": "g/dL"
+    },
+    {
+      "name": "Lp(a)",
+      "status": "high",
+      "value": 20.2,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Bilirubin",
+      "status": "low",
+      "value": 0.28,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 5.1,
+      "unit": "%"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 1.17,
+      "unit": "unknown"
+    },
+    {
+      "name": "25-(OH) Vitamin D",
+      "status": "low",
+      "value": 21.4,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "low",
+      "value": 0.76,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Triglyceride:HDL Ratio",
+      "status": "high",
+      "value": 1.4,
+      "unit": "ratio"
+    },
+    {
+      "name": "VLDL (Calculated)",
+      "status": "high",
+      "value": 16.8,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "LH",
+      "status": "high",
+      "value": 19.24,
+      "unit": "mIU/mL"
+    },
+    {
+      "name": "Blood Urea Nitrogen",
+      "status": "low",
+      "value": 8.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Aspartate Aminotransferase",
+      "status": "high",
+      "value": 51.0,
+      "unit": "U/L"
+    },
+    {
+      "name": "TSH",
+      "status": "high",
+      "value": 3.23,
+      "unit": "uIU/mL"
+    },
+    {
+      "name": "FSH",
+      "status": "high",
+      "value": 31.92,
+      "unit": "mIU/mL"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "low",
+      "value": 38.4,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [
+    "Depression"
+  ],
+  "allergies": [],
+  "symptoms": [
+    {
+      "type": "chronic_pain",
+      "details": "chronic pain reported"
+    }
+  ],
+  "digestive": [
+    "bloating",
+    "constipation"
+  ],
+  "sleep_issues": [
+    "trouble_falling_asleep"
+  ],
+  "exposures": {
+    "mold": null,
+    "chemical": null
+  },
+  "hormonal": {
+    "female_concerns": [
+      "menstrual_concerns"
+    ],
+    "concern_details": "This year - 2025 - I feel am approaching menopause."
+  },
+  "current_supplements": [
+    {
+      "name": "Collagen Peptides",
+      "dose": "20g",
+      "frequency": "1/2 tsp first thing in the morning after coffee",
+      "purpose": "Skin, Hair, Bone + Joint Support"
+    },
+    {
+      "name": "D3",
+      "dose": "1000 IU / 25 mcg",
+      "frequency": "1 daily with breakfast",
+      "purpose": "Supports immune health"
+    },
+    {
+      "name": "C",
+      "dose": "500 mg",
+      "frequency": "1 daily in the afternoon or evening",
+      "purpose": "Supports immune system"
+    },
+    {
+      "name": "B12",
+      "dose": "1000 mcg",
+      "frequency": "1 daily in the afternoon or evening",
+      "purpose": "Supports Energy Production, heart and nerve health"
+    },
+    {
+      "name": "Slow Fe Iron",
+      "dose": "45 mg",
+      "frequency": "1 every Monday and Thursday",
+      "purpose": "Iron Supplemeny"
+    }
+  ],
+  "lifestyle": {
+    "diet": "vegetarian",
+    "stress_level": 5,
+    "diet_nutrient_needs": [
+      "B12",
+      "Iron",
+      "Zinc"
+    ]
+  },
+  "dental_health": [],
+  "family_history": [
+    "tuberculosis (brother)",
+    "kidney_stones (brother)",
+    "diabetes_insulin (mother)",
+    "high_blood_pressure (mother)"
+  ],
+  "childhood_factors": {}
+}

@@ -13,7 +13,8 @@ from src.aether_2.utils.data_processing import clean_agent_output
 from src.aether_2.utils.preprocessing import (
     evaluate_biomarkers,
     compile_user_profile,
-    evaluate_focus_areas
+    evaluate_focus_areas,
+    extract_patient_issues
 )
 
 
@@ -113,21 +114,28 @@ def run_aether_pipeline(patient_data: Dict[str, Any]) -> Dict[str, Any]:
         # Step 3: Evaluate focus areas (Agent 3)
         focus_areas_results = evaluate_focus_areas(preprocessing_data)
         print("✅ Focus areas evaluation complete")
-        
+
+        # Step 4: Extract patient issues (NEW - moved outside CrewAI)
+        patient_issues = extract_patient_issues(user_profile, user_id=user_id)
+        print("✅ Patient issues extraction complete")
+
         # ========== CREWAI EXECUTION (Agents 4-7) ==========
         print("\n🤖 Starting CrewAI execution...")
-        
+
         # Set kickoff inputs for tools to access (class variable)
         Aether2.kickoff_inputs = {
             "user_profile": user_profile.model_dump_json(),
-            "focus_areas": focus_areas_results["markdown_output"]
+            "focus_areas": focus_areas_results["markdown_output"],
+            "patient_issues": json.dumps(patient_issues),
+            "user_id": user_id
         }
-        
+
         # Run crew with inputs
         result = Aether2().crew().kickoff(
             inputs={
                 "user_profile": user_profile.model_dump_json(),
-                "focus_areas": focus_areas_results["markdown_output"]
+                "focus_areas": focus_areas_results["markdown_output"],
+                "patient_issues": json.dumps(patient_issues)
             }
         )
         print("✅ CrewAI execution completed successfully")

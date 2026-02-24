@@ -1,0 +1,245 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user3@example.com",
+        "phase_status": {
+          "id": "e5f6a7b8-c9d0-4903-e456-789012345678",
+          "user_id": "f6a7b8c9-d0e1-4904-f567-890123456789",
+          "created_at": "2024-01-22T14:10:30Z",
+          "updated_at": "2024-02-05T11:25:18Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": true,
+            "known_allergies": [
+              {
+                "allergen": "dairy",
+                "reaction": "Digestive upset and bloating",
+                "allergen_other": null
+              },
+              {
+                "allergen": "soy",
+                "reaction": "Digestive discomfort",
+                "allergen_other": null
+              }
+            ]
+          },
+          "medications": {
+            "has_medications": false,
+            "current_medications": []
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "5000 IU",
+                "name": "Vitamin D3",
+                "purpose": "Severe vitamin D deficiency",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "2000 mg",
+                "name": "Turmeric",
+                "purpose": "Anti-inflammatory support",
+                "frequency": "Twice daily"
+              },
+              {
+                "dose": "600 mg",
+                "name": "N-Acetyl Cysteine",
+                "purpose": "Respiratory and antioxidant support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 41,
+            "ancestry": [
+              "native_american"
+            ],
+            "weight_lbs": 167.8,
+            "height_feet": 5,
+            "height_inches": 7,
+            "ancestry_other": null,
+            "biological_sex": "male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "asthma",
+              "fibromyalgia"
+            ],
+            "surgeries": "None",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "asthma": 2012,
+              "fibromyalgia": 2019
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": false,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "functional_medicine",
+              "acupuncture"
+            ],
+            "traditional_chinese_medicine": true
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 1,
+              "caps_crowns": 2,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 1
+            },
+            "daily_brush_floss": "brush_only",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Paleo",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "8_to_10",
+            "snoring_sleep_apnea": "No",
+            "night_wake_frequency": null,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": true,
+            "night_urination_frequency": null
+          },
+          "systems_review": {
+            "digestive_symptoms": "bloating"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "monthly",
+              "typical_amount": "1-2 drinks on special occasions"
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 3
+          },
+          "sunlight_exposure": {
+            "days_per_week": 7,
+            "average_minutes_per_day": "60-90 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Elementary School Teacher",
+            "work_stress_level": 6
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": "Occasional tension headaches related to weather changes",
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": "Widespread muscle pain and tenderness, particularly in shoulders, neck, and lower back. Pain worse in mornings and with weather changes. Fatigue is significant.",
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "unsure",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"arthritis\": [\"mother\", \"grand-parent\"], \"diabetes\": [\"father\"], \"asthma\": [\"mother\", \"sister\"]}",
+            "has_family_history": true,
+            "other_conditions_text": "Paternal grandfather had heart disease"
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Minimal, primarily from household cleaning products",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": null,
+              "hormonal_concerns": "no"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "male",
+        "Order ID": 1003,
+        "Test Date": "2024-02-01T08:45:00Z",
+        "Alanine Aminotransferase (ALT)": "26 U/L",
+        "Aspartate Aminotransferase (AST)": "24 U/L",
+        "Albumin": "4.3 g/dL",
+        "Blood Urea Nitrogen (BUN)": "16 mg/dL",
+        "Creatinine": "0.95 mg/dL",
+        "Total Bilirubin": "0.65 mg/dL",
+        "eGFR": "85 mL/min/1.73 m\u00b2",
+        "Estim. Avg Glu (eAG)": "111 mg/dL",
+        "Lipoprotein (a)": "22 mg/dL",
+        "Ferritin": "88 ng/mL",
+        "Homocysteine (HCY)": "10.2 umol/L",
+        "High-Sensitivity CRP": "4.5 mg/L",
+        "25-(OH) Vitamin D": "18 ng/mL",
+        "% Hemoglobin A1C": "5.5 %",
+        "Fasting Insulin": "8.8 uIU/mL",
+        "Total Cholesterol:HDL Ratio": "3.4",
+        "Triglycerides:HDL Ratio": "2.15",
+        "Daytime Cortisol": "16.8 mcg/dL",
+        "Thyroid Stimulating Hormone (TSH)": "2.2 uIU/mL",
+        "Apolipoprotein A1 (APOA1)": "158 mg/dL",
+        "Apolipoprotein B (APOB)": "92 mg/dL",
+        "ApoB:ApoA1 Ratio": "0.58",
+        "Calculated LDL-Cholesterol": "104 mg/dL",
+        "HDL Cholesterol": "52 mg/dL",
+        "Total Cholesterol": "178 mg/dL",
+        "Triglycerides": "112 mg/dL",
+        "Testosterone, Total (Males)": "580 ng/dL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "178 ug/dL",
+        "Testosterone:Cortisol ratio": "3.45",
+        "Total Biomarkers": 29
+      }
+    }
+  }
+]

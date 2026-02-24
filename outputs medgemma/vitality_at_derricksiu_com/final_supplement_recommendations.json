@@ -1,0 +1,123 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "4000 IU",
+      "frequency": "once daily with fatty meal",
+      "focus_area": [
+        "IMM",
+        "CM"
+      ],
+      "why": "Your 25-(OH) Vitamin D level is low at 25.8 ng/mL, indicating potential deficiency. Supplementation is crucial for bone health, immune function, and potentially reducing inflammation."
+    },
+    {
+      "ingredient_name": "Omega-3",
+      "recommended_dosage": "2000-4000 mg",
+      "frequency": "once daily with meals",
+      "focus_area": [
+        "CM",
+        "IMM"
+      ],
+      "why": "Your HDL is low (34 mg/dL) and LDL:HDL ratio is high (3.6). Omega-3s can help raise HDL, lower triglycerides, and improve overall cardiovascular health markers."
+    },
+    {
+      "ingredient_name": "Niacin",
+      "recommended_dosage": "500-1000 mg",
+      "frequency": "once daily with meals",
+      "focus_area": [
+        "CM",
+        "IMM"
+      ],
+      "why": "You have low HDL (34 mg/dL), high LDL:HDL ratio (3.6), and high Lp(a) (24 mg/dL). Niacin is known to effectively raise HDL and lower Lp(a), addressing key cardiovascular risk factors."
+    },
+    {
+      "ingredient_name": "Plant Sterols",
+      "recommended_dosage": "2000 mg",
+      "frequency": "once daily with a meal",
+      "focus_area": [
+        "CM"
+      ],
+      "why": "Your LDL Cholesterol is borderline high (122.4 mg/dL) and LDL:HDL ratio is high (3.6). Plant sterols can help lower LDL cholesterol absorption, improving this ratio."
+    },
+    {
+      "ingredient_name": "Magnesium",
+      "recommended_dosage": "200-400 mg",
+      "frequency": "once daily before bedtime",
+      "focus_area": [
+        "STR",
+        "IMM"
+      ],
+      "why": "You report work stress (7/10) and have a history of asthma. Magnesium plays a role in stress management and may help with asthma symptoms by relaxing bronchial muscles."
+    },
+    {
+      "ingredient_name": "Vitamin C",
+      "recommended_dosage": "500 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": [
+        "IMM",
+        "GA"
+      ],
+      "why": "You have a history of allergies (itchy skin, sneezing) and childhood antibiotic use, which can impact gut health. Vitamin C supports immune function and may help modulate allergic responses."
+    },
+    {
+      "ingredient_name": "Probiotics",
+      "recommended_dosage": "10-50 billion CFU",
+      "frequency": "once daily with a meal",
+      "focus_area": [
+        "GA",
+        "IMM"
+      ],
+      "why": "Your history of childhood antibiotic use and allergies suggests potential gut dysbiosis. Probiotics can help restore gut flora balance, which is linked to immune function and allergy management."
+    },
+    {
+      "ingredient_name": "Quercetin",
+      "recommended_dosage": "500 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": [
+        "IMM",
+        "SKN"
+      ],
+      "why": "You experience allergy symptoms (itchy skin, sneezing). Quercetin is a natural antihistamine and anti-inflammatory that can help alleviate these symptoms."
+    },
+    {
+      "ingredient_name": "L-Lysine",
+      "recommended_dosage": "1000-2000 mg",
+      "frequency": "twice daily",
+      "focus_area": [
+        "CM",
+        "IMM"
+      ],
+      "why": "Your Lp(a) level is high at 24 mg/dL, a known cardiovascular risk factor. L-Lysine has shown potential in studies to help lower Lp(a) levels."
+    },
+    {
+      "ingredient_name": "N-Acetyl Cysteine (NAC)",
+      "recommended_dosage": "600-1200 mg",
+      "frequency": "once daily",
+      "focus_area": [
+        "CM",
+        "DTX"
+      ],
+      "why": "Your EAG (estimated average glucose) is elevated at 114.02 mg/dL, indicating potential insulin resistance. NAC may improve insulin sensitivity and support liver health."
+    },
+    {
+      "ingredient_name": "Curcumin",
+      "recommended_dosage": "500-1000 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": [
+        "IMM",
+        "CM"
+      ],
+      "why": "Your High-Sensitivity CRP is slightly elevated (1.0 mg/L), suggesting low-grade inflammation. Curcumin has potent anti-inflammatory properties that can help manage this."
+    },
+    {
+      "ingredient_name": "Zinc",
+      "recommended_dosage": "15-30 mg",
+      "frequency": "once daily with food",
+      "focus_area": [
+        "IMM",
+        "GA"
+      ],
+      "why": "Your history of childhood antibiotic use may have impacted zinc levels, which are important for immune function and gut health. Supplementation can help support these systems."
+    }
+  ]
+}

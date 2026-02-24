@@ -1,0 +1,265 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user6@example.com",
+        "phase_status": {
+          "id": "e1f2a3b4-c5d6-4909-e012-345678901234",
+          "user_id": "f2a3b4c5-d6e7-4910-f123-456789012345",
+          "created_at": "2024-02-15T10:45:20Z",
+          "updated_at": "2024-03-01T14:20:55Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Levothyroxine",
+                "dose": "88 mcg",
+                "frequency": "Daily",
+                "purpose": "Hypothyroidism treatment"
+              },
+              {
+                "name": "Albuterol",
+                "dose": "90 mcg",
+                "frequency": "As needed",
+                "purpose": "Asthma rescue inhaler"
+              },
+              {
+                "name": "Fluticasone",
+                "dose": "110 mcg",
+                "frequency": "Twice daily",
+                "purpose": "Asthma maintenance"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "65 mg",
+                "name": "Iron Bisglycinate",
+                "purpose": "Iron deficiency anemia treatment",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "400 mg",
+                "name": "Magnesium Glycinate",
+                "purpose": "Sleep and muscle support",
+                "frequency": "Before bedtime"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Omega-3",
+                "purpose": "Anti-inflammatory support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Probiotics",
+                "purpose": "Digestive health",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "200 mg",
+                "name": "L-Theanine",
+                "purpose": "Anxiety and stress management",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 36,
+            "ancestry": [
+              "asian"
+            ],
+            "weight_lbs": 148.5,
+            "height_feet": 5,
+            "height_inches": 5,
+            "ancestry_other": null,
+            "biological_sex": "female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "asthma",
+              "overactive_thyroid"
+            ],
+            "surgeries": "C-section in 2019, 2021",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "asthma": 2015,
+              "overactive_thyroid": 2020
+            }
+          },
+          "wearable_devices": {
+            "fitbit": true,
+            "oura_ring": false,
+            "apple_watch": true,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": true,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "ayurveda",
+              "functional_medicine",
+              "acupuncture"
+            ],
+            "traditional_chinese_medicine": true
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 1,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Pescatarian",
+            "diet_style_other": null,
+            "eating_out_frequency": "more_than_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "less_than_6",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 2,
+            "trouble_falling_asleep": true,
+            "trouble_staying_asleep": true,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": 1
+          },
+          "systems_review": {
+            "digestive_symptoms": "abdominal_pain"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "monthly",
+              "typical_amount": "1 glass of wine on special occasions"
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 2
+          },
+          "sunlight_exposure": {
+            "days_per_week": 4,
+            "average_minutes_per_day": "25-35 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Pediatric Nurse Practitioner",
+            "work_stress_level": 8
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": "Frequent tension headaches, 2-3 times per week, often related to stress and lack of sleep",
+              "frequent_headaches_migraines": true
+            },
+            "skin_health": {
+              "has_skin_issues": true,
+              "skin_condition_details": "Eczema on hands and elbows, sensitive skin prone to irritation"
+            },
+            "chronic_pain": {
+              "pain_details": "Lower back pain from pregnancies, occasional neck and shoulder tension",
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": false
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "unsure"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"asthma\": [\"mother\", \"brother\"], \"thyroid_disorders\": [\"mother\", \"sister\"], \"diabetes\": [\"grand-parent\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Hospital environment, exposure to disinfectants and cleaning agents",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Mild jitteriness with Albuterol if used too frequently",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "menstrual_concerns": "Irregular cycles since second pregnancy, heavy bleeding, severe PMS",
+              "concern_details": "Postpartum thyroid issues may be affecting cycles"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "female",
+        "Order ID": 1006,
+        "Test Date": "2024-02-27T09:40:00Z",
+        "Alanine Aminotransferase (ALT)": "20 U/L",
+        "Aspartate Aminotransferase (AST)": "16.4 U/L",
+        "Albumin": "4.0 g/dL",
+        "Blood Urea Nitrogen (BUN)": "9.4 mg/dL",
+        "Creatinine": "0.72 mg/dL",
+        "Total Bilirubin": "0.55 mg/dL",
+        "eGFR": "89 mL/min/1.73 m\u00b2",
+        "Estim. Avg Glu (eAG)": "103 mg/dL",
+        "Lipoprotein (a)": "16 mg/dL",
+        "Ferritin": "15 ng/mL",
+        "Homocysteine (HCY)": "7.8 umol/L",
+        "High-Sensitivity CRP": "3.1 mg/L",
+        "25-(OH) Vitamin D": "24 ng/mL",
+        "% Hemoglobin A1C": "5.1 %",
+        "Fasting Insulin": "6.5 uIU/mL",
+        "Total Cholesterol:HDL Ratio": "2.7",
+        "Triglycerides:HDL Ratio": "1.6",
+        "Daytime Cortisol": "21.8 mcg/dL",
+        "Thyroid Stimulating Hormone (TSH)": "4.2 uIU/mL",
+        "Apolipoprotein A1 (APOA1)": "169 mg/dL",
+        "Apolipoprotein B (APOB)": "76 mg/dL",
+        "ApoB:ApoA1 Ratio": "0.45",
+        "Calculated LDL-Cholesterol": "88 mg/dL",
+        "HDL Cholesterol": "64 mg/dL",
+        "Total Cholesterol": "172 mg/dL",
+        "Triglycerides": "102 mg/dL",
+        "Estradiol (Sensitive)": "138 pg/mL",
+        "Follicle-Stimulating Hormone (FSH)": "5.9 mIU/mL",
+        "Total Biomarkers": 28
+      }
+    }
+  }
+]

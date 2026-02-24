@@ -1,0 +1,88 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "5000 IU",
+      "frequency": "once daily with fatty meal for 8-12 weeks, then recheck level and adjust dose.",
+      "focus_area": ["IMM", "CM"],
+      "why": "The user has a low 25-(OH) Vitamin D level (19.4 ng/mL), indicating deficiency. Supplementation is crucial for immune function, bone health, and potentially mood regulation, which could help with sleep issues."
+    },
+    {
+      "ingredient_name": "Magnesium",
+      "recommended_dosage": "400 mg",
+      "frequency": "once daily before bedtime.",
+      "focus_area": ["STR", "GA"],
+      "why": "The user reports sleep issues (trouble staying asleep, not waking refreshed), high stress, and has high SBHG. Magnesium plays a role in sleep regulation, stress response, and may help lower SBHG levels."
+    },
+    {
+      "ingredient_name": "Omega-3 Fatty Acids",
+      "recommended_dosage": "2000-4000 mg",
+      "frequency": "once daily with meals",
+      "focus_area": ["CM", "IMM"],
+      "why": "The user has a low LDL-C:ApoB ratio (1.25), low total cholesterol (154 mg/dL), and a high Triglyceride:HDL ratio (1.61). Omega-3s can help improve lipid profiles, particularly triglycerides and HDL, and support cardiovascular health."
+    },
+    {
+      "ingredient_name": "Zinc",
+      "recommended_dosage": "15-30 mg",
+      "frequency": "once daily with food",
+      "focus_area": ["IMM", "HRM"],
+      "why": "The user has high SBHG and a history of childhood antibiotic use, which can deplete zinc stores. Zinc is important for immune function, hormone regulation, and may help modulate SBHG levels."
+    },
+    {
+      "ingredient_name": "Vitamin K2",
+      "recommended_dosage": "100-200 mcg",
+      "frequency": "once daily with meals",
+      "focus_area": ["CM", "IMM"],
+      "why": "Often paired with Vitamin D3, K2 helps direct calcium to bones and away from arteries. Given the low Vitamin D, ensuring proper calcium metabolism is important for overall health."
+    },
+    {
+      "ingredient_name": "Probiotic",
+      "recommended_dosage": "10-50 billion CFU",
+      "frequency": "once daily with or without food",
+      "focus_area": ["GA", "IMM"],
+      "why": "The user had childhood antibiotic use, which can negatively impact gut microbiome diversity. Supporting gut health with probiotics may improve overall health and potentially influence inflammation markers like hs-CRP."
+    },
+    {
+      "ingredient_name": "Ashwagandha",
+      "recommended_dosage": "300-500 mg",
+      "frequency": "once daily, typically in the evening",
+      "focus_area": ["STR", "COG"],
+      "why": "The user reports high stress levels (8/10). Ashwagandha is an adaptogen known to help the body manage stress, which could improve sleep quality and overall well-being."
+    },
+    {
+      "ingredient_name": "Melatonin",
+      "recommended_dosage": "1-3 mg",
+      "frequency": "once daily 30-60 minutes before bedtime",
+      "focus_area": ["STR", "COG"],
+      "why": "The user specifically reports trouble staying asleep and not waking refreshed, symptoms consistent with sleep disturbances potentially related to sleep apnea or stress. Melatonin can help regulate the sleep-wake cycle."
+    },
+    {
+      "ingredient_name": "Quercetin",
+      "recommended_dosage": "500 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": ["IMM", "SKN"],
+      "why": "The user experienced mold exposure in 2024 leading to itchy skin. Quercetin is a bioflavonoid with antihistamine and anti-inflammatory properties that may help manage symptoms related to mold sensitivity."
+    },
+    {
+      "ingredient_name": "Niacin",
+      "recommended_dosage": "500-1000 mg",
+      "frequency": "once daily with meals (start low and titrate slowly)",
+      "focus_area": ["CM", "MITO"],
+      "why": "The user has a low LDL-C:ApoB ratio and low total cholesterol, alongside a high Triglyceride:HDL ratio. Niacin can help improve lipid profiles by raising HDL and lowering triglycerides and LDL, although careful monitoring is needed."
+    },
+    {
+      "ingredient_name": "CoQ10",
+      "recommended_dosage": "100-200 mg",
+      "frequency": "once daily with a fatty meal",
+      "focus_area": ["MITO", "CM"],
+      "why": "The user has low total cholesterol and low hs-CRP. CoQ10 is an antioxidant that supports mitochondrial function and cardiovascular health, and may have anti-inflammatory effects."
+    },
+    {
+      "ingredient_name": "L-Theanine",
+      "recommended_dosage": "100-200 mg",
+      "frequency": "once or twice daily",
+      "focus_area": ["STR", "COG"],
+      "why": "The user reports high stress and sleep issues. L-Theanine promotes relaxation without drowsiness, potentially improving sleep quality and reducing stress levels."
+    }
+  ]
+}

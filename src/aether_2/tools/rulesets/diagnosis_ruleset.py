@@ -35,6 +35,8 @@ class DiagnosisRuleset:
         
         # Process each diagnosis
         for diagnosis_name, diagnosis_year in zip(diagnosis_list, diagnosis_years_list):
+            if diagnosis_name is None:
+                continue
             diagnosis_scores = self._score_single_diagnosis(diagnosis_name, diagnosis_year)
             
             # Add to cumulative

@@ -18,7 +18,8 @@ from src.aether_2.utils.data_processing import (
 from src.aether_2.utils.preprocessing import (
     evaluate_biomarkers,
     compile_user_profile,
-    evaluate_focus_areas
+    evaluate_focus_areas,
+    extract_patient_issues
 )
 
 # Initialize authentication and environment
@@ -37,9 +38,10 @@ def run(input_path="inputs/combined_data.json"):
     patient_data = load_and_combine_inputs(input_path)
     logger.info(f"📊 Loaded patient data with {len(patient_data)} main sections")
 
-    # Extract user_id early for output directory
-    user_id = original_input_data[0]["user_full_data"]["metadata"]["phase_status"].get("user_id", "unknown_user")
-    logger.info(f"👤 Processing patient: {user_id}")
+    # Extract email for output directory (sanitized for folder name)
+    email = original_input_data[0]["user_full_data"]["metadata"].get("email", "unknown_user")
+    user_id = email.replace("@", "_at_").replace(".", "_")
+    logger.info(f"👤 Processing patient: {email}")
 
     print(f"\n=== Running Aether2 Pipeline ===")
     print(f"📁 Input: {input_path}")
@@ -62,6 +64,10 @@ def run(input_path="inputs/combined_data.json"):
         focus_areas_results = evaluate_focus_areas(patient_data)
         logger.info("✅ Focus areas evaluation complete")
 
+        # Step 4: Extract patient issues (NEW - moved outside CrewAI)
+        patient_issues = extract_patient_issues(user_profile, user_id=user_id)
+        logger.info("✅ Patient issues extraction complete")
+
         print("✅ Preprocessing complete")
 
     except Exception as e:
@@ -82,17 +88,40 @@ def run(input_path="inputs/combined_data.json"):
     logger.info("🚀 Initializing Aether2 crew...")
 
     try:
+        # Extract patient demographics for dosage queries
+        demographics = user_profile.patient_data.get("phase1_basic_intake", {}).get("demographics", {})
+        age = demographics.get("age", "adult")
+        sex = demographics.get("biological_sex", "").lower()
+        weight = demographics.get("weight_lbs")
+        height_ft = demographics.get("height_feet")
+        height_in = demographics.get("height_inches")
+
+        # Build demographics string
+        height_str = f"{height_ft}'{height_in}\"" if height_ft and height_in else ""
+        weight_str = f"{weight} lbs" if weight else ""
+        demo_parts = [f"{age}-year-old", sex] if age and sex else ["adult"]
+        if weight_str:
+            demo_parts.append(weight_str)
+        if height_str:
+            demo_parts.append(height_str)
+        patient_demographics = ", ".join(demo_parts)
+
         # Set kickoff inputs for tools to access (class variable)
         Aether2.kickoff_inputs = {
             "user_profile": user_profile.model_dump_json(),
-            "focus_areas": focus_areas_results["markdown_output"]
+            "focus_areas": focus_areas_results["markdown_output"],
+            "patient_issues": json.dumps(patient_issues),
+            "user_id": user_id,
+            "patient_demographics": patient_demographics
         }
 
         # Run crew with inputs
         result = Aether2().crew().kickoff(
             inputs={
                 "user_profile": user_profile.model_dump_json(),
-                "focus_areas": focus_areas_results["markdown_output"]
+                "focus_areas": focus_areas_results["markdown_output"],
+                "patient_issues": json.dumps(patient_issues),
+                "patient_demographics": patient_demographics
             }
         )
         print("✅ CrewAI execution completed successfully")

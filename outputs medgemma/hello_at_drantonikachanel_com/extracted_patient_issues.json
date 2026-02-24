@@ -1,0 +1,182 @@
+{
+  "status": "success",
+  "total_issues": 29,
+  "demographics": {
+    "age": 45,
+    "sex": "Female",
+    "ancestry": [
+      "Pacific Islander"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Iron",
+      "status": "high",
+      "value": 102.0,
+      "unit": "mcg/dL"
+    },
+    {
+      "name": "Calcium",
+      "status": "low",
+      "value": 8.4,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "AST:ALT Ratio",
+      "status": "high",
+      "value": 2.93,
+      "unit": "unknown"
+    },
+    {
+      "name": "Total Protein",
+      "status": "high",
+      "value": 7.8,
+      "unit": "g/dL"
+    },
+    {
+      "name": "Triglycerides",
+      "status": "high",
+      "value": 102.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Lp(a)",
+      "status": "high",
+      "value": 25.6,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Bilirubin",
+      "status": "low",
+      "value": 0.1,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 6.1,
+      "unit": "%"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 1.32,
+      "unit": "unknown"
+    },
+    {
+      "name": "25-(OH) Vitamin D",
+      "status": "low",
+      "value": 24.0,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "LDL:HDL Ratio (Calc.)",
+      "status": "high",
+      "value": 2.11,
+      "unit": "ratio"
+    },
+    {
+      "name": "BUN:Creatinine Ratio",
+      "status": "high",
+      "value": 23.18,
+      "unit": "unknown"
+    },
+    {
+      "name": "EAG (Calc.)",
+      "status": "high",
+      "value": 128.37,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "low",
+      "value": 0.4,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Triglyceride:HDL Ratio",
+      "status": "high",
+      "value": 1.88,
+      "unit": "ratio"
+    },
+    {
+      "name": "VLDL (Calculated)",
+      "status": "high",
+      "value": 20.39,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "LH",
+      "status": "high",
+      "value": 32.32,
+      "unit": "mIU/mL"
+    },
+    {
+      "name": "LDL Cholesterol",
+      "status": "high",
+      "value": 113.6,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Aspartate Aminotransferase",
+      "status": "high",
+      "value": 44.0,
+      "unit": "U/L"
+    },
+    {
+      "name": "FSH",
+      "status": "high",
+      "value": 79.64,
+      "unit": "mIU/mL"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "low",
+      "value": 120.4,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [],
+  "allergies": [],
+  "symptoms": [
+    {
+      "type": "headaches",
+      "details": "frequent headaches/migraines"
+    },
+    {
+      "type": "chronic_pain",
+      "details": "chronic pain reported"
+    }
+  ],
+  "digestive": [],
+  "sleep_issues": [
+    "trouble_staying_asleep",
+    "not_waking_refreshed"
+  ],
+  "exposures": {
+    "mold": "2010 lived in an apartment with mold. Had symptoms moved out after 1 year. Used essential oils and TCM",
+    "chemical": null
+  },
+  "hormonal": {
+    "female_concerns": [
+      "menstrual_concerns"
+    ],
+    "concern_details": "I have recently been experiencing severe headaches, joint pain, hot flash, weight gain and broken sleep. I'm feeling very worried about my health and I don't buy insurance. I am looking for a way to get the support I need with out a large out of pocket expense. I'm a veteran and the VA does not cover hormonal health support."
+  },
+  "current_supplements": [],
+  "lifestyle": {
+    "diet": "low_carb_keto,vegetarian",
+    "stress_level": 6,
+    "diet_nutrient_needs": [
+      "B12",
+      "Iron",
+      "Zinc"
+    ]
+  },
+  "dental_health": [
+    "tmj_disorder",
+    "other: no"
+  ],
+  "family_history": [],
+  "childhood_factors": {}
+}

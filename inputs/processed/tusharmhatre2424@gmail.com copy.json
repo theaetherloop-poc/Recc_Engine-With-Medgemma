@@ -1,0 +1,237 @@
+[
+    {
+      "user_full_data": {
+        "metadata": {
+          "email": "tusharmhatre2424@gmail.com",
+          "phase_status": {
+            "id": "6ac17e0f-2dd8-499a-9185-7b44091961de",
+            "user_id": "e5ef349e-ca45-406c-bc80-2a34ca2f4fee",
+            "consult_id": "5755760b-264d-4dfa-8d64-8bd11e050695",
+            "created_at": "2025-11-11T20:54:45.877309+00:00",
+            "updated_at": "2026-02-18T23:21:13.318474+00:00",
+            "phase1_status": "completed",
+            "phase2_status": "completed",
+            "phase3_status": "processing",
+            "phase2_coaching_call": false,
+            "phase2_coaching_recorded_at": "2026-02-16T21:24:26.353+00:00"
+          }
+        },
+        "patient_data": {
+          "phase1_basic_intake": {
+            "allergies": {
+              "has_allergies": false,
+              "known_allergies": []
+            },
+            "medications": {
+              "has_medications": false,
+              "current_medications": []
+            },
+            "supplements": {
+              "has_supplements": false,
+              "current_supplements": []
+            },
+            "demographics": {
+              "age": 26,
+              "ancestry": [
+                "Asian"
+              ],
+              "weight_lbs": 169,
+              "height_feet": 5,
+              "height_inches": 10,
+              "ancestry_other": null,
+              "biological_sex": "Male",
+              "biological_sex_other": null
+            },
+            "medical_history": {
+              "diagnoses": [
+                "kidney_stones_",
+                "tuberculosis_"
+              ],
+              "surgeries": "Covid-19 in 2022",
+              "diagnoses_other": null,
+              "diagnoses_years": {
+                "typhpid_": "2004",
+                "kidney_stones_": "2012"
+              }
+            },
+            "wearable_devices": {
+              "fitbit": false,
+              "oura_ring": false,
+              "apple_watch": false,
+              "other_device": null,
+              "has_any_wearables": false,
+              "google_pixel_watch": false,
+              "samsung_galaxy_watch": false
+            },
+            "complementary_approaches": {
+              "ayurveda": true,
+              "homeopathy": false,
+              "korean_medicine": false,
+              "functional_medicine": true,
+              "selected_approaches": [
+                "functional",
+                "ayurveda"
+              ],
+              "traditional_chinese_medicine": false
+            }
+          },
+          "phase2_detailed_intake": {
+            "pets_animals": {
+              "has_pets": false
+            },
+            "dental_health": {
+              "dental_work": {
+                "implants": 1,
+                "caps_crowns": 0,
+                "root_canals": 0,
+                "gold_fillings": 0,
+                "silver_mercury_fillings": 0
+              },
+              "daily_brush_floss": "brush_only",
+              "removal_timeframe": "2021",
+              "oral_health_issues": {
+                "gingivitis": false,
+                "tooth_pain": false,
+                "tmj_disorder": false,
+                "bleeding_gums": false,
+                "chewing_problems": false,
+                "other_dental_work": null
+              },
+              "mercury_fillings_removed": false
+            },
+            "dietary_habits": {
+              "diet_style": "none",
+              "diet_style_other": null,
+              "eating_out_frequency": "1_2_per_week"
+            },
+            "sleep_patterns": {
+              "hours_category": "6_to_8",
+              "snoring_sleep_apnea": "no",
+              "night_wake_frequency": 2,
+              "trouble_falling_asleep": true,
+              "trouble_staying_asleep": true,
+              "wake_feeling_refreshed": false,
+              "night_urination_frequency": 0
+            },
+            "systems_review": {
+              "digestive_symptoms": "heartburn"
+            },
+            "lifestyle_factors": {
+              "alcohol": {
+                "frequency": "sometimes",
+                "typical_amount": "Two Cans of Beer biweekly"
+              },
+              "tobacco": {
+                "quit_year": "2022",
+                "use_status": "yes",
+                "duration_category": "2_5_years"
+              },
+              "recreational_drugs": {
+                "uses_substances": false,
+                "substance_details": null
+              }
+            },
+            "physical_activity": {
+              "exercise_days_per_week": 2
+            },
+            "sunlight_exposure": {
+              "days_per_week": 7,
+              "average_minutes_per_day": "15 minutes"
+            },
+            "occupation_wellness": {
+              "job_title": "Software Engineer",
+              "work_stress_level": 9
+            },
+            "pain_and_skin_health": {
+              "headaches": {
+                "headache_details": null,
+                "frequent_headaches_migraines": true
+              },
+              "skin_health": {
+                "has_skin_issues": true,
+                "skin_condition_details": null
+              },
+              "chronic_pain": {
+                "pain_details": null,
+                "has_chronic_pain": true
+              }
+            },
+            "childhood_antibiotics": {
+              "took_antibiotics_as_child": false
+            },
+            "childhood_development": {
+              "born_via_c_section": "no",
+              "high_sugar_childhood_diet": "yes"
+            },
+            "family_medical_history": {
+              "conditions_detail": "{\"dialysis\":[\"mother\"],\"diabetes_insulin\":[\"father\"],\"high_blood_pressure\":[\"father\"]}",
+              "has_family_history": true,
+              "other_conditions_text": null
+            },
+            "environmental_exposures": {
+              "mold_details": "Apartment with leaks 2019-21",
+              "mold_exposure": false,
+              "exposure_details": null,
+              "chemical_exposures": "none",
+              "chemical_exposure_other": null
+            },
+            "medication_side_effects": {
+              "reaction_details": "rash",
+              "has_adverse_reactions": false
+            },
+            "reproductive_hormonal_health": {
+              "male_specific": {
+                "concern_details": null,
+                "hormonal_concerns": "no"
+              }
+            }
+          }
+        },
+        "latest_biomarker_results": {
+          "Iron": "94.83 ug/dL",
+          "eGFR": "74.16 mL/min/1.73 m2",
+          "Gender": "Male",
+          "Albumin": "3.78 g/dL",
+          "Calcium": "9.37 mg/dL",
+          "Ferritin": "119.72 ng/mL",
+          "Order ID": 84,
+          "C-Peptide": "2.51 ng/mL",
+          "Test Date": "2025-11-11T20:51:47.051",
+          "Creatinine": "0.88 mg/dL",
+          "AST:ALT Ratio": "0.98 N/A",
+          "Total Protein": "6.54 g/dL",
+          "Triglycerides": "62.01 mg/dL",
+          "HDL Cholesterol": "36 mg/dL",
+          "LDL Cholesterol": "0 mg/dL",
+          "Lipoprotein (a)": "24.21 mg/dL",
+          "Total Bilirubin": "0.67 mg/dL",
+          "% Hemoglobin A1C": "5.21 %",
+          "ApoB:ApoA1 Ratio": "0.32",
+          "Direct Bilirubin": "0.05 mg/dL",
+          "Total Biomarkers": 39,
+          "25-(OH) Vitamin D": "95.89 ng/mL",
+          "Total Cholesterol": "139.73 mg/dL",
+          "% Free Testosterone": "1.38 %",
+          "BUN:Creatinine Ratio": "24.13",
+          "Estim. Avg Glu (eAG)": "102.82 mg/dL",
+          "High-Sensitivity CRP": "0.74 mg/L",
+          "Apolipoprotein B (APOB)": "61.58 mg/dL",
+          "Triglycerides:HDL Ratio": "0.9",
+          "VLDL Cholesterol (Calc)": "12.4 mg/dL",
+          "Apolipoprotein A1 (APOA1)": "191.81 mg/dL",
+          "Blood Urea Nitrogen (BUN)": "21.24 mg/dL",
+          "Free Androgen Index (FAI)": "152.58",
+          "Testosterone, Free (calc)": "11.39 ng/dL",
+          "Testosterone, Total (Males)": "820.1 ng/dL",
+          "Total Cholesterol:HDL Ratio": "5.17",
+          "Calculated Cholesterol, Total": "48.4 mg/dL",
+          "Alanine Aminotransferase (ALT)": "32.33 U/L",
+          "Aspartate Aminotransferase (AST)": "32 U/L",
+          "Thyroid Stimulating Hormone (TSH)": "5.3 uIU/mL",
+          "Sex Hormone-Binding Globulin (SHBG)": "18.65 nmol/L",
+          "Dehydroepiandrosterone Sulfate (DHEA-S)": "496.92 ug/dL",
+          "Unsaturated iron-binding capacity test (UIBC)": "139.75 ug/dL"
+        }
+      }
+    }
+  ]

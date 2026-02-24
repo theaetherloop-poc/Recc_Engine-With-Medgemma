@@ -1,0 +1,64 @@
+{
+  "CM": [
+    "Age:40",
+    "Ancestry:South Asian",
+    "Height:73",
+    "Diagnosis:high_cholesterol",
+    "FamilyHistory:Diabetes Non Insulin",
+    "Tobacco:Quit 1 years ago",
+    "PhysicalActivity:0 days/wk (sedentary)",
+    "SleepHours:Adequate (6-8h)",
+    "SnoringApnea:Yes",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:No"
+  ],
+  "COG": [
+    "TroubleStayingAsleep:No"
+  ],
+  "DTX": [
+    "FamilyHistory:Cancer"
+  ],
+  "IMM": [
+    "Supplement:Vit D3 + K2",
+    "FamilyHistory:Cancer",
+    "Sunlight:(very low)",
+    "SleepHours:Adequate (6-8h)"
+  ],
+  "MITO": [
+    "PhysicalActivity:0 days/wk (sedentary)",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:GI symptoms (brain-gut axis)",
+    "ChronicPain:Physical inactivity"
+  ],
+  "SKN": [],
+  "STR": [
+    "Age:40",
+    "BMI:23.08594483017452",
+    "Diagnosis:claustrophobic",
+    "WorkStress:Stress (high)",
+    "SleepHours:Adequate (6-8h)",
+    "TroubleFallingAsleep:Yes",
+    "TroubleStayingAsleep:No",
+    "WakeFeelingRefreshed:No"
+  ],
+  "HRM": [
+    "Age:40",
+    "Sex:Male",
+    "MaleHormonalHealth:Has hormonal/sexual concerns",
+    "MaleHormonalHealth:Age 40-60 (cardiovascular risk)",
+    "MaleHormonalHealth:Sleep apnea (OSA)"
+  ],
+  "GA": [
+    "Supplement:Probiotics",
+    "ChildhoodAntibiotics:Yes",
+    "SleepHours:Adequate (6-8h)",
+    "Diet:Low-FODMAP",
+    "HighSugarChildhoodDiet:No",
+    "DigestiveSymptoms:Bloating",
+    "DigestiveSymptoms:Heartburn",
+    "DigestiveSymptoms:Diarrhea",
+    "DigestiveSymptoms:Flatulence",
+    "DigestiveSymptoms:Stomach Rumbles",
+    "DigestiveSymptoms:Multi-symptom clustering (\u22655 symptoms)"
+  ]
+}

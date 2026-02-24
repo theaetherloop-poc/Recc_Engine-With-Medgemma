@@ -1,0 +1,88 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Milk Thistle",
+      "recommended_dosage": "140 mg standardized extract (containing 80% silymarin)",
+      "frequency": "twice daily with meals",
+      "focus_area": ["DTX", "IMM"],
+      "why": "The high AST:ALT ratio (3.64) and elevated AST (51) suggest potential liver stress or damage, possibly exacerbated by Celecoxib. Milk thistle is known for its hepatoprotective properties and may help support liver function."
+    },
+    {
+      "ingredient_name": "Omega-3",
+      "recommended_dosage": "2000-4000 mg",
+      "frequency": "once daily with meals",
+      "focus_area": ["IMM", "CM"],
+      "why": "Elevated CRP (3.12) indicates inflammation, consistent with arthritis and fibromyalgia. Omega-3s possess anti-inflammatory properties that can help manage these conditions and potentially improve the high Triglyceride:HDL ratio (1.02)."
+    },
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "5000 IU",
+      "frequency": "once daily with fatty meal",
+      "focus_area": ["GA", "HRM"],
+      "why": "Low Vitamin D (68) and low Calcium (8.7) are present. Vitamin D is crucial for calcium absorption and bone health, especially important given her age and arthritis."
+    },
+    {
+      "ingredient_name": "Magnesium",
+      "recommended_dosage": "200-400 mg",
+      "frequency": "once daily before bedtime",
+      "focus_area": ["STR", "MITO"],
+      "why": "Magnesium deficiency can contribute to muscle pain, sleep disturbances, and high blood pressure. Supplementation may help alleviate fibromyalgia symptoms, improve sleep quality, and support blood pressure management."
+    },
+    {
+      "ingredient_name": "N-Acetyl Cysteine (NAC)",
+      "recommended_dosage": "600-1200 mg",
+      "frequency": "once daily",
+      "focus_area": ["DTX", "IMM"],
+      "why": "The high AST:ALT ratio and elevated AST suggest potential liver stress. NAC is an antioxidant that supports liver detoxification pathways and glutathione production, potentially complementing Milk Thistle."
+    },
+    {
+      "ingredient_name": "Calcium Citrate",
+      "recommended_dosage": "1000-1200 mg",
+      "frequency": "once daily with meals",
+      "focus_area": ["GA", "HRM"],
+      "why": "Low calcium (8.7) needs direct supplementation. Calcium citrate is often better absorbed, especially in older adults or those with potential absorption issues, and works synergistically with Vitamin D."
+    },
+    {
+      "ingredient_name": "Melatonin",
+      "recommended_dosage": "0.5-1 mg",
+      "frequency": "once daily 30-60 minutes before bedtime",
+      "focus_area": ["STR", "COG"],
+      "why": "The patient reports trouble staying asleep, waking once nightly. Melatonin is a hormone that regulates sleep-wake cycles and can help improve sleep quality and duration."
+    },
+    {
+      "ingredient_name": "Berberine",
+      "recommended_dosage": "500 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": ["CM", "IMM"],
+      "why": "The high Triglyceride:HDL ratio (1.02) indicates potential metabolic issues. Berberine has shown promise in improving lipid profiles and insulin sensitivity, addressing this specific biomarker."
+    },
+    {
+      "ingredient_name": "Turmeric",
+      "recommended_dosage": "500-1000 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": ["IMM", "STR"],
+      "why": "High CRP (3.12) and chronic pain from arthritis/fibromyalgia. Turmeric (curcumin) has potent anti-inflammatory effects that can help manage pain and inflammation."
+    },
+    {
+      "ingredient_name": "Vitamin K2",
+      "recommended_dosage": "100-200 mcg",
+      "frequency": "once daily with meals",
+      "focus_area": ["GA", "HRM"],
+      "why": "Low Vitamin D and low Calcium. Vitamin K2 is essential for directing calcium to the bones and away from soft tissues, working synergistically with Vitamin D3 and Calcium Citrate for optimal bone health."
+    },
+    {
+      "ingredient_name": "Selenium",
+      "recommended_dosage": "200 mcg",
+      "frequency": "once daily with meals",
+      "focus_area": ["HRM", "IMM"],
+      "why": "Elevated TSH (3.64) suggests potential thyroid issues, despite Levothyroxine. Selenium is crucial for thyroid hormone metabolism and conversion, potentially supporting thyroid function."
+    },
+    {
+      "ingredient_name": "Zinc",
+      "recommended_dosage": "15-30 mg",
+      "frequency": "once daily with food",
+      "focus_area": ["HRM", "IMM"],
+      "why": "Elevated TSH (3.64) and potential thyroid issues. Zinc is also involved in thyroid hormone metabolism and immune function, complementing Selenium's role in thyroid support."
+    }
+  ]
+}

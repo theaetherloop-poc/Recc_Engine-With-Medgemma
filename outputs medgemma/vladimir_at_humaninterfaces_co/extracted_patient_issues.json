@@ -1,0 +1,158 @@
+{
+  "status": "success",
+  "total_issues": 24,
+  "demographics": {
+    "age": 42,
+    "sex": "Male",
+    "ancestry": [
+      "Caucasian"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Iron",
+      "status": "high",
+      "value": 158.67,
+      "unit": "mcg/dL"
+    },
+    {
+      "name": "AST:ALT Ratio",
+      "status": "high",
+      "value": 2.61,
+      "unit": "unknown"
+    },
+    {
+      "name": "Total Protein",
+      "status": "high",
+      "value": 9.53,
+      "unit": "g/dL"
+    },
+    {
+      "name": "Triglycerides",
+      "status": "high",
+      "value": 168.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "LDL Cholesterol",
+      "status": "high",
+      "value": 127.23,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Lp(a)",
+      "status": "high",
+      "value": 27.04,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Bilirubin",
+      "status": "low",
+      "value": 0.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 5.09,
+      "unit": "%"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 2.16,
+      "unit": "unknown"
+    },
+    {
+      "name": "25-(OH) Vitamin D",
+      "status": "low",
+      "value": 71.11,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "Calculated Total Cholesterol",
+      "status": "high",
+      "value": 232.84,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "BUN:Creatinine Ratio",
+      "status": "high",
+      "value": 23.7,
+      "unit": "unknown"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "low",
+      "value": 0.19,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Apolipoprotein B (APOB)",
+      "status": "low",
+      "value": 58.65,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "VLDL (Calculated)",
+      "status": "high",
+      "value": 33.6,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Apolipoprotein A1 (APOA1)",
+      "status": "low",
+      "value": 113.52,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Blood Urea Nitrogen",
+      "status": "high",
+      "value": 25.13,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "SBHG",
+      "status": "high",
+      "value": 39.64,
+      "unit": "nmol/L"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "low",
+      "value": 4.91,
+      "unit": "mcg/dL"
+    },
+    {
+      "name": "Unsaturated Iron Binding Capacity (UIBC)",
+      "status": "low",
+      "value": 75.18,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [
+    "overactive_thyroid_"
+  ],
+  "allergies": [],
+  "symptoms": [],
+  "digestive": [],
+  "sleep_issues": [
+    "trouble_staying_asleep"
+  ],
+  "exposures": {
+    "mold": null,
+    "chemical": null
+  },
+  "hormonal": {},
+  "current_supplements": [],
+  "lifestyle": {
+    "stress_level": 6
+  },
+  "dental_health": [
+    "root_canals (1)"
+  ],
+  "family_history": [],
+  "childhood_factors": {
+    "childhood_antibiotics": true
+  }
+}

@@ -224,11 +224,10 @@ class BiomarkerEvaluationTool(BaseTool):
         },
 
         "Testosterone, Total (Males)": {
-            "age_20_49": (3.0, 10.8),  # ng/mL
-            "age_40_60": (3.0, 8.9),
-            "age_60_plus": (3.0, 7.2),
-            "hrt_optimal": (700, 1000)  # convert units if necessary
-        },
+            "low": (None, 264),
+            "optimal": (264, 916),
+            "high": (916, None)
+        },  # ng/dL
 
         "Testosterone, Total (Females)": {
             "low": (None, 35),
@@ -237,7 +236,13 @@ class BiomarkerEvaluationTool(BaseTool):
         },
 
         "Free Testosterone": {
-            "male": {"low": (None, 0.047), "optimal": (0.047, 0.244), "high": (0.244, None)}  # ng/mL
+            "male": {"low": (None, 5.0), "optimal": (5.0, 21.0), "high": (21.0, None)},
+            "female": {"low": (None, 0.3), "optimal": (0.3, 1.9), "high": (1.9, None)}
+        },  # ng/dL
+
+        "% Free Testosterone": {
+            "male": {"low": (None, 1.0), "optimal": (1.0, 3.0), "high": (3.0, None)},
+            "female": {"low": (None, 1.0), "optimal": (1.0, 3.0), "high": (3.0, None)}
         },
 
         # ---------------- Thyroid --------------------------------------- #
@@ -315,9 +320,8 @@ class BiomarkerEvaluationTool(BaseTool):
 
         # ---------------- Vitamin / mineral status --------------------- #
         "25-(OH) Vitamin D": {
-            "low": (None, 40),
-            "optimal": ( 80,None),
-            
+            "low": (None, 80),
+            "optimal": (80, None),
         },
 
         "Vitamin B12": {
@@ -497,7 +501,7 @@ class BiomarkerEvaluationTool(BaseTool):
     units: ClassVar[Dict[str, str]] = {
         
         # ... (your entire existing units dictionary remains the same)
-        "Testosterone, Total (Males)": "ng/mL",
+        "Testosterone, Total (Males)": "ng/dL",
         "Ferritin": "ng/mL",
         "25-(OH) Vitamin D": "ng/mL",
         
@@ -537,7 +541,8 @@ class BiomarkerEvaluationTool(BaseTool):
         
         "Estradiol": "pg/mL",
         "Testosterone, Total (Females)": "ng/dL",
-        "Free Testosterone": "ng/mL",
+        "Free Testosterone": "ng/dL",
+        "% Free Testosterone": "%",
         "FSH": "mIU/mL",
         "LH": "mIU/mL",
         
@@ -699,6 +704,7 @@ class BiomarkerEvaluationTool(BaseTool):
         Map blood report biomarker names to the tool's expected names
         """
         name_mapping = {
+            # === Original mappings ===
             "Apolipoprotein A1 (APOA1)": "Apolipoprotein A1 (APOA1)",
             "Apolipoprotein B (APOB)": "Apolipoprotein B (APOB)",
             "Dehydroepiandrosterone Sulfate (DHEA-S)": "Dehydroepiandrosterone Sulfate (DHEA-S)",
@@ -731,14 +737,25 @@ class BiomarkerEvaluationTool(BaseTool):
             "Total Bilirubin": "Bilirubin",
             "Direct Bilirubin": "Bilirubin",  # Map to same as total bilirubin for now
             "BUN:Creatinine Ratio": "BUN:Creatinine Ratio",
-            "% Free Testosterone": "Free Testosterone",  # Map to free testosterone
+            "% Free Testosterone": "% Free Testosterone",  # Percentage-based (separate from absolute Free Testosterone)
             "Estim. Avg Glu (eAG)": "EAG (Calc.)",
             "LDL-C:HDL-C Ratio": "LDL:HDL Ratio (Calc.)",
             "Calculated Cholesterol, Total": "Calculated Total Cholesterol",
             "ApoB:ApoA1 Ratio": "ApoB:ApoA1 Ratio",
             "VLDL Cholesterol (Calc)": "VLDL (Calculated)",
             "AST:ALT Ratio": "AST:ALT Ratio",
-            "LDL-C:ApoB Ratio": "LDL-C:ApoB Ratio"
+            "LDL-C:ApoB Ratio": "LDL-C:ApoB Ratio",
+            
+            # === Added mappings (input names that were missing) ===
+            "Iron Saturation": "Iron Saturation",
+            "Morning Cortisol": "Cortisol",
+            "Daytime Cortisol": "Cortisol",
+            "Alkaline Phosphatase (ALP)": "Alkaline Phosphatase (ALP)",
+            "Calculated LDL-Cholesterol": "LDL Cholesterol",
+            "Testosterone:Cortisol Ratio": "Testosterone:Cortisol Ratio",
+            "Estradiol (Sensitive)": "Estradiol",
+            "Luteinizing Hormone (LH)": "LH",
+            "Follicle-Stimulating Hormone (FSH)": "FSH",
         }
         
         normalized = {}
@@ -754,13 +771,8 @@ class BiomarkerEvaluationTool(BaseTool):
         return normalized
 
     def _select_age_bracket(self, marker: str, age: int, ranges: dict) -> dict:
-        if marker == "Testosterone, Total (Males)":
-            if age < 50:
-                return {"optimal": ranges["age_20_49"]}
-            elif age < 60:
-                return {"optimal": ranges["age_40_60"]}
-            else:
-                return {"optimal": ranges["age_60_plus"]}
+        """Select age-appropriate ranges for biomarkers that have age-based thresholds.
+        Currently no biomarkers use age-based ranges, but method retained for future use."""
         return ranges
 
     def _classify_value(self, value: float, ranges: dict) -> Any:

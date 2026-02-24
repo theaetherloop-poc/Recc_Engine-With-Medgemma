@@ -1,0 +1,205 @@
+{
+  "discovered_ingredients": [
+    {
+      "ingredient_name": "Soy Protein",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol",
+        "high Blood Urea Nitrogen",
+        "low Total Protein"
+      ],
+      "sources": [
+        "PubMed",
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Omega-3 Fatty Acids",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Triglyceride:HDL Ratio",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Oat Beta-Glucan",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Phytosterols",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Red Yeast Rice",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Berberine",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Triglyceride:HDL Ratio"
+      ],
+      "sources": [
+        "PubMed",
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Green Tea",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Plantago (Psyllium)",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Fiber",
+      "reasons": [
+        "high Creatinine",
+        "high Blood Urea Nitrogen",
+        "high LDL Cholesterol"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Calcium",
+      "reasons": [
+        "low Calcium"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Vitamin D",
+      "reasons": [
+        "low Calcium"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Vitamin C",
+      "reasons": [
+        "high Dehydroepiandrosterone Sulfate (DHEA-S)"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Polyphenols",
+      "reasons": [
+        "high Iron"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "6-shogaol",
+      "reasons": [
+        "high Iron"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Probiotics",
+      "reasons": [
+        "high LDL Cholesterol"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Guggul",
+      "reasons": [
+        "high LDL Cholesterol"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Oleoylethanolamide (OEA)",
+      "reasons": [
+        "high Triglyceride:HDL Ratio"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "L-carnitine",
+      "reasons": [
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Whey Protein",
+      "reasons": [
+        "low Total Protein"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Essential Amino Acids (EAA)",
+      "reasons": [
+        "low Total Protein"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    }
+  ]
+}

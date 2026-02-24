@@ -44,6 +44,8 @@ class FamilyHistoryRuleset:
         
         # Process each condition
         for condition_name in conditions_dict.keys():
+            if condition_name is None:
+                continue
             # Normalize condition name (lowercase with underscores)
             normalized_name = self._normalize_condition_name(condition_name)
             

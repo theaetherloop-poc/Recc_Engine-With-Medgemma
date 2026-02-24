@@ -1,0 +1,46 @@
+{
+  "CM": [
+    "BMI:26.0783574687562",
+    "Height:71",
+    "Tobacco:Quit 8 years ago",
+    "PhysicalActivity:2 days/wk (insufficient)",
+    "SleepHours:Adequate (6-8h)",
+    "SnoringApnea:Yes",
+    "Diet:Low-carb/keto",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:No"
+  ],
+  "COG": [
+    "TroubleFallingAsleep:No",
+    "TroubleStayingAsleep:No"
+  ],
+  "DTX": [
+    "Tobacco:Quit 8 years ago"
+  ],
+  "IMM": [
+    "Sunlight:(very low)",
+    "SleepHours:Adequate (6-8h)",
+    "MoldExposure:Mold exposure (inflammatory/respiratory effects)"
+  ],
+  "MITO": [
+    "PhysicalActivity:2 days/wk (insufficient)"
+  ],
+  "SKN": [],
+  "STR": [
+    "Age:28",
+    "WorkStress:Stress (high)",
+    "SleepHours:Adequate (6-8h)",
+    "TroubleFallingAsleep:No",
+    "TroubleStayingAsleep:No",
+    "WakeFeelingRefreshed:No"
+  ],
+  "HRM": [
+    "Sex:Male"
+  ],
+  "GA": [
+    "Ancestry:Caucasian, Middle Eastern",
+    "ChildhoodAntibiotics:Yes",
+    "SleepHours:Adequate (6-8h)",
+    "HighSugarChildhoodDiet:No"
+  ]
+}

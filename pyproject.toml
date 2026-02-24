@@ -13,6 +13,7 @@ dependencies = [
     "torch>=1.9.0",
     "requests>=2.25.0",
     "google-cloud-secret-manager>=2.16.0",
+    "google-cloud-aiplatform>=1.30.0",
 ]
 
 [project.scripts]

@@ -1,0 +1,64 @@
+{
+  "final_recommendations": [
+    {
+      "ingredient_name": "Magnesium",
+      "rank": 1,
+      "why": "Addresses multiple issues: low SBHG (sex hormone binding globulin), high DHEA-S (stress hormone), kidney stones, headaches/migraines, chronic pain, and sleep disturbances. Magnesium plays a crucial role in nerve function, muscle relaxation, and stress response regulation."
+    },
+    {
+      "ingredient_name": "Zinc",
+      "rank": 2,
+      "why": "Supports immune function (history of TB), addresses skin issues, and may help regulate TSH (thyroid stimulating hormone) which is slightly elevated. Zinc is also involved in hormone regulation, potentially impacting the low SBHG."
+    },
+    {
+      "ingredient_name": "Omega-3 Fatty Acids",
+      "rank": 3,
+      "why": "Addresses the dyslipidemia profile (low HDL, low LDL, low Total Cholesterol, low Triglycerides, high Total Cholesterol:HDL ratio, high Lp(a)). Omega-3s can improve lipid profiles and reduce inflammation (indicated by high-sensitivity CRP)."
+    },
+    {
+      "ingredient_name": "Vitamin C",
+      "rank": 4,
+      "why": "Supports immune function (history of TB), addresses skin issues, and may help lower Lp(a) levels. It's also an antioxidant that can help mitigate oxidative stress potentially related to chronic pain and high stress."
+    },
+    {
+      "ingredient_name": "Milk Thistle",
+      "rank": 5,
+      "why": "Supports liver health, potentially addressing the low AST:ALT ratio and low bilirubin. Given the history of mold exposure and potential kidney issues (high BUN:Creatinine ratio), liver support is important for detoxification pathways."
+    },
+    {
+      "ingredient_name": "Hydrolyzed Collagen",
+      "rank": 6,
+      "why": "Addresses low albumin and total protein levels, which can indicate poor nutritional status or inflammation. Collagen supports tissue repair and may benefit skin health."
+    },
+    {
+      "ingredient_name": "Ashwagandha",
+      "rank": 7,
+      "why": "Directly targets the high stress levels (9/10) reported. Ashwagandha is an adaptogen known to help the body manage stress and improve sleep quality, potentially alleviating sleep disturbances."
+    },
+    {
+      "ingredient_name": "L-Theanine",
+      "rank": 8,
+      "why": "Complements Ashwagandha by promoting relaxation and improving sleep quality without sedation. It can help manage high stress and improve focus, beneficial for a software engineer."
+    },
+    {
+      "ingredient_name": "Vitamin B6",
+      "rank": 9,
+      "why": "Addresses low SBHG and high DHEA-S, potentially helping regulate hormone balance. It's also involved in neurotransmitter synthesis, which could benefit mood and sleep."
+    },
+    {
+      "ingredient_name": "Potassium Citrate",
+      "rank": 10,
+      "why": "Directly addresses the history of kidney stones by helping to alkalinize urine and prevent calcium oxalate stone formation."
+    },
+    {
+      "ingredient_name": "Riboflavin (Vitamin B2)",
+      "rank": 11,
+      "why": "May help reduce the frequency and severity of migraines/headaches, a significant symptom for this user. It plays a role in cellular energy production and antioxidant defense."
+    },
+    {
+      "ingredient_name": "Alpha-Lipoic Acid",
+      "rank": 12,
+      "why": "Supports liver function (low AST:ALT ratio) and may help with kidney health (high BUN:Creatinine ratio). It's also a potent antioxidant that can help manage chronic pain and inflammation."
+    }
+  ]
+}

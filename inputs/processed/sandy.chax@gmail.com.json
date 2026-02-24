@@ -1,0 +1,289 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "sandy.chax@gmail.com",
+        "phase_status": {
+          "id": "bca27cfd-611a-4879-99a4-613030df860c",
+          "user_id": "ac106f09-4f42-4626-8878-246acf86d1e0",
+          "consult_id": "143fa4ad-ebd6-433c-83d8-3509349f0782",
+          "created_at": "2025-09-04T07:36:47.04415+00:00",
+          "updated_at": "2026-02-19T18:11:58.158853+00:00",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending",
+          "phase2_coaching_call": null,
+          "phase2_coaching_recorded_at": null
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": false,
+            "current_medications": []
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "4200",
+                "name": "Vit C",
+                "purpose": null,
+                "frequency": "Daily"
+              },
+              {
+                "dose": null,
+                "name": "Vit B complex",
+                "purpose": null,
+                "frequency": "Daily"
+              },
+              {
+                "dose": null,
+                "name": "Potassium",
+                "purpose": null,
+                "frequency": "Daily"
+              },
+              {
+                "dose": null,
+                "name": "Methylated mult-vitamin",
+                "purpose": null,
+                "frequency": "Daily"
+              },
+              {
+                "dose": null,
+                "name": "Iodine",
+                "purpose": null,
+                "frequency": "Daily"
+              },
+              {
+                "dose": null,
+                "name": "Vit D3 + K2",
+                "purpose": null,
+                "frequency": "Daily"
+              },
+              {
+                "dose": null,
+                "name": "Probiotics",
+                "purpose": null,
+                "frequency": "Daily"
+              },
+              {
+                "dose": "500mg",
+                "name": "L-Tryptophan",
+                "purpose": null,
+                "frequency": "Daily"
+              },
+              {
+                "dose": null,
+                "name": "Magnesium Chloride",
+                "purpose": null,
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 40,
+            "ancestry": [
+              "South Asian"
+            ],
+            "weight_lbs": 175,
+            "height_feet": 6,
+            "height_inches": 1,
+            "ancestry_other": null,
+            "biological_sex": "Male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "claustrophobic_",
+              "high_cholesterol_",
+              "other"
+            ],
+            "surgeries": "None",
+            "diagnoses_other": "IBS",
+            "diagnoses_years": {
+              "claustrophobic_": "1995",
+              "high_cholesterol_": "2024"
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": false,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": true,
+            "homeopathy": true,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "functional",
+              "ayurveda",
+              "homeopathy"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 0,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 2
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "oral_health_issues": {
+              "gingivitis": false,
+              "tooth_pain": false,
+              "tmj_disorder": false,
+              "bleeding_gums": true,
+              "chewing_problems": false,
+              "other_dental_work": null
+            },
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "elimination_low_fodmap",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "yes",
+            "night_wake_frequency": null,
+            "trouble_falling_asleep": true,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": null
+          },
+          "systems_review": {
+            "digestive_symptoms": "bloating,heartburn,diarrhea,flatulence,stomach_rumbles"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "never",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": "2025",
+              "use_status": "quit",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 0
+          },
+          "sunlight_exposure": {
+            "days_per_week": 1,
+            "average_minutes_per_day": "10 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Software Developer",
+            "work_stress_level": 9
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "no"
+          },
+          "family_medical_history": {
+            "conditions_detail": {
+              "cancer": [
+                "mother"
+              ],
+              "diabetes_non_insulin": [
+                "grand-parent"
+              ]
+            },
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_details": null,
+            "mold_exposure": false,
+            "exposure_details": "none",
+            "chemical_exposures": "none",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": null,
+              "hormonal_concerns": "yes"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "Male",
+        "Albumin": "3.8 g/dL",
+        "Order ID": 36,
+        "C-Peptide": "1.32 ng/mL",
+        "Test Date": "2026-02-05T20:08:49.151",
+        "Triglycerides": "132 mg/dL",
+        "HDL Cholesterol": "50 mg/dL",
+        "% Hemoglobin A1C": "6.1 %",
+        "ApoB:ApoA1 Ratio": "0.85",
+        "Daytime Cortisol": "6 ug/dL",
+        "LDL-C:ApoB Ratio": "1.19",
+        "Total Biomarkers": 26,
+        "25-(OH) Vitamin D": "58.4 ng/mL",
+        "LDL-C:HDL-C Ratio": "2.91",
+        "Cholesterol, Total": "222 mg/dL",
+        "% Free Testosterone": "3.4 %",
+        "Estim. Avg Glu (eAG)": "128.37 mg/dL",
+        "High-Sensitivity CRP": "20 mg/L",
+        "Apolipoprotein B (APOB)": "122 mg/dL",
+        "Triglycerides:HDL Ratio": "2.64",
+        "VLDL Cholesterol (Calc)": "26.4 mg/dL",
+        "Apolipoprotein A1 (APOA1)": "142 mg/dL",
+        "Free Androgen Index (FAI)": "77.11",
+        "Testosterone, Free (calc)": "8.32 ng/dL",
+        "Calculated LDL-Cholesterol": "145.6 mg/dL",
+        "Testosterone, Total (Males)": "244.44 ng/dL",
+        "Testosterone:Cortisol Ratio": "0.04",
+        "Total Cholesterol:HDL Ratio": "4.44",
+        "Sex Hormone-Binding Globulin (SHBG)": "11 nmol/L",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "360.4 ug/dL"
+      }
+    }
+  }
+]

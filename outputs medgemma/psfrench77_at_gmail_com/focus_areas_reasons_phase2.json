@@ -1,0 +1,82 @@
+{
+  "CM": [
+    "Age:77",
+    "BMI:27.454018644494834",
+    "Height:63",
+    "Diagnosis:high_blood_pressure",
+    "FamilyHistory:Diabetes Insulin",
+    "FamilyHistory:High Cholesterol",
+    "FamilyHistory:High Blood Pressure",
+    "PhysicalActivity:3 days/wk (adequate)",
+    "SleepHours:Restorative (8-10h)",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:Yes"
+  ],
+  "COG": [
+    "FamilyHistory:Stroke",
+    "FamilyHistory:Claustrophobic",
+    "WakeFeelingRefreshed:Yes",
+    "SnoringApnea:No"
+  ],
+  "DTX": [
+    "Medication:Losartn HCTZ",
+    "Supplement:Curcumin",
+    "Supplement:turmeric",
+    "FamilyHistory:Cancer",
+    "MedSideEffect:codeine makes me nauseous; cephalexin gave me palpitations",
+    "Tobacco:Quit 31 years ago",
+    "Alcohol:Consumption (low)",
+    "RecDrugs:Unspecified substance"
+  ],
+  "IMM": [
+    "FamilyHistory:Asthma",
+    "FamilyHistory:Cancer",
+    "FamilyHistory:Diabetes Insulin",
+    "Tobacco:Quit 31 years ago",
+    "Sunlight:(low), shift work",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:Regular NSAID use",
+    "ChronicPain:less Sleep multiplier",
+    "ChronicPain:Inflammatory arthritis",
+    "ChronicPain:Fibromyalgia pattern",
+    "PetsAnimals:Has pets (antigen exposure, microbiota shifts)"
+  ],
+  "MITO": [
+    "Diagnosis:arthritis",
+    "Medication:Losartn HCTZ",
+    "FamilyHistory:Arthritis",
+    "PhysicalActivity:3 days/wk (adequate)",
+    "WakeFeelingRefreshed:Yes"
+  ],
+  "SKN": [],
+  "STR": [
+    "Diagnosis:arthritis",
+    "Diagnosis:fibromyalgia",
+    "FamilyHistory:Claustrophobic",
+    "RecDrugs:Unspecified substance",
+    "TroubleFallingAsleep:No",
+    "TroubleStayingAsleep:Yes (1x/night)",
+    "WakeFeelingRefreshed:Yes",
+    "SnoringApnea:No",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:Regular NSAID use",
+    "ChronicPain:less Sleep multiplier",
+    "ChronicPain:Inflammatory arthritis",
+    "ChronicPain:Fibromyalgia pattern"
+  ],
+  "HRM": [
+    "Sex:Female",
+    "Diagnosis:overactive_thyroid",
+    "Medication:Levothyroxine",
+    "FamilyHistory:Overactive Thyroid"
+  ],
+  "GA": [
+    "Ancestry:Caucasian",
+    "Surgery:gastric bypass",
+    "Medication:Celecoxib",
+    "ChildhoodAntibiotics:Yes",
+    "WorkStress:Stress (low), shift work",
+    "Diet:Gluten-free",
+    "Diet:Other: healthy - no packaged foods (rarely anyway)"
+  ]
+}

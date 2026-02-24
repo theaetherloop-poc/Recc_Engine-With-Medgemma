@@ -1,0 +1,212 @@
+{
+  "status": "success",
+  "total_issues": 34,
+  "demographics": {
+    "age": 40,
+    "sex": "Male",
+    "ancestry": [
+      "South Asian"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Albumin",
+      "status": "low",
+      "value": 3.8,
+      "unit": "g/dL"
+    },
+    {
+      "name": "Triglycerides",
+      "status": "high",
+      "value": 132.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 6.1,
+      "unit": "%"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 1.19,
+      "unit": "unknown"
+    },
+    {
+      "name": "25-(OH) Vitamin D",
+      "status": "low",
+      "value": 58.4,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "LDL:HDL Ratio (Calc.)",
+      "status": "high",
+      "value": 2.91,
+      "unit": "ratio"
+    },
+    {
+      "name": "% Free Testosterone",
+      "status": "high",
+      "value": 3.4,
+      "unit": "%"
+    },
+    {
+      "name": "EAG (Calc.)",
+      "status": "high",
+      "value": 128.37,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "high",
+      "value": 20.0,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Triglyceride:HDL Ratio",
+      "status": "high",
+      "value": 2.64,
+      "unit": "ratio"
+    },
+    {
+      "name": "VLDL (Calculated)",
+      "status": "high",
+      "value": 26.4,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "LDL Cholesterol",
+      "status": "high",
+      "value": 145.6,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Testosterone, Total (Males)",
+      "status": "low",
+      "value": 244.44,
+      "unit": "ng/dL"
+    },
+    {
+      "name": "Total Cholesterol:HDL Ratio",
+      "status": "high",
+      "value": 4.44,
+      "unit": "ratio"
+    },
+    {
+      "name": "SBHG",
+      "status": "low",
+      "value": 11.0,
+      "unit": "nmol/L"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "high",
+      "value": 360.4,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [
+    "claustrophobic_",
+    "high_cholesterol_",
+    "IBS"
+  ],
+  "allergies": [],
+  "symptoms": [
+    {
+      "type": "chronic_pain",
+      "details": "chronic pain reported"
+    }
+  ],
+  "digestive": [
+    "bloating",
+    "heartburn",
+    "diarrhea",
+    "flatulence",
+    "stomach_rumbles"
+  ],
+  "sleep_issues": [
+    "trouble_falling_asleep",
+    "not_waking_refreshed",
+    "snoring_or_sleep_apnea"
+  ],
+  "exposures": {
+    "mold": null,
+    "chemical": null
+  },
+  "hormonal": {
+    "male_concerns": "hormonal concerns reported"
+  },
+  "current_supplements": [
+    {
+      "name": "Vit C",
+      "dose": "4200",
+      "frequency": "Daily",
+      "purpose": null
+    },
+    {
+      "name": "Vit B complex",
+      "dose": null,
+      "frequency": "Daily",
+      "purpose": null
+    },
+    {
+      "name": "Potassium",
+      "dose": null,
+      "frequency": "Daily",
+      "purpose": null
+    },
+    {
+      "name": "Methylated mult-vitamin",
+      "dose": null,
+      "frequency": "Daily",
+      "purpose": null
+    },
+    {
+      "name": "Iodine",
+      "dose": null,
+      "frequency": "Daily",
+      "purpose": null
+    },
+    {
+      "name": "Vit D3 + K2",
+      "dose": null,
+      "frequency": "Daily",
+      "purpose": null
+    },
+    {
+      "name": "Probiotics",
+      "dose": null,
+      "frequency": "Daily",
+      "purpose": null
+    },
+    {
+      "name": "L-Tryptophan",
+      "dose": "500mg",
+      "frequency": "Daily",
+      "purpose": null
+    },
+    {
+      "name": "Magnesium Chloride",
+      "dose": null,
+      "frequency": "Daily",
+      "purpose": null
+    }
+  ],
+  "lifestyle": {
+    "diet": "elimination_low_fodmap",
+    "stress_level": 9,
+    "high_stress": true
+  },
+  "dental_health": [
+    "mercury_fillings (2)",
+    "bleeding_gums"
+  ],
+  "family_history": [
+    "cancer (mother)",
+    "diabetes_non_insulin (grand-parent)"
+  ],
+  "childhood_factors": {
+    "childhood_antibiotics": true
+  }
+}

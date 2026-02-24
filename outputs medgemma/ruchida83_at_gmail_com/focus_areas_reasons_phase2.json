@@ -1,0 +1,70 @@
+{
+  "CM": [
+    "Age:42",
+    "BMI:29.682222222222222",
+    "Height:60",
+    "FamilyHistory:Heart Attack",
+    "FamilyHistory:High Blood Pressure",
+    "PhysicalActivity:0 days/wk (sedentary)",
+    "SleepHours:Adequate (6-8h)",
+    "SnoringApnea:Yes",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:Yes"
+  ],
+  "COG": [
+    "Medication:Sertraline",
+    "RecDrugs:Cannabis (occasional, other route)",
+    "WakeFeelingRefreshed:Yes"
+  ],
+  "DTX": [
+    "FamilyHistory:Cancer",
+    "Alcohol:Consumption (low)"
+  ],
+  "IMM": [
+    "Supplement:Vit D",
+    "FamilyHistory:Cancer",
+    "Sunlight:(low)",
+    "SleepHours:Adequate (6-8h)",
+    "PetsAnimals:Has pets (antigen exposure, microbiota shifts)"
+  ],
+  "MITO": [
+    "PhysicalActivity:0 days/wk (sedentary)",
+    "WakeFeelingRefreshed:Yes",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:GI symptoms (brain-gut axis)",
+    "ChronicPain:less Sleep multiplier",
+    "ChronicPain:Physical inactivity"
+  ],
+  "SKN": [
+    "SkinHealth:Has skin issues"
+  ],
+  "STR": [
+    "Age:42",
+    "Diagnosis:anxiety_disorder",
+    "Medication:Sertraline",
+    "FamilyHistory:Anxiety Disorder",
+    "RecDrugs:Cannabis (occasional, other route)",
+    "WorkStress:Stress (high)",
+    "SleepHours:Adequate (6-8h)",
+    "TroubleFallingAsleep:Yes",
+    "TroubleStayingAsleep:Yes (1x/night)",
+    "WakeFeelingRefreshed:Yes",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:GI symptoms (brain-gut axis)",
+    "ChronicPain:less Sleep multiplier",
+    "ChronicPain:Physical inactivity",
+    "Headache:Frequent headaches/migraines"
+  ],
+  "HRM": [
+    "Age:42",
+    "Sex:Female",
+    "Surgery:Hysterectomy 2023",
+    "FamilyHistory:Osteoporosis"
+  ],
+  "GA": [
+    "Ancestry:Asian, Caucasian",
+    "ChildhoodAntibiotics:Yes",
+    "SleepHours:Adequate (6-8h)",
+    "DigestiveSymptoms:Diarrhea"
+  ]
+}

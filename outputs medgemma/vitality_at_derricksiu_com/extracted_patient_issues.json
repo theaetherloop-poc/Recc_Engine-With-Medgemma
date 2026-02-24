@@ -1,0 +1,142 @@
+{
+  "status": "success",
+  "total_issues": 26,
+  "demographics": {
+    "age": 52,
+    "sex": "Male",
+    "ancestry": [
+      "Asian"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Triglycerides",
+      "status": "low",
+      "value": 58.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HDL Cholesterol",
+      "status": "low",
+      "value": 34.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Lp(a)",
+      "status": "high",
+      "value": 24.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 5.6,
+      "unit": "%"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 1.17,
+      "unit": "unknown"
+    },
+    {
+      "name": "25-(OH) Vitamin D",
+      "status": "low",
+      "value": 25.8,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "LDL:HDL Ratio (Calc.)",
+      "status": "high",
+      "value": 3.6,
+      "unit": "ratio"
+    },
+    {
+      "name": "EAG (Calc.)",
+      "status": "high",
+      "value": 114.02,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "low",
+      "value": 1.0,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Triglyceride:HDL Ratio",
+      "status": "high",
+      "value": 1.7,
+      "unit": "ratio"
+    },
+    {
+      "name": "Apolipoprotein A1 (APOA1)",
+      "status": "low",
+      "value": 98.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "LDL Cholesterol",
+      "status": "high",
+      "value": 122.4,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Total Cholesterol:HDL Ratio",
+      "status": "high",
+      "value": 4.94,
+      "unit": "ratio"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "low",
+      "value": 138.2,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [
+    "asthma_",
+    "hypersensiviity / allergies"
+  ],
+  "allergies": [
+    {
+      "allergen": "other",
+      "reaction": "itchy skin, sneezing, "
+    }
+  ],
+  "symptoms": [],
+  "digestive": [],
+  "sleep_issues": [],
+  "exposures": {
+    "mold": null,
+    "chemical": null
+  },
+  "hormonal": {},
+  "current_supplements": [
+    {
+      "name": "Agemate (Longevity Blend) ",
+      "dose": null,
+      "frequency": "1/day (but havent taken for over a month) ",
+      "purpose": null
+    }
+  ],
+  "lifestyle": {
+    "stress_level": 7,
+    "high_stress": true
+  },
+  "dental_health": [
+    "root_canals (1)",
+    "other: Borken Molar that needs tot be removed."
+  ],
+  "family_history": [
+    "asthma (sister)",
+    "cancer (grand-parent)",
+    "arthritis (mother)",
+    "high_cholesterol (grand-parent, mother, father)",
+    "high_blood_pressure (grand-parent)",
+    "diabetes_non_insulin (grand-parent)"
+  ],
+  "childhood_factors": {
+    "childhood_antibiotics": true
+  }
+}

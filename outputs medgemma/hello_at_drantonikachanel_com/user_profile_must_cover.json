@@ -1,0 +1,42 @@
+{
+  "patient_id": "unknown",
+  "age": 45,
+  "sex": "female",
+  "biomarker_issues": [
+    "Iron (high)",
+    "Calcium (low)",
+    "AST:ALT Ratio (high)",
+    "Total Protein (high)",
+    "Triglycerides (high)",
+    "Lp(a) (high)",
+    "Bilirubin (low)",
+    "HbA1c (high)",
+    "LDL-C:ApoB Ratio (low)",
+    "25-(OH) Vitamin D (low)",
+    "LDL:HDL Ratio (Calc.) (high)",
+    "BUN:Creatinine Ratio (high)",
+    "EAG (Calc.) (high)",
+    "High-Sensitivity CRP (low)",
+    "Triglyceride:HDL Ratio (high)",
+    "VLDL (Calculated) (high)",
+    "LH (high)",
+    "LDL Cholesterol (high)",
+    "Aspartate Aminotransferase (high)",
+    "FSH (high)",
+    "Dehydroepiandrosterone Sulfate (DHEA-S) (low)"
+  ],
+  "other_problems": [
+    "Frequent headaches/migraines",
+    "Chronic pain",
+    "Trouble staying asleep",
+    "Unrefreshing sleep",
+    "TMJ disorder",
+    "High stress (level 6)",
+    "Diet: low_carb_keto,vegetarian",
+    "Menstrual concerns",
+    "Menopause/perimenopause",
+    "Mold exposure"
+  ],
+  "safety_constraints": [],
+  "total": 31
+}

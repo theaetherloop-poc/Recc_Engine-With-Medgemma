@@ -1,0 +1,262 @@
+[
+    {
+      "user_full_data": {
+        "metadata": {
+          "email": "vladimir@humaninterfaces.co",
+          "phase_status": {
+            "id": "9b753fde-fba8-49ef-b762-7a73f0ffa590",
+            "user_id": "bafcc35f-9c6f-4909-9a9e-00e1f1eb69c7",
+            "consult_id": "8653f126-86a2-44a0-8ca1-bddccf9842a4",
+            "created_at": "2025-10-20T21:06:24.312961+00:00",
+            "updated_at": "2026-02-01T08:47:33.537202+00:00",
+            "phase1_status": "completed",
+            "phase2_status": "completed",
+            "phase3_status": "pending",
+            "phase2_coaching_call": true,
+            "phase2_coaching_recorded_at": "2026-01-21T06:26:06.233+00:00"
+          }
+        },
+        "patient_data": {
+          "phase1_basic_intake": {
+            "allergies": {
+              "has_allergies": false,
+              "known_allergies": []
+            },
+            "medications": {
+              "has_medications": true,
+              "current_medications": [
+                {
+                  "dose": "88mcg",
+                  "name": "Synthroid",
+                  "purpose": "Hashimoto",
+                  "frequency": "daily"
+                },
+                {
+                  "dose": "1000mg",
+                  "name": "Vitamin B12",
+                  "purpose": "Hashimoto",
+                  "frequency": "daily"
+                },
+                {
+                  "dose": "2000 UI",
+                  "name": "Vitamin D3",
+                  "purpose": "Hashimoto",
+                  "frequency": "daily"
+                },
+                {
+                  "dose": "200mcg",
+                  "name": "Selenium",
+                  "purpose": "Hashimoto",
+                  "frequency": "daily"
+                }
+              ]
+            },
+            "supplements": {
+              "has_supplements": false,
+              "current_supplements": []
+            },
+            "demographics": {
+              "age": 42,
+              "ancestry": [
+                "Caucasian"
+              ],
+              "weight_lbs": 220,
+              "height_feet": 6,
+              "height_inches": 3,
+              "ancestry_other": null,
+              "biological_sex": "Male",
+              "biological_sex_other": null
+            },
+            "medical_history": {
+              "diagnoses": [
+                "overactive_thyroid_"
+              ],
+              "surgeries": "No",
+              "diagnoses_other": null,
+              "diagnoses_years": {
+                "overactive_thyroid_": "2004"
+              }
+            },
+            "wearable_devices": {
+              "fitbit": false,
+              "oura_ring": false,
+              "apple_watch": false,
+              "other_device": null,
+              "has_any_wearables": true,
+              "google_pixel_watch": false,
+              "samsung_galaxy_watch": true
+            },
+            "complementary_approaches": {
+              "ayurveda": false,
+              "homeopathy": false,
+              "korean_medicine": false,
+              "functional_medicine": true,
+              "selected_approaches": [
+                "functional"
+              ],
+              "traditional_chinese_medicine": false
+            }
+          },
+          "phase2_detailed_intake": {
+            "pets_animals": {
+              "has_pets": true
+            },
+            "dental_health": {
+              "dental_work": {
+                "implants": 0,
+                "caps_crowns": 0,
+                "root_canals": 1,
+                "gold_fillings": 0,
+                "silver_mercury_fillings": 0
+              },
+              "daily_brush_floss": "both_daily",
+              "removal_timeframe": null,
+              "oral_health_issues": {
+                "gingivitis": false,
+                "tooth_pain": false,
+                "tmj_disorder": false,
+                "bleeding_gums": false,
+                "chewing_problems": false,
+                "other_dental_work": null
+              },
+              "mercury_fillings_removed": false
+            },
+            "dietary_habits": {
+              "diet_style": "none",
+              "diet_style_other": null,
+              "eating_out_frequency": "1_2_per_week"
+            },
+            "sleep_patterns": {
+              "hours_category": "6_to_8",
+              "snoring_sleep_apnea": "no",
+              "night_wake_frequency": 1,
+              "trouble_falling_asleep": false,
+              "trouble_staying_asleep": true,
+              "wake_feeling_refreshed": true,
+              "night_urination_frequency": 1
+            },
+            "systems_review": {
+              "digestive_symptoms": "none"
+            },
+            "lifestyle_factors": {
+              "alcohol": {
+                "frequency": "rarely",
+                "typical_amount": "once a week one  glass."
+              },
+              "tobacco": {
+                "quit_year": null,
+                "use_status": "never",
+                "duration_category": null
+              },
+              "recreational_drugs": {
+                "uses_substances": false,
+                "substance_details": null
+              }
+            },
+            "physical_activity": {
+              "exercise_days_per_week": 3
+            },
+            "sunlight_exposure": {
+              "days_per_week": 7,
+              "average_minutes_per_day": "20"
+            },
+            "occupation_wellness": {
+              "job_title": "Software Engineer",
+              "work_stress_level": 6
+            },
+            "pain_and_skin_health": {
+              "headaches": {
+                "headache_details": null,
+                "frequent_headaches_migraines": false
+              },
+              "skin_health": {
+                "has_skin_issues": false,
+                "skin_condition_details": null
+              },
+              "chronic_pain": {
+                "pain_details": null,
+                "has_chronic_pain": false
+              }
+            },
+            "childhood_antibiotics": {
+              "took_antibiotics_as_child": true
+            },
+            "childhood_development": {
+              "born_via_c_section": "no",
+              "high_sugar_childhood_diet": "no"
+            },
+            "family_medical_history": {
+              "conditions_detail": null,
+              "has_family_history": false,
+              "other_conditions_text": null
+            },
+            "environmental_exposures": {
+              "mold_details": null,
+              "mold_exposure": false,
+              "exposure_details": "none",
+              "chemical_exposures": "none",
+              "chemical_exposure_other": null
+            },
+            "medication_side_effects": {
+              "reaction_details": null,
+              "has_adverse_reactions": false
+            },
+            "reproductive_hormonal_health": {
+              "male_specific": {
+                "concern_details": null,
+                "hormonal_concerns": "no"
+              },
+              "female_specific": null
+            }
+          }
+        },
+        "latest_biomarker_results": {
+          "Iron": "158.67 ug/dL",
+          "eGFR": "113.43 mL/min/1.73 m2",
+          "Gender": "Male",
+          "Albumin": "4.35 g/dL",
+          "Calcium": "9.56 mg/dL",
+          "Ferritin": "142.29 ng/mL",
+          "Order ID": 69,
+          "C-Peptide": "1.11 ng/mL",
+          "Test Date": "2025-10-22T02:40:18.808",
+          "Creatinine": "1.06 mg/dL",
+          "AST:ALT Ratio": "2.61 N/A",
+          "Total Protein": "9.53 g/dL",
+          "Triglycerides": "168 mg/dL",
+          "HDL Cholesterol": "72.01 mg/dL",
+          "LDL Cholesterol": "127.23 mg/dL",
+          "Lipoprotein (a)": "27.04 mg/dL",
+          "Total Bilirubin": "0.97 mg/dL",
+          "% Hemoglobin A1C": "5.09 %",
+          "ApoB:ApoA1 Ratio": "0.51",
+          "Direct Bilirubin": "0 mg/dL",
+          "LDL-C:ApoB Ratio": "2.16",
+          "Total Biomarkers": 41,
+          "25-(OH) Vitamin D": "71.11 ng/mL",
+          "LDL-C:HDL-C Ratio": "1.76",
+          "Total Cholesterol": "181.3 mg/dL",
+          "% Free Testosterone": "1.42 %",
+          "BUN:Creatinine Ratio": "23.7",
+          "Estim. Avg Glu (eAG)": "99.38 mg/dL",
+          "High-Sensitivity CRP": "0.19 mg/L",
+          "Apolipoprotein B (APOB)": "58.65 mg/dL",
+          "Triglycerides:HDL Ratio": "0.11",
+          "VLDL Cholesterol (Calc)": "33.6 mg/dL",
+          "Apolipoprotein A1 (APOA1)": "113.52 mg/dL",
+          "Blood Urea Nitrogen (BUN)": "25.13 mg/dL",
+          "Free Androgen Index (FAI)": "65.65",
+          "Testosterone, Free (calc)": "10.72 ng/dL",
+          "Testosterone, Total (Males)": "749.99 ng/dL",
+          "Total Cholesterol:HDL Ratio": "0.71",
+          "Calculated Cholesterol, Total": "232.84 mg/dL",
+          "Alanine Aminotransferase (ALT)": "11.55 U/L",
+          "Aspartate Aminotransferase (AST)": "30.18 U/L",
+          "Thyroid Stimulating Hormone (TSH)": "1.46 uIU/mL",
+          "Sex Hormone-Binding Globulin (SHBG)": "39.64 nmol/L",
+          "Dehydroepiandrosterone Sulfate (DHEA-S)": "4.91 ug/dL",
+          "Unsaturated iron-binding capacity test (UIBC)": "75.18 ug/dL"
+        }
+      }
+    }
+  ]

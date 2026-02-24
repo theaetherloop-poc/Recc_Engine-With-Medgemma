@@ -1,0 +1,265 @@
+[
+    {
+        "user_full_data": {
+            "metadata": {
+                "email": "test_user11@example.com",
+                "phase_status": {
+                    "id": "c1d2e3f4-a5b6-4919-c012-345678901234",
+                    "user_id": "d2e3f4a5-b6c7-4920-d123-456789012345",
+                    "created_at": "2024-02-18T11:50:15Z",
+                    "updated_at": "2024-03-03T09:25:40Z",
+                    "phase1_status": "completed",
+                    "phase2_status": "completed",
+                    "phase3_status": "pending"
+                }
+            },
+            "patient_data": {
+                "phase1_basic_intake": {
+                    "allergies": {
+                        "has_allergies": true,
+                        "known_allergies": [
+                            {
+                                "allergen": "eggs",
+                                "reaction": "Hives and gastrointestinal discomfort",
+                                "allergen_other": null
+                            },
+                            {
+                                "allergen": "dairy",
+                                "reaction": "Digestive upset and bloating",
+                                "allergen_other": null
+                            }
+                        ]
+                    },
+                    "medications": {
+                        "has_medications": true,
+                        "current_medications": [
+                            {
+                                "name": "Insulin Glargine",
+                                "dose": "20 units",
+                                "frequency": "Daily at bedtime",
+                                "purpose": "Type 1 diabetes management"
+                            },
+                            {
+                                "name": "Insulin Lispro",
+                                "dose": "Variable",
+                                "frequency": "Before meals",
+                                "purpose": "Meal-time insulin for blood sugar control"
+                            }
+                        ]
+                    },
+                    "supplements": {
+                        "has_supplements": true,
+                        "current_supplements": [
+                            {
+                                "dose": "200 mg",
+                                "name": "Alpha-Lipoic Acid",
+                                "purpose": "Diabetic neuropathy support",
+                                "frequency": "Twice daily"
+                            },
+                            {
+                                "dose": "500 mg",
+                                "name": "Chromium",
+                                "purpose": "Blood sugar regulation support",
+                                "frequency": "Daily"
+                            },
+                            {
+                                "dose": "1000 mg",
+                                "name": "Omega-3",
+                                "purpose": "Cardiovascular health",
+                                "frequency": "Daily"
+                            }
+                        ]
+                    },
+                    "demographics": {
+                        "age": 38,
+                        "ancestry": [
+                            "northern_european"
+                        ],
+                        "weight_lbs": 163.5,
+                        "height_feet": 5,
+                        "height_inches": 9,
+                        "ancestry_other": null,
+                        "biological_sex": "male",
+                        "biological_sex_other": null
+                    },
+                    "medical_history": {
+                        "diagnoses": [
+                            "diabetes_insulin"
+                        ],
+                        "surgeries": "None",
+                        "diagnoses_other": null,
+                        "diagnoses_years": {
+                            "diabetes_insulin": 2010
+                        }
+                    },
+                    "wearable_devices": {
+                        "fitbit": false,
+                        "oura_ring": false,
+                        "apple_watch": true,
+                        "other_device": null,
+                        "has_any_wearables": true,
+                        "google_pixel_watch": false,
+                        "samsung_galaxy_watch": false
+                    },
+                    "complementary_approaches": {
+                        "ayurveda": false,
+                        "homeopathy": false,
+                        "korean_medicine": false,
+                        "functional_medicine": true,
+                        "selected_approaches": [
+                            "functional_medicine"
+                        ],
+                        "traditional_chinese_medicine": false
+                    }
+                },
+                "phase2_detailed_intake": {
+                    "pets_animals": {
+                        "has_pets": true
+                    },
+                    "dental_health": {
+                        "dental_work": {
+                            "implants": 0,
+                            "caps_crowns": 1,
+                            "root_canals": 0,
+                            "gold_fillings": 0,
+                            "silver_mercury_fillings": 1
+                        },
+                        "daily_brush_floss": "both_daily",
+                        "removal_timeframe": 2020,
+                        "mercury_fillings_removed": true
+                    },
+                    "dietary_habits": {
+                        "diet_style": "Low-carb",
+                        "diet_style_other": null,
+                        "eating_out_frequency": "more_than_2_per_week"
+                    },
+                    "sleep_patterns": {
+                        "hours_category": "less_than_6",
+                        "snoring_sleep_apnea": "No snoring",
+                        "night_wake_frequency": 1,
+                        "trouble_falling_asleep": false,
+                        "trouble_staying_asleep": true,
+                        "wake_feeling_refreshed": false,
+                        "night_urination_frequency": 1
+                    },
+                    "systems_review": {
+                        "digestive_symptoms": "diarrhea"
+                    },
+                    "lifestyle_factors": {
+                        "alcohol": {
+                            "frequency": "rarely",
+                            "typical_amount": null
+                        },
+                        "tobacco": {
+                            "quit_year": null,
+                            "use_status": "never",
+                            "duration_category": null
+                        },
+                        "recreational_drugs": {
+                            "uses_substances": false,
+                            "substance_details": null
+                        }
+                    },
+                    "physical_activity": {
+                        "exercise_days_per_week": 5
+                    },
+                    "sunlight_exposure": {
+                        "days_per_week": 6,
+                        "average_minutes_per_day": "40-50 minutes"
+                    },
+                    "occupation_wellness": {
+                        "job_title": "IT Project Manager",
+                        "work_stress_level": 7
+                    },
+                    "pain_and_skin_health": {
+                        "headaches": {
+                            "headache_details": null,
+                            "frequent_headaches_migraines": false
+                        },
+                        "skin_health": {
+                            "has_skin_issues": true,
+                            "skin_condition_details": "Dry skin, occasional eczema on hands, slow wound healing"
+                        },
+                        "chronic_pain": {
+                            "pain_details": "Mild peripheral neuropathy in feet, tingling and numbness",
+                            "has_chronic_pain": true
+                        }
+                    },
+                    "childhood_antibiotics": {
+                        "took_antibiotics_as_child": true
+                    },
+                    "childhood_development": {
+                        "born_via_c_section": "no",
+                        "high_sugar_childhood_diet": "yes"
+                    },
+                    "family_medical_history": {
+                        "conditions_detail": "{\"diabetes\":[\"father\",\"grand-parent\"],\"heart_disease\":[\"father\"]}",
+                        "has_family_history": true,
+                        "other_conditions_text": null
+                    },
+                    "environmental_exposures": {
+                        "mold_exposure": false,
+                        "chemical_exposures": "Minimal office environment",
+                        "chemical_exposure_other": null
+                    },
+                    "medication_side_effects": {
+                        "reaction_details": "Occasional injection site reactions, mild hypoglycemic episodes if timing is off",
+                        "has_adverse_reactions": true
+                    },
+                    "reproductive_hormonal_health": {
+                        "male_specific": {
+                            "concern_details": null,
+                            "hormonal_concerns": "no"
+                        },
+                        "female_specific": null
+                    }
+                }
+            },
+            "latest_biomarker_results": {
+                "Iron": "89 ug/dL",
+                "eGFR": "82 mL/min/1.73 m2",
+                "Gender": "male",
+                "Calcium": "9.5 mg/dL",
+                "Ferritin": "102 ng/mL",
+                "Order ID": 1011,
+                "C-Peptide": "0.8 ng/mL",
+                "Test Date": "2024-02-29T10:45:00Z",
+                "Creatinine": "0.98 mg/dL",
+                "LH:FSH Ratio": "1.2",
+                "AST:ALT Ratio": "0.87",
+                "Total Protein": "7.0 g/dL",
+                "Triglycerides": "142 mg/dL",
+                "HDL Cholesterol": "51 mg/dL",
+                "Lipoprotein (a)": "29 mg/dL",
+                "Total Bilirubin": "0.75 mg/dL",
+                "% Hemoglobin A1C": "7.2 %",
+                "ApoB:ApoA1 Ratio": "0.71",
+                "Daytime Cortisol": "16.2 ug/dL",
+                "Direct Bilirubin": "0.28 mg/dL",
+                "LDL-C:ApoB Ratio": "1.18",
+                "Total Biomarkers": 40,
+                "25-(OH) Vitamin D": "31 ng/mL",
+                "LDL-C:HDL-C Ratio": "2.4",
+                "Total Cholesterol": "195 mg/dL",
+                "BUN:Creatinine Ratio": "18",
+                "Estim. Avg Glu (eAG)": "165 mg/dL",
+                "High-Sensitivity CRP": "2.9 mg/L",
+                "Estradiol (Sensitive)": "29 pg/mL",
+                "Apolipoprotein B (APOB)": "103 mg/dL",
+                "Triglycerides:HDL Ratio": "2.8",
+                "VLDL Cholesterol (Calc)": "28 mg/dL",
+                "Luteinizing Hormone (LH)": "8.4 mIU/mL",
+                "Apolipoprotein A1 (APOA1)": "145 mg/dL",
+                "Blood Urea Nitrogen (BUN)": "18 mg/dL",
+                "Alkaline Phosphatase (ALP)": "76 U/L",
+                "Calculated LDL-Cholesterol": "116 mg/dL",
+                "Total Cholesterol:HDL Ratio": "3.8",
+                "Alanine Aminotransferase (ALT)": "31 U/L",
+                "Aspartate Aminotransferase (AST)": "27 U/L",
+                "Thyroid Stimulating Hormone (TSH)": "2.4 uIU/mL",
+                "Follicle-Stimulating Hormone (FSH)": "7.0 mIU/mL",
+                "Dehydroepiandrosterone Sulfate (DHEA-S)": "172 ug/dL"
+            }
+        }
+    }
+]

@@ -1,0 +1,64 @@
+{
+  "final_recommendations": [
+    {
+      "ingredient_name": "Vitamin D3",
+      "rank": 1,
+      "why": "The user's Vitamin D level is low (71.11 nmol/L, which is ~28.5 ng/mL, below optimal range). Supplementation is needed to support immune function, bone health, and potentially thyroid health."
+    },
+    {
+      "ingredient_name": "Magnesium",
+      "rank": 2,
+      "why": "The user reports trouble staying asleep and has high SBHG (Sex Hormone Binding Globulin), which can be influenced by magnesium levels. Magnesium also plays a role in sleep regulation and stress response."
+    },
+    {
+      "ingredient_name": "Fish Oil (Omega-3)",
+      "rank": 3,
+      "why": "The user has elevated triglycerides, LDL, Lp(a), and total cholesterol, indicating dyslipidemia. Omega-3s can help improve lipid profiles, reduce inflammation, and support cardiovascular health."
+    },
+    {
+      "ingredient_name": "Niacin",
+      "rank": 4,
+      "why": "Similar to fish oil, niacin can help manage elevated triglycerides, LDL, and total cholesterol. It may also offer benefits for liver health, potentially addressing the high AST:ALT ratio."
+    },
+    {
+      "ingredient_name": "Milk Thistle",
+      "rank": 5,
+      "why": "The user has several markers suggesting potential liver stress or iron overload (high iron, high AST:ALT ratio, high total protein, high BUN:Creatinine ratio). Milk thistle supports liver detoxification and function."
+    },
+    {
+      "ingredient_name": "N-Acetyl Cysteine (NAC)",
+      "rank": 6,
+      "why": "NAC supports liver health and glutathione production, which can be beneficial given the high AST:ALT ratio and potential oxidative stress associated with high iron. It also has antioxidant properties."
+    },
+    {
+      "ingredient_name": "Curcumin",
+      "rank": 7,
+      "why": "Curcumin has anti-inflammatory and antioxidant properties that can help manage dyslipidemia and potentially support liver health. It may also help with iron regulation."
+    },
+    {
+      "ingredient_name": "Alpha-Lipoic Acid (ALA)",
+      "rank": 8,
+      "why": "ALA is an antioxidant that supports liver health and can help improve insulin sensitivity. It may be beneficial given the high AST:ALT ratio and potential metabolic stress."
+    },
+    {
+      "ingredient_name": "Vitamin C",
+      "rank": 9,
+      "why": "Vitamin C can help regulate iron levels by enhancing absorption and potentially reducing iron overload. It also supports immune function and collagen synthesis."
+    },
+    {
+      "ingredient_name": "Melatonin",
+      "rank": 10,
+      "why": "The user reports trouble staying asleep, waking once nightly. Melatonin can help regulate the sleep-wake cycle and improve sleep quality."
+    },
+    {
+      "ingredient_name": "Red Yeast Rice",
+      "rank": 11,
+      "why": "As an alternative or adjunct to niacin, Red Yeast Rice contains monacolin K (similar to lovastatin) and can help lower LDL cholesterol and triglycerides. It addresses the user's dyslipidemia."
+    },
+    {
+      "ingredient_name": "Berberine",
+      "rank": 12,
+      "why": "Berberine can improve insulin sensitivity and lipid profiles, potentially addressing the elevated HbA1c (5.09%) and dyslipidemia. It may also have benefits for liver health."
+    }
+  ]
+}

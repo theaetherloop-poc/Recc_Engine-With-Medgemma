@@ -1,0 +1,41 @@
+{
+  "patient_id": "unknown",
+  "age": 42,
+  "sex": "male",
+  "biomarker_issues": [
+    "Iron (high)",
+    "AST:ALT Ratio (high)",
+    "Total Protein (high)",
+    "Triglycerides (high)",
+    "LDL Cholesterol (high)",
+    "Lp(a) (high)",
+    "Bilirubin (low)",
+    "HbA1c (high)",
+    "LDL-C:ApoB Ratio (low)",
+    "25-(OH) Vitamin D (low)",
+    "Calculated Total Cholesterol (high)",
+    "BUN:Creatinine Ratio (high)",
+    "High-Sensitivity CRP (low)",
+    "Apolipoprotein B (APOB) (low)",
+    "VLDL (Calculated) (high)",
+    "Apolipoprotein A1 (APOA1) (low)",
+    "Blood Urea Nitrogen (high)",
+    "SBHG (high)",
+    "Dehydroepiandrosterone Sulfate (DHEA-S) (low)",
+    "Unsaturated Iron Binding Capacity (UIBC) (low)"
+  ],
+  "other_problems": [
+    "overactivethyroid",
+    "Trouble staying asleep",
+    "Root canal(s)",
+    "High stress (level 6)",
+    "Childhood antibiotic use"
+  ],
+  "safety_constraints": [
+    "Med: Synthroid",
+    "Med: Vitamin B12",
+    "Med: Vitamin D3",
+    "Med: Selenium"
+  ],
+  "total": 25
+}

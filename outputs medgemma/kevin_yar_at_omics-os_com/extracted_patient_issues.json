@@ -1,0 +1,93 @@
+{
+  "status": "success",
+  "total_issues": 13,
+  "demographics": {
+    "age": 28,
+    "sex": "Male",
+    "ancestry": [
+      "Caucasian",
+      "Middle Eastern"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 5.1,
+      "unit": "%"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 1.25,
+      "unit": "unknown"
+    },
+    {
+      "name": "25-(OH) Vitamin D",
+      "status": "low",
+      "value": 19.4,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "Calculated Total Cholesterol",
+      "status": "low",
+      "value": 154.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "low",
+      "value": 0.2,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Triglyceride:HDL Ratio",
+      "status": "high",
+      "value": 1.61,
+      "unit": "ratio"
+    },
+    {
+      "name": "VLDL (Calculated)",
+      "status": "high",
+      "value": 16.8,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "SBHG",
+      "status": "high",
+      "value": 45.0,
+      "unit": "nmol/L"
+    }
+  ],
+  "conditions": [],
+  "allergies": [],
+  "symptoms": [],
+  "digestive": [],
+  "sleep_issues": [
+    "not_waking_refreshed",
+    "snoring_or_sleep_apnea"
+  ],
+  "exposures": {
+    "mold": "apartment with moldy rooms, 2024, itchi skin",
+    "chemical": null
+  },
+  "hormonal": {},
+  "current_supplements": [],
+  "lifestyle": {
+    "diet": "low_carb_keto",
+    "stress_level": 8,
+    "high_stress": true,
+    "diet_nutrient_needs": [
+      "Electrolytes",
+      "Fiber",
+      "Magnesium"
+    ]
+  },
+  "dental_health": [
+    "mercury_fillings (2)"
+  ],
+  "family_history": [],
+  "childhood_factors": {
+    "childhood_antibiotics": true
+  }
+}

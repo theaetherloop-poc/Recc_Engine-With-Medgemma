@@ -39,6 +39,8 @@ class AncestryRuleset:
         
         # Process each selected ancestry
         for anc in ancestry:
+            if anc is None:
+                continue
             anc_lower = anc.lower().strip()
             
             if "african" in anc_lower or "african-american" in anc_lower:
@@ -87,6 +89,8 @@ class AncestryRuleset:
         # 1. Alcohol use + East Asian ancestry (ALDH2-linked flushing)
         if alcohol_frequency and alcohol_frequency.lower() != "never":
             for anc in ancestry:
+                if anc is None:
+                    continue
                 if "east asian" in anc.lower():
                     scores["DTX"] += 0.15
                     scores["GA"] += 0.05
@@ -106,6 +110,8 @@ class AncestryRuleset:
         # Check personal diagnoses
         if diagnoses:
             for diagnosis in diagnoses:
+                if diagnosis is None:
+                    continue
                 if "celiac" in diagnosis.lower():
                     has_celiac = True
                     break

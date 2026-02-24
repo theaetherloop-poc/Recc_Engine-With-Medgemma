@@ -174,14 +174,12 @@ class WebIngredientDiscoveryTool(BaseTool):
             
             For each ingredient, provide:
             1. The exact ingredient name as mentioned
-            2. A brief description of its benefits/context from the text
-            3. The source where it was found (PubMed, Examine.com, NIH, etc.)
-            
+            2. The source where it was found (PubMed, Examine.com, NIH, etc.)
+
             Return ONLY a JSON array in this format:
             [
                 {{
                     "name": "Ingredient Name",
-                    "description": "Brief context from the text",
                     "source": "PubMed"
                 }}
             ]
@@ -223,14 +221,12 @@ class WebIngredientDiscoveryTool(BaseTool):
                     for ingredient in ingredients:
                         if isinstance(ingredient, dict) and "name" in ingredient:
                             name = ingredient["name"].strip()
-                            description = ingredient.get("description", "").strip()
                             source = ingredient.get("source", "Web Research")
-                            
+
                             # Basic validation
                             if len(name) > 2 and len(name) < 100:
                                 discovered_ingredients.append({
                                     "ingredient_name": name,
-                                    "description": description,
                                     "source": source
                                 })
                     

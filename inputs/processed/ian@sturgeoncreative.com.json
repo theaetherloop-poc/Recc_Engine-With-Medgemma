@@ -1,0 +1,265 @@
+[
+    {
+      "user_full_data": {
+        "metadata": {
+          "email": "ian@sturgeoncreative.com",
+          "phase_status": {
+            "id": "ad9cd368-81a9-438f-855d-c489e86bf57b",
+            "user_id": "66610acf-fef7-48a0-9c69-e753be39709e",
+            "consult_id": "134021da-8c10-44e2-a893-945b1740c602",
+            "created_at": "2025-09-04T19:43:28.043572+00:00",
+            "updated_at": "2026-02-10T18:10:40.312913+00:00",
+            "phase1_status": "completed",
+            "phase2_status": "completed",
+            "phase3_status": "processing",
+            "phase2_coaching_call": true,
+            "phase2_coaching_recorded_at": "2026-01-21T06:24:01.464+00:00"
+          }
+        },
+        "patient_data": {
+          "phase1_basic_intake": {
+            "allergies": {
+              "has_allergies": true,
+              "known_allergies": [
+                {
+                  "allergen": "shellfish",
+                  "reaction": "Vomiting",
+                  "allergen_other": null
+                }
+              ]
+            },
+            "medications": {
+              "has_medications": false,
+              "current_medications": []
+            },
+            "supplements": {
+              "has_supplements": true,
+              "current_supplements": [
+                {
+                  "dose": null,
+                  "name": "methylated B Vitamin",
+                  "purpose": "ADHD symptoms",
+                  "frequency": "Once daily"
+                },
+                {
+                  "dose": null,
+                  "name": "Solaray Active Man Men's once daily Multi-Vitamin",
+                  "purpose": "Overall health",
+                  "frequency": "Daily"
+                },
+                {
+                  "dose": "1000",
+                  "name": "Vitamin C",
+                  "purpose": "Immune support",
+                  "frequency": "Daily"
+                }
+              ]
+            },
+            "demographics": {
+              "age": 47,
+              "ancestry": [
+                "Caucasian"
+              ],
+              "weight_lbs": 180,
+              "height_feet": 6,
+              "height_inches": 4,
+              "ancestry_other": null,
+              "biological_sex": "Male",
+              "biological_sex_other": null
+            },
+            "medical_history": {
+              "diagnoses": [
+                "none"
+              ],
+              "surgeries": "Knee surgery when I was 17.  I had my meniscus cartilage on my right knee repaired.",
+              "diagnoses_other": null,
+              "diagnoses_years": {}
+            },
+            "wearable_devices": {
+              "fitbit": false,
+              "oura_ring": false,
+              "apple_watch": false,
+              "other_device": null,
+              "has_any_wearables": false,
+              "google_pixel_watch": false,
+              "samsung_galaxy_watch": false
+            },
+            "complementary_approaches": {
+              "ayurveda": true,
+              "homeopathy": false,
+              "korean_medicine": true,
+              "functional_medicine": true,
+              "selected_approaches": [
+                "functional",
+                "ayurveda",
+                "tcm",
+                "hanyak"
+              ],
+              "traditional_chinese_medicine": true
+            }
+          },
+          "phase2_detailed_intake": {
+            "pets_animals": {
+              "has_pets": true
+            },
+            "dental_health": {
+              "dental_work": {
+                "implants": 0,
+                "caps_crowns": 0,
+                "root_canals": 0,
+                "gold_fillings": 0,
+                "silver_mercury_fillings": 0
+              },
+              "daily_brush_floss": "brush_only",
+              "removal_timeframe": null,
+              "oral_health_issues": {
+                "gingivitis": false,
+                "tooth_pain": false,
+                "tmj_disorder": false,
+                "bleeding_gums": false,
+                "chewing_problems": false,
+                "other_dental_work": null
+              },
+              "mercury_fillings_removed": false
+            },
+            "dietary_habits": {
+              "diet_style": "none",
+              "diet_style_other": null,
+              "eating_out_frequency": "1_2_per_week"
+            },
+            "sleep_patterns": {
+              "hours_category": "6_to_8",
+              "snoring_sleep_apnea": "yes",
+              "night_wake_frequency": 2,
+              "trouble_falling_asleep": false,
+              "trouble_staying_asleep": true,
+              "wake_feeling_refreshed": false,
+              "night_urination_frequency": 0
+            },
+            "systems_review": {
+              "digestive_symptoms": "bloating"
+            },
+            "lifestyle_factors": {
+              "alcohol": {
+                "frequency": "monthly",
+                "typical_amount": "I'll have a cocktail or two with friends once per month or so."
+              },
+              "tobacco": {
+                "quit_year": "2002",
+                "use_status": "quit",
+                "duration_category": null
+              },
+              "recreational_drugs": {
+                "uses_substances": false,
+                "substance_details": null
+              }
+            },
+            "physical_activity": {
+              "exercise_days_per_week": 5
+            },
+            "sunlight_exposure": {
+              "days_per_week": 7,
+              "average_minutes_per_day": "15"
+            },
+            "occupation_wellness": {
+              "job_title": "Marketer, Entrepreneur",
+              "work_stress_level": 5
+            },
+            "pain_and_skin_health": {
+              "headaches": {
+                "headache_details": null,
+                "frequent_headaches_migraines": false
+              },
+              "skin_health": {
+                "has_skin_issues": true,
+                "skin_condition_details": null
+              },
+              "chronic_pain": {
+                "pain_details": null,
+                "has_chronic_pain": true
+              }
+            },
+            "childhood_antibiotics": {
+              "took_antibiotics_as_child": false
+            },
+            "childhood_development": {
+              "born_via_c_section": "no",
+              "high_sugar_childhood_diet": "no"
+            },
+            "family_medical_history": {
+              "conditions_detail": "{\"arthritis\":[\"mother\",\"father\"],\"cancer\":[\"mother\",\"father\"],\"dialysis\":[\"father\"]}",
+              "has_family_history": true,
+              "other_conditions_text": null
+            },
+            "environmental_exposures": {
+              "mold_details": "I helped my parents remodel their house and there was some black mold in it.",
+              "mold_exposure": true,
+              "exposure_details": null,
+              "chemical_exposures": "none",
+              "chemical_exposure_other": null
+            },
+            "medication_side_effects": {
+              "reaction_details": null,
+              "has_adverse_reactions": false
+            },
+            "reproductive_hormonal_health": {
+              "male_specific": {
+                "concern_details": null,
+                "hormonal_concerns": "no"
+              },
+              "female_specific": null
+            }
+          }
+        },
+        "latest_biomarker_results": {
+          "Iron": "152 ug/dL",
+          "eGFR": "92.57 mL/min/1.73 m2",
+          "Gender": "Male",
+          "Albumin": "4.6 g/dL",
+          "Calcium": "9.3 mg/dL",
+          "Ferritin": "427.4 ng/mL",
+          "Order ID": 30,
+          "C-Peptide": "1.24 ng/mL",
+          "Test Date": "2025-12-15T14:53:54.155",
+          "Creatinine": "0.93 mg/dL",
+          "AST:ALT Ratio": "1.29 N/A",
+          "Total Protein": "7.5 g/dL",
+          "Triglycerides": "84 mg/dL",
+          "HDL Cholesterol": "54 mg/dL",
+          "Iron Saturation": "60 %",
+          "Lipoprotein (a)": "6.2 mg/dL",
+          "Total Bilirubin": "1.1 mg/dL",
+          "% Hemoglobin A1C": "5.5 %",
+          "ApoB:ApoA1 Ratio": "0.66",
+          "Direct Bilirubin": "0.3 mg/dL",
+          "LDL-C:ApoB Ratio": "1.35",
+          "Morning Cortisol": "14.4 ug/dL",
+          "Total Biomarkers": 43,
+          "25-(OH) Vitamin D": "48 ng/mL",
+          "LDL-C:HDL-C Ratio": "2.61",
+          "Total Cholesterol": "212 mg/dL",
+          "BUN:Creatinine Ratio": "25.8",
+          "Estim. Avg Glu (eAG)": "111.15 mg/dL",
+          "High-Sensitivity CRP": "0.2 mg/L",
+          "DHEA-S:Cortisol Ratio": "7.19",
+          "Apolipoprotein B (APOB)": "104 mg/dL",
+          "Triglycerides:HDL Ratio": "1.55",
+          "VLDL Cholesterol (Calc)": "16.8 mg/dL",
+          "Apolipoprotein A1 (APOA1)": "156 mg/dL",
+          "Blood Urea Nitrogen (BUN)": "24 mg/dL",
+          "Free Androgen Index (FAI)": "42.52",
+          "Alkaline Phosphatase (ALP)": "42 U/L",
+          "Calculated LDL-Cholesterol": "141.19 mg/dL",
+          "Testosterone, Total (Males)": "629.78 ng/dL",
+          "Testosterone:Cortisol Ratio": "0.043",
+          "Total Cholesterol:HDL Ratio": "3.92",
+          "Alanine Aminotransferase (ALT)": "34 U/L",
+          "Aspartate Aminotransferase (AST)": "44 U/L",
+          "Thyroid Stimulating Hormone (TSH)": "2.4 uIU/mL",
+          "Sex Hormone-Binding Globulin (SHBG)": "51.4 nmol/L",
+          "Dehydroepiandrosterone Sulfate (DHEA-S)": "103.6 ug/dL",
+          "Unsaturated iron-binding capacity test (UIBC)": "101 ug/dL"
+        }
+      }
+    }
+  ]

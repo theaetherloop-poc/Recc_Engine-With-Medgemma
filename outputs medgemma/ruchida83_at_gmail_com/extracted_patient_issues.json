@@ -1,0 +1,181 @@
+{
+  "status": "success",
+  "total_issues": 35,
+  "demographics": {
+    "age": 42,
+    "sex": "Female",
+    "ancestry": [
+      "Asian",
+      "Caucasian"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Iron",
+      "status": "high",
+      "value": 170.0,
+      "unit": "mcg/dL"
+    },
+    {
+      "name": "Calcium",
+      "status": "low",
+      "value": 8.7,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Ferritin",
+      "status": "high",
+      "value": 153.6,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "AST:ALT Ratio",
+      "status": "high",
+      "value": 3.25,
+      "unit": "unknown"
+    },
+    {
+      "name": "Total Protein",
+      "status": "high",
+      "value": 8.1,
+      "unit": "g/dL"
+    },
+    {
+      "name": "Iron Saturation",
+      "status": "high",
+      "value": 69.0,
+      "unit": "%"
+    },
+    {
+      "name": "Bilirubin",
+      "status": "low",
+      "value": 0.23,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 5.6,
+      "unit": "%"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 1.26,
+      "unit": "unknown"
+    },
+    {
+      "name": "25-(OH) Vitamin D",
+      "status": "low",
+      "value": 31.2,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "LDL:HDL Ratio (Calc.)",
+      "status": "high",
+      "value": 2.38,
+      "unit": "ratio"
+    },
+    {
+      "name": "EAG (Calc.)",
+      "status": "high",
+      "value": 114.02,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Triglyceride:HDL Ratio",
+      "status": "high",
+      "value": 1.68,
+      "unit": "ratio"
+    },
+    {
+      "name": "VLDL (Calculated)",
+      "status": "high",
+      "value": 16.8,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "LDL Cholesterol",
+      "status": "high",
+      "value": 119.2,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Total Cholesterol:HDL Ratio",
+      "status": "high",
+      "value": 3.71,
+      "unit": "ratio"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "high",
+      "value": 231.0,
+      "unit": "mcg/dL"
+    },
+    {
+      "name": "Unsaturated Iron Binding Capacity (UIBC)",
+      "status": "low",
+      "value": 78.0,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [
+    "anxiety_disorder_",
+    "Uterine mass (hysterectomy 2023), meningioma (potential surgery needed 2026-2028)"
+  ],
+  "allergies": [],
+  "symptoms": [
+    {
+      "type": "headaches",
+      "details": "frequent headaches/migraines"
+    },
+    {
+      "type": "chronic_pain",
+      "details": "chronic pain reported"
+    },
+    {
+      "type": "skin_issues",
+      "details": "skin issues reported"
+    }
+  ],
+  "digestive": [
+    "diarrhea"
+  ],
+  "sleep_issues": [
+    "trouble_falling_asleep",
+    "trouble_staying_asleep",
+    "snoring_or_sleep_apnea"
+  ],
+  "exposures": {
+    "mold": null,
+    "chemical": null
+  },
+  "hormonal": {},
+  "current_supplements": [
+    {
+      "name": "Vit D",
+      "dose": "6000 IU",
+      "frequency": "daily",
+      "purpose": "low vit D"
+    }
+  ],
+  "lifestyle": {
+    "stress_level": 8,
+    "high_stress": true
+  },
+  "dental_health": [
+    "mercury_fillings (2)",
+    "other: No"
+  ],
+  "family_history": [
+    "cancer (mother, grand-parent)",
+    "heart_attack (grand-parent)",
+    "osteoporosis (grand-parent)",
+    "anxiety_disorder (mother)",
+    "high_blood_pressure (father)"
+  ],
+  "childhood_factors": {
+    "childhood_antibiotics": true,
+    "high_sugar_childhood": true
+  }
+}

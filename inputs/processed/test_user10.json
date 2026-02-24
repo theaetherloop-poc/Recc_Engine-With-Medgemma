@@ -1,0 +1,230 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user10@example.com",
+        "phase_status": {
+          "id": "a9b0c1d2-e3f4-4917-a890-123456789012",
+          "user_id": "b0c1d2e3-f4a5-4918-b901-234567890123",
+          "created_at": "2024-02-03T07:25:30Z",
+          "updated_at": "2024-02-17T15:40:20Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": false,
+            "current_medications": []
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "500 mg",
+                "name": "Bromelain",
+                "purpose": "Inflammation and joint support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Omega-3",
+                "purpose": "Anti-inflammatory support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Curcumin",
+                "purpose": "Joint inflammation and pain",
+                "frequency": "Twice daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 49,
+            "ancestry": [
+              "mediterranean",
+              "caucasian"
+            ],
+            "weight_lbs": 171.2,
+            "height_feet": 5,
+            "height_inches": 8,
+            "ancestry_other": null,
+            "biological_sex": "male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "gout"
+            ],
+            "surgeries": "Knee surgery in 2016",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "gout": 2019
+            }
+          },
+          "wearable_devices": {
+            "fitbit": true,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": false,
+            "selected_approaches": [],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 3,
+              "root_canals": 1,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 2
+            },
+            "daily_brush_floss": "neither_regularly",
+            "removal_timeframe": 2018,
+            "mercury_fillings_removed": true
+          },
+          "dietary_habits": {
+            "diet_style": "Balanced diet",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "more_than_10",
+            "snoring_sleep_apnea": "Moderate snoring",
+            "night_wake_frequency": null,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": true,
+            "night_urination_frequency": null
+          },
+          "systems_review": {
+            "digestive_symptoms": "none"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "sometimes",
+              "typical_amount": "2-3 beers per week"
+            },
+            "tobacco": {
+              "quit_year": 2005,
+              "use_status": "quit",
+              "duration_category": ">_5_years"
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 1
+          },
+          "sunlight_exposure": {
+            "days_per_week": 3,
+            "average_minutes_per_day": "20-30 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Construction Manager",
+            "work_stress_level": 8
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": "Gout attacks in big toe and ankle, 2-3 times per year, managed with diet and supplements",
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"gout\": [\"father\", \"grand-parent\"], \"heart_disease\": [\"father\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Construction site exposure to various materials and dust",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": null,
+              "hormonal_concerns": "no"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "male",
+        "Order ID": 1010,
+        "Test Date": "2024-02-13T09:15:00Z",
+        "Alanine Aminotransferase (ALT)": "33 U/L",
+        "Aspartate Aminotransferase (AST)": "30 U/L",
+        "Albumin": "4.3 g/dL",
+        "Blood Urea Nitrogen (BUN)": "21 mg/dL",
+        "Creatinine": "1.05 mg/dL",
+        "Total Bilirubin": "0.9 mg/dL",
+        "eGFR": "78 mL/min/1.73 m\u00b2",
+        "Estim. Avg Glu (eAG)": "115 mg/dL",
+        "Lipoprotein (a)": "38 mg/dL",
+        "Ferritin": "158 ng/mL",
+        "Homocysteine (HCY)": "11.8 umol/L",
+        "High-Sensitivity CRP": "4.2 mg/L",
+        "25-(OH) Vitamin D": "29 ng/mL",
+        "% Hemoglobin A1C": "5.6 %",
+        "Fasting Insulin": "10.8 uIU/mL",
+        "Total Cholesterol:HDL Ratio": "4.7",
+        "Triglycerides:HDL Ratio": "3.8",
+        "Daytime Cortisol": "13.8 mcg/dL",
+        "Thyroid Stimulating Hormone (TSH)": "3.0 uIU/mL",
+        "Apolipoprotein A1 (APOA1)": "142 mg/dL",
+        "Apolipoprotein B (APOB)": "115 mg/dL",
+        "ApoB:ApoA1 Ratio": "0.81",
+        "Calculated LDL-Cholesterol": "130 mg/dL",
+        "HDL Cholesterol": "44 mg/dL",
+        "Total Cholesterol": "208 mg/dL",
+        "Triglycerides": "168 mg/dL",
+        "Testosterone, Total (Males)": "480 ng/dL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "148 ug/dL",
+        "Testosterone:Cortisol ratio": "3.48",
+        "Total Biomarkers": 29
+      }
+    }
+  }
+]

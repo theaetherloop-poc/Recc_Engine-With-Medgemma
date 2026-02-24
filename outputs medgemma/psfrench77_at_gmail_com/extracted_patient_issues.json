@@ -1,0 +1,222 @@
+{
+  "status": "success",
+  "total_issues": 34,
+  "demographics": {
+    "age": 77,
+    "sex": "Female",
+    "ancestry": [
+      "Caucasian"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Iron",
+      "status": "high",
+      "value": 128.0,
+      "unit": "mcg/dL"
+    },
+    {
+      "name": "Calcium",
+      "status": "low",
+      "value": 8.7,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "AST:ALT Ratio",
+      "status": "high",
+      "value": 3.64,
+      "unit": "unknown"
+    },
+    {
+      "name": "Total Protein",
+      "status": "low",
+      "value": 6.6,
+      "unit": "g/dL"
+    },
+    {
+      "name": "Bilirubin",
+      "status": "low",
+      "value": 0.23,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 1.15,
+      "unit": "unknown"
+    },
+    {
+      "name": "25-(OH) Vitamin D",
+      "status": "low",
+      "value": 68.0,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "BUN:Creatinine Ratio",
+      "status": "high",
+      "value": 28.57,
+      "unit": "unknown"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "high",
+      "value": 3.12,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Triglyceride:HDL Ratio",
+      "status": "high",
+      "value": 1.02,
+      "unit": "ratio"
+    },
+    {
+      "name": "LH",
+      "status": "high",
+      "value": 11.66,
+      "unit": "mIU/mL"
+    },
+    {
+      "name": "Blood Urea Nitrogen",
+      "status": "high",
+      "value": 22.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Aspartate Aminotransferase",
+      "status": "high",
+      "value": 51.0,
+      "unit": "U/L"
+    },
+    {
+      "name": "TSH",
+      "status": "high",
+      "value": 3.64,
+      "unit": "uIU/mL"
+    },
+    {
+      "name": "FSH",
+      "status": "high",
+      "value": 47.62,
+      "unit": "mIU/mL"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "low",
+      "value": 9.8,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [
+    "arthritis_",
+    "fibromyalgia_",
+    "high_blood_pressure_",
+    "overactive_thyroid_"
+  ],
+  "allergies": [],
+  "symptoms": [
+    {
+      "type": "chronic_pain",
+      "details": "chronic pain reported"
+    }
+  ],
+  "digestive": [],
+  "sleep_issues": [
+    "trouble_staying_asleep"
+  ],
+  "exposures": {
+    "mold": null,
+    "chemical": null
+  },
+  "hormonal": {},
+  "current_supplements": [
+    {
+      "name": "Garlic",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "Shilajit minderals",
+      "dose": "20,000",
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "baby aspirin",
+      "dose": "80 mg",
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "magnesium",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "organic plant calcium",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "multivitamins",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "B12",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "Curcumin",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "turmeric",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "IQ Blast",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    },
+    {
+      "name": "Burn Evolved",
+      "dose": null,
+      "frequency": null,
+      "purpose": null
+    }
+  ],
+  "lifestyle": {
+    "diet": "gluten_free,other",
+    "stress_level": 3
+  },
+  "dental_health": [
+    "mercury_fillings (6)",
+    "other: had all mercury fillings replaced"
+  ],
+  "family_history": [
+    "asthma (mother)",
+    "cancer (brother)",
+    "stroke (father)",
+    "arthritis (mother)",
+    "claustrophobic (mother)",
+    "diabetes_insulin (brother)",
+    "high_cholesterol (brother)",
+    "overactive_thyroid (mother)",
+    "high_blood_pressure (mother, brother)"
+  ],
+  "childhood_factors": {
+    "childhood_antibiotics": true,
+    "high_sugar_childhood": true
+  }
+}

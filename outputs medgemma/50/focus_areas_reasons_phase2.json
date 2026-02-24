@@ -1,0 +1,57 @@
+{
+  "CM": [
+    "Age:50",
+    "Ancestry:South Asian",
+    "Height:62",
+    "FamilyHistory:Diabetes Insulin",
+    "FamilyHistory:High Blood Pressure",
+    "PhysicalActivity:5 days/wk (optimal)",
+    "SleepHours:Adequate (6-8h)",
+    "Diet:Vegetarian",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:Not sure"
+  ],
+  "COG": [
+    "Diagnosis:Depression",
+    "TroubleStayingAsleep:No",
+    "WakeFeelingRefreshed:Yes",
+    "SnoringApnea:No"
+  ],
+  "DTX": [],
+  "IMM": [
+    "Supplement:D3",
+    "FamilyHistory:Diabetes Insulin",
+    "Sunlight:(very low)",
+    "SleepHours:Adequate (6-8h)"
+  ],
+  "MITO": [
+    "PhysicalActivity:5 days/wk (optimal)",
+    "WakeFeelingRefreshed:Yes",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:GI symptoms (brain-gut axis)"
+  ],
+  "SKN": [],
+  "STR": [
+    "BMI:20.84859521331946",
+    "WorkStress:Stress (moderate)",
+    "SleepHours:Adequate (6-8h)",
+    "TroubleFallingAsleep:Yes",
+    "TroubleStayingAsleep:No",
+    "WakeFeelingRefreshed:Yes",
+    "SnoringApnea:No"
+  ],
+  "HRM": [
+    "Age:50",
+    "Sex:Female",
+    "FemaleHormonalHealth:Has menstrual concerns",
+    "FemaleHormonalHealth:Peri/early post-menopause (40-60)"
+  ],
+  "GA": [
+    "Supplement:Slow Fe Iron",
+    "FamilyHistory:Kidney Stones",
+    "SleepHours:Adequate (6-8h)",
+    "HighSugarChildhoodDiet:Not sure",
+    "DigestiveSymptoms:Bloating",
+    "DigestiveSymptoms:Constipation"
+  ]
+}

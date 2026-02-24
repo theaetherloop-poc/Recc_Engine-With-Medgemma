@@ -1,0 +1,166 @@
+{
+  "discovered_ingredients": [
+    {
+      "ingredient_name": "Oat beta-glucan",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Psyllium",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Red Yeast Rice",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Phytosterols",
+      "reasons": [
+        "high LDL Cholesterol",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Omega-3 Fatty Acids",
+      "reasons": [
+        "high Triglyceride:HDL Ratio",
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Vitamin C",
+      "reasons": [
+        "high Dehydroepiandrosterone Sulfate (DHEA-S)"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Ashwagandha",
+      "reasons": [
+        "high Dehydroepiandrosterone Sulfate (DHEA-S)"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Polyphenols",
+      "reasons": [
+        "high Iron"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "6-shogaol",
+      "reasons": [
+        "high Iron"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Calcium",
+      "reasons": [
+        "low Calcium"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Vitamin D",
+      "reasons": [
+        "low Calcium"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Soluble Fiber",
+      "reasons": [
+        "high LDL Cholesterol"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Niacin (Vitamin B3)",
+      "reasons": [
+        "high Triglyceride:HDL Ratio"
+      ],
+      "sources": [
+        "Examine.com",
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Garlic",
+      "reasons": [
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    },
+    {
+      "ingredient_name": "Green Tea",
+      "reasons": [
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Soy",
+      "reasons": [
+        "high Calculated Total Cholesterol"
+      ],
+      "sources": [
+        "PubMed"
+      ]
+    },
+    {
+      "ingredient_name": "Protein",
+      "reasons": [
+        "low Total Protein"
+      ],
+      "sources": [
+        "Examine.com"
+      ]
+    }
+  ]
+}

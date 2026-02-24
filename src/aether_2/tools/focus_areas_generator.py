@@ -468,6 +468,7 @@ class EvaluateFocusAreasTool(BaseTool):
             has_skin_conditions = any(
                 condition in diagnosis.lower()
                 for diagnosis in extracted_data['diagnosis_list']
+                if diagnosis  # Skip None values
                 for condition in skin_conditions
             )
 
@@ -971,7 +972,9 @@ class EvaluateFocusAreasTool(BaseTool):
                 log_lines.append(f"{area_name} ({code}): {score:.3f}")
 
             log_content = "\n".join(log_lines)
-            patient_id = extracted_data.get('age', 'unknown')
+            # Use email for folder naming (sanitized)
+            email = data.get("metadata", {}).get("email", "unknown")
+            patient_id = email.replace("@", "_at_").replace(".", "_") if email != "unknown" else "unknown"
             log_file_path = self._save_log_file(log_content, str(patient_id))
             print(f"✅ Log file saved to: {log_file_path}")
 
@@ -983,7 +986,10 @@ class EvaluateFocusAreasTool(BaseTool):
             return markdown_output
 
         except Exception as e:
+            import traceback
             error_msg = f"Error in focus areas evaluation: {str(e)}"
             print(f"❌ {error_msg}")
+            print(f"❌ Full traceback:")
+            traceback.print_exc()
             raise
 

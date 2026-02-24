@@ -1,0 +1,26 @@
+{
+  "patient_id": "unknown",
+  "age": 28,
+  "sex": "male",
+  "biomarker_issues": [
+    "HbA1c (high)",
+    "LDL-C:ApoB Ratio (low)",
+    "25-(OH) Vitamin D (low)",
+    "Calculated Total Cholesterol (low)",
+    "High-Sensitivity CRP (low)",
+    "Triglyceride:HDL Ratio (high)",
+    "VLDL (Calculated) (high)",
+    "SBHG (high)"
+  ],
+  "other_problems": [
+    "Unrefreshing sleep",
+    "Possible sleep apnea",
+    "Mercury fillings",
+    "High stress (level 8)",
+    "Diet: low_carb_keto",
+    "Mold exposure",
+    "Childhood antibiotic use"
+  ],
+  "safety_constraints": [],
+  "total": 15
+}

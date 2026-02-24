@@ -1,0 +1,49 @@
+{
+  "CM": [
+    "Age:45",
+    "Ancestry:Pacific Islander",
+    "Height:61",
+    "PhysicalActivity:3 days/wk (adequate)",
+    "SleepHours:Adequate (6-8h)",
+    "Diet:Low-carb/keto",
+    "Diet:Vegetarian",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:No"
+  ],
+  "COG": [
+    "TroubleFallingAsleep:No",
+    "SnoringApnea:No"
+  ],
+  "DTX": [],
+  "IMM": [
+    "Sunlight:(very low), shift work",
+    "SleepHours:Adequate (6-8h)",
+    "MoldExposure:Mold exposure (inflammatory/respiratory effects)"
+  ],
+  "MITO": [
+    "PhysicalActivity:3 days/wk (adequate)",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:less Sleep multiplier"
+  ],
+  "SKN": [],
+  "STR": [
+    "Age:45",
+    "BMI:22.671324912657887",
+    "TroubleStayingAsleep:Yes (1x/night)",
+    "WakeFeelingRefreshed:No",
+    "SnoringApnea:No",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:less Sleep multiplier",
+    "Headache:Frequent headaches/migraines"
+  ],
+  "HRM": [
+    "Age:45",
+    "Sex:Female",
+    "FemaleHormonalHealth:Has menstrual concerns",
+    "FemaleHormonalHealth:Peri/early post-menopause (40-60)"
+  ],
+  "GA": [
+    "WorkStress:Stress (moderate), shift work",
+    "HighSugarChildhoodDiet:No"
+  ]
+}

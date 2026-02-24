@@ -1,0 +1,88 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Magnesium",
+      "recommended_dosage": "400 mg",
+      "frequency": "once daily before bedtime",
+      "focus_area": ["STR", "MITO"],
+      "why": "Addresses low calcium, anxiety, sleep issues, headaches/migraines, and high stress. Magnesium plays a crucial role in nerve function, muscle relaxation, and stress response regulation."
+    },
+    {
+      "ingredient_name": "Curcumin",
+      "recommended_dosage": "500-1000 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": ["IMM", "DTX"],
+      "why": "Targets high iron/ferritin, potential inflammation related to chronic pain, and may have anti-cancer properties relevant to uterine mass and meningioma history."
+    },
+    {
+      "ingredient_name": "Milk Thistle",
+      "recommended_dosage": "210-420 mg",
+      "frequency": "once daily",
+      "focus_area": ["DTX", "CM"],
+      "why": "Supports liver health indicated by the high AST:ALT ratio and high total protein. It may help protect the liver from oxidative stress and potentially improve iron metabolism."
+    },
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "4000-6000 IU",
+      "frequency": "once daily with fatty meal",
+      "focus_area": ["IMM", "STR"],
+      "why": "Addresses the low 25-(OH) Vitamin D level (31.2 ng/mL) despite supplementation, potentially due to limited sun exposure. Optimal Vitamin D is important for immune function, mood, and bone health."
+    },
+    {
+      "ingredient_name": "N-Acetyl Cysteine (NAC)",
+      "recommended_dosage": "600-1200 mg",
+      "frequency": "once daily",
+      "focus_area": ["DTX", "IMM"],
+      "why": "Supports liver detoxification pathways, potentially improving the high AST:ALT ratio and high total protein. It also acts as an antioxidant, which may help with chronic pain and skin issues."
+    },
+    {
+      "ingredient_name": "L-Theanine",
+      "recommended_dosage": "100-200 mg",
+      "frequency": "once daily",
+      "focus_area": ["STR", "COG"],
+      "why": "Directly targets anxiety and high stress levels without sedation, promoting relaxation and focus. It complements the existing Sertraline treatment."
+    },
+    {
+      "ingredient_name": "Probiotics",
+      "recommended_dosage": "10-20 billion CFU",
+      "frequency": "once daily with a meal",
+      "focus_area": ["GA", "IMM"],
+      "why": "Addresses chronic diarrhea, supporting gut health which can influence overall inflammation, nutrient absorption (including Vitamin D), and potentially mood."
+    },
+    {
+      "ingredient_name": "Ashwagandha",
+      "recommended_dosage": "300-500 mg",
+      "frequency": "once daily",
+      "focus_area": ["STR", "MITO"],
+      "why": "Helps manage high stress levels and may improve sleep quality, complementing L-Theanine and Magnesium for stress and sleep support."
+    },
+    {
+      "ingredient_name": "Zinc",
+      "recommended_dosage": "15-30 mg",
+      "frequency": "once daily with food",
+      "focus_area": ["SKN", "HRM"],
+      "why": "Addresses skin issues and potentially helps regulate DHEA-S levels, which are elevated. Zinc is important for immune function and skin health."
+    },
+    {
+      "ingredient_name": "Riboflavin (Vitamin B2)",
+      "recommended_dosage": "400 mg",
+      "frequency": "once daily with meals",
+      "focus_area": ["MITO", "STR"],
+      "why": "May help reduce the frequency and severity of headaches/migraines, a significant symptom for this user. It plays a role in cellular energy production."
+    },
+    {
+      "ingredient_name": "Calcium Citrate",
+      "recommended_dosage": "1000-1200 mg",
+      "frequency": "once daily with meals, divided doses",
+      "focus_area": ["CM", "STR"],
+      "why": "Directly addresses the low calcium level (8.7 mg/dL), important for bone health, nerve function, and muscle contraction, especially given the family history of osteoporosis."
+    },
+    {
+      "ingredient_name": "CoQ10",
+      "recommended_dosage": "100-200 mg",
+      "frequency": "once or twice daily with meals",
+      "focus_area": ["MITO", "STR"],
+      "why": "Supports mitochondrial function and energy production, potentially helping with chronic pain, headaches/migraines, and fatigue associated with high stress and chronic conditions."
+    }
+  ]
+}

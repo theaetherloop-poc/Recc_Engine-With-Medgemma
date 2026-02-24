@@ -1,0 +1,248 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user4@example.com",
+        "phase_status": {
+          "id": "a7b8c9d0-e1f2-4905-a678-901234567890",
+          "user_id": "b8c9d0e1-f2a3-4906-b789-012345678901",
+          "created_at": "2024-02-12T09:15:45Z",
+          "updated_at": "2024-02-26T13:50:30Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": true,
+            "known_allergies": [
+              {
+                "allergen": "latex",
+                "reaction": "Skin rash and itching",
+                "allergen_other": null
+              },
+              {
+                "allergen": "eggs",
+                "reaction": "Hives and gastrointestinal discomfort",
+                "allergen_other": null
+              }
+            ]
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Amlodipine",
+                "dose": "5 mg",
+                "frequency": "Daily",
+                "purpose": "Hypertension management"
+              },
+              {
+                "name": "Rosuvastatin",
+                "dose": "10 mg",
+                "frequency": "Daily",
+                "purpose": "High cholesterol treatment"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "3000 IU",
+                "name": "Vitamin D3",
+                "purpose": "Vitamin D deficiency",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Fish Oil",
+                "purpose": "Cardiovascular health",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 47,
+            "ancestry": [
+              "african"
+            ],
+            "weight_lbs": 182.3,
+            "height_feet": 6,
+            "height_inches": 1,
+            "ancestry_other": null,
+            "biological_sex": "female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "high_blood_pressure",
+              "high_cholesterol"
+            ],
+            "surgeries": "Hysterectomy in 2018, Cholecystectomy in 2020",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "high_blood_pressure": 2016,
+              "high_cholesterol": 2017
+            }
+          },
+          "wearable_devices": {
+            "fitbit": true,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": false,
+            "selected_approaches": [],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 3,
+              "root_canals": 1,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 2
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": 2017,
+            "mercury_fillings_removed": true
+          },
+          "dietary_habits": {
+            "diet_style": "Low-carb",
+            "diet_style_other": null,
+            "eating_out_frequency": "more_than_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "Mild snoring, no sleep apnea",
+            "night_wake_frequency": 1,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": true,
+            "night_urination_frequency": 0
+          },
+          "systems_review": {
+            "digestive_symptoms": "none"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "sometimes",
+              "typical_amount": "1 glass of wine 2-3 times per week"
+            },
+            "tobacco": {
+              "quit_year": 2015,
+              "use_status": "quit",
+              "duration_category": "2-5_years"
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 4
+          },
+          "sunlight_exposure": {
+            "days_per_week": 5,
+            "average_minutes_per_day": "40-50 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Registered Nurse",
+            "work_stress_level": 7
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "yes",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"high_blood_pressure\": [\"mother\", \"father\"], \"diabetes\": [\"mother\"], \"heart_disease\": [\"father\", \"grand-parent\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Hospital environment exposure to cleaning agents and disinfectants",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "menstrual_concerns": null,
+              "concern_details": "Post-menopausal since 2018, no current menstrual concerns"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "female",
+        "Order ID": 1004,
+        "Test Date": "2024-02-22T10:30:00Z",
+        "Alanine Aminotransferase (ALT)": "29 U/L",
+        "Aspartate Aminotransferase (AST)": "25.5 U/L",
+        "Albumin": "4.2 g/dL",
+        "Blood Urea Nitrogen (BUN)": "15 mg/dL",
+        "Creatinine": "0.85 mg/dL",
+        "Total Bilirubin": "0.7 mg/dL",
+        "eGFR": "75 mL/min/1.73 m\u00b2",
+        "Estim. Avg Glu (eAG)": "114 mg/dL",
+        "Lipoprotein (a)": "28 mg/dL",
+        "Ferritin": "95 ng/mL",
+        "Homocysteine (HCY)": "9.8 umol/L",
+        "High-Sensitivity CRP": "2.5 mg/L",
+        "25-(OH) Vitamin D": "31 ng/mL",
+        "% Hemoglobin A1C": "5.6 %",
+        "Fasting Insulin": "9.5 uIU/mL",
+        "Total Cholesterol:HDL Ratio": "3.4",
+        "Triglycerides:HDL Ratio": "2.3",
+        "Daytime Cortisol": "13.2 mcg/dL",
+        "Thyroid Stimulating Hormone (TSH)": "2.6 uIU/mL",
+        "Apolipoprotein A1 (APOA1)": "151 mg/dL",
+        "Apolipoprotein B (APOB)": "98 mg/dL",
+        "ApoB:ApoA1 Ratio": "0.65",
+        "Calculated LDL-Cholesterol": "110 mg/dL",
+        "HDL Cholesterol": "58 mg/dL",
+        "Total Cholesterol": "195 mg/dL",
+        "Triglycerides": "135 mg/dL",
+        "Estradiol (Sensitive)": "18 pg/mL",
+        "Follicle-Stimulating Hormone (FSH)": "28.2 mIU/mL",
+        "Total Biomarkers": 28
+      }
+    }
+  }
+]

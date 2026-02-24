@@ -14,6 +14,573 @@ from ..rulesets.constants import (
     detect_shift_work
 )
 
+# ============================================================================
+# PHASE 3 NEW SCHEMA DEFINITION
+# ============================================================================
+# Complete schema for Phase 3 intake questions (93 questions total)
+# This serves as the single source of truth for question metadata
+
+PHASE3_SCHEMA = {
+    "q001": {
+        "category": "Goals & Narrative",
+        "subcategory": "Top Health Goals",
+        "question": "What are your top three health goals right now?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q002": {
+        "category": "Goals & Narrative",
+        "subcategory": "Your Theory",
+        "question": "Why do YOU think these issues are happening (or goals are pending)?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q003": {
+        "category": "Goals & Narrative",
+        "subcategory": "What Needs to Change",
+        "question": "Are you willing to make lifestyle changes?",
+        "data_type": "UI: Checkbox options — Yes · No"
+    },
+    "q004": {
+        "category": "Goals & Narrative",
+        "subcategory": "What Needs to Change",
+        "question": "If people are not sure about the response or say No - Anything else you'd like to share about it?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q005": {
+        "category": "Goals & Narrative",
+        "subcategory": "Last Time Well",
+        "question": "When did you last feel really well—body and mind?",
+        "data_type": "UI: Short-text"
+    },
+    "q006": {
+        "category": "Goals & Narrative",
+        "subcategory": "Trigger Event",
+        "question": "Did anything specific start or worsen your wellness?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q007": {
+        "category": "Goals & Narrative",
+        "subcategory": "Makes Worse",
+        "question": "What makes your symptoms WORSE?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q008": {
+        "category": "Goals & Narrative",
+        "subcategory": "Time of Day Worse",
+        "question": "What time of the day does it get worse?",
+        "data_type": "UI: Radio — Morning · Afternoon · Evening"
+    },
+    "q009": {
+        "category": "Goals & Narrative",
+        "subcategory": "Time of Day Worse",
+        "question": "Explain/Anything else you'd like to share about it?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q010": {
+        "category": "Goals & Narrative",
+        "subcategory": "Where It Happens",
+        "question": "Where does it happen?",
+        "data_type": "UI: Radio — Home · Work ·"
+    },
+    "q011": {
+        "category": "Goals & Narrative",
+        "subcategory": "Where It Happens",
+        "question": "If Other, Explain/Anything else you'd like to share about it?",
+        "data_type": "UI: Short-text"
+    },
+    "q012": {
+        "category": "Goals & Narrative",
+        "subcategory": "Food/Drink Triggers",
+        "question": "Do any foods/drinks trigger your symptoms?",
+        "data_type": "UI: Checkbox options — Yes · No"
+    },
+    "q013": {
+        "category": "Goals & Narrative",
+        "subcategory": "Food/Drink Triggers",
+        "question": "If yes, Ask: \"Explain/Anything else you'd like to share about it?",
+        "data_type": "UI: Short-text"
+    },
+    "q014": {
+        "category": "Goals & Narrative",
+        "subcategory": "Makes Better",
+        "question": "And what seems to HELP with your symptoms?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q015": {
+        "category": "Meds & Supplements",
+        "subcategory": "Long-Term Medication Use",
+        "question": "Have you taken antibiotics, steroids, reflux meds, or daily pain-relievers for long periods?",
+        "data_type": "UI: Checkbox options — Yes · No"
+    },
+    "q016": {
+        "category": "Meds & Supplements",
+        "subcategory": "Long-Term Medication Use",
+        "question": "If yes, Ask: \"Which and how long?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q017": {
+        "category": "Meds & Supplements",
+        "subcategory": "Long-Term Medication Use",
+        "question": "If yes, When was the last time you took them",
+        "data_type": "year"
+    },
+    "q018": {
+        "category": "Lifestyle",
+        "subcategory": "Exercise Types",
+        "question": "What kinds of activity and how intense?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q019": {
+        "category": "Lifestyle",
+        "subcategory": "Rank Sunlight Days",
+        "question": "Rank your days of sunlight exposure from most to least during a week",
+        "data_type": "UI: Reorder bars — Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
+    },
+    "q020": {
+        "category": "Sleep",
+        "subcategory": "Sleep Aids",
+        "question": "Do you use any sleep aids or medicines?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q021": {
+        "category": "Sleep",
+        "subcategory": "Sleep Aids",
+        "question": "Explain/Anything else you'd like to share about it",
+        "data_type": "UI: Short-text"
+    },
+    "q022": {
+        "category": "Sleep",
+        "subcategory": "Consistent Bedtime",
+        "question": "Do you go to sleep around the same time every day?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q023": {
+        "category": "Sleep",
+        "subcategory": "Consistent Wake Time",
+        "question": "Do you wake up around the same time every day?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q024": {
+        "category": "Nutrition",
+        "subcategory": "Typical Day of Eating",
+        "question": "Walk me through your typical meals and snacks.",
+        "data_type": "UI: Multi-line text |"
+    },
+    "q025": {
+        "category": "Nutrition",
+        "subcategory": "Food Sensitivities",
+        "question": "Do you avoid any foods because they cause issues?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q026": {
+        "category": "Nutrition",
+        "subcategory": "Food Sensitivities",
+        "question": "If yes, Explain/Anything else you'd like to share about it",
+        "data_type": "UI: Multi-line text"
+    },
+    "q027": {
+        "category": "Nutrition",
+        "subcategory": "Cravings",
+        "question": "I'll read out a few food types. Please answer yes or no if you feel any strong cravings for any of these?",
+        "data_type": "UI: Check-boxes — Sweets · Salty · Bread/Pasta · Chocolate · Caffeine"
+    },
+    "q028": {
+        "category": "Nutrition",
+        "subcategory": "Cravings",
+        "question": "Any other cravings",
+        "data_type": "UI: Short text"
+    },
+    "q029": {
+        "category": "Stress & Support",
+        "subcategory": "Mood",
+        "question": "How would you describe your mood lately?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q030": {
+        "category": "Stress & Support",
+        "subcategory": "Stress Level",
+        "question": "On a scale of 1–10, how high is your current stress?",
+        "data_type": "UI: Slider 1–10"
+    },
+    "q031": {
+        "category": "Stress & Support",
+        "subcategory": "Stressors",
+        "question": "What are your biggest sources of stress right now?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q032": {
+        "category": "Stress & Support",
+        "subcategory": "Relaxation Practices",
+        "question": "Which relaxation techniques do you use?",
+        "data_type": "UI: Check-boxes — Meditation · Yoga · Breathing · Tai Chi/Qigong · Prayer ·"
+    },
+    "q033": {
+        "category": "Stress & Support",
+        "subcategory": "Relaxation Practices",
+        "question": "Any Other: 'Please describe.'",
+        "data_type": "UI: Short-text"
+    },
+    "q034": {
+        "category": "Stress & Support",
+        "subcategory": "Support Network",
+        "question": "Who or what do you lean on for support?",
+        "data_type": "UI: Check-boxes — Partner · Family · Friends · Spiritual · Pets · Therapist"
+    },
+    "q035": {
+        "category": "Stress & Support",
+        "subcategory": "Support Network",
+        "question": "If others, please specify",
+        "data_type": "UI: Short-text"
+    },
+    "q036": {
+        "category": "Stress & Support",
+        "subcategory": "Trauma History",
+        "question": "The next question is highly sensitive,so you can choose not to answer it. Have you experienced significant trauma or abuse?",
+        "data_type": "UI: Radio — Yes · No (optional)"
+    },
+    "q037": {
+        "category": "Stress & Support",
+        "subcategory": "Trauma Details (If Yes)",
+        "question": "If they choose to answer the above question, ask this follow up  - Again , only if you are comfortable, would you like to describe, if comfortable (optional).",
+        "data_type": "UI: Multi-line text."
+    },
+    "q038": {
+        "category": "Childhood & Development",
+        "subcategory": "Childhood Illnesses",
+        "question": "Any significant illnesses during childhood?",
+        "data_type": "UI: Radio — Yes · No · Not sure"
+    },
+    "q039": {
+        "category": "Childhood & Development",
+        "subcategory": "Childhood Illnesses",
+        "question": "Explain/Anything else you'd like to share about it?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q040": {
+        "category": "Childhood & Development",
+        "subcategory": "Secure Environment?",
+        "question": "Was your childhood home happy and secure?",
+        "data_type": "UI: Radio — Yes · No · Not sure"
+    },
+    "q041": {
+        "category": "Childhood & Development",
+        "subcategory": "Secure Environment?",
+        "question": "Explain/Anything else you'd like to share about it?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q042": {
+        "category": "Childhood & Development",
+        "subcategory": "Breast-Fed?",
+        "question": "Were you breast-fed as an infant?",
+        "data_type": "UI: Radio — Yes · No · Not sure"
+    },
+    "q043": {
+        "category": "Childhood & Development",
+        "subcategory": "Breastfeeding Duration (If Yes)",
+        "question": "If yes, Approximately how long were you breast-fed?",
+        "data_type": "UI: Short-text"
+    },
+    "q044": {
+        "category": "Childhood & Development",
+        "subcategory": "Early-Life Exposures",
+        "question": "Early exposure to smoke, lead paint, pesticides, etc.?",
+        "data_type": "UI: Radio — Yes · No · Not sure"
+    },
+    "q045": {
+        "category": "Childhood & Development",
+        "subcategory": "Early-Life Exposures",
+        "question": "Explain/Anything else you'd like to share about it?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q046": {
+        "category": "Dental History",
+        "subcategory": "Teeth Sensitivity",
+        "question": "Do you have teeth sensitivity?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q047": {
+        "category": "Dental History",
+        "subcategory": "Sensitivity Details (If Yes)",
+        "question": "Please explain (optional).",
+        "data_type": "UI: Short-text"
+    },
+    "q048": {
+        "category": "Environment & Exposures",
+        "subcategory": "Indoor Environment Factors",
+        "question": "I'll read out a few environmental exposures. Please say Yes or No for any of these that you may have been exposed to.",
+        "data_type": "UI: Check-boxes — Water leaks/Dampness · Ongoing renovations · Fresh paint/VOCs · New carpet/Flooring glue · Poor ventilation/Stale air · Gas stove · Wood-burning fireplace · Pets indoors · Heavy fragrance/Air fresheners · High-EMF sources (server room)"
+    },
+    "q049": {
+        "category": "Environment & Exposures",
+        "subcategory": "Indoor Environment Factors",
+        "question": "Any 'Other building issues'? 'Please describe.'",
+        "data_type": "UI: Multi-line text"
+    },
+    "q050": {
+        "category": "Environment & Exposures",
+        "subcategory": "Chemical Sensitivity",
+        "question": "Are you unusually sensitive (headache, nausea, rashes) to small amounts of chemicals, perfumes, smoke or exhaust?",
+        "data_type": "UI: Radio — Yes · No |"
+    },
+    "q051": {
+        "category": "Environment & Exposures",
+        "subcategory": "Chemical Sensitivity",
+        "question": "If Yes: Assistant: List common triggers or situations.",
+        "data_type": "UI: Multi-line text"
+    },
+    "q052": {
+        "category": "Environment & Exposures",
+        "subcategory": "Caffeine Sensitivity",
+        "question": "Do you use caffeine?",
+        "data_type": "UI: Radio — Yes · No |"
+    },
+    "q053": {
+        "category": "Environment & Exposures",
+        "subcategory": "Caffeine Sensitivity",
+        "question": "If yes, Which of the following ring true with respect to how caffeine makes you feel",
+        "data_type": "UI: Radio — Sensitive (jittery / palpitations) · Tolerant"
+    },
+    "q054": {
+        "category": "Environment & Exposures",
+        "subcategory": "Alcohol Flush Reaction",
+        "question": "Does a small amount of alcohol make you flush or feel unwell?",
+        "data_type": "UI: Radio — Yes · No · I don't drink"
+    },
+    "q055": {
+        "category": "Environment & Exposures",
+        "subcategory": "Alcohol Flush Reaction",
+        "question": "Explain/Anything else you'd like to share about it",
+        "data_type": "UI: Multi-line text"
+    },
+    "q056": {
+        "category": "Environment & Exposures",
+        "subcategory": "Clothing Fibers",
+        "question": "I'll read out the names of a few fiber types. Please say yes, no or don't know if you use any of the following fibers in your clothing?",
+        "data_type": "UI: Check-boxes — Polyester · Nylon · Rayon · Acrylic · Spandex (Lycra/Elastane) · Acetate"
+    },
+    "q057": {
+        "category": "Environment & Exposures",
+        "subcategory": "Seasonal Allergies",
+        "question": "Do you get seasonal allergies?",
+        "data_type": "UI: Radio — Yes · No |"
+    },
+    "q058": {
+        "category": "Environment & Exposures",
+        "subcategory": "Seasonal Allergies",
+        "question": "If Yes: List name and symptom.",
+        "data_type": "UI: Multi-line text"
+    },
+    "q059": {
+        "category": "Environment & Exposures",
+        "subcategory": "Hygiene Products",
+        "question": "Now I'll read the hygiene step you usually may do in your daily life and I'd like you to share the brand or product you use for it. Example for Toothpaste would be Colgate. Options: Bodywash, Soap, Scrub, Shampoo, Conditioner, Toothpaste, Mouthwash",
+        "data_type": "UI: Multi-line text (per item field)"
+    },
+    "q060": {
+        "category": "Environment & Exposures",
+        "subcategory": "Air Filter",
+        "question": "Do you use an air-filter?",
+        "data_type": "UI: Radio — Yes · No |"
+    },
+    "q061": {
+        "category": "Environment & Exposures",
+        "subcategory": "Air Filter",
+        "question": "If Yes: Assistant: What brand/model.",
+        "data_type": "UI: Multi-line text"
+    },
+    "q062": {
+        "category": "Environment & Exposures",
+        "subcategory": "Water Filter / Bottled Water",
+        "question": "Do you drink bottled water or use a water-filter?",
+        "data_type": "UI: Radio — Yes · No |"
+    },
+    "q063": {
+        "category": "Environment & Exposures",
+        "subcategory": "Water Filter / Bottled Water",
+        "question": "If Yes: Assistant: What brand/model.",
+        "data_type": "UI: Multi-line text"
+    },
+    "q064": {
+        "category": "Pets & Animals",
+        "subcategory": "Animal Types (If Yes)",
+        "question": "What kind of animals do you have? (Select all)",
+        "data_type": "UI: Check-boxes — Dog · Cat · Bird · Reptile · Livestock"
+    },
+    "q065": {
+        "category": "Pets & Animals",
+        "subcategory": "Animal Types (If Yes)",
+        "question": "Any Other Animals?: Assistant: Please specify the animal(s).",
+        "data_type": "UI: Short-text"
+    },
+    "q066": {
+        "category": "Pets & Animals",
+        "subcategory": "Mostly Where? (If Yes)",
+        "question": "Do they live mostly inside, outside, or both?",
+        "data_type": "UI: Radio — Inside · Outside · Both"
+    },
+    "q067": {
+        "category": "Systems Check",
+        "subcategory": "Weight Change",
+        "question": "Have you experienced an unintentional weight change recently?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q068": {
+        "category": "Systems Check",
+        "subcategory": "Weight Change Details (If Yes)",
+        "question": "IF yes to weight gain, How much and over what timeframe?",
+        "data_type": "UI: Short-text"
+    },
+    "q069": {
+        "category": "Systems Check",
+        "subcategory": "Bowel Movements (If triggered)",
+        "question": "How often do you have bowel movements?",
+        "data_type": "Record as: short text"
+    },
+    "q070": {
+        "category": "Systems Check",
+        "subcategory": "Digestive follow- up",
+        "question": "If user selected Bloating, Bloating timing: 'When do you feel bloated—within 2 hours of eating, after 2 hours, or variable?'",
+        "data_type": "UI: Multi-line text"
+    },
+    "q071": {
+        "category": "Systems Check",
+        "subcategory": "Digestive follow- up",
+        "question": "If user selected Heartburn 'Is it reflux/GERD or occasional heartburn?'",
+        "data_type": "UI: Multi-line text"
+    },
+    "q072": {
+        "category": "Systems Check",
+        "subcategory": "Digestive follow- up",
+        "question": "If user selected constipation 'Any known triggers (e.g., after trauma, travel, foods)?'",
+        "data_type": "UI: Multi-line text"
+    },
+    "q073": {
+        "category": "Systems Check",
+        "subcategory": "Digestive follow- up",
+        "question": "Stool analysis: 'Any foul smell, notable color, or blood/mucus?'",
+        "data_type": "UI: Multi-line text"
+    },
+    "q074": {
+        "category": "Systems Check",
+        "subcategory": "Digestive follow- up",
+        "question": "Anorectal symptoms: 'Any hemorrhoids, fissures, or prolapse?'",
+        "data_type": "UI: Multi-line text"
+    },
+    "q075": {
+        "category": "Systems Check",
+        "subcategory": "Transit Time (If triggered)",
+        "question": "If you've measured it, what is your transit time with beet or charcoal test? Some people check transit time by eating beets (red stool) or activated charcoal and timing to first color change.",
+        "data_type": "UI: Short-text"
+    },
+    "q076": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Hormone Therapy / Birth Control",
+        "question": "Are you using hormonal birth control?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q077": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Hormone Therapy / Birth Control",
+        "question": "Please explain the type,dosage,start,reason and duration for which you have taken it?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q078": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "HRT Details",
+        "question": "Do you receive any HRT (Hormone Replacement Therapy).",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q079": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "HRT Details",
+        "question": "If yes, please explain",
+        "data_type": "UI: Multi-line text"
+    },
+    "q080": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Pregnancy History",
+        "question": "You can choose to skip the following question if you'd like. How many pregnancies, births, miscarriages or complications?",
+        "data_type": "UI: Checkbox & Number: Pregnancy (#), Miscarriage (#), Complications (Textbox)"
+    },
+    "q081": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Timing Between Pregnancies/Miscarriages",
+        "question": "If Pregnancy or Miscarriages selected/shared, ask - What was the time between each pregnancy/miscarriage/complication?",
+        "data_type": "UI: Repeatable rows per Pregnancy/Miscarriage #: Number input for time (months/years)"
+    },
+    "q082": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Breast Cancer Risk",
+        "question": "Have you ever been diagnosed of breast cancer or considered high-risk?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q083": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Breast Cancer Risk",
+        "question": "If yes, Please explain.",
+        "data_type": "UI: Multi-line text"
+    },
+    "q084": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Male Concerns Details (If Yes)",
+        "question": "You previously shared that you had Male hormones/sexual concerns.Please describe—onset, labs, treatments",
+        "data_type": "UI: Multi-line text"
+    },
+    "q085": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Gynecomastia",
+        "question": "Do you have diagnosed or suspected gynecomastia (breast tissue development in males leading to enlarged breasts)?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q086": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Gynecomastia",
+        "question": "If Yes: Explain diagnosis and any ongoing treatment.",
+        "data_type": "UI: Multi-line text"
+    },
+    "q087": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Prostate Issues",
+        "question": "Do you have any prostate related issue?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q088": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Prostate Issues",
+        "question": "If yes, Please explain.",
+        "data_type": "UI: Multi-line text"
+    },
+    "q089": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Prostate/Testicular Cancer Risk",
+        "question": "Have you ever been diagnosed of prostate or testicular cancer or considered high-risk?",
+        "data_type": "UI: Radio — Yes · No"
+    },
+    "q090": {
+        "category": "Hormone / Sex-Specific",
+        "subcategory": "Prostate/Testicular Cancer Risk",
+        "question": "If yes, Please explain.",
+        "data_type": "UI: Multi-line text"
+    },
+    "q091": {
+        "category": "Pain · Headache · Skin",
+        "subcategory": "Headache Details (If Yes)",
+        "question": "You previously mentioned you had frequent headaches/migraines. How often and any known triggers?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q092": {
+        "category": "Pain · Headache · Skin",
+        "subcategory": "Pain Details (If Yes)",
+        "question": "Where is the pain and what makes it worse/better?",
+        "data_type": "UI: Multi-line text"
+    },
+    "q093": {
+        "category": "Pain · Headache · Skin",
+        "subcategory": "Skin Details (If Yes)",
+        "question": "Please describe location, triggers, timing.",
+        "data_type": "UI: Multi-line text"
+    },
+}
+
 # Phase 3 Field Context Mapping
 # Maps field position number to human-readable context name for reason tracking
 PHASE3_FIELD_CONTEXT = {
@@ -53,7 +620,15 @@ PHASE3_FIELD_CONTEXT = {
     33: "AlcoholFlushing",  # Alcohol flushing (radio + optional free text with context-driven scoring)
     34: "SyntheticFiberWear",  # Regular synthetic fiber wear (multi-select with optional free text)
     35: "SeasonalAllergies",  # Seasonal allergies (radio with optional free text)
-    37: "AirFilter",  # Air filter usage (radio with optional brand/model text)
+    36: "AirFilter",  # Air filter usage (radio with optional brand/model text)
+    37: "WaterFilter",  # Water filter/bottled water usage (radio with optional brand/model text)
+    38: "AnimalTypes",  # What kind of animals do you have (multi-select with optional free text)
+    39: "PetLivingLocation",  # Where do your pets/animals primarily live (radio: Inside/Outside/Both)
+    40: "UnintentionalWeightChange",  # Any unintentional weight change recently (radio: Yes/No)
+    41: "WeightChangeDetails",  # Weight change details (free text: magnitude, direction, timeframe)
+    42: "BowelMovementFrequency",  # Bowel movement frequency & characteristics (free text)
+    43: "TransitTime",  # Transit time measurement (free text)
+    44: "HeadacheMigraineDetails",  # Headache/migraine frequency & triggers (free text, conditional on Phase 2)
 }
 
 # ============================================================================
@@ -281,6 +856,7 @@ __all__ = [
     "SHIFT_WORK_KEYWORDS",
     "detect_shift_work",
     # Phase 3-specific
+    "PHASE3_SCHEMA",
     "PHASE3_FIELD_CONTEXT",
     # NLP utilities
     "SPACY_AVAILABLE",

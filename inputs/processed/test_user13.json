@@ -1,0 +1,260 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user13@example.com",
+        "phase_status": {
+          "id": "a5b6c7d8-e9f0-4923-a456-789012345678",
+          "user_id": "b6c7d8e9-f0a1-4924-b567-890123456789",
+          "created_at": "2024-01-30T10:15:20Z",
+          "updated_at": "2024-02-13T14:30:55Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Synthroid",
+                "dose": "100 mcg",
+                "frequency": "Daily",
+                "purpose": "Hypothyroidism treatment"
+              },
+              {
+                "name": "Metformin",
+                "dose": "500 mg",
+                "frequency": "Twice daily",
+                "purpose": "PCOS and insulin resistance management"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "400 mg",
+                "name": "Magnesium",
+                "purpose": "PCOS and insulin sensitivity support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Inositol",
+                "purpose": "PCOS and hormonal balance",
+                "frequency": "Twice daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Berberine",
+                "purpose": "Blood sugar and insulin regulation",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Omega-3",
+                "purpose": "Inflammation and hormonal support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 31,
+            "ancestry": [
+              "caucasian"
+            ],
+            "weight_lbs": 178.5,
+            "height_feet": 5,
+            "height_inches": 7,
+            "ancestry_other": null,
+            "biological_sex": "female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "overactive_thyroid"
+            ],
+            "surgeries": "None",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "overactive_thyroid": 2022
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": true,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "functional_medicine"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 0,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Low-glycemic index",
+            "diet_style_other": null,
+            "eating_out_frequency": "more_than_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 1,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": true,
+            "night_urination_frequency": 0
+          },
+          "systems_review": {
+            "digestive_symptoms": "bloating"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "monthly",
+              "typical_amount": "1-2 drinks on special occasions"
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 4
+          },
+          "sunlight_exposure": {
+            "days_per_week": 5,
+            "average_minutes_per_day": "30-40 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Research Scientist",
+            "work_stress_level": 6
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": true,
+              "skin_condition_details": "Acne, particularly around jawline and chin, related to hormonal fluctuations"
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "no"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"thyroid_disorders\": [\"mother\", \"sister\"], \"diabetes\": [\"mother\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Laboratory environment, minimal exposure to research chemicals",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "menstrual_concerns": "Irregular cycles, 35-50 days, very heavy bleeding, severe PMS",
+              "concern_details": "PCOS diagnosed in 2021, working on weight management and insulin resistance"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "52 ug/dL",
+        "eGFR": "91 mL/min/1.73 m2",
+        "Gender": "female",
+        "Calcium": "9.6 mg/dL",
+        "Ferritin": "35 ng/mL",
+        "Order ID": 1013,
+        "C-Peptide": "2.6 ng/mL",
+        "Test Date": "2024-02-09T11:20:00Z",
+        "Creatinine": "0.75 mg/dL",
+        "LH:FSH Ratio": "3.2",
+        "AST:ALT Ratio": "0.83",
+        "Total Protein": "7.1 g/dL",
+        "Triglycerides": "118 mg/dL",
+        "HDL Cholesterol": "59 mg/dL",
+        "Lipoprotein (a)": "21 mg/dL",
+        "Total Bilirubin": "0.62 mg/dL",
+        "% Hemoglobin A1C": "5.8 %",
+        "ApoB:ApoA1 Ratio": "0.58",
+        "Daytime Cortisol": "20.5 ug/dL",
+        "Direct Bilirubin": "0.22 mg/dL",
+        "LDL-C:ApoB Ratio": "1.25",
+        "Total Biomarkers": 39,
+        "25-(OH) Vitamin D": "26 ng/mL",
+        "LDL-C:HDL-C Ratio": "1.8",
+        "Total Cholesterol": "182 mg/dL",
+        "BUN:Creatinine Ratio": "15",
+        "Estim. Avg Glu (eAG)": "120 mg/dL",
+        "High-Sensitivity CRP": "2.4 mg/L",
+        "Estradiol (Sensitive)": "128 pg/mL",
+        "Apolipoprotein B (APOB)": "88 mg/dL",
+        "Triglycerides:HDL Ratio": "2.0",
+        "VLDL Cholesterol (Calc)": "24 mg/dL",
+        "Luteinizing Hormone (LH)": "18.4 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "152 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "11 mg/dL",
+        "Alkaline Phosphatase (ALP)": "67 U/L",
+        "Calculated LDL-Cholesterol": "99 mg/dL",
+        "Total Cholesterol:HDL Ratio": "3.1",
+        "Alanine Aminotransferase (ALT)": "24 U/L",
+        "Aspartate Aminotransferase (AST)": "20 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "4.5 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "5.8 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "245 ug/dL"
+      }
+    }
+  }
+]

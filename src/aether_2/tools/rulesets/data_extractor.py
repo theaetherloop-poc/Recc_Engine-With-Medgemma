@@ -77,6 +77,8 @@ def extract_phase1_phase2_data(data: Dict[str, Any]) -> Dict[str, Any]:
 
     if diagnoses:
         for diagnosis in diagnoses:
+            if diagnosis is None:
+                continue
             diagnosis_clean = diagnosis.lower().strip().rstrip('_')
 
             # If diagnosis is "other", use diagnoses_other field
@@ -111,7 +113,7 @@ def extract_phase1_phase2_data(data: Dict[str, Any]) -> Dict[str, Any]:
 
     if has_allergies and known_allergies:
         for allergy_item in known_allergies:
-            allergen = allergy_item.get("allergen", "").lower().strip()
+            allergen = (allergy_item.get("allergen") or "").lower().strip()
             reaction = allergy_item.get("reaction", "")
 
             # If allergen is "other", use allergen_other field

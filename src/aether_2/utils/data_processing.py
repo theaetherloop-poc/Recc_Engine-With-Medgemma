@@ -57,16 +57,18 @@ def load_and_combine_inputs(input_path):
     user_data = data[0]["user_full_data"]
     patient_data = user_data["patient_data"]
     blood_data = user_data["latest_biomarker_results"]
+    metadata = user_data.get("metadata", {})
     
     # Wrap patient_data back into the expected structure
     patient_data_wrapped = {
         "patient_data": patient_data
     }
     
-    # Combine into expected format
+    # Combine into expected format (include metadata for folder naming)
     combined_data = {
         "patient_form": patient_data_wrapped,
-        "blood_report": blood_data
+        "blood_report": blood_data,
+        "metadata": metadata
     }
     
     return combined_data

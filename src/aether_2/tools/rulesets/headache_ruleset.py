@@ -16,7 +16,7 @@ class HeadacheRuleset:
         digestive_symptoms: Optional[str] = None,
         diagnoses: Optional[str] = None,
         sleep_hours_category: Optional[str] = None,
-        trouble_staying_asleep: Optional[str] = None,
+        trouble_staying_asleep: Optional[bool] = None,
         snoring_sleep_apnea: Optional[str] = None,
         biological_sex: Optional[str] = None,
         menstrual_concerns: Optional[str] = None,
@@ -81,11 +81,11 @@ class HeadacheRuleset:
         # C) Sleep & breathing links
         # Sleep <6h or trouble staying asleep
         short_sleep = sleep_hours_category and sleep_hours_category == "less_than_6"
-        if short_sleep or (trouble_staying_asleep and trouble_staying_asleep.lower() in ['yes', 'y']):
+        if short_sleep or trouble_staying_asleep:
             scores["STR"] += 0.10
             scores["COG"] += 0.05
             #descriptions.append("Sleep disruption")
-        
+
         # OSA suspected/confirmed or loud snoring
         if snoring_sleep_apnea and snoring_sleep_apnea.lower() in ['yes', 'y', 'not sure']:
             scores["STR"] += 0.10

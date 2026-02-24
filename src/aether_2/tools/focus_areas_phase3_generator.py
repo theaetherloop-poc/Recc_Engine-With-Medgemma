@@ -42,9 +42,105 @@ from .rulesets_phase3.alcohol_flushing_ruleset import AlcoholFlushingRuleset
 from .rulesets_phase3.synthetic_fiber_wear_ruleset import SyntheticFiberWearRuleset
 from .rulesets_phase3.seasonal_allergies_ruleset import SeasonalAllergiesRuleset
 from .rulesets_phase3.air_filter_ruleset import AirFilterRuleset
+from .rulesets_phase3.water_filter_ruleset import WaterFilterRuleset
+from .rulesets_phase3.animal_types_ruleset import AnimalTypesRuleset
+from .rulesets_phase3.pet_living_location_ruleset import PetLivingLocationRuleset
+from .rulesets_phase3.unintentional_weight_change_ruleset import UnintentionalWeightChangeRuleset
+from .rulesets_phase3.unintentional_weight_change_details_ruleset import UnintentionalWeightChangeDetailsRuleset
+from .rulesets_phase3.bowel_movement_ruleset import BowelMovementRuleset
+from .rulesets_phase3.transit_time_ruleset import TransitTimeRuleset
+from .rulesets_phase3.headache_migraine_ruleset import HeadacheMigraineRuleset
+from .rulesets_phase3.chronic_pain_modifiers_ruleset import ChronicPainModifiersRuleset
+from .rulesets_phase3.skin_issues_ruleset import SkinIssuesRuleset
 from .rulesets.constants import FOCUS_AREAS, FOCUS_AREA_NAMES, add_top_contributors
-from .rulesets_phase3.constants import PHASE3_FIELD_CONTEXT
+from .rulesets_phase3.constants import PHASE3_FIELD_CONTEXT, PHASE3_SCHEMA
 from .rulesets.data_extractor import extract_phase1_phase2_data
+
+# ============================================================================
+# FIELD MAPPING: Maps old position-based fields to new schema question IDs
+# ============================================================================
+# This mapping allows us to support the new Phase 3 schema format while keeping
+# all rulesets unchanged. Each entry maps a field position (0-46) to:
+# - primary: The main question ID (e.g., "q001")
+# - followups: List of follow-up question IDs that should be merged
+# - merge_strategy: How to combine primary + followups
+#   - "simple": Just return primary value
+#   - "concatenate": Combine primary + followup with "; " separator
+#   - "nested_dict": Create {"radio": primary, "text": followup} structure
+#   - "list": Combine multiple values into a list
+
+FIELD_MAPPING = {
+    # Position 0-9: Goals & Narrative
+    0: {"primary": "q001", "followups": [], "merge_strategy": "simple"},  # Top health goals
+    1: {"primary": "q002", "followups": [], "merge_strategy": "simple"},  # Patient reasoning
+    2: {"primary": "q003", "followups": [], "merge_strategy": "simple"},  # Lifestyle willingness (Yes/No only)
+    3: {"primary": "q005", "followups": [], "merge_strategy": "simple"},  # Last felt well
+    4: {"primary": "q006", "followups": [], "merge_strategy": "simple"},  # Trigger event
+    5: {"primary": "q007", "followups": [], "merge_strategy": "simple"},  # What makes worse
+    6: {"primary": "q008", "followups": ["q009"], "merge_strategy": "concatenate"},  # Time of day worse + explanation
+    7: {"primary": "q010", "followups": ["q011"], "merge_strategy": "concatenate"},  # Where symptoms worse + explanation
+    8: {"primary": "q012", "followups": ["q013"], "merge_strategy": "concatenate"},  # Food/drink triggers + details
+    9: {"primary": "q014", "followups": [], "merge_strategy": "simple"},  # What helps
+
+    # Position 10: Meds & Supplements
+    10: {"primary": "q015", "followups": ["q016", "q017"], "merge_strategy": "concatenate"},  # Long-term meds + which/how long + year
+
+    # Position 11-12: Lifestyle
+    11: {"primary": "q018", "followups": [], "merge_strategy": "simple"},  # Activity intensity
+    12: {"primary": "q019", "followups": [], "merge_strategy": "simple"},  # Sunlight exposure ranking
+
+    # Position 13-15: Sleep
+    13: {"primary": "q020", "followups": ["q021"], "merge_strategy": "concatenate"},  # Sleep aids + details
+    14: {"primary": "q022", "followups": [], "merge_strategy": "simple"},  # Consistent bedtime
+    15: {"primary": "q023", "followups": [], "merge_strategy": "simple"},  # Consistent wake time
+
+    # Position 16-18: Nutrition
+    16: {"primary": "q024", "followups": [], "merge_strategy": "simple"},  # Typical meals
+    17: {"primary": "q025", "followups": ["q026"], "merge_strategy": "concatenate"},  # Food sensitivities + details
+    18: {"primary": "q027", "followups": ["q028"], "merge_strategy": "concatenate"},  # Cravings + other cravings
+
+    # Position 19-23: Stress & Support
+    19: {"primary": "q029", "followups": [], "merge_strategy": "simple"},  # Mood
+    20: {"primary": "q030", "followups": [], "merge_strategy": "simple"},  # Stress level (1-10)
+    21: {"primary": "q031", "followups": [], "merge_strategy": "simple"},  # Stress sources
+    22: {"primary": "q032", "followups": ["q033"], "merge_strategy": "concatenate"},  # Relaxation techniques + other
+    23: {"primary": "q034", "followups": ["q035"], "merge_strategy": "concatenate"},  # Support sources + other
+    24: {"primary": "q036", "followups": ["q037"], "merge_strategy": "concatenate"},  # Trauma history + details
+
+    # Position 25-28: Childhood & Development
+    25: {"primary": "q038", "followups": ["q039"], "merge_strategy": "concatenate"},  # Childhood illnesses + details
+    26: {"primary": "q040", "followups": ["q041"], "merge_strategy": "concatenate"},  # Childhood home security + details
+    27: {"primary": "q042", "followups": ["q043"], "merge_strategy": "concatenate"},  # Breastfeeding + duration
+    28: {"primary": "q044", "followups": ["q045"], "merge_strategy": "concatenate"},  # Early environmental exposures + details
+
+    # Position 29: Dental History
+    29: {"primary": "q046", "followups": ["q047"], "merge_strategy": "concatenate"},  # Tooth sensitivity + details
+
+    # Position 30-35: Environment & Exposures
+    30: {"primary": "q048", "followups": ["q049"], "merge_strategy": "concatenate"},  # Indoor environment factors + other
+    31: {"primary": "q050", "followups": ["q051"], "merge_strategy": "concatenate"},  # Chemical sensitivity + triggers
+    32: {"primary": "q052", "followups": ["q053"], "merge_strategy": "concatenate"},  # Caffeine use + sensitivity
+    33: {"primary": "q054", "followups": ["q055"], "merge_strategy": "concatenate"},  # Alcohol flush + details
+    34: {"primary": "q056", "followups": [], "merge_strategy": "simple"},  # Synthetic fiber wear
+    35: {"primary": "q057", "followups": ["q058"], "merge_strategy": "concatenate"},  # Seasonal allergies + details
+    36: {"primary": "q060", "followups": ["q061"], "merge_strategy": "concatenate"},  # Air filter + brand/model
+    37: {"primary": "q062", "followups": ["q063"], "merge_strategy": "concatenate"},  # Water filter + brand/model
+
+    # Position 38-40: Pets & Animals
+    38: {"primary": "q064", "followups": ["q065"], "merge_strategy": "concatenate"},  # Animal types + other
+    39: {"primary": "q066", "followups": [], "merge_strategy": "simple"},  # Pet living location
+
+    # Position 40-44: Systems Check
+    40: {"primary": "q067", "followups": [], "merge_strategy": "simple"},  # Unintentional weight change
+    41: {"primary": "q068", "followups": [], "merge_strategy": "simple"},  # Weight change details
+    42: {"primary": "q069", "followups": [], "merge_strategy": "simple"},  # Bowel movement frequency
+    43: {"primary": "q075", "followups": [], "merge_strategy": "simple"},  # Transit time
+
+    # Position 44-46: Pain, Headache, Skin
+    44: {"primary": "q091", "followups": [], "merge_strategy": "simple"},  # Headache/migraine details
+    45: {"primary": "q092", "followups": [], "merge_strategy": "simple"},  # Chronic pain details
+    46: {"primary": "q093", "followups": [], "merge_strategy": "simple"},  # Skin issues details
+}
 
 class EvaluateFocusAreasPhase3Input(BaseModel):
     patient_and_blood_data: Union[str, dict] = Field(
@@ -124,14 +220,132 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
 
         return reasons_file_path
 
-    def _extract_phase3_to_dataframe(self, phase3_dict: Dict[str, Any]) -> pd.DataFrame:
-        """Convert phase3_detailed_intake dict to DataFrame for position-based access."""
-        if not phase3_dict:
+    def _validate_new_format(self, phase3_data: Any) -> bool:
+        """
+        Validate that phase3_data is in the new schema format.
+
+        Returns:
+            True if valid new format, False otherwise
+        """
+        if not phase3_data:
+            return False
+
+        if isinstance(phase3_data, dict) and "questions" in phase3_data:
+            if isinstance(phase3_data["questions"], list):
+                return True
+
+        return False
+
+    def _merge_followup_questions(self, questions_list: List[Dict], mapping: Dict) -> str:
+        """
+        Merge primary question with follow-up questions based on mapping strategy.
+
+        Args:
+            questions_list: List of question objects from new schema
+            mapping: Field mapping dict with "primary", "followups", "merge_strategy"
+
+        Returns:
+            Merged value as string or nested structure
+        """
+        primary_id = mapping.get("primary")
+        followup_ids = mapping.get("followups", [])
+        strategy = mapping.get("merge_strategy", "simple")
+
+        # Find primary question value
+        primary_value = None
+        for q in questions_list:
+            if q.get("id") == primary_id:
+                primary_value = q.get("value")
+                break
+
+        # If no followups, just return primary
+        if not followup_ids or strategy == "simple":
+            return primary_value if primary_value is not None else ""
+
+        # Find followup values
+        followup_values = []
+        for followup_id in followup_ids:
+            for q in questions_list:
+                if q.get("id") == followup_id:
+                    val = q.get("value")
+                    if val is not None and val != "":
+                        followup_values.append(val)
+                    break
+
+        # Apply merge strategy
+        if strategy == "concatenate":
+            # Combine primary + followups with "; " separator
+            parts = []
+            if primary_value is not None and primary_value != "":
+                parts.append(str(primary_value))
+            parts.extend([str(v) for v in followup_values])
+            return "; ".join(parts) if parts else ""
+
+        elif strategy == "nested_dict":
+            # Create {"radio": primary, "text": followup} structure
+            result = {"radio": primary_value if primary_value is not None else ""}
+            if followup_values:
+                result["text"] = followup_values[0]  # Take first followup as text
+            else:
+                result["text"] = ""
+            return result
+
+        elif strategy == "list":
+            # Combine into list
+            result = []
+            if primary_value is not None and primary_value != "":
+                result.append(primary_value)
+            result.extend(followup_values)
+            return result
+
+        # Default: just return primary
+        return primary_value if primary_value is not None else ""
+
+    def _extract_phase3_to_dataframe(self, phase3_data: Dict[str, Any]) -> pd.DataFrame:
+        """
+        Convert phase3_detailed_intake (new schema format) to DataFrame for position-based access.
+        Expects new format with "questions" array.
+        """
+        if not phase3_data:
             return pd.DataFrame(columns=['question', 'answer', 'position'])
-        
-        items = list(phase3_dict.items())
-        df = pd.DataFrame(items, columns=['question', 'answer'])
-        df['position'] = df.index
+
+        # Validate new format
+        if not self._validate_new_format(phase3_data):
+            raise ValueError(
+                "Invalid Phase 3 data format. Expected new schema with 'questions' array. "
+                "Please ensure input follows the new schema format."
+            )
+
+        # Extract from questions array
+        questions_list = phase3_data.get("questions", [])
+
+        # If FIELD_MAPPING is empty, raise error
+        if not FIELD_MAPPING:
+            raise ValueError(
+                "FIELD_MAPPING is empty. Please populate FIELD_MAPPING before using new schema format."
+            )
+
+        # Use FIELD_MAPPING to merge followups
+        merged_fields = []
+        for position in sorted(FIELD_MAPPING.keys()):
+            mapping = FIELD_MAPPING[position]
+            merged_value = self._merge_followup_questions(questions_list, mapping)
+
+            # Get question text from primary question
+            primary_id = mapping.get("primary")
+            question_text = ""
+            for q in questions_list:
+                if q.get("id") == primary_id:
+                    question_text = q.get("question", "")
+                    break
+
+            merged_fields.append({
+                'question': question_text,
+                'answer': merged_value,
+                'position': position
+            })
+
+        df = pd.DataFrame(merged_fields)
         return df
 
     def _get_field_by_position(self, df: pd.DataFrame, position: int, default: str = "") -> str:
@@ -170,13 +384,34 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
             if not phase3_data:
                 return "Focus Areas Ranking:\n(No phase3 data available)"
 
+            # Validate new format
+            if not self._validate_new_format(phase3_data):
+                raise ValueError(
+                    "Invalid Phase 3 data format. Expected new schema with 'questions' array.\n"
+                    "Please ensure phase3_detailed_intake follows the new schema format."
+                )
+
+            # Log format info
+            num_questions = len(phase3_data.get("questions", []))
+            print(f"\n🔍 Phase 3 Data: New Schema Format")
+            print(f"   Total questions: {num_questions}")
+            print(f"   Fields to extract: {len(FIELD_MAPPING) if FIELD_MAPPING else 0}")
+
+            if not FIELD_MAPPING:
+                raise ValueError(
+                    "FIELD_MAPPING is empty. Please populate FIELD_MAPPING with all 47 field mappings "
+                    "before processing new schema format."
+                )
+
             # Extract Phase 1/2 context using shared extractor (no duplication!)
             phase1_phase2_context = extract_phase1_phase2_data(data)
 
             # Extract commonly used fields
             age = phase1_phase2_context.get("age")
             sex = phase1_phase2_context.get("biological_sex")
-            patient_id = str(age) if age else "unknown"
+            # Use email for folder naming (sanitized)
+            email = data.get("metadata", {}).get("email", "unknown")
+            patient_id = email.replace("@", "_at_").replace(".", "_") if email != "unknown" else "unknown"
             occupation_data = {"job_title": phase1_phase2_context.get("job_title"),
                              "work_stress_level": phase1_phase2_context.get("work_stress_level")}
             environmental_exposures = {"mold_exposure": phase1_phase2_context.get("mold_exposure"),
@@ -222,7 +457,17 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
             field_33 = self._get_field_by_position(phase3_df, 33)  # Alcohol flushing (radio + optional free text)
             field_34 = self._get_field_by_position(phase3_df, 34)  # Synthetic fiber wear (multi-select + optional free text)
             field_35 = self._get_field_by_position(phase3_df, 35)  # Seasonal allergies (radio + optional free text)
-            field_37 = self._get_field_by_position(phase3_df, 37)  # Air filter usage (radio + optional brand/model)
+            field_37 = self._get_field_by_position(phase3_df, 36)  # Air filter usage (radio + optional brand/model)
+            field_38 = self._get_field_by_position(phase3_df, 37)  # Water filter/bottled water usage (radio + optional brand/model)
+            field_39 = self._get_field_by_position(phase3_df, 38)  # Animal types (multi-select + optional free text)
+            field_40 = self._get_field_by_position(phase3_df, 39)  # Pet living location (radio: Inside/Outside/Both)
+            field_41 = self._get_field_by_position(phase3_df, 40)  # Unintentional weight change (radio: Yes/No)
+            field_42 = self._get_field_by_position(phase3_df, 41)  # Weight change details (free text)
+            field_43 = self._get_field_by_position(phase3_df, 42)  # Bowel movement frequency & characteristics (free text)
+            field_44 = self._get_field_by_position(phase3_df, 43)  # Transit time (beet/charcoal test) (free text)
+            field_45 = self._get_field_by_position(phase3_df, 44)  # Headache/migraine details (free text, conditional)
+            field_46 = self._get_field_by_position(phase3_df, 45)  # Chronic pain modifiers (free text, conditional)
+            field_47 = self._get_field_by_position(phase3_df, 46)  # Skin issues details (free text, conditional)
 
             # TEMPORARY: Print extracted fields for verification
             print("\n🔍 Phase3 Data Extraction Debug:")
@@ -273,7 +518,17 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
             print(f"  Field 33 (Alcohol flushing): '{field_33[:100] if field_33 else 'EMPTY'}...'")
             print(f"  Field 34 (Synthetic fiber wear): '{field_34[:100] if field_34 else 'EMPTY'}...'")
             print(f"  Field 35 (Seasonal allergies): '{field_35[:100] if field_35 else 'EMPTY'}...'")
-            print(f"  Field 37 (Air filter): '{field_37[:100] if field_37 else 'EMPTY'}...'")
+            print(f"  Field 36 (Air filter): '{field_37[:100] if field_37 else 'EMPTY'}...'")
+            print(f"  Field 37 (Water filter): '{field_38[:100] if field_38 else 'EMPTY'}...'")
+            print(f"  Field 38 (Animal types): '{field_39[:100] if field_39 else 'EMPTY'}...'")
+            print(f"  Field 39 (Pet living location): '{field_40[:100] if field_40 else 'EMPTY'}...'")
+            print(f"  Field 40 (Unintentional weight change): '{field_41[:100] if field_41 else 'EMPTY'}...'")
+            print(f"  Field 41 (Weight change details): '{field_42[:100] if field_42 else 'EMPTY'}...'")
+            print(f"  Field 42 (Bowel movement frequency): '{field_43[:100] if field_43 else 'EMPTY'}...'")
+            print(f"  Field 43 (Transit time): '{field_44[:100] if field_44 else 'EMPTY'}...'")
+            print(f"  Field 44 (Headache/migraine details): '{field_45[:100] if field_45 else 'EMPTY'}...'")
+            print(f"  Field 45 (Chronic pain modifiers): '{field_46[:100] if field_46 else 'EMPTY'}...'")
+            print(f"  Field 46 (Skin issues details): '{field_47[:100] if field_47 else 'EMPTY'}...'")
             print("")
 
             # Initialize scores, reasons, and log
@@ -321,6 +576,16 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
             synthetic_fiber_wear_ruleset = SyntheticFiberWearRuleset()
             seasonal_allergies_ruleset = SeasonalAllergiesRuleset()
             air_filter_ruleset = AirFilterRuleset()
+            water_filter_ruleset = WaterFilterRuleset()
+            animal_types_ruleset = AnimalTypesRuleset()
+            pet_living_location_ruleset = PetLivingLocationRuleset()
+            unintentional_weight_change_ruleset = UnintentionalWeightChangeRuleset()
+            weight_change_details_ruleset = UnintentionalWeightChangeDetailsRuleset()
+            bowel_movement_ruleset = BowelMovementRuleset()
+            transit_time_ruleset = TransitTimeRuleset()
+            headache_migraine_ruleset = HeadacheMigraineRuleset()
+            chronic_pain_modifiers_ruleset = ChronicPainModifiersRuleset()
+            skin_issues_ruleset = SkinIssuesRuleset()
 
             log_entries.append("="*80)
             log_entries.append(f"PHASE 3 FOCUS AREA EVALUATION - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -1135,7 +1400,8 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
 
             # Field 27: Breastfeeding History (radio + duration with cross-field synergies)
             # Extract cross-field data
-            c_section = phase1_phase2_context.get("born_via_c_section", "").lower() == "yes"
+            c_section_value = phase1_phase2_context.get("born_via_c_section", "")
+            c_section = str(c_section_value).lower() == "yes" if c_section_value else False
             early_antibiotics = phase1_phase2_context.get("took_antibiotics_as_child", False)
             current_skin_disease = phase1_phase2_context.get("has_skin_issues", False)
 
@@ -1560,7 +1826,7 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
             )
 
             # Track reasons - simple format: choice
-            field_context = PHASE3_FIELD_CONTEXT[37]
+            field_context = PHASE3_FIELD_CONTEXT[36]
             field_37_display = field_37_choice if field_37_choice else "none"
             add_top_contributors(
                 all_reasons,
@@ -1571,7 +1837,7 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
             )
 
             # Log
-            log_entries.append(self._create_log_entry(f"Field 37 - {field_context}", field_37_scores, field_37_display))
+            log_entries.append(self._create_log_entry(f"Field 36 - {field_context}", field_37_scores, field_37_display))
 
             all_scores = self._combine_scores(all_scores, field_37_scores)
 
@@ -1579,6 +1845,661 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
             if field_37_flags:
                 for flag in field_37_flags:
                     log_entries.append(f"  ⚠️  {flag}")
+
+            # ================================================================
+            # Field 38: Water Filter/Bottled Water Usage
+            # ================================================================
+            # Parse field_38 to extract choice and brand/model text
+            # Format: "Yes; Brita pitcher filter"
+            field_38_choice = ""
+            field_38_brand_model = ""
+            if field_38:
+                field_38_str = str(field_38).strip()
+                if ";" in field_38_str:
+                    parts = field_38_str.split(";", 1)
+                    field_38_choice = parts[0].strip()
+                    field_38_brand_model = parts[1].strip() if len(parts) > 1 else ""
+                else:
+                    field_38_choice = field_38_str
+
+            # Get water source from Phase 2 if available
+            water_source = phase1_phase2_context.get("water_source", "unknown")
+
+            # Get PFAS advisory from Phase 2 if available
+            has_pfas_advisory = phase1_phase2_context.get("has_pfas_advisory", False)
+            if isinstance(has_pfas_advisory, str):
+                has_pfas_advisory = has_pfas_advisory.lower() in ["yes", "true"]
+
+            field_38_scores, field_38_flags = water_filter_ruleset.get_water_filter_weights(
+                field_38_choice,
+                brand_model_text=field_38_brand_model,
+                water_source=water_source,
+                has_pfas_advisory=has_pfas_advisory
+            )
+
+            # Track reasons
+            field_context = PHASE3_FIELD_CONTEXT[37]
+            field_38_display = field_38_choice if field_38_choice else "none"
+            add_top_contributors(
+                all_reasons,
+                field_38_scores,
+                field_context,
+                field_38_display,
+                top_n=self.TOP_N_CONTRIBUTORS
+            )
+
+            # Log
+            log_entries.append(self._create_log_entry(f"Field 37 - {field_context}", field_38_scores, field_38_display))
+
+            all_scores = self._combine_scores(all_scores, field_38_scores)
+
+            # Log validation warnings/flags
+            if field_38_flags:
+                for flag in field_38_flags:
+                    log_entries.append(f"  ⚠️  {flag}")
+
+            # ================================================================
+            # Field 39: Animal Types
+            # ================================================================
+            # Get has_pets from Phase 2
+            has_pets_phase2 = phase1_phase2_context.get("has_pets", False)
+            if isinstance(has_pets_phase2, str):
+                has_pets_phase2 = has_pets_phase2.lower() in ["yes", "true"]
+
+            # Parse field_39 (comma/semicolon-separated animal list)
+            field_39_animal_list = str(field_39).strip() if field_39 else ""
+
+            # Detect if user has livestock (needed for Field 40)
+            has_livestock = False
+            if field_39_animal_list:
+                field_39_norm = field_39_animal_list.lower()
+                if any(kw in field_39_norm for kw in ["livestock", "chicken", "hen", "rooster", "duck", "goose", "goat", "sheep", "cow", "cattle", "pig", "horse"]):
+                    has_livestock = True
+
+            # Get context from other fields
+            # handles_litter: check if user mentioned litter in Field 30 or elsewhere
+            handles_litter = False
+            if field_30:
+                field_30_norm = str(field_30).lower()
+                if any(kw in field_30_norm for kw in ["litter", "litter box", "cat litter"]):
+                    handles_litter = True
+
+            # For now, we don't have data for these parameters - set to False
+            feeds_raw_food = False
+            backyard_poultry_frequent = False
+            litter_daily_cleaning = False
+            poor_hand_hygiene = False
+            good_hand_hygiene = False
+            has_hepa_bedroom = False  # Could be derived from Field 37 if needed
+            ruminant_birthing_exposure = False
+
+            field_39_scores, field_39_flags = animal_types_ruleset.get_animal_types_weights(
+                field_39_animal_list,
+                has_pets=has_pets_phase2,
+                handles_litter=handles_litter,
+                feeds_raw_food=feeds_raw_food,
+                backyard_poultry_frequent=backyard_poultry_frequent,
+                litter_daily_cleaning=litter_daily_cleaning,
+                poor_hand_hygiene=poor_hand_hygiene,
+                good_hand_hygiene=good_hand_hygiene,
+                has_hepa_bedroom=has_hepa_bedroom,
+                ruminant_birthing_exposure=ruminant_birthing_exposure
+            )
+
+            # Track reasons
+            field_context = PHASE3_FIELD_CONTEXT[38]
+            field_39_display = field_39_animal_list[:100] if field_39_animal_list else "none"
+            add_top_contributors(
+                all_reasons,
+                field_39_scores,
+                field_context,
+                field_39_display,
+                top_n=self.TOP_N_CONTRIBUTORS
+            )
+
+            # Log
+            log_entries.append(self._create_log_entry(f"Field 38 - {field_context}", field_39_scores, field_39_display))
+
+            all_scores = self._combine_scores(all_scores, field_39_scores)
+
+            # Log validation warnings/flags
+            if field_39_flags:
+                for flag in field_39_flags:
+                    log_entries.append(f"  ⚠️  {flag}")
+
+            # ================================================================
+            # Field 40: Pet Living Location
+            # ================================================================
+            # This field applies multipliers to the base pet scores from Field 39
+            # Parse field_40 (radio: Inside/Outside/Both)
+            field_40_location = str(field_40).strip() if field_40 else ""
+
+            # Get air filter from Field 37
+            air_filter_type = field_37_choice if field_37_choice else "None"
+
+            # Get mold/damp from Field 30
+            has_mold_damp_field30 = has_mold_dampness_field30  # Already extracted earlier
+
+            # Get cleans_litter_coops (same as handles_litter for now)
+            cleans_litter_coops = handles_litter
+
+            # Apply location adjustments to Field 39 base scores
+            field_40_scores, field_40_flags = pet_living_location_ruleset.apply_pet_location_adjustments(
+                field_39_scores,  # Base scores from Field 39
+                location=field_40_location,
+                has_pets=has_pets_phase2,
+                has_livestock=has_livestock,
+                air_filter=air_filter_type,
+                cleans_litter_coops=cleans_litter_coops,
+                has_mold_damp=has_mold_damp_field30
+            )
+
+            # Track reasons
+            field_context = PHASE3_FIELD_CONTEXT[39]
+            field_40_display = field_40_location if field_40_location else "none"
+            add_top_contributors(
+                all_reasons,
+                field_40_scores,
+                field_context,
+                field_40_display,
+                top_n=self.TOP_N_CONTRIBUTORS
+            )
+
+            # Log
+            log_entries.append(self._create_log_entry(f"Field 39 - {field_context}", field_40_scores, field_40_display))
+
+            # IMPORTANT: For Field 40, we need to REPLACE the Field 39 scores with the adjusted scores
+            # First, subtract the Field 39 scores
+            for fa, score in field_39_scores.items():
+                all_scores[fa] -= score
+
+            # Then add the Field 40 adjusted scores
+            all_scores = self._combine_scores(all_scores, field_40_scores)
+
+            # Log validation warnings/flags
+            if field_40_flags:
+                for flag in field_40_flags:
+                    log_entries.append(f"  ⚠️  {flag}")
+
+            # ================================================================
+            # Field 41: Unintentional Weight Change (Radio: Yes/No)
+            # ================================================================
+            field_41_choice = str(field_41).strip() if field_41 else ""
+
+            field_41_scores, field_41_flags = unintentional_weight_change_ruleset.get_unintentional_weight_change_weights(
+                field_41_choice
+            )
+
+            # Track reasons
+            field_context = PHASE3_FIELD_CONTEXT[40]
+            field_41_display = field_41_choice if field_41_choice else "none"
+            add_top_contributors(
+                all_reasons,
+                field_41_scores,
+                field_context,
+                field_41_display,
+                top_n=self.TOP_N_CONTRIBUTORS
+            )
+
+            # Log
+            log_entries.append(self._create_log_entry(f"Field 40 - {field_context}", field_41_scores, field_41_display))
+
+            all_scores = self._combine_scores(all_scores, field_41_scores)
+
+            # Log validation warnings/flags
+            if field_41_flags:
+                for flag in field_41_flags:
+                    log_entries.append(f"  {flag}")
+
+            # ================================================================
+            # Field 42: Weight Change Details (Free Text)
+            # ================================================================
+            # Only process if Field 41 = "Yes"
+            field_41_norm = field_41_choice.lower() if field_41_choice else ""
+
+            if field_41_norm == "yes":
+                # Extract baseline weight from Phase 1/2 context
+                baseline_weight_kg = None
+                weight_lbs = phase1_phase2_context.get("weight_lbs")
+                if weight_lbs:
+                    baseline_weight_kg = weight_lbs * 0.453592  # Convert lbs to kg
+
+                # Extract cross-field context
+                # GI symptoms from Phase 2
+                has_diarrhea = "diarrhea" in digestive_symptoms.lower() if digestive_symptoms else False
+                has_steatorrhea = "steatorrhea" in digestive_symptoms.lower() or "fatty stool" in digestive_symptoms.lower() if digestive_symptoms else False
+                has_abdominal_pain = "abdominal pain" in digestive_symptoms.lower() or "stomach pain" in digestive_symptoms.lower() if digestive_symptoms else False
+                has_blood_in_stool = "blood" in digestive_symptoms.lower() if digestive_symptoms else False
+
+                # Diagnoses
+                has_ibd_celiac = False
+                diagnoses_string = phase1_phase2_context.get("diagnoses_string", "")
+                diagnoses_other = phase1_phase2_context.get("diagnoses_other", "")
+                all_diagnoses = (diagnoses_string or "") + " " + (diagnoses_other or "")
+                all_diagnoses_lower = all_diagnoses.lower()
+                if any(kw in all_diagnoses_lower for kw in ["ibd", "crohn", "colitis", "celiac"]):
+                    has_ibd_celiac = True
+
+                # Thyrotoxic symptoms (from Phase 2 symptoms)
+                has_thyrotoxic_symptoms = False
+                if other_symptoms:
+                    other_symptoms_lower = other_symptoms.lower()
+                    if any(kw in other_symptoms_lower for kw in ["heat intolerance", "tremor", "palpitations", "sweating"]):
+                        has_thyrotoxic_symptoms = True
+
+                # Post-infectious (from Field 4 trigger events)
+                has_post_infectious = False
+                if field_4:
+                    field_4_lower = str(field_4).lower()
+                    if any(kw in field_4_lower for kw in ["infection", "flu", "covid", "virus", "sick"]):
+                        has_post_infectious = True
+
+                # Reflux (from Field 29 or Phase 2)
+                has_reflux = has_chronic_gerd  # Already extracted earlier
+
+                # Late meals (from Field 16)
+                has_late_meals = False
+                if field_16:
+                    field_16_lower = str(field_16).lower()
+                    if any(kw in field_16_lower for kw in ["late", "before bed", "midnight", "evening snack"]):
+                        has_late_meals = True
+
+                # Medications from Phase 1/2 context
+                on_steroids = False
+                on_antipsychotics = False
+                current_medications = phase1_phase2_context.get("current_medications", [])
+                if current_medications:
+                    for med in current_medications:
+                        med_name = med.get("name", "").lower() if isinstance(med, dict) else str(med).lower()
+                        if any(kw in med_name for kw in ["prednisone", "dexamethasone", "cortisone", "steroid"]):
+                            on_steroids = True
+                        if any(kw in med_name for kw in ["olanzapine", "quetiapine", "risperidone", "aripiprazole", "antipsychotic"]):
+                            on_antipsychotics = True
+
+                # Central adiposity (from Phase 1 demographics or body composition)
+                has_central_adiposity = False
+                # This would need to be extracted from body composition data if available
+
+                # Edema, SOB, night sweats, fever (from Phase 2 symptoms)
+                has_edema = False
+                has_sob = False
+                has_night_sweats = False
+                has_fever = False
+                if other_symptoms:
+                    other_symptoms_lower = other_symptoms.lower()
+                    if any(kw in other_symptoms_lower for kw in ["edema", "swelling", "ankle swelling"]):
+                        has_edema = True
+                    if any(kw in other_symptoms_lower for kw in ["shortness of breath", "sob", "dyspnea"]):
+                        has_sob = True
+                    if any(kw in other_symptoms_lower for kw in ["night sweats", "sweating at night"]):
+                        has_night_sweats = True
+                    if any(kw in other_symptoms_lower for kw in ["fever", "temperature"]):
+                        has_fever = True
+
+                # Parse Field 42 text
+                field_42_text = str(field_42).strip() if field_42 else ""
+
+                field_42_scores, field_42_flags = weight_change_details_ruleset.get_weight_change_details_weights(
+                    field_42_text,
+                    baseline_weight_kg=baseline_weight_kg,
+                    has_diarrhea=has_diarrhea,
+                    has_steatorrhea=has_steatorrhea,
+                    has_abdominal_pain=has_abdominal_pain,
+                    has_ibd_celiac=has_ibd_celiac,
+                    has_thyrotoxic_symptoms=has_thyrotoxic_symptoms,
+                    has_post_infectious=has_post_infectious,
+                    has_reflux=has_reflux,
+                    has_late_meals=has_late_meals,
+                    on_steroids=on_steroids,
+                    on_antipsychotics=on_antipsychotics,
+                    has_central_adiposity=has_central_adiposity,
+                    has_edema=has_edema,
+                    has_sob=has_sob,
+                    has_blood_in_stool=has_blood_in_stool,
+                    has_night_sweats=has_night_sweats,
+                    has_fever=has_fever
+                )
+
+                # Track reasons
+                field_context = PHASE3_FIELD_CONTEXT[41]
+                field_42_display = field_42_text[:100] if field_42_text else "none"
+                add_top_contributors(
+                    all_reasons,
+                    field_42_scores,
+                    field_context,
+                    field_42_display,
+                    top_n=self.TOP_N_CONTRIBUTORS
+                )
+
+                # Log
+                log_entries.append(self._create_log_entry(f"Field 41 - {field_context}", field_42_scores, field_42_display))
+
+                all_scores = self._combine_scores(all_scores, field_42_scores)
+
+                # Log validation warnings/flags
+                if field_42_flags:
+                    for flag in field_42_flags:
+                        log_entries.append(f"  {flag}")
+            else:
+                # Field 40 was "No" or empty, skip Field 41
+                log_entries.append("\n--- FIELD 41 - WeightChangeDetails ---")
+                log_entries.append("Skipped (Field 40 was not 'Yes')")
+
+            # ================================================================
+            # Field 43: Bowel Movement Frequency & Characteristics (Free Text)
+            # ================================================================
+            field_43_text = str(field_43).strip() if field_43 else ""
+
+            # Get digestive symptoms from Phase 2 for context
+            phase2_digestive_symptoms = phase1_phase2_context.get("digestive_symptoms", "")
+
+            field_43_scores, field_43_flags, field_43_alerts = bowel_movement_ruleset.get_bowel_movement_weights(
+                bowel_text=field_43_text,
+                phase2_digestive_symptoms=phase2_digestive_symptoms
+            )
+
+            # Track reasons
+            field_context = "BowelMovementFrequency"  # Field 42 in the new numbering
+            field_43_display = field_43_text[:100] if field_43_text else "none"
+            add_top_contributors(
+                all_reasons,
+                field_43_scores,
+                field_context,
+                field_43_display,
+                top_n=self.TOP_N_CONTRIBUTORS
+            )
+
+            # Log
+            log_entries.append(self._create_log_entry(f"Field 42 - {field_context}", field_43_scores, field_43_display))
+
+            # Store Field 43 scores separately (for anti-duplication logic)
+            field_43_scores_stored = field_43_scores.copy()
+
+            # Log validation warnings/flags
+            if field_43_flags:
+                for flag in field_43_flags:
+                    log_entries.append(f"  ℹ️  {flag}")
+
+            # Log safety alerts
+            if field_43_alerts:
+                for alert in field_43_alerts:
+                    log_entries.append(f"  🚨 [{alert['severity'].upper()}] {alert['message']}")
+                    if alert['severity'] == 'urgent':
+                        safety_flags["urgent_care"] = True
+
+            # ================================================================
+            # Field 44: Transit Time (Beet/Charcoal Test) (Free Text)
+            # ================================================================
+            field_44_text = str(field_44).strip() if field_44 else ""
+
+            # Extract medical history for modifiers
+            cholecystectomy = False
+            diabetes = False
+            medications = []
+
+            # Check for cholecystectomy in surgeries
+            surgeries = phase1_phase2_context.get("surgeries", "")
+            if surgeries and isinstance(surgeries, str):
+                if "cholecystectomy" in surgeries.lower() or "gallbladder" in surgeries.lower():
+                    cholecystectomy = True
+
+            # Check for diabetes in diagnoses
+            diagnoses = phase1_phase2_context.get("diagnoses", "")
+            if diagnoses and isinstance(diagnoses, str):
+                if "diabetes" in diagnoses.lower():
+                    diabetes = True
+
+            # Get medications
+            meds = phase1_phase2_context.get("medications", "")
+            if meds and isinstance(meds, str):
+                medications = [m.strip() for m in meds.split(",") if m.strip()]
+
+            field_44_scores, field_44_flags, field_44_alerts = transit_time_ruleset.get_transit_time_weights(
+                transit_text=field_44_text,
+                cholecystectomy=cholecystectomy,
+                diabetes=diabetes,
+                medications=medications,
+                phase2_digestive_symptoms=phase2_digestive_symptoms
+            )
+
+            # Track reasons
+            field_context = "TransitTime"  # Field 43 in the new numbering
+            field_44_display = field_44_text[:100] if field_44_text else "none"
+            add_top_contributors(
+                all_reasons,
+                field_44_scores,
+                field_context,
+                field_44_display,
+                top_n=self.TOP_N_CONTRIBUTORS
+            )
+
+            # Log
+            log_entries.append(self._create_log_entry(f"Field 43 - {field_context}", field_44_scores, field_44_display))
+
+            # Log validation warnings/flags
+            if field_44_flags:
+                for flag in field_44_flags:
+                    log_entries.append(f"  ℹ️  {flag}")
+
+            # Log safety alerts
+            if field_44_alerts:
+                for alert in field_44_alerts:
+                    log_entries.append(f"  🚨 [{alert['severity'].upper()}] {alert['message']}")
+                    if alert['severity'] == 'urgent':
+                        safety_flags["urgent_care"] = True
+
+            # ================================================================
+            # Anti-Duplication Logic: Field 43 + Field 44 Integration
+            # ================================================================
+            # Check if transit time was actually measured
+            transit_measured = False
+            if field_44_text:
+                text_lower = field_44_text.lower()
+                not_measured_phrases = ["not measured", "don't know", "didn't measure",
+                                       "haven't tested", "no test", "unknown"]
+                if not any(phrase in text_lower for phrase in not_measured_phrases):
+                    # Check for time indicators
+                    time_indicators = ["h", "hr", "hour", "day", "d"]
+                    if any(indicator in text_lower for indicator in time_indicators):
+                        transit_measured = True
+
+            # Apply anti-duplication logic
+            if transit_measured:
+                # Transit time measured → Field 44 takes priority
+                # Reduce Field 43 frequency-related weights by 50%
+                log_entries.append("\n--- ANTI-DUPLICATION LOGIC ---")
+                log_entries.append("Transit time measured → Field 44 priority")
+                log_entries.append("Reducing Field 43 frequency weights by 50%")
+
+                # Reduce Field 43 weights by 50% (frequency overlap)
+                for domain in ["GA", "DTX", "CM", "MITO", "HRM"]:
+                    if domain in field_43_scores_stored:
+                        original = field_43_scores_stored[domain]
+                        reduced = original * 0.5
+                        field_43_scores_stored[domain] = reduced
+                        log_entries.append(f"  {domain}: {original:.3f} → {reduced:.3f} (50% reduction)")
+
+                # Add both Field 43 (reduced) and Field 44 (full)
+                all_scores = self._combine_scores(all_scores, field_43_scores_stored, field_44_scores)
+            else:
+                # Transit time NOT measured → Field 43 takes priority
+                log_entries.append("\n--- ANTI-DUPLICATION LOGIC ---")
+                log_entries.append("Transit time NOT measured → Field 43 priority")
+                log_entries.append("Using Field 43 weights at 100%, adding Field 44 Bristol-inferred weights")
+
+                # Add Field 43 at full value, Field 44 at full value (Bristol-only)
+                all_scores = self._combine_scores(all_scores, field_43_scores_stored, field_44_scores)
+
+            # ================================================================
+            # Field 44: Headache/Migraine Details (Conditional on Phase 2)
+            # ================================================================
+
+            # Check Phase 2 pre-condition: frequent_headaches_migraines == true
+            phase2_headaches = phase1_phase2_context.get("frequent_headaches_migraines", False)
+
+            if phase2_headaches:
+                field_45_text = str(field_45).strip() if field_45 else ""
+
+                # Get Phase 2 context for synergies
+                phase2_sleep_hours_category = phase1_phase2_context.get("sleep_hours_category", "")
+                phase2_medications = phase1_phase2_context.get("current_medications", [])
+                phase1_known_allergies = phase1_phase2_context.get("known_allergies", [])
+
+                # Call ruleset
+                field_45_scores, field_45_flags, field_45_alerts = headache_migraine_ruleset.get_headache_migraine_weights(
+                    headache_text=field_45_text,
+                    age=age,
+                    biological_sex=sex,
+                    phase2_digestive_symptoms=phase2_digestive_symptoms,
+                    phase2_sleep_hours_category=phase2_sleep_hours_category,
+                    phase2_medications=phase2_medications,
+                    phase1_known_allergies=phase1_known_allergies
+                )
+
+                # Track reasons
+                field_context = "HeadacheMigraineDetails"  # Field 44 in the new numbering
+                field_45_display = field_45_text[:100] if field_45_text else "none"
+                add_top_contributors(
+                    all_reasons,
+                    field_45_scores,
+                    field_context,
+                    field_45_display,
+                    top_n=self.TOP_N_CONTRIBUTORS
+                )
+
+                # Log
+                log_entries.append(self._create_log_entry(f"Field 44 - {field_context}", field_45_scores, field_45_display))
+
+                # Log validation warnings/flags
+                if field_45_flags:
+                    for flag in field_45_flags:
+                        log_entries.append(f"  ℹ️  {flag}")
+
+                # Log safety alerts
+                if field_45_alerts:
+                    for alert in field_45_alerts:
+                        log_entries.append(f"  🚨 [{alert['severity'].upper()}] {alert['message']}")
+                        if alert['severity'] == 'urgent':
+                            safety_flags["urgent_care"] = True
+                        elif alert['severity'] == 'warning':
+                            safety_flags["red_flag"] = True
+
+                # Add scores
+                all_scores = self._combine_scores(all_scores, field_45_scores)
+            else:
+                log_entries.append("\n--- FIELD 44 - HEADACHE/MIGRAINE DETAILS ---")
+                log_entries.append("Skipped: Phase 2 frequent_headaches_migraines == false")
+
+            # ================================================================
+            # Field 45: Chronic Pain Modifiers (Conditional on Phase 2)
+            # ================================================================
+
+            # Check Phase 2 pre-condition: has_chronic_pain == true
+            phase2_chronic_pain = phase1_phase2_context.get("has_chronic_pain", False)
+
+            if phase2_chronic_pain:
+                field_46_text = str(field_46).strip() if field_46 else ""
+
+                # Get Phase 2 context for synergies
+                phase2_digestive_symptoms_list = phase1_phase2_context.get("digestive_symptoms", [])
+                phase2_medications_list = phase1_phase2_context.get("current_medications", [])
+
+                # Call ruleset
+                field_46_scores, field_46_flags, field_46_alerts = chronic_pain_modifiers_ruleset.get_chronic_pain_weights(
+                    pain_text=field_46_text,
+                    age=age,
+                    phase2_digestive_symptoms=phase2_digestive_symptoms_list,
+                    phase2_medications=phase2_medications_list
+                )
+
+                # Track reasons
+                field_context = "ChronicPainModifiers"  # Field 45 in the new numbering
+                field_46_display = field_46_text[:100] if field_46_text else "none"
+                add_top_contributors(
+                    all_reasons,
+                    field_46_scores,
+                    field_context,
+                    field_46_display,
+                    top_n=self.TOP_N_CONTRIBUTORS
+                )
+
+                # Log
+                log_entries.append(self._create_log_entry(f"Field 45 - {field_context}", field_46_scores, field_46_display))
+
+                # Log validation warnings/flags
+                if field_46_flags:
+                    for flag in field_46_flags:
+                        log_entries.append(f"  ℹ️  {flag}")
+
+                # Log safety alerts
+                if field_46_alerts:
+                    for alert in field_46_alerts:
+                        log_entries.append(f"  🚨 [{alert['severity'].upper()}] {alert['message']}")
+                        if alert['severity'] == 'urgent':
+                            safety_flags["urgent_care"] = True
+                        elif alert['severity'] == 'warning':
+                            safety_flags["red_flag"] = True
+
+                # Add scores
+                all_scores = self._combine_scores(all_scores, field_46_scores)
+            else:
+                log_entries.append("\n--- FIELD 45 - CHRONIC PAIN MODIFIERS ---")
+                log_entries.append("Skipped: Phase 2 has_chronic_pain == false")
+
+            # ================================================================
+            # Field 46: Skin Issues Details (Conditional on Phase 2)
+            # ================================================================
+
+            # Check Phase 2 pre-condition: has_skin_issues == true
+            phase2_skin_issues = phase1_phase2_context.get("has_skin_issues", False)
+
+            if phase2_skin_issues:
+                field_47_text = str(field_47).strip() if field_47 else ""
+
+                # Get Phase 2 context for synergies
+                phase2_digestive_symptoms_list = phase1_phase2_context.get("digestive_symptoms", [])
+
+                # Call ruleset
+                field_47_scores, field_47_flags, field_47_alerts = skin_issues_ruleset.get_skin_issues_weights(
+                    skin_text=field_47_text,
+                    age=age,
+                    biological_sex=sex,
+                    phase2_digestive_symptoms=phase2_digestive_symptoms_list
+                )
+
+                # Track reasons
+                field_context = "SkinIssuesDetails"  # Field 46 in the new numbering
+                field_47_display = field_47_text[:100] if field_47_text else "none"
+                add_top_contributors(
+                    all_reasons,
+                    field_47_scores,
+                    field_context,
+                    field_47_display,
+                    top_n=self.TOP_N_CONTRIBUTORS
+                )
+
+                # Log
+                log_entries.append(self._create_log_entry(f"Field 46 - {field_context}", field_47_scores, field_47_display))
+
+                # Log validation warnings/flags
+                if field_47_flags:
+                    for flag in field_47_flags:
+                        log_entries.append(f"  ℹ️  {flag}")
+
+                # Log safety alerts
+                if field_47_alerts:
+                    for alert in field_47_alerts:
+                        log_entries.append(f"  🚨 [{alert['severity'].upper()}] {alert['message']}")
+                        if alert['severity'] == 'urgent':
+                            safety_flags["urgent_care"] = True
+                        elif alert['severity'] == 'warning':
+                            safety_flags["red_flag"] = True
+
+                # Add scores
+                all_scores = self._combine_scores(all_scores, field_47_scores)
+            else:
+                log_entries.append("\n--- FIELD 46 - SKIN ISSUES DETAILS ---")
+                log_entries.append("Skipped: Phase 2 has_skin_issues == false")
 
             # Add final scores to log
             log_entries.append("\n" + "="*80)
@@ -1627,5 +2548,9 @@ class EvaluateFocusAreasPhase3Tool(BaseTool):
             return "\n".join(result)
 
         except Exception as e:
-            return f"Error evaluating phase3 focus areas: {str(e)}"
+            import traceback
+            error_details = traceback.format_exc()
+            print(f"\n❌ ERROR in Phase 3 evaluation:")
+            print(error_details)
+            return f"Error evaluating phase3 focus areas: {str(e)}\n\nFull traceback:\n{error_details}"
 

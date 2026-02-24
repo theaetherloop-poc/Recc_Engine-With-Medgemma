@@ -1,0 +1,88 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Magnesium",
+      "recommended_dosage": "200-400 mg",
+      "frequency": "once daily before bedtime",
+      "focus_area": ["GA", "STR"],
+      "why": "Addresses low calcium, low Vitamin D, chronic pain, and sleep issues. It plays a crucial role in muscle relaxation, nerve function, and bone health, potentially alleviating pain and improving sleep quality."
+    },
+    {
+      "ingredient_name": "Milk Thistle",
+      "recommended_dosage": "210-420 mg",
+      "frequency": "once daily",
+      "focus_area": ["DTX", "CM"],
+      "why": "High iron, elevated AST:ALT ratio, and high AST suggest potential liver stress or inflammation. Milk thistle supports liver detoxification and protection, which may help manage these markers and potentially improve iron metabolism."
+    },
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "4000 IU",
+      "frequency": "once daily with fatty meal",
+      "focus_area": ["HRM", "IMM"],
+      "why": "Low Vitamin D (21.4 ng/dL) is present, which is linked to low calcium and potentially contributes to mood issues and pain. Supplementation is needed to optimize levels for bone health, immune function, and mood regulation."
+    },
+    {
+      "ingredient_name": "Niacin",
+      "recommended_dosage": "500-1000 mg",
+      "frequency": "once daily with meals (start low, titrate slowly)",
+      "focus_area": ["CM", "DTX"],
+      "why": "High Lp(a) and elevated Triglyceride:HDL ratio indicate cardiovascular risk. Niacin can help lower Lp(a) and improve lipid profiles, although monitoring liver function is important."
+    },
+    {
+      "ingredient_name": "Probiotics",
+      "recommended_dosage": "10-20 billion CFU",
+      "frequency": "once daily with a meal",
+      "focus_area": ["GA", "IMM"],
+      "why": "Addresses bloating and constipation, common digestive issues. Supporting gut health can improve nutrient absorption, reduce inflammation, and potentially impact mood and overall well-being."
+    },
+    {
+      "ingredient_name": "Calcium",
+      "recommended_dosage": "1000-1200 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": ["HRM", "GA"],
+      "why": "Low calcium (8.6 mg/dL) needs direct correction for bone health, especially with approaching menopause. It works synergistically with Vitamin D and Magnesium for optimal bone density."
+    },
+    {
+      "ingredient_name": "N-Acetyl Cysteine (NAC)",
+      "recommended_dosage": "600-1200 mg",
+      "frequency": "once daily",
+      "focus_area": ["DTX", "IMM"],
+      "why": "Elevated liver enzymes (AST:ALT ratio 2.31, AST 51.0 U/L) and high total protein suggest potential oxidative stress or liver burden. NAC acts as an antioxidant and supports liver detoxification pathways."
+    },
+    {
+      "ingredient_name": "Zinc",
+      "recommended_dosage": "15-30 mg",
+      "frequency": "once daily with food",
+      "focus_area": ["HRM", "IMM"],
+      "why": "Low C-peptide and high TSH could indicate thyroid dysfunction or insulin resistance. Zinc is essential for thyroid hormone metabolism and insulin sensitivity, potentially improving these markers."
+    },
+    {
+      "ingredient_name": "Vitamin B6",
+      "recommended_dosage": "50-100 mg",
+      "frequency": "once daily",
+      "focus_area": ["HRM", "COG"],
+      "why": "Addresses menstrual concerns and potentially low C-peptide. B6 is involved in hormone regulation and glucose metabolism, which could be beneficial given her symptoms and biomarkers."
+    },
+    {
+      "ingredient_name": "Black Cohosh",
+      "recommended_dosage": "20-40 mg",
+      "frequency": "twice daily",
+      "focus_area": ["HRM", "STR"],
+      "why": "High LH (19.24 mIU/mL) and FSH (31.92 mIU/mL) indicate perimenopausal hormonal changes. Black Cohosh may help manage symptoms associated with this transition, such as hot flashes and sleep disturbances."
+    },
+    {
+      "ingredient_name": "Psyllium Husk",
+      "recommended_dosage": "1-2 teaspoons (approx. 5-10 grams)",
+      "frequency": "once daily mixed with 8 oz water, taken 1 hour before or after meals. Start with 1 teaspoon and increase as needed.",
+      "focus_area": ["GA", "CM"],
+      "why": "Directly targets bloating and constipation by adding fiber to the diet. It promotes regular bowel movements and can improve gut health, complementing the effects of probiotics."
+    },
+    {
+      "ingredient_name": "Melatonin",
+      "recommended_dosage": "0.5-1 mg",
+      "frequency": "before bedtime",
+      "focus_area": ["STR", "COG"],
+      "why": "Addresses trouble falling asleep, a common issue exacerbated by perimenopause and potentially low DHEA-S. Melatonin helps regulate the sleep-wake cycle and can improve sleep quality."
+    }
+  ]
+}

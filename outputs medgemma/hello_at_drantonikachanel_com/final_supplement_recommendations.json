@@ -1,0 +1,88 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Magnesium",
+      "recommended_dosage": "400 mg",
+      "frequency": "once daily before bedtime",
+      "focus_area": ["STR", "MITO"],
+      "why": "Addresses low calcium, frequent headaches/migraines, chronic pain, TMJ disorder, sleep issues, and high stress. Magnesium plays a crucial role in muscle relaxation, nerve function, and sleep regulation."
+    },
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "4000 IU",
+      "frequency": "once daily with fatty meal",
+      "focus_area": ["IMM", "MITO"],
+      "why": "Addresses low 25-(OH) Vitamin D (24.0 ng/mL). Supports bone health, immune function, and may help with chronic pain and headaches."
+    },
+    {
+      "ingredient_name": "Berberine",
+      "recommended_dosage": "500 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": ["CM", "MITO"],
+      "why": "Addresses high triglycerides, high Lp(a), high LDL cholesterol, high VLDL, high LDL HDL ratio, and high HbA1c/EAG, indicating metabolic dysregulation. It can improve insulin sensitivity and lipid profiles."
+    },
+    {
+      "ingredient_name": "Curcumin",
+      "recommended_dosage": "500-1000 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": ["IMM", "CM"],
+      "why": "Addresses high iron, high AST:ALT ratio, high AST, high triglycerides, high Lp(a), high LDL cholesterol, high VLDL, high LDL:HDL ratio, and chronic pain/inflammation. It has anti-inflammatory and antioxidant properties."
+    },
+    {
+      "ingredient_name": "Inositol",
+      "recommended_dosage": "2000-4000 mg",
+      "frequency": "once daily",
+      "focus_area": ["HRM", "CM"],
+      "why": "Addresses high LH/FSH (suggesting hormonal imbalance), sleep issues, and potentially metabolic markers like high triglycerides and LDL. It may improve insulin sensitivity and mood."
+    },
+    {
+      "ingredient_name": "Coenzyme Q10",
+      "recommended_dosage": "100-200 mg",
+      "frequency": "once daily with meals",
+      "focus_area": ["MITO", "CM"],
+      "why": "Addresses high triglycerides, high Lp(a), high LDL cholesterol, high VLDL, high LDL:HDL ratio, and potentially headaches/migraines. It supports mitochondrial function and cardiovascular health."
+    },
+    {
+      "ingredient_name": "Vitamin K2",
+      "recommended_dosage": "100-200 mcg",
+      "frequency": "once daily with meals",
+      "focus_area": ["CM", "MITO"],
+      "why": "Complements Vitamin D3 by directing calcium to bones and away from soft tissues, addressing low calcium and supporting bone health. It also plays a role in cardiovascular health."
+    },
+    {
+      "ingredient_name": "Zinc",
+      "recommended_dosage": "15-30 mg",
+      "frequency": "once daily with food",
+      "focus_area": ["IMM", "SKN"],
+      "why": "Addresses potential deficiency due to vegetarian diet. Zinc is important for immune function, wound healing, and may play a role in managing headaches and sleep."
+    },
+    {
+      "ingredient_name": "Ashwagandha",
+      "recommended_dosage": "300-500 mg",
+      "frequency": "once daily before bedtime",
+      "focus_area": ["STR", "COG"],
+      "why": "Addresses high stress and trouble staying asleep/not waking refreshed. It is an adaptogen that can help the body manage stress and improve sleep quality."
+    },
+    {
+      "ingredient_name": "N-Acetyl Cysteine (NAC)",
+      "recommended_dosage": "600-1200 mg",
+      "frequency": "once daily",
+      "focus_area": ["DTX", "IMM"],
+      "why": "Addresses low bilirubin, which can be a marker of oxidative stress. NAC is an antioxidant precursor and may support liver health (indicated by AST/ALT ratio)."
+    },
+    {
+      "ingredient_name": "Vitamin B12",
+      "recommended_dosage": "1000 mcg",
+      "frequency": "once daily",
+      "focus_area": ["MITO", "COG"],
+      "why": "Addresses potential deficiency due to vegetarian diet. B12 is crucial for nerve function, energy production, and may help with fatigue and headaches."
+    },
+    {
+      "ingredient_name": "Melatonin",
+      "recommended_dosage": "0.5-1 mg",
+      "frequency": "once daily 30-60 minutes before bedtime",
+      "focus_area": ["STR", "COG"],
+      "why": "Directly addresses trouble staying asleep and not waking refreshed. It helps regulate the sleep-wake cycle."
+    }
+  ]
+}

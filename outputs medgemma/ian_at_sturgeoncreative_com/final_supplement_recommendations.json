@@ -1,0 +1,124 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "5000 IU",
+      "frequency": "once daily with fatty meal",
+      "focus_area": [
+        "IMM",
+        "STR"
+      ],
+      "why": "The user's Vitamin D level is low (48.0 ng/mL), which is suboptimal for overall health, immune function, and potentially linked to chronic pain and sleep issues. Supplementation is needed to bring levels into the optimal range (typically 50-80 ng/mL)."
+    },
+    {
+      "ingredient_name": "Magnesium",
+      "recommended_dosage": "400 mg",
+      "frequency": "once daily before bedtime",
+      "focus_area": [
+        "IMM",
+        "STR"
+      ],
+      "why": "Magnesium deficiency can contribute to chronic pain, sleep disturbances (trouble staying asleep, not refreshed), and potentially high blood pressure (indicated by BUN:Creatinine ratio). It also plays a role in regulating blood sugar and lipid metabolism."
+    },
+    {
+      "ingredient_name": "Curcumin",
+      "recommended_dosage": "500-1000 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": [
+        "IMM",
+        "DTX"
+      ],
+      "why": "The user has significantly high iron (152.0 mcg/dL) and ferritin (427.4 ng/mL), indicating iron overload. Curcumin has demonstrated potential in reducing iron absorption and mitigating oxidative stress associated with iron overload."
+    },
+    {
+      "ingredient_name": "N-Acetyl Cysteine (NAC)",
+      "recommended_dosage": "600-1200 mg",
+      "frequency": "once daily",
+      "focus_area": [
+        "DTX",
+        "IMM"
+      ],
+      "why": "Elevated total protein (7.5 g/dL) and AST (44.0 U/L) suggest potential liver stress or inflammation. NAC is a precursor to glutathione, a major antioxidant, and supports liver detoxification pathways, potentially helping to address these markers."
+    },
+    {
+      "ingredient_name": "Milk Thistle",
+      "recommended_dosage": "140 mg standardized extract",
+      "frequency": "three times daily with meals",
+      "focus_area": [
+        "DTX",
+        "IMM"
+      ],
+      "why": "Similar to NAC, Milk Thistle supports liver health and detoxification. It may be particularly beneficial given the high total protein, AST, and BUN:Creatinine ratio, suggesting potential kidney/liver strain."
+    },
+    {
+      "ingredient_name": "Berberine",
+      "recommended_dosage": "500 mg",
+      "frequency": "twice daily with meals",
+      "focus_area": [
+        "CM",
+        "IMM"
+      ],
+      "why": "The user's HbA1c (5.5%) and EAG (111.15 mg/dL) are slightly elevated, indicating potential insulin resistance or pre-diabetes. Berberine has shown efficacy in improving insulin sensitivity and glucose metabolism."
+    },
+    {
+      "ingredient_name": "Fish Oil (Omega-3 Fatty Acids)",
+      "recommended_dosage": "2000-4000 mg",
+      "frequency": "once daily with meals",
+      "focus_area": [
+        "CM",
+        "IMM"
+      ],
+      "why": "The user has an unfavorable lipid profile with high LDL:HDL ratio (2.61), high Total Cholesterol:HDL ratio (3.92), and high Triglyceride:HDL ratio (1.55). Omega-3s can help improve these ratios, reduce inflammation, and may also benefit chronic pain."
+    },
+    {
+      "ingredient_name": "Zinc",
+      "recommended_dosage": "15-30 mg",
+      "frequency": "once daily with food",
+      "focus_area": [
+        "SKN",
+        "IMM"
+      ],
+      "why": "The user reports skin issues and has high SBHG (Sex Hormone Binding Globulin), which can be influenced by zinc levels. Zinc is crucial for skin health, immune function, and hormone regulation."
+    },
+    {
+      "ingredient_name": "Choline",
+      "recommended_dosage": "500 mg",
+      "frequency": "once daily",
+      "focus_area": [
+        "DTX",
+        "HRM"
+      ],
+      "why": "The high BUN:Creatinine ratio (25.8) and BUN (24.0 mg/dL) may indicate potential kidney stress or dehydration. Choline is important for liver function and can help prevent fat accumulation in the liver, potentially reducing strain on both liver and kidneys."
+    },
+    {
+      "ingredient_name": "Melatonin",
+      "recommended_dosage": "3-5 mg",
+      "frequency": "once daily before bedtime",
+      "focus_area": [
+        "STR",
+        "IMM"
+      ],
+      "why": "The user experiences significant sleep disruption (wakes 2x nightly, trouble staying asleep, not refreshed) and snores/sleep apnea. Melatonin can help regulate the sleep-wake cycle and improve sleep quality."
+    },
+    {
+      "ingredient_name": "Chlorella",
+      "recommended_dosage": "1-3 grams",
+      "frequency": "once daily with meals",
+      "focus_area": [
+        "DTX",
+        "IMM"
+      ],
+      "why": "Given the history of black mold exposure, Chlorella may help bind to and facilitate the excretion of mycotoxins, supporting detoxification pathways."
+    },
+    {
+      "ingredient_name": "Vitamin C",
+      "recommended_dosage": "500 mg",
+      "frequency": "once daily",
+      "focus_area": [
+        "IMM",
+        "SKN"
+      ],
+      "why": "The user reports skin issues and has a high iron level. Vitamin C can enhance iron absorption but also acts as an antioxidant, potentially mitigating some oxidative stress from iron overload, and supports collagen production for skin health."
+    }
+  ]
+}

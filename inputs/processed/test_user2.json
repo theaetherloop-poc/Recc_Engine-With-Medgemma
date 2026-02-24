@@ -1,0 +1,258 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user2@example.com",
+        "phase_status": {
+          "id": "c3d4e5f6-a7b8-4901-c234-567890123456",
+          "user_id": "d4e5f6a7-b8c9-4902-d345-678901234567",
+          "created_at": "2024-02-08T11:20:15Z",
+          "updated_at": "2024-02-22T09:35:42Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Sertraline",
+                "dose": "100 mg",
+                "frequency": "Daily",
+                "purpose": "Anxiety and depression management"
+              },
+              {
+                "name": "Levothyroxine",
+                "dose": "75 mcg",
+                "frequency": "Daily",
+                "purpose": "Hypothyroidism treatment"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "1000 IU",
+                "name": "Vitamin D3",
+                "purpose": "General health support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "65 mg",
+                "name": "Iron",
+                "purpose": "Iron deficiency anemia",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "400 mg",
+                "name": "Magnesium Glycinate",
+                "purpose": "Sleep and muscle relaxation",
+                "frequency": "Before bedtime"
+              },
+              {
+                "dose": "50 mg",
+                "name": "Zinc",
+                "purpose": "Immune support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "B-Complex",
+                "purpose": "Energy and stress support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 32,
+            "ancestry": [
+              "south_asian"
+            ],
+            "weight_lbs": 138.2,
+            "height_feet": 5,
+            "height_inches": 3,
+            "ancestry_other": null,
+            "biological_sex": "female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "anxiety_disorder",
+              "overactive_thyroid"
+            ],
+            "surgeries": "Tonsillectomy in 2005",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "anxiety_disorder": 2020,
+              "overactive_thyroid": 2021
+            }
+          },
+          "wearable_devices": {
+            "fitbit": true,
+            "oura_ring": false,
+            "apple_watch": true,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": true,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "ayurveda",
+              "functional_medicine"
+            ],
+            "traditional_chinese_medicine": true
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 0,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Vegetarian",
+            "diet_style_other": null,
+            "eating_out_frequency": "more_than_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "less_than_6",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 3,
+            "trouble_falling_asleep": true,
+            "trouble_staying_asleep": true,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": 1
+          },
+          "systems_review": {
+            "digestive_symptoms": "constipation"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "rarely",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 6
+          },
+          "sunlight_exposure": {
+            "days_per_week": 4,
+            "average_minutes_per_day": "20-30 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Marketing Director",
+            "work_stress_level": 9
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": "Frequent tension headaches and migraines, 3-4 times per month, often triggered by stress and lack of sleep",
+              "frequent_headaches_migraines": true
+            },
+            "skin_health": {
+              "has_skin_issues": true,
+              "skin_condition_details": "Eczema on hands and wrists, occasional breakouts on face, sensitive skin"
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": false
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "no"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"diabetes\": [\"mother\"], \"anxiety\": [\"mother\", \"sister\"], \"thyroid_disorders\": [\"mother\", \"grand-parent\"]}",
+            "has_family_history": true,
+            "other_conditions_text": "Maternal grandmother had osteoporosis"
+          },
+          "environmental_exposures": {
+            "mold_exposure": true,
+            "chemical_exposures": "Previous apartment had water damage and visible mold, moved 6 months ago",
+            "chemical_exposure_other": "Sensitive to strong fragrances and cleaning products"
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "menstrual_concerns": "Irregular cycles, heavy bleeding, severe PMS symptoms including mood swings and fatigue",
+              "concern_details": "PCOS suspected but not formally diagnosed, cycles range from 28-45 days"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "female",
+        "Order ID": 1002,
+        "Test Date": "2024-02-18T14:20:00Z",
+        "Alanine Aminotransferase (ALT)": "18 U/L",
+        "Aspartate Aminotransferase (AST)": "13.5 U/L",
+        "Albumin": "4.1 g/dL",
+        "Blood Urea Nitrogen (BUN)": "9.5 mg/dL",
+        "Creatinine": "0.68 mg/dL",
+        "Total Bilirubin": "0.5 mg/dL",
+        "eGFR": "92 mL/min/1.73 m\u00b2",
+        "Estim. Avg Glu (eAG)": "105 mg/dL",
+        "Lipoprotein (a)": "15 mg/dL",
+        "Ferritin": "18 ng/mL",
+        "Homocysteine (HCY)": "8.5 umol/L",
+        "High-Sensitivity CRP": "2.8 mg/L",
+        "25-(OH) Vitamin D": "22 ng/mL",
+        "% Hemoglobin A1C": "5.2 %",
+        "Fasting Insulin": "7.2 uIU/mL",
+        "Total Cholesterol:HDL Ratio": "2.4",
+        "Triglycerides:HDL Ratio": "1.3",
+        "Daytime Cortisol": "22.5 mcg/dL",
+        "Thyroid Stimulating Hormone (TSH)": "3.8 uIU/mL",
+        "Apolipoprotein A1 (APOA1)": "171 mg/dL",
+        "Apolipoprotein B (APOB)": "72 mg/dL",
+        "ApoB:ApoA1 Ratio": "0.42",
+        "Calculated LDL-Cholesterol": "79 mg/dL",
+        "HDL Cholesterol": "68 mg/dL",
+        "Total Cholesterol": "165 mg/dL",
+        "Triglycerides": "88 mg/dL",
+        "Estradiol (Sensitive)": "145 pg/mL",
+        "Follicle-Stimulating Hormone (FSH)": "5.4 mIU/mL",
+        "Total Biomarkers": 28
+      }
+    }
+  }
+]

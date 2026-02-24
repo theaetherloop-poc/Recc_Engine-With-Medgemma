@@ -92,7 +92,7 @@ class MaleHormonalHealthRuleset:
         # Check for androgen-deprivation therapy
         if current_medications:
             for med in current_medications:
-                med_name = med.get('name', '').lower()
+                med_name = (med.get('name') or '').lower()
                 adt_keywords = ['leuprolide', 'lupron', 'goserelin', 'zoladex', 'degarelix', 'firmagon']
                 if any(keyword in med_name for keyword in adt_keywords):
                     scores["HRM"] += 0.30
@@ -132,7 +132,7 @@ class MaleHormonalHealthRuleset:
                 
                 if current_medications:
                     for med in current_medications:
-                        med_name = med.get('name', '').lower()
+                        med_name = (med.get('name') or '').lower()
                         if any(keyword in med_name for keyword in self.AAS_KEYWORDS):
                             has_aas = True
                             break
@@ -181,8 +181,8 @@ class MaleHormonalHealthRuleset:
             # Chronic opioids
             has_chronic_opioid = False
             for med in current_medications:
-                med_name = med.get('name', '').lower()
-                frequency = med.get('frequency', '').lower()
+                med_name = (med.get('name') or '').lower()
+                frequency = (med.get('frequency') or '').lower()
                 if any(keyword in med_name for keyword in self.OPIOID_KEYWORDS):
                     if 'daily' in frequency or 'chronic' in frequency:
                         has_chronic_opioid = True
@@ -197,7 +197,7 @@ class MaleHormonalHealthRuleset:
             # SSRIs/SNRIs
             has_ssri_snri = False
             for med in current_medications:
-                med_name = med.get('name', '').lower()
+                med_name = (med.get('name') or '').lower()
                 if any(keyword in med_name for keyword in self.SSRI_SNRI_KEYWORDS):
                     has_ssri_snri = True
                     break
@@ -210,7 +210,7 @@ class MaleHormonalHealthRuleset:
             # Antihypertensives (thiazide, beta-blockers)
             has_antihypertensive = False
             for med in current_medications:
-                med_name = med.get('name', '').lower()
+                med_name = (med.get('name') or '').lower()
                 if any(keyword in med_name for keyword in self.ANTIHYPERTENSIVE_KEYWORDS):
                     has_antihypertensive = True
                     break

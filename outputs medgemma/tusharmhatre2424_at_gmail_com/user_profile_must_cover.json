@@ -1,0 +1,40 @@
+{
+  "patient_id": "unknown",
+  "age": 26,
+  "sex": "male",
+  "biomarker_issues": [
+    "Albumin (low)",
+    "AST:ALT Ratio (low)",
+    "Total Protein (low)",
+    "Triglycerides (low)",
+    "HDL Cholesterol (low)",
+    "LDL Cholesterol (low)",
+    "Lp(a) (high)",
+    "Bilirubin (low)",
+    "HbA1c (high)",
+    "Calculated Total Cholesterol (low)",
+    "BUN:Creatinine Ratio (high)",
+    "High-Sensitivity CRP (low)",
+    "Apolipoprotein B (APOB) (low)",
+    "Blood Urea Nitrogen (high)",
+    "Total Cholesterol:HDL Ratio (high)",
+    "TSH (high)",
+    "SBHG (low)",
+    "Dehydroepiandrosterone Sulfate (DHEA-S) (high)"
+  ],
+  "other_problems": [
+    "kidneystones",
+    "typhoid",
+    "Frequent headaches/migraines",
+    "Chronic pain",
+    "Skin issues",
+    "Digestive: heartburn",
+    "Trouble falling asleep",
+    "Trouble staying asleep",
+    "Unrefreshing sleep",
+    "High stress (level 9)",
+    "Menstrual concerns"
+  ],
+  "safety_constraints": [],
+  "total": 29
+}

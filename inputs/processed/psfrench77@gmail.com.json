@@ -1,0 +1,366 @@
+[
+    {
+      "user_full_data": {
+        "metadata": {
+          "email": "psfrench77@gmail.com",
+          "phase_status": {
+            "id": "fbfc6006-3c35-414f-bb6d-a8415998255a",
+            "user_id": "27c6ff78-d01b-47da-95dd-547aaf7f455e",
+            "consult_id": "edb846ca-5277-4f70-8a39-6c36b51e389b",
+            "created_at": "2025-09-07T23:16:00.273985+00:00",
+            "updated_at": "2026-02-01T07:45:42.71841+00:00",
+            "phase1_status": "completed",
+            "phase2_status": "completed",
+            "phase3_status": "processing",
+            "phase2_coaching_call": true,
+            "phase2_coaching_recorded_at": "2026-01-21T06:24:43.191+00:00"
+          }
+        },
+        "patient_data": {
+          "phase1_basic_intake": {
+            "allergies": {
+              "has_allergies": false,
+              "known_allergies": []
+            },
+            "medications": {
+              "has_medications": true,
+              "current_medications": [
+                {
+                  "dose": "50 mcg",
+                  "name": "Levothyroxine",
+                  "purpose": "thyroid",
+                  "frequency": null
+                },
+                {
+                  "dose": "100-12.5 mg",
+                  "name": "Losartn HCTZ",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": "200 mg",
+                  "name": "Celecoxib",
+                  "purpose": "arthritis",
+                  "frequency": "twice daily"
+                },
+                {
+                  "dose": "unsure",
+                  "name": "omprezole",
+                  "purpose": "acid reflux",
+                  "frequency": null
+                }
+              ]
+            },
+            "supplements": {
+              "has_supplements": true,
+              "current_supplements": [
+                {
+                  "dose": null,
+                  "name": "Garlic",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": "20,000",
+                  "name": "Shilajit minderals",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": "80 mg",
+                  "name": "baby aspirin",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": null,
+                  "name": "magnesium",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": null,
+                  "name": "organic plant calcium",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": null,
+                  "name": "multivitamins",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": null,
+                  "name": "B12",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": null,
+                  "name": "Curcumin",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": null,
+                  "name": "turmeric",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": null,
+                  "name": "IQ Blast",
+                  "purpose": null,
+                  "frequency": null
+                },
+                {
+                  "dose": null,
+                  "name": "Burn Evolved",
+                  "purpose": null,
+                  "frequency": null
+                }
+              ]
+            },
+            "demographics": {
+              "age": 77,
+              "ancestry": [
+                "Caucasian"
+              ],
+              "weight_lbs": 155,
+              "height_feet": 5,
+              "height_inches": 3,
+              "ancestry_other": null,
+              "biological_sex": "Female",
+              "biological_sex_other": null
+            },
+            "medical_history": {
+              "diagnoses": [
+                "arthritis_",
+                "fibromyalgia_",
+                "high_blood_pressure_",
+                "overactive_thyroid_"
+              ],
+              "surgeries": "2 c-sections; gastric bypass; 2 knee replacements",
+              "diagnoses_other": null,
+              "diagnoses_years": {
+                "arthritis_": "1990",
+                "fibromyalgia_": "2024",
+                "overactive_thyroid_": "1990",
+                "high_blood_pressure_": "1990"
+              }
+            },
+            "wearable_devices": {
+              "fitbit": false,
+              "oura_ring": false,
+              "apple_watch": false,
+              "other_device": null,
+              "has_any_wearables": false,
+              "google_pixel_watch": false,
+              "samsung_galaxy_watch": false
+            },
+            "complementary_approaches": {
+              "ayurveda": false,
+              "homeopathy": true,
+              "korean_medicine": false,
+              "functional_medicine": true,
+              "selected_approaches": [
+                "functional",
+                "tcm",
+                "homeopathy"
+              ],
+              "traditional_chinese_medicine": true
+            }
+          },
+          "phase2_detailed_intake": {
+            "pets_animals": {
+              "has_pets": true
+            },
+            "dental_health": {
+              "dental_work": {
+                "implants": 0,
+                "caps_crowns": 2,
+                "root_canals": 0,
+                "gold_fillings": 0,
+                "silver_mercury_fillings": 6
+              },
+              "daily_brush_floss": "both_daily",
+              "removal_timeframe": "2012",
+              "oral_health_issues": {
+                "gingivitis": false,
+                "tooth_pain": false,
+                "tmj_disorder": false,
+                "bleeding_gums": false,
+                "chewing_problems": false,
+                "other_dental_work": "had all mercury fillings replaced"
+              },
+              "mercury_fillings_removed": true
+            },
+            "dietary_habits": {
+              "diet_style": "gluten_free,other",
+              "diet_style_other": "healthy - no packaged foods (rarely anyway)",
+              "eating_out_frequency": "1_2_per_week"
+            },
+            "sleep_patterns": {
+              "hours_category": "8_to_10",
+              "snoring_sleep_apnea": "no",
+              "night_wake_frequency": 1,
+              "trouble_falling_asleep": false,
+              "trouble_staying_asleep": true,
+              "wake_feeling_refreshed": true,
+              "night_urination_frequency": 1
+            },
+            "systems_review": {
+              "digestive_symptoms": "none"
+            },
+            "lifestyle_factors": {
+              "alcohol": {
+                "frequency": "daily",
+                "typical_amount": "I was drinking 1-2 glasses honey whiskey in the evening, but am cutting back to 2 - 3 times a week"
+              },
+              "tobacco": {
+                "quit_year": "1995",
+                "use_status": "quit",
+                "duration_category": null
+              },
+              "recreational_drugs": {
+                "uses_substances": true,
+                "substance_details": "I take an edible every evening for sleep"
+              }
+            },
+            "physical_activity": {
+              "exercise_days_per_week": 3
+            },
+            "sunlight_exposure": {
+              "days_per_week": 7,
+              "average_minutes_per_day": "15 +"
+            },
+            "occupation_wellness": {
+              "job_title": "retired",
+              "work_stress_level": 3
+            },
+            "pain_and_skin_health": {
+              "headaches": {
+                "headache_details": null,
+                "frequent_headaches_migraines": false
+              },
+              "skin_health": {
+                "has_skin_issues": false,
+                "skin_condition_details": null
+              },
+              "chronic_pain": {
+                "pain_details": null,
+                "has_chronic_pain": true
+              }
+            },
+            "childhood_antibiotics": {
+              "took_antibiotics_as_child": true
+            },
+            "childhood_development": {
+              "born_via_c_section": "no",
+              "high_sugar_childhood_diet": "yes"
+            },
+            "family_medical_history": {
+              "conditions_detail": {
+                "asthma": [
+                  "mother"
+                ],
+                "cancer": [
+                  "brother"
+                ],
+                "stroke": [
+                  "father"
+                ],
+                "arthritis": [
+                  "mother"
+                ],
+                "claustrophobic": [
+                  "mother"
+                ],
+                "diabetes_insulin": [
+                  "brother"
+                ],
+                "high_cholesterol": [
+                  "brother"
+                ],
+                "overactive_thyroid": [
+                  "mother"
+                ],
+                "high_blood_pressure": [
+                  "mother",
+                  "brother"
+                ]
+              },
+              "has_family_history": true,
+              "other_conditions_text": null
+            },
+            "environmental_exposures": {
+              "mold_details": null,
+              "mold_exposure": false,
+              "exposure_details": "none",
+              "chemical_exposures": "none",
+              "chemical_exposure_other": null
+            },
+            "medication_side_effects": {
+              "reaction_details": "codeine makes me nauseous; cephalexin gave me palpitations",
+              "has_adverse_reactions": true
+            },
+            "reproductive_hormonal_health": {
+              "male_specific": null,
+              "female_specific": {
+                "concern_details": null,
+                "menstrual_concerns": "no"
+              }
+            }
+          }
+        },
+        "latest_biomarker_results": {
+          "Iron": "128 ug/dL",
+          "eGFR": "77.26 mL/min/1.73 m2",
+          "Gender": "Female",
+          "Calcium": "8.7 mg/dL",
+          "Ferritin": "130 ng/mL",
+          "Order ID": 44,
+          "C-Peptide": "1.76 ng/mL",
+          "Test Date": "2025-11-04T12:51:05.954426",
+          "Creatinine": "0.77 mg/dL",
+          "LH:FSH Ratio": "0.24",
+          "AST:ALT Ratio": "3.64 N/A",
+          "Total Protein": "6.6 g/dL",
+          "Triglycerides": "72 mg/dL",
+          "HDL Cholesterol": "70 mg/dL",
+          "Iron Saturation": "44 %",
+          "Lipoprotein (a)": "6.2 mg/dL",
+          "Total Bilirubin": "0.9 mg/dL",
+          "% Hemoglobin A1C": "4.8 %",
+          "ApoB:ApoA1 Ratio": "0.39",
+          "Daytime Cortisol": "14 ug/dL",
+          "Direct Bilirubin": "0.23 mg/dL",
+          "LDL-C:ApoB Ratio": "1.15",
+          "Total Biomarkers": 41,
+          "25-(OH) Vitamin D": "68 ng/mL",
+          "LDL-C:HDL-C Ratio": "1.22",
+          "Total Cholesterol": "170 mg/dL",
+          "BUN:Creatinine Ratio": "28.57",
+          "Estim. Avg Glu (eAG)": "91.05 mg/dL",
+          "High-Sensitivity CRP": "3.12 mg/L",
+          "Estradiol (Sensitive)": "48 pg/mL",
+          "Apolipoprotein B (APOB)": "74 mg/dL",
+          "Triglycerides:HDL Ratio": "1.02",
+          "VLDL Cholesterol (Calc)": "14.4 mg/dL",
+          "Luteinizing Hormone (LH)": "11.66 mIU/mL",
+          "Apolipoprotein A1 (APOA1)": "186 mg/dL",
+          "Blood Urea Nitrogen (BUN)": "22 mg/dL",
+          "Alkaline Phosphatase (ALP)": "99 U/L",
+          "Calculated LDL-Cholesterol": "85.6 mg/dL",
+          "Total Cholesterol:HDL Ratio": "2.43",
+          "Alanine Aminotransferase (ALT)": "14 U/L",
+          "Aspartate Aminotransferase (AST)": "51 U/L",
+          "Thyroid Stimulating Hormone (TSH)": "3.64 uIU/mL",
+          "Follicle-Stimulating Hormone (FSH)": "47.62 mIU/mL",
+          "Dehydroepiandrosterone Sulfate (DHEA-S)": "9.8 ug/dL",
+          "Unsaturated iron-binding capacity test (UIBC)": "166 ug/dL"
+        }
+      }
+    }
+  ]

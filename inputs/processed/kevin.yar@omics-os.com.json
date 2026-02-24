@@ -1,0 +1,224 @@
+[
+    {
+      "user_full_data": {
+        "metadata": {
+          "email": "kevin.yar@omics-os.com",
+          "phase_status": {
+            "id": "27807217-c2b5-4c14-a0cb-853f97e49849",
+            "user_id": "4458513d-e4c4-4f42-8f17-5acc72214d72",
+            "consult_id": "e61c4a51-c555-4e17-b2d8-8abdb4a2d86b",
+            "created_at": "2025-10-03T21:50:34.388986+00:00",
+            "updated_at": "2026-01-21T20:31:10.150451+00:00",
+            "phase1_status": "completed",
+            "phase2_status": "completed",
+            "phase3_status": "pending",
+            "phase2_coaching_call": true,
+            "phase2_coaching_recorded_at": "2026-01-21T06:24:26.133+00:00"
+          }
+        },
+        "patient_data": {
+          "phase1_basic_intake": {
+            "allergies": {
+              "has_allergies": false,
+              "known_allergies": []
+            },
+            "medications": {
+              "has_medications": false,
+              "current_medications": []
+            },
+            "supplements": {
+              "has_supplements": false,
+              "current_supplements": []
+            },
+            "demographics": {
+              "age": 28,
+              "ancestry": [
+                "Caucasian",
+                "Middle Eastern"
+              ],
+              "weight_lbs": 187,
+              "height_feet": 5,
+              "height_inches": 11,
+              "ancestry_other": null,
+              "biological_sex": "Male",
+              "biological_sex_other": null
+            },
+            "medical_history": {
+              "diagnoses": [
+                "none"
+              ],
+              "surgeries": "-",
+              "diagnoses_other": null,
+              "diagnoses_years": {}
+            },
+            "wearable_devices": {
+              "fitbit": false,
+              "oura_ring": false,
+              "apple_watch": false,
+              "other_device": null,
+              "has_any_wearables": false,
+              "google_pixel_watch": false,
+              "samsung_galaxy_watch": false
+            },
+            "complementary_approaches": {
+              "ayurveda": false,
+              "homeopathy": false,
+              "korean_medicine": false,
+              "functional_medicine": true,
+              "selected_approaches": [
+                "functional"
+              ],
+              "traditional_chinese_medicine": false
+            }
+          },
+          "phase2_detailed_intake": {
+            "pets_animals": {
+              "has_pets": false
+            },
+            "dental_health": {
+              "dental_work": {
+                "implants": 0,
+                "caps_crowns": 0,
+                "root_canals": 0,
+                "gold_fillings": 0,
+                "silver_mercury_fillings": 2
+              },
+              "daily_brush_floss": "both_daily",
+              "removal_timeframe": "2015",
+              "oral_health_issues": {
+                "gingivitis": false,
+                "tooth_pain": false,
+                "tmj_disorder": false,
+                "bleeding_gums": false,
+                "chewing_problems": false,
+                "other_dental_work": null
+              },
+              "mercury_fillings_removed": true
+            },
+            "dietary_habits": {
+              "diet_style": "low_carb_keto",
+              "diet_style_other": null,
+              "eating_out_frequency": "1_2_per_week"
+            },
+            "sleep_patterns": {
+              "hours_category": "6_to_8",
+              "snoring_sleep_apnea": "yes",
+              "night_wake_frequency": null,
+              "trouble_falling_asleep": false,
+              "trouble_staying_asleep": false,
+              "wake_feeling_refreshed": false,
+              "night_urination_frequency": null
+            },
+            "systems_review": {
+              "digestive_symptoms": "none"
+            },
+            "lifestyle_factors": {
+              "alcohol": {
+                "frequency": "never",
+                "typical_amount": null
+              },
+              "tobacco": {
+                "quit_year": "2018",
+                "use_status": "quit",
+                "duration_category": null
+              },
+              "recreational_drugs": {
+                "uses_substances": false,
+                "substance_details": null
+              }
+            },
+            "physical_activity": {
+              "exercise_days_per_week": 2
+            },
+            "sunlight_exposure": {
+              "days_per_week": 1,
+              "average_minutes_per_day": "15"
+            },
+            "occupation_wellness": {
+              "job_title": "founder",
+              "work_stress_level": 8
+            },
+            "pain_and_skin_health": {
+              "headaches": {
+                "headache_details": null,
+                "frequent_headaches_migraines": false
+              },
+              "skin_health": {
+                "has_skin_issues": false,
+                "skin_condition_details": null
+              },
+              "chronic_pain": {
+                "pain_details": null,
+                "has_chronic_pain": false
+              }
+            },
+            "childhood_antibiotics": {
+              "took_antibiotics_as_child": true
+            },
+            "childhood_development": {
+              "born_via_c_section": "no",
+              "high_sugar_childhood_diet": "no"
+            },
+            "family_medical_history": {
+              "conditions_detail": null,
+              "has_family_history": false,
+              "other_conditions_text": null
+            },
+            "environmental_exposures": {
+              "mold_details": "apartment with moldy rooms, 2024, itchi skin",
+              "mold_exposure": true,
+              "exposure_details": "none",
+              "chemical_exposures": "none",
+              "chemical_exposure_other": null
+            },
+            "medication_side_effects": {
+              "reaction_details": null,
+              "has_adverse_reactions": false
+            },
+            "reproductive_hormonal_health": {
+              "male_specific": {
+                "concern_details": null,
+                "hormonal_concerns": "no"
+              },
+              "female_specific": null
+            }
+          }
+        },
+        "latest_biomarker_results": {
+          "Gender": "Male",
+          "Albumin": "4.4 g/dL",
+          "Ferritin": "105.4 ng/mL",
+          "Order ID": 46,
+          "C-Peptide": "1.54 ng/mL",
+          "Test Date": "2025-11-13T00:30:22.143",
+          "Triglycerides": "84 mg/dL",
+          "HDL Cholesterol": "52 mg/dL",
+          "Lipoprotein (a)": "13.4 mg/dL",
+          "% Hemoglobin A1C": "5.1 %",
+          "ApoB:ApoA1 Ratio": "0.48",
+          "Daytime Cortisol": "12.2 ug/dL",
+          "LDL-C:ApoB Ratio": "1.25",
+          "Total Biomarkers": 29,
+          "25-(OH) Vitamin D": "19.4 ng/mL",
+          "LDL-C:HDL-C Ratio": "1.63",
+          "Total Cholesterol": "154 mg/dL",
+          "% Free Testosterone": "1.73 %",
+          "Estim. Avg Glu (eAG)": "99.66 mg/dL",
+          "High-Sensitivity CRP": "0.2 mg/L",
+          "Apolipoprotein B (APOB)": "68 mg/dL",
+          "Triglycerides:HDL Ratio": "1.61",
+          "VLDL Cholesterol (Calc)": "16.8 mg/dL",
+          "Apolipoprotein A1 (APOA1)": "140 mg/dL",
+          "Free Androgen Index (FAI)": "41.59",
+          "Testosterone, Free (calc)": "9.35 ng/dL",
+          "Calculated LDL-Cholesterol": "85.2 mg/dL",
+          "Testosterone, Total (Males)": "539.36 ng/dL",
+          "Testosterone:Cortisol Ratio": "0.044",
+          "Total Cholesterol:HDL Ratio": "2.96",
+          "Thyroid Stimulating Hormone (TSH)": "1.22 uIU/mL",
+          "Sex Hormone-Binding Globulin (SHBG)": "45 nmol/L",
+          "Dehydroepiandrosterone Sulfate (DHEA-S)": "188.2 ug/dL"
+        }
+      }
+    }
+  ]

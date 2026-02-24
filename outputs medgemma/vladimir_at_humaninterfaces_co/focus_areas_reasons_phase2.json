@@ -1,0 +1,50 @@
+{
+  "CM": [
+    "Age:42",
+    "BMI:27.49511111111111",
+    "Height:75",
+    "PhysicalActivity:3 days/wk (adequate)",
+    "SleepHours:Adequate (6-8h)",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:No"
+  ],
+  "COG": [
+    "TroubleFallingAsleep:No",
+    "WakeFeelingRefreshed:Yes",
+    "SnoringApnea:No"
+  ],
+  "DTX": [
+    "Alcohol:Consumption (low)"
+  ],
+  "IMM": [
+    "Sunlight:(low)",
+    "SleepHours:Adequate (6-8h)",
+    "PetsAnimals:Has pets (antigen exposure, microbiota shifts)"
+  ],
+  "MITO": [
+    "PhysicalActivity:3 days/wk (adequate)",
+    "WakeFeelingRefreshed:Yes"
+  ],
+  "SKN": [],
+  "STR": [
+    "Age:42",
+    "WorkStress:Stress (moderate)",
+    "SleepHours:Adequate (6-8h)",
+    "TroubleFallingAsleep:No",
+    "TroubleStayingAsleep:Yes (1x/night)",
+    "WakeFeelingRefreshed:Yes",
+    "SnoringApnea:No"
+  ],
+  "HRM": [
+    "Age:42",
+    "Sex:Male",
+    "Diagnosis:overactive_thyroid",
+    "Medication:Synthroid"
+  ],
+  "GA": [
+    "Ancestry:Caucasian",
+    "ChildhoodAntibiotics:Yes",
+    "SleepHours:Adequate (6-8h)",
+    "HighSugarChildhoodDiet:No"
+  ]
+}

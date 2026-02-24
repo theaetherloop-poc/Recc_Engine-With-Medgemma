@@ -1,0 +1,261 @@
+[
+    {
+      "user_full_data": {
+        "metadata": {
+          "email": "vitality@derricksiu.com",
+          "phase_status": {
+            "id": "b991ede7-ddf8-4298-8ac1-f2d594cbc00d",
+            "user_id": "ca0fe668-8f60-4761-94c4-48ffa7c83b76",
+            "consult_id": "9fc42580-b31d-4e63-a8c8-7a5c55f18e7b",
+            "created_at": "2025-09-06T13:43:12.198633+00:00",
+            "updated_at": "2026-01-23T07:21:29.917465+00:00",
+            "phase1_status": "completed",
+            "phase2_status": "completed",
+            "phase3_status": "pending",
+            "phase2_coaching_call": true,
+            "phase2_coaching_recorded_at": "2026-01-21T06:25:44.551+00:00"
+          }
+        },
+        "patient_data": {
+          "phase1_basic_intake": {
+            "allergies": {
+              "has_allergies": true,
+              "known_allergies": [
+                {
+                  "allergen": "other",
+                  "reaction": "itchy skin, sneezing, ",
+                  "allergen_other": "weeds/ grass / pollen"
+                }
+              ]
+            },
+            "medications": {
+              "has_medications": false,
+              "current_medications": []
+            },
+            "supplements": {
+              "has_supplements": true,
+              "current_supplements": [
+                {
+                  "dose": null,
+                  "name": "Agemate (Longevity Blend) ",
+                  "purpose": null,
+                  "frequency": "1/day (but havent taken for over a month) "
+                }
+              ]
+            },
+            "demographics": {
+              "age": 52,
+              "ancestry": [
+                "Asian"
+              ],
+              "weight_lbs": 155,
+              "height_feet": 5,
+              "height_inches": 6,
+              "ancestry_other": null,
+              "biological_sex": "Male",
+              "biological_sex_other": null
+            },
+            "medical_history": {
+              "diagnoses": [
+                "asthma_",
+                "other"
+              ],
+              "surgeries": "Wisdom Tooth Extraaction (day surgery), Dehydration - had IV fluids overnight in 1996/1996",
+              "diagnoses_other": "hypersensiviity / allergies",
+              "diagnoses_years": {
+                "asthma_": "1973"
+              }
+            },
+            "wearable_devices": {
+              "fitbit": false,
+              "oura_ring": true,
+              "apple_watch": true,
+              "other_device": "whoop",
+              "has_any_wearables": true,
+              "google_pixel_watch": false,
+              "samsung_galaxy_watch": false
+            },
+            "complementary_approaches": {
+              "ayurveda": false,
+              "homeopathy": false,
+              "korean_medicine": false,
+              "functional_medicine": true,
+              "selected_approaches": [
+                "functional",
+                "tcm"
+              ],
+              "traditional_chinese_medicine": true
+            }
+          },
+          "phase2_detailed_intake": {
+            "pets_animals": {
+              "has_pets": false
+            },
+            "dental_health": {
+              "dental_work": {
+                "implants": 0,
+                "caps_crowns": 0,
+                "root_canals": 1,
+                "gold_fillings": 0,
+                "silver_mercury_fillings": 0
+              },
+              "daily_brush_floss": "both_daily",
+              "removal_timeframe": null,
+              "oral_health_issues": {
+                "gingivitis": false,
+                "tooth_pain": false,
+                "tmj_disorder": false,
+                "bleeding_gums": false,
+                "chewing_problems": false,
+                "other_dental_work": "Borken Molar that needs tot be removed. "
+              },
+              "mercury_fillings_removed": false
+            },
+            "dietary_habits": {
+              "diet_style": "none",
+              "diet_style_other": null,
+              "eating_out_frequency": "more_than_2_per_week"
+            },
+            "sleep_patterns": {
+              "hours_category": "6_to_8",
+              "snoring_sleep_apnea": "not_sure",
+              "night_wake_frequency": null,
+              "trouble_falling_asleep": false,
+              "trouble_staying_asleep": false,
+              "wake_feeling_refreshed": true,
+              "night_urination_frequency": null
+            },
+            "systems_review": {
+              "digestive_symptoms": "none"
+            },
+            "lifestyle_factors": {
+              "alcohol": {
+                "frequency": "never",
+                "typical_amount": null
+              },
+              "tobacco": {
+                "quit_year": null,
+                "use_status": "never",
+                "duration_category": null
+              },
+              "recreational_drugs": {
+                "uses_substances": true,
+                "substance_details": "very rarely, cannibis, mushrooms, mdna"
+              }
+            },
+            "physical_activity": {
+              "exercise_days_per_week": 5
+            },
+            "sunlight_exposure": {
+              "days_per_week": 3,
+              "average_minutes_per_day": "20"
+            },
+            "occupation_wellness": {
+              "job_title": "Startup Founder",
+              "work_stress_level": 7
+            },
+            "pain_and_skin_health": {
+              "headaches": {
+                "headache_details": null,
+                "frequent_headaches_migraines": false
+              },
+              "skin_health": {
+                "has_skin_issues": false,
+                "skin_condition_details": null
+              },
+              "chronic_pain": {
+                "pain_details": null,
+                "has_chronic_pain": false
+              }
+            },
+            "childhood_antibiotics": {
+              "took_antibiotics_as_child": true
+            },
+            "childhood_development": {
+              "born_via_c_section": "no",
+              "high_sugar_childhood_diet": "no"
+            },
+            "family_medical_history": {
+              "conditions_detail": {
+                "asthma": [
+                  "sister"
+                ],
+                "cancer": [
+                  "grand-parent"
+                ],
+                "arthritis": [
+                  "mother"
+                ],
+                "high_cholesterol": [
+                  "grand-parent",
+                  "mother",
+                  "father"
+                ],
+                "high_blood_pressure": [
+                  "grand-parent"
+                ],
+                "diabetes_non_insulin": [
+                  "grand-parent"
+                ]
+              },
+              "has_family_history": true,
+              "other_conditions_text": "Hypertension - grandmother"
+            },
+            "environmental_exposures": {
+              "mold_details": null,
+              "mold_exposure": false,
+              "exposure_details": "none",
+              "chemical_exposures": "none",
+              "chemical_exposure_other": null
+            },
+            "medication_side_effects": {
+              "reaction_details": null,
+              "has_adverse_reactions": false
+            },
+            "reproductive_hormonal_health": {
+              "male_specific": {
+                "concern_details": null,
+                "hormonal_concerns": "no"
+              },
+              "female_specific": null
+            }
+          }
+        },
+        "latest_biomarker_results": {
+          "Gender": "Male",
+          "Albumin": "4.2 g/dL",
+          "Ferritin": "173.6 ng/mL",
+          "Order ID": 38,
+          "C-Peptide": "1.48 ng/mL",
+          "Test Date": "2025-11-17T14:54:25.713",
+          "Triglycerides": "58 mg/dL",
+          "HDL Cholesterol": "34 mg/dL",
+          "Lipoprotein (a)": "24 mg/dL",
+          "% Hemoglobin A1C": "5.6 %",
+          "ApoB:ApoA1 Ratio": "1.06",
+          "Daytime Cortisol": "13.6 ug/dL",
+          "LDL-C:ApoB Ratio": "1.17",
+          "Total Biomarkers": 29,
+          "25-(OH) Vitamin D": "25.8 ng/mL",
+          "LDL-C:HDL-C Ratio": "3.6",
+          "Total Cholesterol": "168 mg/dL",
+          "% Free Testosterone": "2.32 %",
+          "Estim. Avg Glu (eAG)": "114.02 mg/dL",
+          "High-Sensitivity CRP": "1 mg/L",
+          "Apolipoprotein B (APOB)": "104 mg/dL",
+          "Triglycerides:HDL Ratio": "1.7",
+          "VLDL Cholesterol (Calc)": "11.6 mg/dL",
+          "Apolipoprotein A1 (APOA1)": "98 mg/dL",
+          "Free Androgen Index (FAI)": "41.39",
+          "Testosterone, Free (calc)": "6.94 ng/dL",
+          "Calculated LDL-Cholesterol": "122.4 mg/dL",
+          "Testosterone, Total (Males)": "298.22 ng/dL",
+          "Testosterone:Cortisol Ratio": "0.021",
+          "Total Cholesterol:HDL Ratio": "4.94",
+          "Thyroid Stimulating Hormone (TSH)": "1.65 uIU/mL",
+          "Sex Hormone-Binding Globulin (SHBG)": "25 nmol/L",
+          "Dehydroepiandrosterone Sulfate (DHEA-S)": "138.2 ug/dL"
+        }
+      }
+    }
+  ]

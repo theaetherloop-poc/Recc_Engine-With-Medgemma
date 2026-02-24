@@ -1,0 +1,178 @@
+{
+  "status": "success",
+  "total_issues": 28,
+  "demographics": {
+    "age": 47,
+    "sex": "Male",
+    "ancestry": [
+      "Caucasian"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Iron",
+      "status": "high",
+      "value": 152.0,
+      "unit": "mcg/dL"
+    },
+    {
+      "name": "Ferritin",
+      "status": "high",
+      "value": 427.4,
+      "unit": "ng/mL"
+    },
+    {
+      "name": "Total Protein",
+      "status": "high",
+      "value": 7.5,
+      "unit": "g/dL"
+    },
+    {
+      "name": "Iron Saturation",
+      "status": "high",
+      "value": 60.0,
+      "unit": "%"
+    },
+    {
+      "name": "Bilirubin",
+      "status": "low",
+      "value": 0.3,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 5.5,
+      "unit": "%"
+    },
+    {
+      "name": "LDL-C:ApoB Ratio",
+      "status": "low",
+      "value": 1.35,
+      "unit": "unknown"
+    },
+    {
+      "name": "LDL:HDL Ratio (Calc.)",
+      "status": "high",
+      "value": 2.61,
+      "unit": "ratio"
+    },
+    {
+      "name": "Calculated Total Cholesterol",
+      "status": "high",
+      "value": 212.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "BUN:Creatinine Ratio",
+      "status": "high",
+      "value": 25.8,
+      "unit": "unknown"
+    },
+    {
+      "name": "EAG (Calc.)",
+      "status": "high",
+      "value": 111.15,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "low",
+      "value": 0.2,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Triglyceride:HDL Ratio",
+      "status": "high",
+      "value": 1.55,
+      "unit": "ratio"
+    },
+    {
+      "name": "VLDL (Calculated)",
+      "status": "high",
+      "value": 16.8,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Blood Urea Nitrogen",
+      "status": "high",
+      "value": 24.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Total Cholesterol:HDL Ratio",
+      "status": "high",
+      "value": 3.92,
+      "unit": "ratio"
+    },
+    {
+      "name": "Aspartate Aminotransferase",
+      "status": "high",
+      "value": 44.0,
+      "unit": "U/L"
+    },
+    {
+      "name": "SBHG",
+      "status": "high",
+      "value": 51.4,
+      "unit": "nmol/L"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "low",
+      "value": 103.6,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [],
+  "allergies": [
+    {
+      "allergen": "shellfish",
+      "reaction": "Vomiting"
+    }
+  ],
+  "symptoms": [
+    {
+      "type": "chronic_pain",
+      "details": "chronic pain reported"
+    },
+    {
+      "type": "skin_issues",
+      "details": "skin issues reported"
+    }
+  ],
+  "digestive": [
+    "bloating"
+  ],
+  "sleep_issues": [
+    "trouble_staying_asleep",
+    "not_waking_refreshed",
+    "snoring_or_sleep_apnea",
+    "wakes_2x_per_night"
+  ],
+  "exposures": {
+    "mold": "I helped my parents remodel their house and there was some black mold in it.",
+    "chemical": null
+  },
+  "hormonal": {},
+  "current_supplements": [
+    {
+      "name": "methylated B Vitamin",
+      "dose": null,
+      "frequency": "Once daily",
+      "purpose": "ADHD symptoms"
+    },
+    {
+      "name": "Solaray Active Man Men's once daily Multi-Vitamin",
+      "dose": null,
+      "frequency": "Daily",
+      "purpose": "Overall health"
+    },
+    {
+      "name": "Vitamin C",
+      "dose": "1000",
+      "frequency": "Daily",
+      "purpose": "Immune support"
+    }
+  ]
+}

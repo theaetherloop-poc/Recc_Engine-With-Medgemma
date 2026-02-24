@@ -1,0 +1,61 @@
+{
+  "CM": [
+    "Age:47",
+    "Height:76",
+    "FamilyHistory:Dialysis",
+    "PhysicalActivity:5 days/wk (optimal)",
+    "SleepHours:Adequate (6-8h)",
+    "SnoringApnea:Yes",
+    "EatingOut:1-2 times/week",
+    "HighSugarChildhoodDiet:No"
+  ],
+  "COG": [
+    "TroubleFallingAsleep:No"
+  ],
+  "DTX": [
+    "FamilyHistory:Cancer",
+    "Tobacco:Quit 24 years ago",
+    "Alcohol:Consumption (low)"
+  ],
+  "IMM": [
+    "Allergy:Shellfish",
+    "FamilyHistory:Cancer",
+    "Tobacco:Quit 24 years ago",
+    "Sunlight:(low)",
+    "SleepHours:Adequate (6-8h)",
+    "PetsAnimals:Has pets (antigen exposure, microbiota shifts)",
+    "MoldExposure:Mold exposure (inflammatory/respiratory effects)"
+  ],
+  "MITO": [
+    "FamilyHistory:Arthritis",
+    "PhysicalActivity:5 days/wk (optimal)",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:GI symptoms (brain-gut axis)",
+    "ChronicPain:less Sleep multiplier"
+  ],
+  "SKN": [
+    "SkinHealth:Has skin issues"
+  ],
+  "STR": [
+    "Age:47",
+    "BMI:21.907894736842106",
+    "WorkStress:Stress (moderate)",
+    "SleepHours:Adequate (6-8h)",
+    "TroubleFallingAsleep:No",
+    "TroubleStayingAsleep:Yes (2x/night)",
+    "WakeFeelingRefreshed:No",
+    "ChronicPain:Has chronic pain",
+    "ChronicPain:GI symptoms (brain-gut axis)",
+    "ChronicPain:less Sleep multiplier"
+  ],
+  "HRM": [
+    "Age:47",
+    "Sex:Male"
+  ],
+  "GA": [
+    "Ancestry:Caucasian",
+    "SleepHours:Adequate (6-8h)",
+    "HighSugarChildhoodDiet:No",
+    "DigestiveSymptoms:Bloating"
+  ]
+}

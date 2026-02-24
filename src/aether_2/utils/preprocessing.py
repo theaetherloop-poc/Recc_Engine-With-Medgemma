@@ -3,11 +3,13 @@ Preprocessing pipeline for rule-based tasks.
 Migrated from CrewAI agents to regular Python functions for performance optimization.
 """
 
+import os
 import json
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from src.aether_2.tools.biomarker_evaluation import BiomarkerEvaluationTool
 from src.aether_2.tools.user_profile_compiler import UserProfileCompilerTool
 from src.aether_2.tools.focus_areas_generator import EvaluateFocusAreasTool
+from src.aether_2.tools.patient_issue_extractor import PatientIssueExtractorTool
 from src.aether_2.models import UserProfile, FocusAreaScores
 
 
@@ -145,5 +147,54 @@ def evaluate_focus_areas(patient_and_blood_data: Dict[str, Any]) -> Dict[str, An
         
     except Exception as e:
         print(f"❌ Focus areas evaluation failed: {str(e)}")
+        raise
+
+
+def extract_patient_issues(user_profile: UserProfile, user_id: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Extract patient issues (biomarkers, conditions, symptoms) from user profile.
+    This is done before CrewAI execution to simplify the agent's task.
+
+    Args:
+        user_profile: UserProfile (Pydantic model)
+        user_id: Optional user ID for saving extracted issues to file
+
+    Returns:
+        Dict with:
+            - status: "success" or "error"
+            - total_issues: Total count of all issues
+            - biomarkers: List of flagged biomarkers with search terms
+            - conditions: List of medical conditions with search terms
+            - symptoms: List of symptoms with search terms
+            - dental_health: List of dental health issues
+            - family_history: List of family medical history conditions
+            - childhood_factors: Dict with childhood factors
+    """
+    try:
+        tool = PatientIssueExtractorTool()
+        result_json = tool._run(user_profile=user_profile.model_dump())
+        result = json.loads(result_json)
+
+        print(f"  - Extracted {result.get('total_issues', 0)} patient issues")
+        print(f"    • Biomarkers: {len(result.get('biomarkers', []))}")
+        print(f"    • Conditions: {len(result.get('conditions', []))}")
+        print(f"    • Symptoms: {len(result.get('symptoms', []))}")
+        print(f"    • Dental: {len(result.get('dental_health', []))}")
+        print(f"    • Family History: {len(result.get('family_history', []))}")
+        print(f"    • Childhood: {len(result.get('childhood_factors', {}))}")
+
+        # Save to file for verification if user_id is provided
+        if user_id:
+            out_dir = os.path.join("outputs", user_id)
+            os.makedirs(out_dir, exist_ok=True)
+            out_path = os.path.join(out_dir, "extracted_patient_issues.json")
+            with open(out_path, "w") as f:
+                json.dump(result, f, indent=2)
+            print(f"  ✅ Saved extracted issues to {out_path}")
+
+        return result
+
+    except Exception as e:
+        print(f"❌ Patient issues extraction failed: {str(e)}")
         raise
 

@@ -86,8 +86,8 @@ class ChronicPainRuleset:
         has_regular_nsaid = False
         if current_medications:
             for med in current_medications:
-                med_name = med.get('name', '').lower()
-                frequency = med.get('frequency', '').lower()
+                med_name = (med.get('name') or '').lower()
+                frequency = (med.get('frequency') or '').lower()
                 if any(nsaid in med_name for nsaid in self.NSAID_KEYWORDS):
                     # Check for regular use (daily or most days)
                     if 'daily' in frequency or 'day' in frequency:
@@ -103,8 +103,8 @@ class ChronicPainRuleset:
         has_regular_opioid = False
         if current_medications:
             for med in current_medications:
-                med_name = med.get('name', '').lower()
-                frequency = med.get('frequency', '').lower()
+                med_name = (med.get('name') or '').lower()
+                frequency = (med.get('frequency') or '').lower()
                 if any(opioid in med_name for opioid in self.OPIOID_KEYWORDS):
                     # Check for regular use
                     if 'daily' in frequency or 'day' in frequency:

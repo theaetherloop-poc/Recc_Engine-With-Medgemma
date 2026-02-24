@@ -1,0 +1,41 @@
+{
+  "patient_id": "unknown",
+  "age": 52,
+  "sex": "male",
+  "biomarker_issues": [
+    "Triglycerides (low)",
+    "HDL Cholesterol (low)",
+    "Lp(a) (high)",
+    "HbA1c (high)",
+    "LDL-C:ApoB Ratio (low)",
+    "25-(OH) Vitamin D (low)",
+    "LDL:HDL Ratio (Calc.) (high)",
+    "EAG (Calc.) (high)",
+    "High-Sensitivity CRP (low)",
+    "Triglyceride:HDL Ratio (high)",
+    "Apolipoprotein A1 (APOA1) (low)",
+    "LDL Cholesterol (high)",
+    "Total Cholesterol:HDL Ratio (high)",
+    "Dehydroepiandrosterone Sulfate (DHEA-S) (low)"
+  ],
+  "other_problems": [
+    "asthma",
+    "hypersensiviity / allergies",
+    "Possible sleep apnea",
+    "Dental: Borken Molar that needs tot be removed. ",
+    "Root canal(s)",
+    "High stress (level 7)",
+    "Recreational substance use",
+    "Family history: asthma",
+    "Family history: cancer",
+    "Family history: arthritis",
+    "Family history: high cholesterol",
+    "Family history: high blood pressure",
+    "Family history: diabetes non insulin",
+    "Childhood antibiotic use"
+  ],
+  "safety_constraints": [
+    "other"
+  ],
+  "total": 28
+}

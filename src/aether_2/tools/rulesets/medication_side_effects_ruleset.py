@@ -189,7 +189,7 @@ class MedicationSideEffectsRuleset:
         med_names_lower = []
         if current_medications:
             for med in current_medications:
-                med_name = med.get("name", "").lower()
+                med_name = (med.get("name") or "").lower()
                 if med_name:
                     med_names_lower.append(med_name)
 

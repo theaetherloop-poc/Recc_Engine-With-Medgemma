@@ -1,0 +1,246 @@
+# Preprocessing tasks (evaluate_inputs, evaluate_focus_areas, compile_user_profile)
+# have been migrated to regular Python functions in utils/preprocessing.py
+
+# Profile summary task - creates concise natural language summary
+summarize_patient_profile:
+  description: >
+    Summarize the patient's health profile in natural language.
+
+    USER PROFILE: {user_profile}
+
+    MUST INCLUDE (if present in data):
+    - Demographics (age, sex)
+    - Flagged biomarkers with values and status (high/low)
+    - Medical conditions and diagnoses
+    - Allergies
+    - Symptoms (pain, skin, headaches, digestive)
+    - Sleep issues
+    - Environmental exposures (mold, chemical)
+    - Hormonal concerns with patient's own description if available
+    - Diet style (vegetarian, vegan, etc.)
+    - Stress level (especially if high ≥7)
+    - Family history (brief mention if present)
+    - Current supplements
+
+    FORMAT RULES:
+    - One paragraph, 100-150 words max
+    - Use short phrases, no filler words
+    - Include actual values/numbers where available
+    - Mention patient's own words for concerns when available
+    - Simplify the explaination adn don't use  confusing phrases from the input as it is.
+
+  expected_output: >
+    A single paragraph covering ALL patient details concisely.
+    No JSON, no headers - just the summary text.
+  agent: profile_summarizer
+
+# NOTE: rank_ingredients_rag is DISABLED - replaced by discover_ingredients_medgemma
+# rank_ingredients_rag:
+#   description: >
+#     Use RAG-based search to find relevant ingredients.
+#   expected_output: >
+#     A JSON response with ranked ingredients.
+#   agent: ingredient_ranker_rag
+
+# NOTE: discover_ingredients_web is DISABLED - replaced by discover_ingredients_medgemma
+# discover_ingredients_web:
+
+discover_ingredients_medgemma:
+  description: >
+    You are a clinical nutritionist discovering evidence-based supplements for this patient.
+
+    PATIENT ISSUES PROVIDED: {patient_issues}
+
+    This contains:
+    - biomarkers: Flagged biomarkers with high/low status and values
+    - conditions: Diagnosed medical conditions
+    - symptoms: Pain/skin/digestive/other symptoms
+    - hormonal: Hormonal concerns (if present)
+    - lifestyle: Diet style, stress level (if present)
+    - sleep_issues: Sleep problems (if present)
+    - exposures: Environmental exposures (mold, chemical)
+    - dental_health: Dental issues (if present)
+    - family_history: Family medical history (if present)
+    - childhood_factors: Childhood health factors (if present)
+
+    YOUR TASK:
+    1. Analyze ALL patient issues listed above
+    2. For EACH issue, recommend 1-3 evidence-based supplements that address it
+    3. Prioritize supplements that address MULTIPLE issues
+    4. Include clinical reasoning for each supplement
+
+    IMPORTANT GUIDELINES:
+    - Cover ALL patient issues - do not skip any
+    - Recommend supplements with strong clinical evidence
+    - Consider nutrient interactions and synergies
+    - Account for diet restrictions (vegetarian/vegan need B12, iron, etc.)
+
+    AFTER ANALYSIS - COMPILE RESULTS:
+    - Deduplicate ingredients (merge reasons if same ingredient addresses multiple issues)
+    - Sort by priority (ingredients addressing multiple issues first)
+    - Return 15-25 ingredients total to ensure broad coverage
+
+    OUTPUT FORMAT (JSON only):
+    {
+      "discovered_ingredients": [
+        {
+          "ingredient_name": "Vitamin D3",
+          "reasons": ["low vitamin D", "immune support", "bone health"]
+        }
+      ]
+    }
+
+  expected_output: >
+    JSON object with "discovered_ingredients" array containing 15-25 ingredients.
+    Each ingredient has: ingredient_name, reasons (array).
+    Format: {"discovered_ingredients": [...]}
+  agent: medgemma_ingredient_discovery
+
+# ROLLBACK - Web search version of discover_ingredients_medgemma:
+# discover_ingredients_medgemma:
+#   description: >
+#     You have access to web search via the search tool.
+#     PATIENT ISSUES PROVIDED: {patient_issues}
+#     TASK: Use web search to find evidence-based supplements for each patient issue
+#     EXAMPLE SEARCHES: "best supplements for low vitamin D deficiency"
+
+
+
+
+# Final task for supplement recommendations - Gemini clinical reasoning
+generate_supplement_recommendations:
+  description: >
+    You are a clinical supplement specialist analyzing patient data to create recommendations.
+
+    PATIENT DATA AVAILABLE:
+    - Patient Summary: Output from summarize_patient_profile task (concise natural language summary)
+    - Candidate ingredients: Output from discover_ingredients_medgemma task (evidence-based candidate ingredients)
+
+    YOUR TASK:
+    1. Review the patient summary to understand their health profile
+    2. Analyze the candidate ingredients and their reasons
+    3. Select the TOP 8-12 most important supplements for THIS patient
+    4. Rank by clinical priority (most critical issues first)
+    5. Provide patient-specific reasoning for each
+
+    SELECTION RULES:
+    - Do NOT select supplements that cover the exact same problems unless they complement each other
+    - Maximize coverage across different health issues
+    - Prioritize supplements addressing multiple patient issues
+    - Consider the patient's specific biomarkers, symptoms, and conditions
+
+    CRITICAL: Output ONLY the JSON structure. No explanatory text or reasoning outside the JSON.
+
+  expected_output: >
+    ONLY the JSON response with proper Pydantic validation. No additional text.
+    OUTPUT FORMAT:
+    {
+      "final_recommendations": [
+        {
+          "ingredient_name": "Exact ingredient name",
+          "rank": 1,
+          "why": "Concise 1-2 line patient-specific explanation"
+        }
+      ]
+    }
+  agent: supplement_recommender
+
+# Focus area assignment task - maps supplements to health focus areas
+assign_focus_areas:
+  description: >
+    You are a functional medicine specialist assigning health focus areas to supplements.
+
+    YOUR TASK: For each supplement in the recommendations, assign 1-2 most relevant focus area codes.
+
+    DATA AVAILABLE:
+    - Supplement recommendations: Output from generate_supplement_recommendations task (ingredient_name, rank, why)
+    - Focus areas: {focus_areas} (patient's health priorities with scores)
+
+    FOCUS AREA CODES (assign 1-2 per supplement):
+    - CM: Cardiometabolic & Metabolic Health (cholesterol, blood sugar, heart health)
+    - COG: Cognitive & Mental Health (brain function, mood, memory)
+    - DTX: Detoxification & Biotransformation (liver function, toxin clearance)
+    - IMM: Immune Function & Inflammation (immune support, reducing inflammation)
+    - MITO: Mitochondrial & Energy Metabolism (cellular energy, fatigue)
+    - SKN: Skin & Barrier Function (skin health, wound healing)
+    - STR: Stress-Axis & Nervous System Resilience (stress response, adrenals)
+    - HRM: Hormonal Health (thyroid, sex hormones, hormone transport)
+    - GA: Gut Health and Assimilation (digestion, nutrient absorption)
+
+    FOR EACH SUPPLEMENT:
+    1. Look at the "why" field to understand what health issue it addresses
+    2. Match to 1-2 focus areas based on supplement's mechanism of action
+    3. Prioritize focus areas that are highest scored for this patient
+
+    CRITICAL: Output ONLY the JSON structure with focus areas added.
+
+  expected_output: >
+    ONLY the JSON response. No additional text.
+    OUTPUT FORMAT:
+    {
+      "recommendations": [
+        {
+          "ingredient_name": "Exact ingredient name",
+          "rank": 1,
+          "why": "Patient-specific reasoning",
+          "focus_area": ["CODE1", "CODE2"]
+        }
+      ]
+    }
+  agent: focus_area_specialist
+
+# Final task for dosage compilation - Gemini clinical reasoning
+compile_final_supplement_recommendations:
+  description: >
+    You are a clinical pharmacist adding evidence-based dosage information.
+
+    DATA AVAILABLE:
+    - Supplements with focus areas: Output from assign_focus_areas task (ingredient_name, rank, why, focus_area)
+    - Patient demographics: {patient_demographics}
+
+    YOUR TASK:
+    For EACH supplement in the list, determine:
+    1. recommended_dosage: Evidence-based dosage appropriate for this patient
+    2. frequency: Optimal timing and frequency (e.g., "Once daily with food")
+
+    DOSAGE GUIDELINES:
+    - Consider patient demographics (age, sex, weight)
+    - Account for the health condition being addressed (from "why" field)
+    - Use standard clinical dosages from established guidelines
+    - Adjust for bioavailability and absorption factors
+    - Consider time of day for optimal efficacy (morning vs evening, with/without food)
+
+    COMPILE FINAL OUTPUT:
+    For each supplement, output:
+    1. ingredient_name: Keep exact name from previous task
+    2. recommended_dosage: Evidence-based dosage (e.g., "2000 IU", "500mg")
+    3. frequency: Timing and frequency (e.g., "Once daily with breakfast")
+    4. focus_area: Keep the focus_area array from previous task (already assigned)
+    5. why: Keep the original patient-specific reasoning
+
+    CRITICAL: Output ONLY the JSON structure. No explanatory text.
+
+  expected_output: >
+    ONLY the JSON response. No additional text.
+    OUTPUT FORMAT:
+    {
+      "supplement_recommendations": [
+        {
+          "ingredient_name": "Exact ingredient name",
+          "recommended_dosage": "Evidence-based dosage",
+          "frequency": "Timing and frequency",
+          "focus_area": ["CODE1", "CODE2"],
+          "why": "Patient-specific reasoning"
+        }
+      ]
+    }
+  agent: final_supplement_compiler
+
+# ROLLBACK - Web search version of compile_final_supplement_recommendations:
+# compile_final_supplement_recommendations:
+#   description: >
+#     You are a clinical pharmacist creating complete supplement protocols.
+#     YOUR TASK: Use web search to find evidence-based dosage information for each supplement
+#     EXAMPLE SEARCHES: "Vitamin D3 recommended daily dosage adults"
+
+

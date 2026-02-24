@@ -370,7 +370,7 @@ class SupplementsRuleset:
         # G) Turmeric/Curcumin
         elif supp_type == "turmeric":
             # Enhanced bioavailability (piperine/bioperine) - check name, dosage, and purpose
-            if any(keyword in text.lower() for text in [supp_name, dosage, purpose] for keyword in ["piperine", "bioperine"]):
+            if any(keyword in text.lower() for text in [supp_name, dosage, purpose] if text for keyword in ["piperine", "bioperine"]):
                 scores["DTX"] += 0.12
             else:
                 scores["DTX"] += 0.08  # Conservative default

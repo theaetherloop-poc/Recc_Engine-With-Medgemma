@@ -1,0 +1,244 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user5@example.com",
+        "phase_status": {
+          "id": "c9d0e1f2-a3b4-4907-c890-123456789012",
+          "user_id": "d0e1f2a3-b4c5-4908-d901-234567890123",
+          "created_at": "2024-01-28T16:20:10Z",
+          "updated_at": "2024-02-10T08:55:33Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Bupropion",
+                "dose": "150 mg",
+                "frequency": "Twice daily",
+                "purpose": "Depression support"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "500 mg",
+                "name": "Magnesium Citrate",
+                "purpose": "Muscle relaxation and sleep support",
+                "frequency": "Before bedtime"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Omega-3",
+                "purpose": "Brain health and inflammation",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "50 mg",
+                "name": "Zinc Picolinate",
+                "purpose": "Immune system support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "200 mg",
+                "name": "CoQ10",
+                "purpose": "Energy and cardiovascular support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 29,
+            "ancestry": [
+              "middle_eastern"
+            ],
+            "weight_lbs": 155.7,
+            "height_feet": 5,
+            "height_inches": 8,
+            "ancestry_other": null,
+            "biological_sex": "male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "anxiety_disorder"
+            ],
+            "surgeries": "None",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "anxiety_disorder": 2022
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": true,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "functional_medicine"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 0,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Keto",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 1,
+            "trouble_falling_asleep": true,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": 0
+          },
+          "systems_review": {
+            "digestive_symptoms": "diarrhea"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "rarely",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": 2023,
+              "use_status": "quit",
+              "duration_category": "less_than_a_year"
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 5
+          },
+          "sunlight_exposure": {
+            "days_per_week": 3,
+            "average_minutes_per_day": "15-20 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Data Scientist",
+            "work_stress_level": 6
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": "Occasional tension headaches, stress-related",
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "no"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"anxiety\": [\"mother\", \"sister\"], \"depression\": [\"mother\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Minimal office environment",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Mild dry mouth initially, resolved after first month",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": null,
+              "hormonal_concerns": "no"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "male",
+        "Order ID": 1005,
+        "Test Date": "2024-02-06T12:15:00Z",
+        "Alanine Aminotransferase (ALT)": "23 U/L",
+        "Aspartate Aminotransferase (AST)": "22 U/L",
+        "Albumin": "4.4 g/dL",
+        "Blood Urea Nitrogen (BUN)": "15 mg/dL",
+        "Creatinine": "0.92 mg/dL",
+        "Total Bilirubin": "0.6 mg/dL",
+        "eGFR": "95 mL/min/1.73 m\u00b2",
+        "Estim. Avg Glu (eAG)": "106 mg/dL",
+        "Lipoprotein (a)": "19 mg/dL",
+        "Ferritin": "110 ng/mL",
+        "Homocysteine (HCY)": "8.2 umol/L",
+        "High-Sensitivity CRP": "1.2 mg/L",
+        "25-(OH) Vitamin D": "35 ng/mL",
+        "% Hemoglobin A1C": "5.3 %",
+        "Fasting Insulin": "7.8 uIU/mL",
+        "Total Cholesterol:HDL Ratio": "3.1",
+        "Triglycerides:HDL Ratio": "1.7",
+        "Daytime Cortisol": "19.5 mcg/dL",
+        "Thyroid Stimulating Hormone (TSH)": "2.0 uIU/mL",
+        "Apolipoprotein A1 (APOA1)": "163 mg/dL",
+        "Apolipoprotein B (APOB)": "85 mg/dL",
+        "ApoB:ApoA1 Ratio": "0.52",
+        "Calculated LDL-Cholesterol": "94 mg/dL",
+        "HDL Cholesterol": "55 mg/dL",
+        "Total Cholesterol": "168 mg/dL",
+        "Triglycerides": "95 mg/dL",
+        "Testosterone, Total (Males)": "650 ng/dL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "195 ug/dL",
+        "Testosterone:Cortisol ratio": "3.33",
+        "Total Biomarkers": 29
+      }
+    }
+  }
+]

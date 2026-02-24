@@ -1,0 +1,37 @@
+{
+  "patient_id": "unknown",
+  "age": 50,
+  "sex": "female",
+  "biomarker_issues": [
+    "Iron (high)",
+    "Calcium (low)",
+    "C-peptide (low)",
+    "AST:ALT Ratio (high)",
+    "Total Protein (high)",
+    "Lp(a) (high)",
+    "Bilirubin (low)",
+    "HbA1c (high)",
+    "LDL-C:ApoB Ratio (low)",
+    "25-(OH) Vitamin D (low)",
+    "High-Sensitivity CRP (low)",
+    "Triglyceride:HDL Ratio (high)",
+    "VLDL (Calculated) (high)",
+    "LH (high)",
+    "Blood Urea Nitrogen (low)",
+    "Aspartate Aminotransferase (high)",
+    "TSH (high)",
+    "FSH (high)",
+    "Dehydroepiandrosterone Sulfate (DHEA-S) (low)"
+  ],
+  "other_problems": [
+    "Depression",
+    "Chronic pain",
+    "Digestive: bloating,constipation",
+    "Trouble falling asleep",
+    "Diet: vegetarian",
+    "Menstrual concerns",
+    "Menopause/perimenopause"
+    ],
+  "safety_constraints": [],
+  "total": 25
+}

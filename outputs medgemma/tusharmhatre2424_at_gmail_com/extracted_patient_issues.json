@@ -1,0 +1,171 @@
+{
+  "status": "success",
+  "total_issues": 30,
+  "demographics": {
+    "age": 26,
+    "sex": "Male",
+    "ancestry": [
+      "Asian"
+    ]
+  },
+  "biomarkers": [
+    {
+      "name": "Albumin",
+      "status": "low",
+      "value": 3.78,
+      "unit": "g/dL"
+    },
+    {
+      "name": "AST:ALT Ratio",
+      "status": "low",
+      "value": 0.98,
+      "unit": "unknown"
+    },
+    {
+      "name": "Total Protein",
+      "status": "low",
+      "value": 6.54,
+      "unit": "g/dL"
+    },
+    {
+      "name": "Triglycerides",
+      "status": "low",
+      "value": 62.01,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HDL Cholesterol",
+      "status": "low",
+      "value": 36.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "LDL Cholesterol",
+      "status": "low",
+      "value": 0.0,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Lp(a)",
+      "status": "high",
+      "value": 24.21,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Bilirubin",
+      "status": "low",
+      "value": 0.05,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "HbA1c",
+      "status": "high",
+      "value": 5.21,
+      "unit": "%"
+    },
+    {
+      "name": "Calculated Total Cholesterol",
+      "status": "low",
+      "value": 48.4,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "BUN:Creatinine Ratio",
+      "status": "high",
+      "value": 24.13,
+      "unit": "unknown"
+    },
+    {
+      "name": "High-Sensitivity CRP",
+      "status": "low",
+      "value": 0.74,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Apolipoprotein B (APOB)",
+      "status": "low",
+      "value": 61.58,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Blood Urea Nitrogen",
+      "status": "high",
+      "value": 21.24,
+      "unit": "mg/dL"
+    },
+    {
+      "name": "Total Cholesterol:HDL Ratio",
+      "status": "high",
+      "value": 5.17,
+      "unit": "ratio"
+    },
+    {
+      "name": "TSH",
+      "status": "high",
+      "value": 5.3,
+      "unit": "uIU/mL"
+    },
+    {
+      "name": "SBHG",
+      "status": "low",
+      "value": 18.65,
+      "unit": "nmol/L"
+    },
+    {
+      "name": "Dehydroepiandrosterone Sulfate (DHEA-S)",
+      "status": "high",
+      "value": 496.92,
+      "unit": "mcg/dL"
+    }
+  ],
+  "conditions": [
+    "kidney_stones_",
+    "tuberculosis_"
+  ],
+  "allergies": [],
+  "symptoms": [
+    {
+      "type": "headaches",
+      "details": "frequent headaches/migraines"
+    },
+    {
+      "type": "chronic_pain",
+      "details": "chronic pain reported"
+    },
+    {
+      "type": "skin_issues",
+      "details": "skin issues reported"
+    }
+  ],
+  "digestive": [
+    "heartburn"
+  ],
+  "sleep_issues": [
+    "trouble_falling_asleep",
+    "trouble_staying_asleep",
+    "not_waking_refreshed",
+    "wakes_2x_per_night"
+  ],
+  "exposures": {
+    "mold": null,
+    "chemical": null
+  },
+  "hormonal": {
+    "female_concerns": [
+      "menstrual_concerns"
+    ],
+    "concern_details": "Irregular cycles"
+  },
+  "current_supplements": [],
+  "lifestyle": {
+    "stress_level": 9,
+    "high_stress": true
+  },
+  "dental_health": [
+    "dental_implants (1)"
+  ],
+  "family_history": [],
+  "childhood_factors": {
+    "high_sugar_childhood": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "CM": [
+    "Age:52",
+    "BMI:25.01492194674013",
+    "Height:66",
+    "FamilyHistory:High Cholesterol",
+    "FamilyHistory:High Blood Pressure",
+    "FamilyHistory:Diabetes Non Insulin",
+    "PhysicalActivity:5 days/wk (optimal)",
+    "SleepHours:Adequate (6-8h)",
+    "SnoringApnea:Not sure",
+    "EatingOut:>2 times/week",
+    "HighSugarChildhoodDiet:No"
+  ],
+  "COG": [
+    "TroubleFallingAsleep:No",
+    "TroubleStayingAsleep:No",
+    "WakeFeelingRefreshed:Yes"
+  ],
+  "DTX": [
+    "FamilyHistory:Cancer"
+  ],
+  "IMM": [
+    "Allergy:weeds/ grass / pollen",
+    "Diagnosis:asthma",
+    "FamilyHistory:Asthma",
+    "FamilyHistory:Cancer",
+    "Sunlight:(low)",
+    "SleepHours:Adequate (6-8h)"
+  ],
+  "MITO": [
+    "FamilyHistory:Arthritis",
+    "PhysicalActivity:5 days/wk (optimal)",
+    "WakeFeelingRefreshed:Yes"
+  ],
+  "SKN": [],
+  "STR": [
+    "RecDrugs:Psilocybin",
+    "WorkStress:Stress (moderate)",
+    "SleepHours:Adequate (6-8h)",
+    "TroubleFallingAsleep:No",
+    "TroubleStayingAsleep:No",
+    "WakeFeelingRefreshed:Yes"
+  ],
+  "HRM": [
+    "Age:52",
+    "Sex:Male"
+  ],
+  "GA": [
+    "ChildhoodAntibiotics:Yes",
+    "SleepHours:Adequate (6-8h)",
+    "HighSugarChildhoodDiet:No"
+  ]
+}
