@@ -18,12 +18,12 @@ class SupplementRecommendations(BaseModel):
 
 class SupplementWithFocusArea(BaseModel):
     ingredient_name: str = Field(..., description="Exact ingredient name")
-    rank: int = Field(..., description="Clinical priority rank (1-10)")
+    rank: int = Field(..., description="Clinical priority rank")
     why: str = Field(..., description="Patient-specific reasoning")
-    focus_area: List[str] = Field(..., description="List of 1-2 most relevant focus area codes")
+    focus_area: List[str] = Field(..., description="List of 1-2 focus area codes")
 
 class SupplementsWithFocusAreas(BaseModel):
-    recommendations: List[SupplementWithFocusArea] = Field(..., description="Supplements with assigned focus areas")
+    recommendations: List[SupplementWithFocusArea] = Field(..., description="List of supplements with assigned focus areas")
 
 class FinalSupplementProtocol(BaseModel):
     supplement_recommendations: List[IngredientRecommendation] = Field(..., description="Complete list of supplement recommendations with dosages and protocols")
@@ -76,11 +76,17 @@ class RankedIngredientsResponse(BaseModel):
 # Web Ingredient Discovery Models
 class DiscoveredIngredient(BaseModel):
     ingredient_name: str = Field(..., description="Exact ingredient name (e.g., 'Vitamin D3', 'Calcium Citrate')")
-    reasons: List[str] = Field(..., description="List of patient issues this ingredient addresses (e.g., ['low Calcium', 'vitamin_d_deficiency'])")
-    sources: List[str] = Field(..., description="List of credible sources where evidence was found (e.g., ['PubMed', 'Examine.com'])")
+    reasons: List[str] = Field(..., description="List of health conditions this ingredient was found under on Examine.com")
+    summary: str = Field(default="", description="Examine.com evidence summary for this supplement")
+    dosage_hint: str = Field(default="", description="Dosage information from Examine.com (first 200 chars)")
+    citation_count: int = Field(default=0, description="Number of studies cited on Examine.com — proxy for evidence strength")
+    categories: List[str] = Field(default_factory=list, description="Examine.com health categories (e.g. ['Brain Health', 'Sleep'])")
+    research_summaries: List[str] = Field(default_factory=list, description="Key research finding snippets from Examine.com")
+    examine_url: str = Field(default="", description="Direct URL to the supplement page on Examine.com")
+    source: str = Field(default="Examine.com", description="Data source")
 
 class WebDiscoveryResponse(BaseModel):
-    discovered_ingredients: List[DiscoveredIngredient] = Field(..., description="List of discovered ingredients from web research")
+    discovered_ingredients: List[DiscoveredIngredient] = Field(..., description="List of discovered ingredients from Examine.com via Apify")
 
 
 # MedGemma Medical Expert Models
@@ -88,6 +94,7 @@ class MedGemmaIngredient(BaseModel):
     """Single ingredient recommendation from MedGemma."""
     ingredient_name: str = Field(..., description="Exact supplement ingredient name (e.g., 'Vitamin D3', 'Magnesium Glycinate')")
     reasons: List[str] = Field(..., description="List of patient issues this ingredient addresses (e.g., ['low Vitamin D', 'hypothyroidism'])")
+    evidence_summary: str = Field(default="", description="Brief clinical evidence supporting this recommendation")
 
 
 class MedGemmaResponse(BaseModel):

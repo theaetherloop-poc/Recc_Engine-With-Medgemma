@@ -10,6 +10,7 @@ from typing import Dict, Any
 from src.aether_2.crew import Aether2
 from src.aether_2.utils.auth_setup import initialize_auth
 from src.aether_2.utils.data_processing import clean_agent_output
+from src.aether_2.utils.logging_setup import logger
 from src.aether_2.utils.preprocessing import (
     evaluate_biomarkers,
     compile_user_profile,
@@ -119,25 +120,33 @@ def run_aether_pipeline(patient_data: Dict[str, Any]) -> Dict[str, Any]:
         patient_issues = extract_patient_issues(user_profile, user_id=user_id)
         print("✅ Patient issues extraction complete")
 
+        # Step 5: Build patient demographics string for dosage context
+        demographics = (
+            preprocessing_data.get("patient_form", {})
+            .get("patient_data", {})
+            .get("phase1_basic_intake", {})
+            .get("demographics", {})
+        )
+        patient_demographics = f"{demographics.get('age', 'unknown')}-year-old {demographics.get('biological_sex', 'unknown')}"
+        logger.info(f"✅ Patient demographics: {patient_demographics}")
+
         # ========== CREWAI EXECUTION (Agents 4-7) ==========
         print("\n🤖 Starting CrewAI execution...")
+        logger.info("🚀 Initializing Aether2 crew...")
 
-        # Set kickoff inputs for tools to access (class variable)
-        Aether2.kickoff_inputs = {
+        kickoff_inputs = {
             "user_profile": user_profile.model_dump_json(),
             "focus_areas": focus_areas_results["markdown_output"],
             "patient_issues": json.dumps(patient_issues),
+            "patient_demographics": patient_demographics,
             "user_id": user_id
         }
 
+        # Set kickoff inputs for tools to access (class variable)
+        Aether2.kickoff_inputs = kickoff_inputs
+
         # Run crew with inputs
-        result = Aether2().crew().kickoff(
-            inputs={
-                "user_profile": user_profile.model_dump_json(),
-                "focus_areas": focus_areas_results["markdown_output"],
-                "patient_issues": json.dumps(patient_issues)
-            }
-        )
+        result = Aether2().crew().kickoff(inputs=kickoff_inputs)
         print("✅ CrewAI execution completed successfully")
         
         # ========== POST-PROCESSING ==========
@@ -202,9 +211,10 @@ def run_aether_pipeline(patient_data: Dict[str, Any]) -> Dict[str, Any]:
     except Exception as e:
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
-        
+
+        logger.error(f"❌ Pipeline failed for {user_id} after {duration:.2f}s: {str(e)}", exc_info=True)
         print(f"❌ Pipeline failed after {duration:.2f} seconds: {str(e)}")
-        
+
         return {
             "status": "error",
             "user_id": user_id,

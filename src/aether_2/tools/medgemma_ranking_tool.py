@@ -22,7 +22,7 @@ Patient: {patient_context}
 Supplements: {supplements}
 
 Example format:
-1. Supplement Name - 2-3 line explanation of why this ingredient is necessary for this specific patient refering to their profile and mention specific data points and biomarkers
+1. Supplement Name - 2-3 line explanation of why this ingredient is necessary for this specific patient refering to their profile
 2. Supplement Name - same as above
 ....
 
@@ -43,7 +43,7 @@ class MedGemmaRankingTool(BaseTool):
     description: str = (
         "Rank supplements by clinical priority for a patient. "
         "Provide patient_context (health issues) and supplements (comma-separated list). "
-        "Returns top 8-12 ranked supplements with brief reasons."
+        "Returns top 8-10 ranked supplements with brief reasons."
     )
     args_schema: Type[BaseModel] = MedGemmaRankingInput
     

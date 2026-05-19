@@ -62,26 +62,20 @@ class PatientIssueExtractorTool(BaseTool):
             hormonal = self._extract_hormonal_issues(user_profile_parsed)
             current_supplements = self._extract_current_supplements(user_profile_parsed)
             lifestyle = self._extract_lifestyle_factors(user_profile_parsed)
-            dental = self._extract_dental_health(user_profile_parsed)
-            family_history = self._extract_family_history(user_profile_parsed)
-            childhood = self._extract_childhood_factors(user_profile_parsed)
-
+            
             # Count total issues
             total_issues = (
-                len(biomarkers) +
-                len(conditions) +
-                len(allergies) +
-                len(symptoms) +
-                len(digestive) +
-                len(sleep) +
+                len(biomarkers) + 
+                len(conditions) + 
+                len(allergies) + 
+                len(symptoms) + 
+                len(digestive) + 
+                len(sleep) + 
                 (1 if exposures.get("mold") else 0) +
                 (1 if exposures.get("chemical") else 0) +
-                (1 if hormonal else 0) +
-                len(dental) +
-                len(family_history) +
-                (1 if childhood.get("childhood_antibiotics") else 0)
+                (1 if hormonal else 0)
             )
-
+            
             # Compile response
             response = {
                 "status": "success",
@@ -96,10 +90,7 @@ class PatientIssueExtractorTool(BaseTool):
                 "exposures": exposures,
                 "hormonal": hormonal,
                 "current_supplements": current_supplements,
-                "lifestyle": lifestyle,
-                "dental_health": dental,
-                "family_history": family_history,
-                "childhood_factors": childhood
+                "lifestyle": lifestyle
             }
             
             return json.dumps(response, indent=2)
@@ -424,108 +415,5 @@ class PatientIssueExtractorTool(BaseTool):
             result["stress_level"] = stress_level
             if int(stress_level) >= 7:
                 result["high_stress"] = True
-
-        # Diet-based nutrient needs
-        diet_nutrient_map = {
-            "vegetarian": ["B12", "Iron", "Zinc"],
-            "vegan": ["B12", "Iron", "Omega-3", "Zinc", "Calcium"],
-            "keto": ["Electrolytes", "Fiber", "Magnesium"],
-            "pescatarian": ["B12", "Iron"],
-            "paleo": ["Calcium", "Fiber"]
-        }
-        if diet_style:
-            diet_lower = diet_style.lower()
-            for diet_key, nutrients in diet_nutrient_map.items():
-                if diet_key in diet_lower:
-                    result["diet_nutrient_needs"] = nutrients
-                    break
-
-        return result
-
-    # =========================================================================
-    # Dental Health (NEW)
-    # =========================================================================
-
-    def _extract_dental_health(self, user_profile: Dict[str, Any]) -> List[str]:
-        """Extract dental health issues that may impact supplement needs"""
-        dental_data = user_profile.get("patient_data", {}).get("phase2_detailed_intake", {}).get("dental_health", {})
-
-        if not dental_data:
-            return []
-
-        issues = []
-
-        # Dental work with potential health impacts
-        dental_work = dental_data.get("dental_work", {})
-        if dental_work.get("root_canals", 0) > 0:
-            issues.append(f"root_canals ({dental_work.get('root_canals')})")
-        if dental_work.get("silver_mercury_fillings", 0) > 0:
-            issues.append(f"mercury_fillings ({dental_work.get('silver_mercury_fillings')})")
-        if dental_work.get("implants", 0) > 0:
-            issues.append(f"dental_implants ({dental_work.get('implants')})")
-
-        # Oral health issues
-        oral_issues = dental_data.get("oral_health_issues", {})
-        if isinstance(oral_issues, dict):
-            if oral_issues.get("gingivitis"):
-                issues.append("gingivitis")
-            if oral_issues.get("tooth_pain"):
-                issues.append("tooth_pain")
-            if oral_issues.get("tmj_disorder"):
-                issues.append("tmj_disorder")
-            if oral_issues.get("bleeding_gums"):
-                issues.append("bleeding_gums")
-            if oral_issues.get("chewing_problems"):
-                issues.append("chewing_problems")
-            other_dental = oral_issues.get("other_dental_work", "")
-            if other_dental and other_dental.strip():
-                issues.append(f"other: {other_dental.strip()}")
-
-        return issues
-
-    # =========================================================================
-    # Family History (NEW)
-    # =========================================================================
-
-    def _extract_family_history(self, user_profile: Dict[str, Any]) -> List[str]:
-        """Extract family medical history conditions for preventive consideration"""
-        family_data = user_profile.get("patient_data", {}).get("phase2_detailed_intake", {}).get("family_medical_history", {})
-
-        if not family_data:
-            return []
-
-        conditions = []
-        conditions_detail = family_data.get("conditions_detail", {})
-
-        if isinstance(conditions_detail, dict):
-            for condition, relatives in conditions_detail.items():
-                if relatives:
-                    # Format: "condition (relative1, relative2)"
-                    relatives_str = ", ".join(relatives) if isinstance(relatives, list) else str(relatives)
-                    conditions.append(f"{condition} ({relatives_str})")
-
-        return conditions
-
-    # =========================================================================
-    # Childhood Factors (NEW)
-    # =========================================================================
-
-    def _extract_childhood_factors(self, user_profile: Dict[str, Any]) -> Dict[str, Any]:
-        """Extract childhood factors that may impact gut health"""
-        phase2_data = user_profile.get("patient_data", {}).get("phase2_detailed_intake", {})
-
-        result = {}
-
-        # Childhood antibiotics
-        childhood_antibiotics = phase2_data.get("childhood_antibiotics", {})
-        if childhood_antibiotics.get("took_antibiotics_as_child", False):
-            result["childhood_antibiotics"] = True
-
-        # Childhood development factors
-        childhood_dev = phase2_data.get("childhood_development", {})
-        if childhood_dev.get("born_via_c_section", "").lower() == "yes":
-            result["c_section_birth"] = True
-        if childhood_dev.get("high_sugar_childhood_diet", "").lower() == "yes":
-            result["high_sugar_childhood"] = True
-
+        
         return result

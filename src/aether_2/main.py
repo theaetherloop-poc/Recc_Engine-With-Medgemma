@@ -65,8 +65,13 @@ def run(input_path="inputs/combined_data.json"):
         logger.info("✅ Focus areas evaluation complete")
 
         # Step 4: Extract patient issues (NEW - moved outside CrewAI)
-        patient_issues = extract_patient_issues(user_profile, user_id=user_id)
+        patient_issues = extract_patient_issues(user_profile)
         logger.info("✅ Patient issues extraction complete")
+
+        # Step 5: Extract patient demographics for dosage context
+        demographics = patient_data.get("phase1_basic_intake", {}).get("demographics", {})
+        patient_demographics = f"{demographics.get('age', 'unknown')}-year-old {demographics.get('biological_sex', 'unknown')}"
+        logger.info(f"✅ Patient demographics: {patient_demographics}")
 
         print("✅ Preprocessing complete")
 
@@ -88,30 +93,11 @@ def run(input_path="inputs/combined_data.json"):
     logger.info("🚀 Initializing Aether2 crew...")
 
     try:
-        # Extract patient demographics for dosage queries
-        demographics = user_profile.patient_data.get("phase1_basic_intake", {}).get("demographics", {})
-        age = demographics.get("age", "adult")
-        sex = demographics.get("biological_sex", "").lower()
-        weight = demographics.get("weight_lbs")
-        height_ft = demographics.get("height_feet")
-        height_in = demographics.get("height_inches")
-
-        # Build demographics string
-        height_str = f"{height_ft}'{height_in}\"" if height_ft and height_in else ""
-        weight_str = f"{weight} lbs" if weight else ""
-        demo_parts = [f"{age}-year-old", sex] if age and sex else ["adult"]
-        if weight_str:
-            demo_parts.append(weight_str)
-        if height_str:
-            demo_parts.append(height_str)
-        patient_demographics = ", ".join(demo_parts)
-
         # Set kickoff inputs for tools to access (class variable)
         Aether2.kickoff_inputs = {
             "user_profile": user_profile.model_dump_json(),
             "focus_areas": focus_areas_results["markdown_output"],
             "patient_issues": json.dumps(patient_issues),
-            "user_id": user_id,
             "patient_demographics": patient_demographics
         }
 
@@ -183,10 +169,9 @@ def run(input_path="inputs/combined_data.json"):
 
             # Get the raw content
             content = ""
-            if getattr(task_output, "tool_output", None):
-                content = str(task_output.tool_output)
-            elif getattr(task_output, "output", None):
-                content = str(task_output.output)
+            if getattr(task_output, "pydantic", None):
+                # Task used output_pydantic — serialize properly, not via str()
+                content = task_output.pydantic.model_dump_json(indent=2)
             elif getattr(task_output, "raw", None):
                 content = str(task_output.raw)
             else:

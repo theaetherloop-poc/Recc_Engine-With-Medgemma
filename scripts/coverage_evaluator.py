@@ -84,6 +84,7 @@ def print_evaluation(result: dict):
     print(f"Protocol: {result['supplements_count']} supplements")
     print(f"Must-Cover: {result['total_must_cover']} items")
     print(f"\nBIOMARKER COVERAGE: {result['biomarkers']['covered']}/{result['biomarkers']['total']} ({result['coverage_pct']['biomarkers']}%)")
+    
     if result['biomarkers']['missed']:
         for m in result['biomarkers']['missed'][:5]:
             print(f"  ✗ {m}")
