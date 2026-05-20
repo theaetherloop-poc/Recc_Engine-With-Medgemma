@@ -1,0 +1,268 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user16@example.com",
+        "phase_status": {
+          "id": "a1b2c3d4-e5f6-4929-a012-345678901234",
+          "user_id": "b2c3d4e5-f6a7-4930-b123-456789012345",
+          "created_at": "2024-02-28T08:45:20Z",
+          "updated_at": "2024-03-12T15:20:10Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": true,
+            "known_allergies": [
+              {
+                "allergen": "dairy",
+                "reaction": "Digestive upset and bloating",
+                "allergen_other": null
+              }
+            ]
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Atorvastatin",
+                "dose": "20 mg",
+                "frequency": "Daily",
+                "purpose": "High cholesterol management"
+              },
+              {
+                "name": "Losartan",
+                "dose": "50 mg",
+                "frequency": "Daily",
+                "purpose": "Hypertension control"
+              },
+              {
+                "name": "Omeprazole",
+                "dose": "20 mg",
+                "frequency": "Daily",
+                "purpose": "GERD management"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "1000 mg",
+                "name": "Niacin",
+                "purpose": "Cholesterol management support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Red Yeast Rice",
+                "purpose": "Natural cholesterol support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "400 mg",
+                "name": "Magnesium",
+                "purpose": "Blood pressure and muscle support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 56,
+            "ancestry": [
+              "caucasian"
+            ],
+            "weight_lbs": 192.7,
+            "height_feet": 6,
+            "height_inches": 0,
+            "ancestry_other": null,
+            "biological_sex": "male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "high_blood_pressure",
+              "high_cholesterol",
+              "hiatal_hernia_reflux_disease"
+            ],
+            "surgeries": "Hernia repair in 2015",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "high_blood_pressure": 2011,
+              "high_cholesterol": 2010,
+              "hiatal_hernia_reflux_disease": 2016
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": false,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": false,
+            "selected_approaches": [],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 1,
+              "caps_crowns": 4,
+              "root_canals": 1,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 3
+            },
+            "daily_brush_floss": "brush_only",
+            "removal_timeframe": 2017,
+            "mercury_fillings_removed": true
+          },
+          "dietary_habits": {
+            "diet_style": "Heart-healthy low-sodium",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "Severe snoring, sleep apnea suspected but not diagnosed",
+            "night_wake_frequency": null,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": 2
+          },
+          "systems_review": {
+            "digestive_symptoms": "heartburn"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "sometimes",
+              "typical_amount": "2-3 beers per week"
+            },
+            "tobacco": {
+              "quit_year": 1998,
+              "use_status": "quit",
+              "duration_category": ">_5_years"
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 2
+          },
+          "sunlight_exposure": {
+            "days_per_week": 3,
+            "average_minutes_per_day": "20-25 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Accountant",
+            "work_stress_level": 5
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"high_blood_pressure\": [\"father\", \"mother\"], \"high_cholesterol\": [\"father\", \"grand-parent\"], \"heart_disease\": [\"father\", \"grand-parent\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Minimal office environment",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Mild muscle aches with Atorvastatin, occasional dizziness with Losartan",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": null,
+              "hormonal_concerns": "no"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "105 ug/dL",
+        "eGFR": "66 mL/min/1.73 m2",
+        "Gender": "male",
+        "Calcium": "9.8 mg/dL",
+        "Ferritin": "152 ng/mL",
+        "Order ID": 1016,
+        "C-Peptide": "2.5 ng/mL",
+        "Test Date": "2024-03-08T10:00:00Z",
+        "Creatinine": "1.12 mg/dL",
+        "LH:FSH Ratio": "1.7",
+        "AST:ALT Ratio": "0.86",
+        "Total Protein": "7.1 g/dL",
+        "Triglycerides": "162 mg/dL",
+        "HDL Cholesterol": "43 mg/dL",
+        "Lipoprotein (a)": "41 mg/dL",
+        "Total Bilirubin": "0.88 mg/dL",
+        "% Hemoglobin A1C": "5.9 %",
+        "ApoB:ApoA1 Ratio": "0.85",
+        "Daytime Cortisol": "13.5 ug/dL",
+        "Direct Bilirubin": "0.32 mg/dL",
+        "LDL-C:ApoB Ratio": "1.09",
+        "Total Biomarkers": 41,
+        "25-(OH) Vitamin D": "25 ng/mL",
+        "LDL-C:HDL-C Ratio": "3.1",
+        "Total Cholesterol": "215 mg/dL",
+        "BUN:Creatinine Ratio": "21",
+        "Estim. Avg Glu (eAG)": "123 mg/dL",
+        "High-Sensitivity CRP": "3.5 mg/L",
+        "Estradiol (Sensitive)": "27 pg/mL",
+        "Apolipoprotein B (APOB)": "118 mg/dL",
+        "Triglycerides:HDL Ratio": "3.8",
+        "VLDL Cholesterol (Calc)": "32 mg/dL",
+        "Luteinizing Hormone (LH)": "10.2 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "139 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "24 mg/dL",
+        "Alkaline Phosphatase (ALP)": "91 U/L",
+        "Calculated LDL-Cholesterol": "140 mg/dL",
+        "Total Cholesterol:HDL Ratio": "5.0",
+        "Alanine Aminotransferase (ALT)": "36 U/L",
+        "Aspartate Aminotransferase (AST)": "31 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "3.2 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "6.0 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "142 ug/dL"
+      }
+    }
+  }
+]

@@ -1,0 +1,752 @@
+{"email": "psfrench77@gmail.com",
+  "version": "1.0",
+  "source_file": "Schema - Phase 3 intake.xlsx",
+  "sheet": "Schema for JSON",
+  "questions": [
+    {
+      "id": "q001",
+      "category": "Goals & Narrative",
+      "subcategory": "Top Health Goals",
+      "question": "What are your top three health goals right now?",
+      "data_type": "UI: Multi-line text",
+      "value": "To live longer, healthier; Be on the right supplement plan to that's helping my body;  have no pain and lose weight"
+    },
+    {
+      "id": "q002",
+      "category": "Goals & Narrative",
+      "subcategory": "Your Theory",
+      "question": "Why do YOU think these goals are pending?",
+      "data_type": "UI: Multi-line text",
+      "value": "Part of it's age, can't do anything about it and I am doing stuff about it. That's, you know, I have been working on it, so."
+    },
+    {
+      "id": "q003",
+      "category": "Goals & Narrative",
+      "subcategory": "What Needs to Change",
+      "question": "Are you willing to make lifestyle changes?",
+      "data_type": "UI: Checkbox options — Yes · No",
+      "value": "Yes"
+    },
+    {
+      "id": "q004",
+      "category": "Goals & Narrative",
+      "subcategory": "What Needs to Change",
+      "question": "If people are not sure about the response or say No ask - Anything else you'd like to share about it?",
+      "data_type": "UI: Multi-line text",
+      "value": null
+    },
+    {
+      "id": "q005",
+      "category": "Goals & Narrative",
+      "subcategory": "Last Time Well",
+      "question": "When did you last feel really well—body and mind?",
+      "data_type": "UI: Short-text",
+      "value": "You know, I feel pretty well most of the time with the regime I'm on right now. I just know I don't get enough exercise and the exercise part seems to create pain, unfortunately. I'm trying to incorporate a better exercise routine is what I really need to do.The lsat time I was pain free is right now."
+    },
+    {
+      "id": "q006",
+      "category": "Goals & Narrative",
+      "subcategory": "Trigger Event",
+      "question": "Did anything specific start or worsen your wellness?",
+      "data_type": "UI: Multi-line text ",
+      "value": "Part of the aging process, "
+    },
+    {
+      "id": "q007",
+      "category": "Goals & Narrative",
+      "subcategory": "Makes Worse",
+      "question": "What makes your symptoms WORSE?",
+      "data_type": "UI: Multi-line text ",
+      "value": "Um, not eating properly. Um, not getting enough rest, but I get. I get a lot of rest. And stress. I think., worse make is just sitting too long and not being active enough makes it worse."
+    },
+    {
+      "id": "q008",
+      "category": "Goals & Narrative",
+      "subcategory": "Time of Day Worse",
+      "question": "What time of the day does it get worse? Morning · Afternoon · Evening",
+      "data_type": "UI: Radio — Morning · Afternoon · Evening",
+      "value": "Time of day. Yes. I don't know. They're off and on throughout the day, so I don't think I have a a time when they get worse."
+    },
+    {
+      "id": "q009",
+      "category": "Goals & Narrative",
+      "subcategory": "Time of Day Worse",
+      "question": "Anything else you'd like to share about it?",
+      "data_type": "UI: Multi-line text",
+      "value": "I don't know if you need to know that they say I have a growth growing in my abdomen, which I have to have a biopsy on. I don't know if you need to know that. They're going to do a biopsy and hopefully it's not cancerous. I mean, you know, I've had hip surgery, 2 knee surgeries. I don't want another one and they want to remove it, so that's why I'm doing a biopsy instead"
+
+    },
+    {
+      "id": "q010",
+      "category": "Goals & Narrative",
+      "subcategory": "Where It Happens",
+      "question": "Where does it happen? Home · Work or any other place?",
+      "data_type": "UI: Radio — Home · Work · ",
+      "value": "It happens when I don't get enough exercise. You know, I stand up from sitting too long. It hurts. So I know exercise is crucial, but I'm also pretty stressed out right now because I need to make money and I'm looking for work, so. I think the stress has a lot to do with it too."
+    },
+    {
+      "id": "q011",
+      "category": "Goals & Narrative",
+      "subcategory": "Where It Happens",
+      "question": "If Other, Can you please explain about it?",
+      "data_type": "UI: Short-text",
+      "value": null
+    },
+    {
+      "id": "q012",
+      "category": "Goals & Narrative",
+      "subcategory": "Food/Drink Triggers",
+      "question": "Do any foods/drinks trigger your symptoms?",
+      "data_type": "UI: Checkbox options — Yes · No",
+      "value": "Yes"
+    },
+    {
+      "id": "q013",
+      "category": "Goals & Narrative",
+      "subcategory": "Food/Drink Triggers",
+      "question": "If yes,\nAsk: \"Explain the triggers a little please?",
+      "data_type": "UI: Short-text",
+      "value": "soda;alcohol"
+    },
+    {
+      "id": "q014",
+      "category": "Goals & Narrative",
+      "subcategory": "Makes Better",
+      "question": "And what seems to HELP with your symptoms?",
+      "data_type": "UI: Multi-line text ",
+      "value": "rest, eating properly,taking supplements. Exercise is exhauting but I know it is probably helpful in the long run. But it hurts to exercise and I push myself through it"
+    },
+    {
+      "id": "q015",
+      "category": "Meds & Supplements",
+      "subcategory": "Long-Term Medication Use",
+      "question": "Have you ever taken antibiotics, steroids, reflux meds, or daily pain-relievers for long periods? ",
+      "data_type": "UI: Checkbox options — Yes · No",
+      "value": "Yes"
+    },
+    {
+      "id": "q016",
+      "category": "Meds & Supplements",
+      "subcategory": "Long-Term Medication Use",
+      "question": "If yes,\nAsk: \"Which ones our of these and how long?",
+      "data_type": "UI: Multi-line text ",
+      "value": "Gabapentin every night for fibromyalgia.; Celebrix for arthiritis"
+    },
+    {
+      "id": "q017",
+      "category": "Meds & Supplements",
+      "subcategory": "Long-Term Medication Use",
+      "question": "If yes, When was the last time you took them",
+      "data_type": "year",
+      "value": "took gabapentin last night and this morning. Celebrix is one in the morning and one in night"
+    },
+    {
+      "id": "q018",
+      "category": "Lifestyle",
+      "subcategory": "Exercise Types",
+      "question": "What kinds of activity and how intense?",
+      "data_type": "UI: Multi-line text ",
+      "value": "water aerobics with intensity 10; do a few PT exercise for strength building;  Online zumba beginners class."
+    },
+    {
+      "id": "q019",
+      "category": "Lifestyle",
+      "subcategory": "Rank Sunlight Days",
+      "question": "Rank your days of sunlight exposure from most to least during a week e.g.rank Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday in terms of most to least exposure",
+      "data_type": "UI: Reorder bars — Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+      "value": "gets more sunshine in summers. Some days are more others."
+    },
+    {
+      "id": "q020",
+      "category": "Sleep",
+      "subcategory": "Sleep Aids",
+      "question": "Do you use any sleep aids or medicines?",
+      "data_type": "UI: Radio — Yes · No",
+      "value": "Yes"
+    },
+    {
+      "id": "q021",
+      "category": "Sleep",
+      "subcategory": "Sleep Aids",
+      "question": "If answer to #26 is Yes, Explain about the sleep aids",
+      "data_type": "UI: Short-text ",
+      "value": " edibles.THC; Between 10-20 mg every night; Gabapentin also makes me sleepy"
+    },
+    {
+      "id": "q022",
+      "category": "Sleep",
+      "subcategory": "Consistent Bedtime",
+      "question": "Do you go to sleep around the same time every day?",
+      "data_type": "UI: Radio — Yes · No",
+      "value": "Yes"
+    },
+    {
+      "id": "q023",
+      "category": "Sleep",
+      "subcategory": "Consistent Wake Time",
+      "question": "Do you wake up around the same time every day?",
+      "data_type": "UI: Radio — Yes · No",
+      "value": "Yes"
+    },
+    {
+      "id": "q024",
+      "category": "Nutrition",
+      "subcategory": "Typical Day of Eating",
+      "question": "Walk me through your typical meals and snacks.",
+      "data_type": "UI: Multi-line text |",
+      "value": "Egg bites; eggs; cheese; bacon; alfalfa sprouts; tomatoes; tea; Emergen-C drink; salad; Asian-style hamburger meat; cabbage; sauce; vegetables; fish; chicken; rice"
+    },
+    {
+      "id": "q025",
+      "category": "Nutrition",
+      "subcategory": "Food Sensitivities",
+      "question": "Do you avoid any foods because they cause issues?",
+      "data_type": "UI: Radio — Yes · No",
+      "value": "Yes;"
+    },
+    {
+      "id": "q026",
+      "category": "Nutrition",
+      "subcategory": "Food Sensitivities",
+      "question": "If yes, Explain what food and what issues are caused?",
+      "data_type": "UI: Multi-line text ",
+      "value": "Yeah,Anything that's fatty or fried I can't handle it; My mouth getting numb;sometimes I get gluten or sugar; I get an upset stomach. Sugary foods make stomach upset"
+    },
+    {
+      "id": "q027",
+      "category": "Nutrition",
+      "subcategory": "Cravings",
+      "question": "I'll read out a few food types. Please answer yes or no if you feel any strong cravings for any of these?(How many times a month?)",
+      "data_type": "UI: Check-boxes — Sweets(y/n) · Salty(y/n) · Bread/Pasta(y/n) · Chocolate(y/n) · Caffeine(y/n) ",
+      "value": "Sweets; Chocolate"
+    },
+    {
+      "id": "q028",
+      "category": "Nutrition",
+      "subcategory": "Cravings",
+      "question": "Any other cravings",
+      "data_type": "UI: Short text",
+      "value": "Sometimes one and sometimes you do get cravings with like the sugar. So like I have mushroom coffee drinks, but I one of them is sweeter than the other, but I'll put some monk sugar in it"
+    },
+    {
+      "id": "q029",
+      "category": "Stress & Support",
+      "subcategory": "Mood",
+      "question": "How would you describe your mood lately?",
+      "data_type": "UI: Multi-line text ",
+      "value": "Because I'm looking for work, I'm a little depressed because it really sucks out there in the market and I've already been. The market sucks out there and there's a lot scams. Yeah. I, you know, money is really the only thing that stresses me. Pretty much nothing else that money just because you have to pay your bills and there's things I want to get, you know, and. Stressful. Yeah."
+    },
+    {
+      "id": "q030",
+      "category": "Stress & Support",
+      "subcategory": "Stress Level",
+      "question": "On a scale of 1–10, how high is your current stress?",
+      "data_type": "UI: Slider 1–10",
+      "value": "8"
+    },
+    {
+      "id": "q031",
+      "category": "Stress & Support",
+      "subcategory": "Stressors",
+      "question": "What are your biggest sources of stress right now?",
+      "data_type": "UI: Multi-line text ",
+      "value": "job search and money"
+    },
+    {
+      "id": "q032",
+      "category": "Stress & Support",
+      "subcategory": "Relaxation Practices",
+      "question": "Which relaxation techniques do you use? Some options can be  Meditation · Yoga · Breathing · Tai Chi/Qigong · Prayer ·",
+      "data_type": "UI: Check-boxes — Meditation · Yoga · Breathing · Tai Chi/Qigong · Prayer ·",
+      "value": "None"
+    },
+    {
+      "id": "q033",
+      "category": "Stress & Support",
+      "subcategory": "Relaxation Practices",
+      "question": "Any Other: “Please describe.”",
+      "data_type": "UI: Short-text",
+      "value": null
+    },
+    {
+      "id": "q034",
+      "category": "Stress & Support",
+      "subcategory": "Support Network",
+      "question": "Who or what do you lean on for support?",
+      "data_type": "UI: Check-boxes — Partner · Family · Friends · Spiritual · Pets · Therapist",
+      "value": "Family"
+    },
+    {
+      "id": "q035",
+      "category": "Stress & Support",
+      "subcategory": "Support Network",
+      "question": "Anything or anybody else?",
+      "data_type": " UI: Short-text",
+      "value": "Oh, a couple of girlfriends I talked to. Yeah, I have some girlfriends that are going through struggles too. And we kind of help each other out and talk, you know, we let things out with each other just to get it off her chest, you know?"
+    },
+    {
+      "id": "q036",
+      "category": "Stress & Support",
+      "subcategory": "Trauma History",
+      "question": "The next question is highly sensitive,so you can choose not to answer it. Have you experienced significant trauma or abuse?",
+      "data_type": "UI: Radio — Yes · No (optional)",
+      "value": "No"
+    },
+    {
+      "id": "q037",
+      "category": "Stress & Support",
+      "subcategory": "Trauma Details (If Yes)",
+      "question": "If they choose to answer the above question, ask this follow up  - Again , only if you are comfortable, would you like to describe (optional).",
+      "data_type": " UI: Multi-line text.",
+      "value": "mental abuse from my ex about 50 years ago."
+    },
+    {
+      "id": "q038",
+      "category": "Childhood & Development",
+      "subcategory": "Childhood Illnesses",
+      "question": "Any significant illnesses during childhood?",
+      "data_type": "UI: Radio — Yes · No · Not sure",
+      "value": "No"
+    },
+    {
+      "id": "q039",
+      "category": "Childhood & Development",
+      "subcategory": "Childhood Illnesses",
+      "question": "If response is Yes,can you please explain a little more about your childhood illnesses?",
+      "data_type": "UI: Multi-line text",
+      "value": null
+    },
+    {
+      "id": "q040",
+      "category": "Childhood & Development",
+      "subcategory": "Secure Environment?",
+      "question": "Was your childhood home happy and secure?",
+      "data_type": "UI: Radio — Yes · No · Not sure",
+      "value": "Yes"
+    },
+    {
+      "id": "q041",
+      "category": "Childhood & Development",
+      "subcategory": "Secure Environment?",
+      "question": "If response is No or Not sure, Could you please share a little more about that?",
+      "data_type": "UI: Multi-line text",
+      "value": null
+    },
+    {
+      "id": "q042",
+      "category": "Childhood & Development",
+      "subcategory": "Breast-Fed?",
+      "question": "Were you breast-fed as an infant?",
+      "data_type": "UI: Radio — Yes · No · Not sure",
+      "value": "Yes"
+    },
+    {
+      "id": "q043",
+      "category": "Childhood & Development",
+      "subcategory": "Breastfeeding Duration (If Yes)",
+      "question": "If yes, Approximately how long were you breast-fed?",
+      "data_type": "UI: Short-text ",
+      "value": "Oh, I have no idea. Probably as long as you know you were supposed to as a child, as an infant."
+    },
+    {
+      "id": "q044",
+      "category": "Childhood & Development",
+      "subcategory": "Early-Life Exposures",
+      "question": "Did you have any early exposure to smoke, lead paint, pesticides, etc.?",
+      "data_type": "UI: Radio — Yes · No · Not sure",
+      "value": "Yes"
+    },
+    {
+      "id": "q045",
+      "category": "Childhood & Development",
+      "subcategory": "Early-Life Exposures",
+      "question": "Any other exposures that you might've had?",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q046",
+      "category": "Dental History",
+      "subcategory": "Teeth Sensitivity",
+      "question": "Do you have teeth sensitivity?",
+      "data_type": "UI: Radio — Yes · No",
+      "value": " No"
+    },
+    {
+      "id": "q047",
+      "category": "Dental History",
+      "subcategory": "Sensitivity Details (If Yes)",
+      "question": "If yes, Please explain (optional).",
+      "data_type": "UI: Short-text",
+      "value": null
+    },
+    {
+      "id": "q048",
+      "category": "Environment & Exposures",
+      "subcategory": "Indoor Environment Factors",
+      "question": "I'll read out a few indoor environmental exposures. Please say Yes or No for any of these that you may have been exposed to.",
+      "data_type": "UI: Check-boxes — Water leaks/Dampness · Ongoing renovations · Fresh paint/VOCs · New carpet/Flooring glue · Poor ventilation/Stale air · Gas stove · Wood-burning fireplace · Pets indoors · Heavy fragrance/Air fresheners · High-EMF sources (server room) ",
+      "value": null
+    },
+    {
+      "id": "q049",
+      "category": "Environment & Exposures",
+      "subcategory": "Indoor Environment Factors",
+      "question": "\nIf the user says “Other indoor environment issues” “Please describe.”",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q050",
+      "category": "Environment & Exposures",
+      "subcategory": "Chemical Sensitivity",
+      "question": "Are you unusually sensitive (headache, nausea, rashes) to small amounts of chemicals, perfumes, smoke or exhaust?",
+      "data_type": "UI: Radio — Yes · No | ",
+      "value": "No"
+    },
+    {
+      "id": "q051",
+      "category": "Environment & Exposures",
+      "subcategory": "Chemical Sensitivity",
+      "question": "If Yes: List common triggers or situations.",
+      "data_type": " UI: Multi-line text ",
+      "value": "I don't get nausea, but I might choke from exhaust . But no, I don't get nausea."
+    },
+    {
+      "id": "q052",
+      "category": "Environment & Exposures",
+      "subcategory": "Caffeine Sensitivity",
+      "question": "Do you use caffeine?",
+      "data_type": "UI: Radio — Yes · No | ",
+      "value": "No"
+    },
+    {
+      "id": "q053",
+      "category": "Environment & Exposures",
+      "subcategory": "Caffeine Sensitivity",
+      "question": "If yes, Which of the following ring true with respect to how caffeine makes you feel ",
+      "data_type": " UI: Radio — Sensitive (jittery / palpitations) · Tolerant ",
+      "value": "Tolerant"
+    },
+    {
+      "id": "q054",
+      "category": "Environment & Exposures",
+      "subcategory": "Alcohol Flush Reaction",
+      "question": "Does a small amount of alcohol make you flush or feel unwell?",
+      "data_type": "UI: Radio — Yes · No ·",
+      "value": "No"
+    },
+    {
+      "id": "q055",
+      "category": "Environment & Exposures",
+      "subcategory": "Alcohol Flush Reaction",
+      "question": "If yes, ask - Could you explain the details a little more please?",
+      "data_type": "UI: Multi-line text",
+      "value": null
+    },
+    {
+      "id": "q056",
+      "category": "Environment & Exposures",
+      "subcategory": "Clothing Fibers",
+      "question": "I'll read out the names of a few fiber types. Please say yes, no or don't know if you use any of the following fibers in your clothing?",
+      "data_type": "UI: Check-boxes — Polyester · Nylon · Rayon · Acrylic · Spandex (Lycra/Elastane) · Acetate",
+      "value": "Polyester; Nylon; Rayon"
+    },
+    {
+      "id": "q057",
+      "category": "Environment & Exposures",
+      "subcategory": "Seasonal Allergies",
+      "question": "Do you get seasonal allergies?",
+      "data_type": "UI: Radio — Yes · No | ",
+      "value": "No"
+    },
+    {
+      "id": "q058",
+      "category": "Environment & Exposures",
+      "subcategory": "Seasonal Allergies",
+      "question": "If Yes: Could you please share the name and symptoms. ",
+      "data_type": "UI: Multi-line text",
+      "value": "I can't imagine. Not usually, you know. I mean, sometimes I'll sneeze and I don't know what it's from, but."
+    },
+    {
+      "id": "q059",
+      "category": "Environment & Exposures",
+      "subcategory": "Hygiene Products",
+      "question": "Now I'll read the hygiene step you usually may do in your daily life and I'd like you to share the brand or product you use for it. Example for Toothpaste would be Colgate. \nOptions: Bodywash, Soap, Scrub, Shampoo, Conditioner, Toothpaste, Mouthwash",
+      "data_type": "UI: Multi-line text (per item field)",
+      "value": null
+    },
+    {
+      "id": "q060",
+      "category": "Environment & Exposures",
+      "subcategory": "Air Filter",
+      "question": "Do you use an air-filter?",
+      "data_type": "UI: Radio — Yes · No |",
+      "value": "Yes"
+    },
+    {
+      "id": "q061",
+      "category": "Environment & Exposures",
+      "subcategory": "Air Filter",
+      "question": " If Yes: Assistant: What brand/model. ",
+      "data_type": "UI: Multi-line text",
+      "value": "levoit"
+    },
+    {
+      "id": "q062",
+      "category": "Environment & Exposures",
+      "subcategory": "Water Filter / Bottled Water",
+      "question": "Do you drink bottled water or use a water-filter?",
+      "data_type": "UI: Radio — Yes · No |",
+      "value": "Yes"
+    },
+    {
+      "id": "q063",
+      "category": "Environment & Exposures",
+      "subcategory": "Water Filter / Bottled Water",
+      "question": " If Yes, ask - What brand/model. ",
+      "data_type": "UI: Multi-line text ",
+      "value": "I have a Berkey"
+    },
+    {
+      "id": "q064",
+      "category": "Pets & Animals",
+      "subcategory": "Animal Types (If Yes)",
+      "question": "What kind of animals do you have?",
+      "data_type": "Condition: If #82 = Yes | UI: Check-boxes — Dog · Cat · Bird · Reptile · Livestock",
+      "value": "Dog;Cat"
+    },
+    {
+      "id": "q065",
+      "category": "Pets & Animals",
+      "subcategory": "Animal Types (If Yes)",
+      "question": " Any Other Animals or citters you may be exposed to?",
+      "data_type": "UI: Short-text",
+      "value": null
+    },
+    {
+      "id": "q066",
+      "category": "Pets & Animals",
+      "subcategory": "Mostly Where? (If Yes)",
+      "question": "Do they live mostly inside, outside, or both?",
+      "data_type": "UI: Radio — Inside · Outside · Both",
+      "value": "Inside"
+    },
+    {
+      "id": "q067",
+      "category": "Systems Check",
+      "subcategory": "Weight Change",
+      "question": "Have you experienced an unintentional weight change recently?",
+      "data_type": "UI: Radio — Yes · No",
+      "value": "Yes"
+    },
+    {
+      "id": "q068",
+      "category": "Systems Check",
+      "subcategory": "Weight Change Details (If Yes)",
+      "question": "IF yes to weight gain, How much and over what timeframe?",
+      "data_type": "UI: Short-text ",
+      "value": "OK. I'm putting weight back on. I was on ozempic last year for 2 1/2 months and lost 25 lbs and kept it off, but now it's starting to come back on."
+    },
+    {
+      "id": "q069",
+      "category": "Systems Check",
+      "subcategory": "Bowel Movements ",
+      "question": "You pointed out some digestive issues, so we will dig deeper into digestive questions now. Please feel free to answer this only if you're comfortable - How often do you have bowel movements?",
+      "data_type": "Record as: short text",
+      "value": "Every day."
+    },
+    {
+      "id": "q070",
+      "category": "Systems Check",
+      "subcategory": "Digestive follow- up",
+      "question": "If user selected Bloating, Bloating timing: “When do you feel bloated—within 2 hours of eating, after 2 hours, or variable?”\n\t",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q071",
+      "category": "Systems Check",
+      "subcategory": "Digestive follow- up",
+      "question": "If user selected Heartburn “Is it reflux/GERD or occasional heartburn?”\n\t",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q072",
+      "category": "Systems Check",
+      "subcategory": "Digestive follow- up",
+      "question": "If user selected constipation“Any known triggers (e.g., after trauma, travel, foods)?”\n\t",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q073",
+      "category": "Systems Check",
+      "subcategory": "Digestive follow- up",
+      "question": "Do you observe Any foul smell, notable color, or blood/mucus in your stool?\n",
+      "data_type": "UI: Multi-line text ",
+      "value": "No"
+    },
+    {
+      "id": "q074",
+      "category": "Systems Check",
+      "subcategory": "Digestive follow- up",
+      "question": "Do you have Any hemorrhoids, fissures, or prolapse?”",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q075",
+      "category": "Systems Check",
+      "subcategory": "Transit Time (If triggered)",
+      "question": "If you’ve measured it, what is your transit time with beet or charcoal test? Some people check transit time by eating beets (red stool) or activated charcoal and timing to first color change. ",
+      "data_type": " UI: Short-text",
+      "value": "half an hour of eating only after I eat breakfast. But all  excretion happens at breakfast. Sometime I go 2-3 times in the morning. I did not do any transit time test.I have a lot of gas and very bad smelling gas these days. would need some help with it "
+    },
+    {
+      "id": "q076",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Hormone Therapy / Birth Control",
+      "question": "Are you using hormonal birth control?",
+      "data_type": "UI: Radio — Yes · No",
+      "value": "No"
+    },
+    {
+      "id": "q077",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Hormone Therapy / Birth Control",
+      "question": "\"Please explain the type,dosage,start,reason and duration for which you have taken it?",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q078",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "HRT Details",
+      "question": "Do you receive any HRT (Hormone Replacement Therapy). ",
+      "data_type": "UI: Radio — Yes · No",
+      "value": "No"
+    },
+    {
+      "id": "q079",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "HRT Details",
+      "question": "If yes, please explain what type and your experience with it",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q080",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Pregnancy History",
+      "question": "You can choose to skip the following question if you'd like. How many pregnancies, births, miscarriages or complications?",
+      "data_type": "UI: Checkbox & Number: Pregnancy (#), Miscarriage (#), Complications (Textbox) ",
+      "value": "3 pregnancies"
+    },
+    {
+      "id": "q081",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Timing Between Pregnancies/Miscarriages",
+      "question": "If Pregnancy or Miscarriages selected/shared, ask - What was the time between each pregnancy/miscarriage/complication?",
+      "data_type": "UI: Repeatable rows per Pregnancy/Miscarriage #: Number input for time (months/years)",
+      "value": "Not a lot. I was very fertile. I had my son, my daughter, my first daughter and my son are like a year and a half apart. And then my my son and my baby daughter are three years apart."
+    },
+    {
+      "id": "q082",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Breast Cancer Risk",
+      "question": "Have you ever been diagnosed of breast cancer or considered high-risk? ",
+      "data_type": "UI: Radio — Yes · No",
+      "value": "No"
+    },
+    {
+      "id": "q083",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Breast Cancer Risk",
+      "question": "If yes, Could you Please share details of the diagnosis.",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q084",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Male Concerns Details (If Yes)",
+      "question": "You previously shared that you had Male hormones/sexual concerns.Please describe—onset, labs, treatments",
+      "data_type": " UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q085",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Gynecomastia",
+      "question": "Do you have diagnosed or suspected gynecomastia (breast tissue development in males leading to enlarged breasts)?",
+      "data_type": "UI: Radio — Yes · No ",
+      "value": null
+    },
+    {
+      "id": "q086",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Gynecomastia",
+      "question": "If Yes: Explain diagnosis and any ongoing treatment. ",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q087",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Prostate Issues",
+      "question": "Do you have any prostate related issue?",
+      "data_type": "UI: Radio — Yes · No ",
+      "value": null
+    },
+    {
+      "id": "q088",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Prostate Issues",
+      "question": " If yes,Could you share the symptoms and other details",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q089",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Prostate/Testicular Cancer Risk",
+      "question": "Have you ever been diagnosed of prostate or testicular cancer or considered high-risk?",
+      "data_type": "UI: Radio — Yes · No ",
+      "value": null
+    },
+    {
+      "id": "q090",
+      "category": "Hormone / Sex-Specific",
+      "subcategory": "Prostate/Testicular Cancer Risk",
+      "question": " If yes, Please explain.",
+      "data_type": "UI: Multi-line text",
+      "value": null
+    },
+    {
+      "id": "q091",
+      "category": "Pain · Headache · Skin",
+      "subcategory": "Headache Details (If Yes)",
+      "question": "You previously mentioned you had frequent headaches/migraines. How often and any known triggers?",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    },
+    {
+      "id": "q092",
+      "category": "Pain · Headache · Skin",
+      "subcategory": "Pain Details (If Yes)",
+      "question": "Where is the pain and what makes it worse/better?",
+      "data_type": "UI: Multi-line text ",
+      "value": "Yeah, and it's still part of it is healing from my hip. I think my weakness, my weakness is mostly in my knees. I've had both my knees replaced and I think they still, I mean, I can't get down on my knees anymore. There's too much pain on the.\nCaused from the surgeries, you know, the ligaments or something. So that's kind of like nothing we can do about, I don't think. My other pain is my lower back, which I've had all my life off and on.I have tendonitis. And between that and just my arthritis, which I think is pretty much under control, I take cucumin and I think, like I said, the supplements I've been taking, I think are really helping me feel better physically"
+    },
+    {
+      "id": "q093",
+      "category": "Pain · Headache · Skin",
+      "subcategory": "Skin Details (If Yes)",
+      "question": "Please describe location, triggers, timing.",
+      "data_type": "UI: Multi-line text ",
+      "value": null
+    }
+  ]
+}

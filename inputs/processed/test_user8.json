@@ -1,0 +1,259 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user8@example.com",
+        "phase_status": {
+          "id": "c5d6e7f8-a9b0-4913-c456-789012345678",
+          "user_id": "d6e7f8a9-b0c1-4914-d567-890123456789",
+          "created_at": "2024-02-20T08:15:50Z",
+          "updated_at": "2024-03-05T10:30:15Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": true,
+            "known_allergies": [
+              {
+                "allergen": "shellfish",
+                "reaction": "Vomiting and hives",
+                "allergen_other": null
+              },
+              {
+                "allergen": "iodine",
+                "reaction": "Allergic reaction",
+                "allergen_other": null
+              }
+            ]
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Warfarin",
+                "dose": "5 mg",
+                "frequency": "Daily",
+                "purpose": "Blood clot prevention"
+              },
+              {
+                "name": "Metoprolol",
+                "dose": "50 mg",
+                "frequency": "Twice daily",
+                "purpose": "Heart rate control and blood pressure"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "400 mg",
+                "name": "Magnesium",
+                "purpose": "Heart rhythm support and muscle function",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Omega-3",
+                "purpose": "Cardiovascular health",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "100 mg",
+                "name": "CoQ10",
+                "purpose": "Heart muscle support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 55,
+            "ancestry": [
+              "south_asian"
+            ],
+            "weight_lbs": 161.4,
+            "height_feet": 5,
+            "height_inches": 6,
+            "ancestry_other": null,
+            "biological_sex": "female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "blood_clots_dvt",
+              "heart_murmur",
+              "high_blood_pressure"
+            ],
+            "surgeries": "Deep vein thrombosis treatment in 2020, Cardiac catheterization in 2021",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "blood_clots_dvt": 2020,
+              "heart_murmur": 2018,
+              "high_blood_pressure": 2015
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": "Samsung Galaxy Watch 5",
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": true
+          },
+          "complementary_approaches": {
+            "ayurveda": true,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": false,
+            "selected_approaches": [
+              "ayurveda",
+              "yoga"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 2,
+              "root_canals": 1,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 1
+            },
+            "daily_brush_floss": "brush_only",
+            "removal_timeframe": 2019,
+            "mercury_fillings_removed": true
+          },
+          "dietary_habits": {
+            "diet_style": "Low-sodium heart-healthy",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "Mild snoring, no sleep apnea",
+            "night_wake_frequency": 1,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": true,
+            "night_urination_frequency": 1
+          },
+          "systems_review": {
+            "digestive_symptoms": "nausea"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "rarely",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 3
+          },
+          "sunlight_exposure": {
+            "days_per_week": 6,
+            "average_minutes_per_day": "35-45 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Cardiac Nurse",
+            "work_stress_level": 7
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": "Occasional chest discomfort, not related to heart issues per cardiologist",
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "yes",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"heart_disease\": [\"father\", \"grand-parent\"], \"blood_clots\": [\"mother\"], \"high_blood_pressure\": [\"mother\", \"father\", \"sister\"]}",
+            "has_family_history": true,
+            "other_conditions_text": "Paternal grandfather had stroke, maternal grandmother had diabetes"
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Hospital environment, exposure to various medical chemicals and disinfectants",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Bruising easily with Warfarin, requires frequent INR monitoring",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "menstrual_concerns": null,
+              "concern_details": "Post-menopausal since 2020, no current concerns"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "female",
+        "Order ID": 1008,
+        "Test Date": "2024-03-01T09:25:00Z",
+        "Alanine Aminotransferase (ALT)": "27 U/L",
+        "Aspartate Aminotransferase (AST)": "23 U/L",
+        "Albumin": "4.0 g/dL",
+        "Blood Urea Nitrogen (BUN)": "15 mg/dL",
+        "Creatinine": "0.88 mg/dL",
+        "Total Bilirubin": "0.65 mg/dL",
+        "eGFR": "71 mL/min/1.73 m\u00b2",
+        "Estim. Avg Glu (eAG)": "120 mg/dL",
+        "Lipoprotein (a)": "42 mg/dL",
+        "Ferritin": "78 ng/mL",
+        "Homocysteine (HCY)": "10.8 umol/L",
+        "High-Sensitivity CRP": "2.8 mg/L",
+        "25-(OH) Vitamin D": "38 ng/mL",
+        "% Hemoglobin A1C": "5.8 %",
+        "Fasting Insulin": "10.5 uIU/mL",
+        "Total Cholesterol:HDL Ratio": "3.2",
+        "Triglycerides:HDL Ratio": "2.1",
+        "Daytime Cortisol": "15.5 mcg/dL",
+        "Thyroid Stimulating Hormone (TSH)": "2.9 uIU/mL",
+        "Apolipoprotein A1 (APOA1)": "154 mg/dL",
+        "Apolipoprotein B (APOB)": "105 mg/dL",
+        "ApoB:ApoA1 Ratio": "0.68",
+        "Calculated LDL-Cholesterol": "109 mg/dL",
+        "HDL Cholesterol": "61 mg/dL",
+        "Total Cholesterol": "198 mg/dL",
+        "Triglycerides": "128 mg/dL",
+        "Estradiol (Sensitive)": "15 pg/mL",
+        "Follicle-Stimulating Hormone (FSH)": "36.8 mIU/mL",
+        "Total Biomarkers": 28
+      }
+    }
+  }
+]

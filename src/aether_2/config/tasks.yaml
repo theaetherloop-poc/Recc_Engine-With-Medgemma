@@ -1,37 +1,35 @@
 # Preprocessing tasks (evaluate_inputs, evaluate_focus_areas, compile_user_profile)
 # have been migrated to regular Python functions in utils/preprocessing.py
 
-# Profile summary task - creates concise natural language summary
+# Profile summary task - clean prose summary, organized into a few topical paragraphs.
+# Consumed by all downstream agents (recommender, focus area assigner, dosage compiler).
 summarize_patient_profile:
   description: >
-    Summarize the patient's health profile in natural language.
+    Write a clear, complete prose summary of the patient's health profile.
+    Use 4-6 short paragraphs grouped by theme. Keep it readable — no headers,
+    no bullet lists, no JSON.
 
     USER PROFILE: {user_profile}
 
-    MUST INCLUDE (if present in data):
-    - Demographics (age, sex)
-    - Flagged biomarkers with values and status (high/low)
-    - Medical conditions and diagnoses
-    - Allergies
-    - Symptoms (pain, skin, headaches, digestive)
-    - Sleep issues
-    - Environmental exposures (mold, chemical)
-    - Hormonal concerns with patient's own description if available
-    - Diet style (vegetarian, vegan, etc.)
-    - Stress level (especially if high ≥7)
-    - Family history (brief mention if present)
-    - Current supplements
+    SUGGESTED PARAGRAPH STRUCTURE (only include themes that have data):
+    1. Demographics + flagged biomarkers (with values and units).
+    2. Diagnosed conditions and current medications.
+    3. Current symptoms in the patient's own words.
+    4. Sleep, stress, diet, and lifestyle factors.
+    5. Allergies, environmental exposures, hormonal health, family history.
+    6. Current supplements the patient is already taking.
 
-    FORMAT RULES:
-    - One paragraph, 100-150 words max
-    - Use short phrases, no filler words
-    - Include actual values/numbers where available
-    - Mention patient's own words for concerns when available
-    - Simplify the explaination adn don't use  confusing phrases from the input as it is.
+    RULES:
+    - Cover EVERY data point present in the input — do not drop anything.
+    - State each fact ONCE. Do not repeat the same biomarker or condition across paragraphs.
+    - Include actual values and units for biomarkers (e.g. "Vitamin D 15 ng/mL — low").
+    - Use the patient's own words for subjective symptoms when available.
+    - No filler phrases, no clinical jargon padding, no "this patient presents with...".
+    - If a theme has no data, skip its paragraph entirely.
 
   expected_output: >
-    A single paragraph covering ALL patient details concisely.
-    No JSON, no headers - just the summary text.
+    Clean prose summary in 4-6 short paragraphs. No headers, no bullets, no JSON.
+    Every input data point covered exactly once.
   agent: profile_summarizer
 
 # NOTE: rank_ingredients_rag is DISABLED
@@ -43,32 +41,26 @@ summarize_patient_profile:
 # ACTIVE - Serper-based web ingredient discovery
 discover_ingredients_web:
   description: >
-    Use web search to discover evidence-based supplements for this patient's health conditions.
+    Use web search to discover evidence-based supplement names for this patient's key health issues.
 
     PATIENT ISSUES: {patient_issues}
 
-    YOUR TASK:
-    For each significant health issue in the patient's data (flagged biomarkers, diagnoses,
-    symptoms), search credible scientific sources to find relevant supplements.
+    STEP 1 — Identify the 5-6 most clinically significant axes from the patient issues above.
+    Group related issues into axes (e.g., "low Vitamin D + bone health" = one axis).
+    Do NOT create an axis for every individual issue — consolidate.
 
-    SEARCH STRATEGY — for each key issue, run searches like:
-    - "site:examine.com [condition] supplements evidence"
-    - "site:pubmed.ncbi.nlm.nih.gov [condition] supplementation clinical"
-    - "site:nccih.nih.gov [condition] dietary supplements"
-    - "site:ods.od.nih.gov [nutrient] dietary supplement"
+    STEP 2 — Run exactly ONE search per axis (maximum 6 searches total) using this format:
+    - "site:examine.com [condition] supplements"
+    - "site:pubmed.ncbi.nlm.nih.gov [condition] supplementation"
 
-    EXAMPLE SEARCHES:
-    - low Vitamin D: "site:examine.com vitamin D deficiency", "site:ods.od.nih.gov vitamin D"
-    - high cholesterol: "site:pubmed.ncbi.nlm.nih.gov omega-3 LDL cholesterol"
-    - hypothyroidism: "site:examine.com selenium thyroid", "site:nccih.nih.gov iodine thyroid"
-    - insomnia: "site:examine.com melatonin sleep", "site:pubmed.ncbi.nlm.nih.gov magnesium sleep"
+    STEP 3 — From each search result, extract ONLY supplement/ingredient names and which
+    patient condition they address. Ignore all other content (URLs, dates, snippets).
 
-    EXTRACTION RULES:
-    - Extract ingredient names from search results
-    - Map each ingredient to the patient condition(s) it addresses (populate "reasons")
-    - Cover each distinct clinical axis (biomarker, condition, symptom) with at least one search
-    - Aim to discover 10-15 candidate ingredients total
-    - Do NOT invent ingredients — only include what search results confirm
+    RULES:
+    - Maximum 6 searches. Stop after 6 regardless of remaining issues.
+    - Extract 2-3 ingredient names per search at most.
+    - Do NOT invent ingredients — only include names found in search results.
+    - Output ONLY ingredient_name, reasons, and source fields.
 
     OUTPUT FORMAT:
     {
@@ -79,9 +71,9 @@ discover_ingredients_web:
     }
 
   expected_output: >
-    JSON with "discovered_ingredients" array. Each item must have at minimum:
-    ingredient_name (string) and reasons (list of patient conditions it addresses).
-    Optionally include source. No other fields required.
+    JSON with "discovered_ingredients" array. Each entry has exactly three fields:
+    ingredient_name (string), reasons (list of patient conditions), source (string).
+    10-15 ingredients total. No other fields.
   agent: web_ingredient_discovery
 
 
@@ -156,8 +148,14 @@ assign_focus_areas:
     YOUR TASK: For each supplement in the recommendations, assign 1-2 most relevant focus area codes.
 
     DATA AVAILABLE:
+    - Patient profile report: Output from summarize_patient_profile task (full clinical context)
     - Supplement recommendations: Output from generate_supplement_recommendations task (ingredient_name, rank, why)
-    - Focus areas: {focus_areas} (patient's health priorities with scores)
+    - Focus areas scoring: {focus_areas} (patient's health priorities with scores)
+
+    Use the patient profile to anchor your focus area assignments to THIS patient's
+    actual presentation — not generic supplement-area mappings. If the patient has
+    documented sleep issues, lean STR/COG for relevant supplements; if metabolic
+    biomarkers are flagged, lean CM; and so on.
 
     FOCUS AREA CODES (assign 1-2 per supplement):
     - CM: Cardiometabolic & Metabolic Health (cholesterol, blood sugar, heart health)
@@ -192,54 +190,46 @@ assign_focus_areas:
     }
   agent: focus_area_specialist
 
-# Final task for dosage compilation using Serper web search
+# Final task for dosage compilation using LLM clinical knowledge
 compile_final_supplement_recommendations:
   description: >
-    You are a clinical pharmacist adding dosage information using web search.
-
-    CRITICAL REQUIREMENT: You MUST use the SerperDevTool for EVERY supplement.
-    Do NOT generate dosages from your own knowledge.
-    Each dosage and frequency MUST come from actual web search results.
-    If you skip tool calls, the output will be invalid.
+    You are a clinical pharmacist compiling evidence-based dosages for each supplement.
 
     DATA AVAILABLE:
+    - Patient profile report: Output from summarize_patient_profile task (full clinical context — biomarkers, conditions, medications, allergies, etc.)
     - Supplements with focus areas: Output from assign_focus_areas task (ingredient_name, rank, why, focus_area)
     - Patient demographics: {patient_demographics}
 
-    MANDATORY TASK - EXECUTE ALL SEARCHES:
-    For EACH supplement in the list, you MUST:
-    1. Search for evidence-based dosage information
-    2. Use site-specific searches for credible sources
+    YOUR TASK:
+    For each supplement, apply your clinical knowledge to assign appropriate dosage and timing.
+    Use the FULL patient profile to personalise dosing, form, and timing — including:
+    - Adjusting dose for age, weight, biological sex
+    - Selecting forms compatible with documented allergies or sensitivities
+    - Flagging interactions with current medications listed in the profile
+    - Reducing dose when the patient is already on a related supplement
+    - Adjusting timing around documented sleep, digestive, or stress patterns
 
-    EXAMPLE SEARCHES YOU MUST MAKE:
-    - "site:examine.com Vitamin D3 dosage recommendations"
-    - "site:pubmed.ncbi.nlm.nih.gov Omega-3 Fish Oil clinical dosage"
-    - "site:nih.gov [supplement name] recommended daily intake"
-
-    FORM SPECIFICITY RULES — apply these as hard overrides when compiling dosage and frequency:
+    FORM SPECIFICITY RULES — apply these as hard overrides:
     - Magnesium: MUST specify the salt form based on the patient's reason for taking it.
-      Use the "why" field to determine: sleep/relaxation → glycinate (~200 mg nightly);
-      constipation → citrate or oxide; cognitive/neurological → threonate; cramping → malate;
-      active/daytime use → glycerophosphate (non-sedating). Never output just "Magnesium".
+      sleep/relaxation → glycinate (~200 mg nightly); constipation → citrate or oxide;
+      cognitive/neurological → threonate; cramping → malate. Never output just "Magnesium".
     - Vitamin D3: MUST note K2 pairing (e.g. "Take with Vitamin K2 MK-7 to direct calcium
-      to bones"). Exception: if patient has high serum calcium, add a caution note instead.
+      to bones"). If patient has high serum calcium, add a caution note instead.
     - Vitamin B12: MUST specify methylcobalamin form, not cyanocobalamin.
     - Vitamin B6: MUST specify P-5-P (pyridoxal-5-phosphate) form.
     - Curcumin/Turmeric: MUST note "standardized extract (≥95% curcuminoids) or
-      phytosome/liposomal form required for therapeutic effect; dietary turmeric is
-      insufficient".
-    - Red Rice Yeast: MUST note "take at night" in frequency (mimics statin timing).
-    - Probiotics: MUST specify strain(s) and CFU count from search results. MUST note
+      phytosome/liposomal form required for therapeutic effect".
+    - Red Rice Yeast: MUST note "take at night" in frequency.
+    - Probiotics: MUST specify strain(s) and CFU count. MUST note
       "take on empty stomach, 20-30 minutes before breakfast". Only include if GI symptoms
       are documented in the patient's "why" field.
 
-    COMPILE FINAL OUTPUT:
-    For each supplement, output:
-    1. ingredient_name: Fetch the exact name from previous task, but you can incorporate form specificity rules above
-    2. recommended_dosage: Use dosage from search results, incorporating form specificity rules above
-    3. frequency: Use frequency/timing from search results, incorporating form specificity rules above
-    4. focus_area: Keep the focus_area array from previous task (already assigned)
-    5. why: Keep the original patient-specific reasoning
+    For each supplement output:
+    1. ingredient_name: Keep from previous task, apply form specificity rules above
+    2. recommended_dosage: Evidence-based clinical dosage
+    3. frequency: Timing and frequency based on clinical best practice
+    4. focus_area: Keep the focus_area array from the previous task unchanged
+    5. why: Keep the original patient-specific reasoning unchanged
 
     CRITICAL: Output ONLY the JSON structure. No explanatory text.
 
@@ -250,8 +240,8 @@ compile_final_supplement_recommendations:
       "supplement_recommendations": [
         {
           "ingredient_name": "Exact ingredient name",
-          "recommended_dosage": "Clinical dosage from web search",
-          "frequency": "Timing and frequency from web search",
+          "recommended_dosage": "Evidence-based clinical dosage",
+          "frequency": "Timing and frequency",
           "focus_area": ["CODE1", "CODE2"],
           "why": "Patient-specific reasoning"
         }

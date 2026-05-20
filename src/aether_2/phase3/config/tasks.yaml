@@ -1,0 +1,282 @@
+# Preprocessing tasks (evaluate_inputs, evaluate_focus_areas, compile_user_profile)
+# have been migrated to regular Python functions in utils/preprocessing.py
+
+
+# Focus Areas Prioritization Task
+prioritize_focus_areas:
+  description: >
+    You are analyzing a patient's health focus areas to create a prioritized list with clear explanations.
+
+    INPUTS PROVIDED:
+    - focus_areas_scores: {focus_areas_scores} (JSON with 9 focus area codes and their scores)
+    - focus_areas_reasons: {focus_areas_reasons} (JSON with reasons/contributors for each focus area)
+
+    FOCUS AREA CODES AND NAMES:
+    - CM: Cardiometabolic & Metabolic Health
+    - STR: Stress-Axis & Nervous System Resilience
+    - HRM: Hormonal Health (Transport)
+    - IMM: Immune Function & Inflammation
+    - SKN: Skin & Barrier Function
+    - COG: Cognitive & Mental Health
+    - MITO: Mitochondrial & Energy Metabolism
+    - DTX: Detoxification & Biotransformation
+    - GA: Gut Health and Assimilation
+
+    TASK:
+    1. Parse the focus_areas_scores JSON to get all 9 scores
+    2. Rank all 9 focus areas by score (highest score = priority 1, lowest = priority 9)
+    3. For each focus area, parse the reasons from focus_areas_reasons
+    4. Create a human-readable "why" explanation that:
+       - Synthesizes ALL reasons for that focus area into a clear summary, do not miss any reason
+       - Addresses the user directly (use "You reported...", "Your...", etc.)
+       - Avoids technical jargon - use plain language
+       - Is concise (4-5 sentences maximum)
+       - Connects the reasons to real health impacts
+       - Based on the score the text should also reflect on why this focus area needs most attention(for example if the score is high it means that the patient has multiple reasons that are contributing to this focus area and it needs more attention)
+
+    
+    OUTPUT ALL 9 FOCUS AREAS ranked by priority with their codes, names, why explanations, and priority numbers.
+
+    CRITICAL: Output ONLY the JSON structure. No explanatory text outside the JSON.
+
+  expected_output: >
+    ONLY the JSON response with proper Pydantic validation. No additional text.
+    OUTPUT FORMAT:
+    Make sure you don't add include a json identifier like this ```json and just return the json object
+    {
+      "prioritized_focus_areas": [
+        {
+          "cfa_code": "STR",
+          "cfa_name": "Stress-Axis & Nervous System Resilience",
+          "why": "You reported high work stress, elevated stress levels, and poor sleep quality.",
+          "priority": 1
+        },
+        ... (all 9 focus areas)
+      ]
+    }
+  agent: focus_areas_prioritizer
+
+
+
+# Phase 3 Supplement Refinement Tasks (Sequential Chain)
+refine_supplements_chunk1:
+  description: >
+    Refine Phase 2 supplements based on patient goals and triggers (q001-q014).
+
+    INPUTS:
+    - phase2_recommendations: {phase2_recommendations} (BASELINE - RESPECT THIS)
+    - patient_issues: {patient_issues} (Phase 2 identified these issues - supplements address THESE)
+    - chunk1_qna: {chunk1_qna}
+
+    🚫 CRITICAL RULES:
+    1. NEVER modify focus_area arrays - they are LOCKED from Phase 2
+    2. KEEP supplements mostly unchanged (respect the baseline - most supplements should remain as-is)
+    3. Phase 2 chose supplements to address patient_issues - RESPECT this clinical logic
+    4. Only modify with CLEAR chunk1 justification
+
+    WHEN TO MODIFY (rare):
+    - TIMING: Move to bedtime if top goal is "better sleep"
+    - REMOVE: if patient reports intolerance/trigger in chunk1
+    - ADD: if top goal completely unaddressed by existing supplements
+    The above are just examples, the agent should use its clinical reasoning to decide when to modify the protocol.
+
+    WHY FIELD:
+    - PRESERVE Phase 2 text: "[Phase 2 why]. [Chunk1 addition if relevant]."
+    - Example: "Supports cortisol regulation. Your top goal is improving sleep quality."
+    - Do not explicitly state the question number(e.g Q070) or sources(rag,web) as the user won't understand these.
+
+    OUTPUT: JSON only, same structure as phase2_recommendations.
+
+  expected_output: >
+    Refined protocol with minimal changes, locked focus_area arrays, cumulative why fields.
+  agent: supplement_refiner_chunk1
+
+refine_supplements_chunk2:
+  description: >
+    Refine chunk1 output based on medications, activity, sunlight, sleep (q015-q028).
+
+    INPUTS:
+    - Previous protocol from chunk1 (via context)
+    - patient_issues: {patient_issues} (Phase 2 baseline issues)
+    - chunk2_qna: {chunk2_qna}
+
+    🚫 CRITICAL RULES:
+    1. NEVER modify focus_area arrays - LOCKED from Phase 2
+    2. KEEP supplements mostly unchanged
+    3. Only modify with CLEAR chunk2 justification
+
+    WHEN TO MODIFY (rare):
+    - DRUG DEPLETION: PPI → increase B12/Mg if already present, add only if absent
+    - SUNLIGHT: High exposure → reduce Vit D dosage (don't remove)
+    - TIMING: Move Mg/glycine to bedtime for sleep
+    - REMOVE: Only if patient already takes same supplement
+    The above are just examples, the agent should use its clinical reasoning to decide when to modify the protocol.
+    WHY FIELD:
+    - PRESERVE all previous text: "[Chunk1 why]. [Chunk2 addition if relevant]."
+    - Do not explicitly state the question number(e.g Q070) or sources(rag,web) as the user won't understand these.
+
+    OUTPUT: JSON only.
+
+  expected_output: >
+    Refined protocol, locked focus_area, cumulative why.
+  agent: supplement_refiner_chunk2
+
+refine_supplements_chunk3:
+  description: >
+    Refine chunk2 output based on diet, food sensitivities, stress, mood (q029-q045).
+
+    INPUTS:
+    - Previous protocol from chunk2 (via context)
+    - patient_issues: {patient_issues}
+    - chunk3_qna: {chunk3_qna}
+
+    🚫 CRITICAL RULES:
+    1. NEVER modify focus_area arrays - LOCKED
+    2. KEEP supplements mostly unchanged
+    3. Only modify with CLEAR chunk3 justification
+    
+
+    WHEN TO MODIFY (rare):
+    - FOOD SENSITIVITY: Dairy trigger → remove whey if present
+    - STRESS: Stress 8-10/10 → increase Mg dosage if already present
+    - REMOVE: Only if food intolerance
+    The above are just examples, the agent should use its clinical reasoning to decide when to modify the protocol.
+
+    WHY FIELD:
+    - PRESERVE all previous: "[Chunk2 why]. [Chunk3 addition if relevant]."
+    - Do not explicitly state the question number(e.g Q070) or sources(rag,web) as the user won't understand these.
+
+    OUTPUT: JSON only.
+
+  expected_output: >
+    Refined protocol, locked focus_area, cumulative why.
+  agent: supplement_refiner_chunk3
+
+refine_supplements_chunk4:
+  description: >
+    Refine chunk3 output based on environment, exposures, chemical sensitivity (q046-q063).
+
+    INPUTS:
+    - Previous protocol from chunk3 (via context)
+    - patient_issues: {patient_issues}
+    - chunk4_qna: {chunk4_qna}
+
+    🚫 CRITICAL RULES:
+    1. NEVER modify focus_area arrays - LOCKED
+    2. KEEP supplements mostly unchanged
+    3. Only modify with CLEAR chunk4 justification
+
+    WHEN TO MODIFY (rare):
+    - CHEMICAL SENSITIVITY: Change to whole-food forms if patient reports sensitivity
+    - MOLD/TOXINS: Add detox support (NAC/glutathione) ONLY if not present
+    - REMOVE: Only if synthetic form contraindicated
+    The above are just examples, the agent should use its clinical reasoning to decide when to modify the protocol.
+
+    WHY FIELD:
+    - PRESERVE all previous: "[Chunk3 why]. [Chunk4 addition if relevant]."
+    - Do not explicitly state the question number(e.g Q070) or sources(rag,web) as the user won't understand these.
+
+    OUTPUT: JSON only.
+
+  expected_output: >
+    Refined protocol, locked focus_area, cumulative why.
+  agent: supplement_refiner_chunk4
+
+refine_supplements_chunk5:
+  description: >
+    Refine chunk4 output based on digestive function, bowel patterns (q064-q075).
+
+    INPUTS:
+    - Previous protocol from chunk4 (via context)
+    - patient_issues: {patient_issues}
+    - chunk5_qna: {chunk5_qna}
+
+    🚫 CRITICAL RULES:
+    1. NEVER modify focus_area arrays - LOCKED
+    2. KEEP supplements mostly unchanged
+    3. Only modify with CLEAR chunk5 justification
+    The above are just examples, the agent should use its clinical reasoning to decide when to modify the protocol.
+    
+
+    WHEN TO MODIFY (rare):
+    - CONSTIPATION: Change Mg to citrate form if <1 BM/day
+    - DIARRHEA: Change Mg to glycinate form if >3 BM/day
+    - POOR ABSORPTION: Change to bioavailable forms
+    - ADD: Digestive enzymes ONLY if severe issues AND not present
+
+    WHY FIELD:
+    - PRESERVE all previous: "[Chunk4 why]. [Chunk5 addition if relevant]."
+    - Do not explicitly state the question number(e.g Q070) or sources(rag,web) as the user won't understand these.
+
+    OUTPUT: JSON only.
+
+  expected_output: >
+    Refined protocol, locked focus_area, cumulative why.
+  agent: supplement_refiner_chunk5
+
+refine_supplements_chunk6:
+  description: >
+    Refine chunk5 output based on hormones, birth control, migraines, pain, skin (q076-q093).
+
+    INPUTS:
+    - Previous protocol from chunk5 (via context)
+    - patient_issues: {patient_issues}
+    - chunk6_qna: {chunk6_qna}
+
+    🚫 CRITICAL RULES:
+    1. NEVER modify focus_area arrays - LOCKED
+    2. KEEP supplements mostly unchanged
+    3. Only modify with CLEAR chunk6 justification
+    The above are just examples, the agent should use its clinical reasoning to decide when to modify the protocol.
+
+    WHEN TO MODIFY (rare):
+    - BIRTH CONTROL: Increase B6/Mg/folate if on BC AND already present
+    - MIGRAINES: Add riboflavin/CoQ10 ONLY if ≥2/month AND not present
+    - PAIN: Add curcumin/omega-3 ONLY if chronic pain AND not present
+    - SKIN: Add zinc ONLY if severe acne/eczema AND not present
+
+    WHY FIELD:
+    - PRESERVE all previous: "[Chunk5 why]. [Chunk6 addition if relevant]."
+    - Do not explicitly state the question number(e.g Q070) or sources(rag,web) as the user won't understand these.
+
+    OUTPUT: JSON only.
+
+  expected_output: >
+    Refined protocol, locked focus_area, cumulative why.
+  agent: supplement_refiner_chunk6
+
+
+# Agent 8: Final Protocol Optimizer (Deduplication & Shortlisting)
+optimize_final_protocol:
+  description: >
+    Optimize chunk6 output: remove duplicates, eliminate redundancies, shortlist to ≤10 supplements.
+
+    INPUTS:
+    - Previous protocol from chunk6 (via context)
+    - patient_issues: {patient_issues}
+    - chunk1_qna: {chunk1_qna} (for top goals)
+
+    🚫 CRITICAL RULES:
+    1. NEVER modify focus_area arrays - LOCKED
+    2. NEVER modify "why" fields - PRESERVE complete reasoning chain
+    3. MUST output ≤10 supplements (count and remove lowest priority if >10)
+
+    DEDUPLICATION:
+    - Same ingredient, different forms → Keep most appropriate (Mg citrate for constipation, glycinate for sleep)
+    - Multiple anti-inflammatories → Keep 1-2 most evidence-based
+    - Multiple adaptogens → Keep 1 most relevant to goals
+
+    PRIORITIZATION (if >10):
+    1. Top 3 health goals (chunk1)
+    2. Drug-nutrient depletions
+    3. Chronic conditions (migraines, pain)
+    4. Foundational (Vit D, omega-3)
+    5. Nice-to-have (remove these first)
+
+    OUTPUT: JSON only, ≤10 supplements.
+
+  expected_output: >
+    Final protocol ≤10 supplements, no duplicates, preserved why/focus_area.
+  agent: final_protocol_optimizer
+
+

@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import sys
@@ -8,6 +9,7 @@ from datetime import datetime
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 from src.aether_2.crew import Aether2
+from src.aether_2.phase3.pipeline import run_phase3_refinement
 from src.aether_2.utils.logging_setup import logger, csv_log_file
 from src.aether_2.utils.auth_setup import initialize_auth
 from src.aether_2.utils.data_processing import (
@@ -26,8 +28,19 @@ from src.aether_2.utils.preprocessing import (
 initialize_auth()
 
 
-def run(input_path="inputs/combined_data.json"):
-    """Run the crew on combined patient data (patient details + blood report)."""
+def run(input_path="inputs/combined_data.json", run_phase3_flag: bool = False, phase3_input_path: str = None):
+    """Run the crew on combined patient data (patient details + blood report).
+
+    Args:
+        input_path: Path to combined_data.json.
+        run_phase3_flag: If True, run Phase 3 refinement after Phase 2.
+            Requires either `phase3_input_path` or a `phase3_detailed_intake`
+            field inside the input JSON.
+        phase3_input_path: Optional path to a separate Phase 3 questionnaire
+            JSON file shaped like ``{"questions": [{...}, ...]}``.  When
+            provided, this takes precedence over any `phase3_detailed_intake`
+            field embedded in `combined_data.json`.
+    """
     start_time = datetime.now()
     logger.info(f"🎯 Starting Aether2 pipeline with input: {input_path}")
     
@@ -196,6 +209,71 @@ def run(input_path="inputs/combined_data.json"):
     except Exception as e:
         print(f"  ⚠️ Warning: Could not create Excel report: {e}")
 
+    # 5. Phase 3 refinement (optional)
+    phase3_status = "skipped"
+    phase3_duration = 0.0
+
+    # Load Phase 3 questionnaire: separate file takes precedence over embedded field
+    if phase3_input_path:
+        try:
+            with open(phase3_input_path, "r") as f:
+                phase3_data = json.load(f)
+            print(f"\n📋 Loaded Phase 3 questionnaire from: {phase3_input_path}")
+            logger.info(f"Loaded Phase 3 data from separate file: {phase3_input_path}")
+        except Exception as e:
+            print(f"❌ Could not load Phase 3 input file '{phase3_input_path}': {e}")
+            logger.error(f"Failed to load phase3_input_path={phase3_input_path}: {e}")
+            phase3_data = None
+    else:
+        phase3_data = original_input_data[0]["user_full_data"].get("phase3_detailed_intake")
+
+    if run_phase3_flag and phase3_data:
+        print("\n🧪 Running Phase 3 refinement...")
+        logger.info("🧪 Starting Phase 3 refinement")
+
+        # Recover Phase 2 baseline protocol from disk (already cleaned + serialized above)
+        phase2_protocol_path = os.path.join(out_dir, "final_supplement_recommendations.json")
+        try:
+            with open(phase2_protocol_path, "r") as f:
+                phase2_protocol = json.loads(f.read())
+        except Exception as e:
+            logger.error(f"Could not load Phase 2 protocol from {phase2_protocol_path}: {e}")
+            phase2_protocol = None
+
+        if phase2_protocol:
+            phase3_result = run_phase3_refinement(
+                phase2_protocol=phase2_protocol,
+                user_profile=user_profile,
+                focus_areas_results=focus_areas_results,
+                patient_issues=patient_issues,
+                phase3_data=phase3_data,
+            )
+            phase3_duration = phase3_result.get("execution_time_seconds", 0.0)
+
+            if phase3_result.get("status") == "success":
+                phase3_dir = os.path.join(out_dir, "phase3")
+                os.makedirs(phase3_dir, exist_ok=True)
+
+                with open(os.path.join(phase3_dir, "refined_protocol.json"), "w") as f:
+                    json.dump(phase3_result["refined_protocol"], f, indent=2)
+                print(f"  ✅ phase3/refined_protocol.json")
+
+                # Per-task audit dumps
+                for task_name, output in phase3_result.get("task_outputs", {}).items():
+                    with open(os.path.join(phase3_dir, f"{task_name}.json"), "w") as f:
+                        json.dump(output, f, indent=2)
+
+                phase3_status = "success"
+                logger.info(f"✅ Phase 3 refinement saved to {phase3_dir}")
+            else:
+                phase3_status = "failed"
+                logger.error(f"Phase 3 failed: {phase3_result.get('error')}")
+                print(f"  ❌ Phase 3 failed: {phase3_result.get('error')}")
+    elif run_phase3_flag and not phase3_data:
+        print("\n⚠️  --run-phase3 set but no Phase 3 questionnaire found.")
+        print("    Pass --phase3-input <path/to/phase3.json> or embed phase3_detailed_intake in the input file.")
+        phase3_status = "no_questionnaire"
+
     # Log execution to CSV
     end_time = datetime.now()
     duration = (end_time - start_time).total_seconds()
@@ -203,26 +281,52 @@ def run(input_path="inputs/combined_data.json"):
     # Write to CSV log
     with open(csv_log_file, 'a', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow([user_id, start_time.isoformat(), end_time.isoformat(), duration, 'success'])
+        writer.writerow([
+            user_id, start_time.isoformat(), end_time.isoformat(), duration, 'success',
+            phase3_status, f"{phase3_duration:.2f}",
+        ])
 
     logger.info(f"📊 Execution logged to CSV: {duration:.2f} seconds")
 
     print(f"\n🎉 Pipeline completed successfully!")
     print(f"📁 All outputs saved to: {out_dir}")
     print(f"⏱️  Total execution time: {duration:.2f} seconds")
-    print(f"📊 Preprocessing (Agents 1-3): Rule-based functions")
-    print(f"🤖 CrewAI (Agents 4-7): AI-powered recommendations")
+    print(f"📊 Preprocessing: Rule-based functions")
+    print(f"🤖 Phase 2 CrewAI: AI-powered baseline recommendations")
+    if phase3_status == "success":
+        print(f"🧪 Phase 3 refinement: completed in {phase3_duration:.2f} seconds")
+    elif phase3_status != "skipped":
+        print(f"🧪 Phase 3 refinement: {phase3_status}")
 
 
 
 if __name__ == "__main__":
-    # Check if specific file is provided as command line argument
-    if len(sys.argv) > 1:
-        input_file = sys.argv[1]
-        logger.info(f"🎯 Processing file: {input_file}")
-        run(input_file)
-    else:
-        # Default input file
-        default_input = "inputs/combined_data.json"
-        logger.info(f"🎯 Processing default file: {default_input}")
-        run(default_input)
+    parser = argparse.ArgumentParser(description="Run the Aether 2 recommendation pipeline.")
+    parser.add_argument(
+        "input_file",
+        nargs="?",
+        default="inputs/combined_data.json",
+        help="Path to combined_data.json (default: inputs/combined_data.json)",
+    )
+    parser.add_argument(
+        "--run-phase3",
+        action="store_true",
+        help="Run Phase 3 refinement after Phase 2.",
+    )
+    parser.add_argument(
+        "--phase3-input",
+        default=None,
+        metavar="FILE",
+        help=(
+            "Path to a separate Phase 3 questionnaire JSON file "
+            "(shaped like {\"questions\": [{...}, ...]}). "
+            "Takes precedence over any phase3_detailed_intake embedded in the input file."
+        ),
+    )
+    args = parser.parse_args()
+
+    logger.info(
+        f"🎯 Processing file: {args.input_file} "
+        f"(run_phase3={args.run_phase3}, phase3_input={args.phase3_input})"
+    )
+    run(args.input_file, run_phase3_flag=args.run_phase3, phase3_input_path=args.phase3_input)

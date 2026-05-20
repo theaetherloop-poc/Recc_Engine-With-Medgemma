@@ -75,15 +75,9 @@ class RankedIngredientsResponse(BaseModel):
 
 # Web Ingredient Discovery Models
 class DiscoveredIngredient(BaseModel):
-    ingredient_name: str = Field(..., description="Exact ingredient name (e.g., 'Vitamin D3', 'Calcium Citrate')")
-    reasons: List[str] = Field(..., description="List of health conditions this ingredient was found under on Examine.com")
-    summary: str = Field(default="", description="Examine.com evidence summary for this supplement")
-    dosage_hint: str = Field(default="", description="Dosage information from Examine.com (first 200 chars)")
-    citation_count: int = Field(default=0, description="Number of studies cited on Examine.com — proxy for evidence strength")
-    categories: List[str] = Field(default_factory=list, description="Examine.com health categories (e.g. ['Brain Health', 'Sleep'])")
-    research_summaries: List[str] = Field(default_factory=list, description="Key research finding snippets from Examine.com")
-    examine_url: str = Field(default="", description="Direct URL to the supplement page on Examine.com")
-    source: str = Field(default="Examine.com", description="Data source")
+    ingredient_name: str = Field(..., description="Exact ingredient name (e.g., 'Vitamin D3', 'Magnesium Glycinate')")
+    reasons: List[str] = Field(..., description="List of patient conditions/issues this ingredient addresses")
+    source: str = Field(default="web", description="Data source")
 
 class WebDiscoveryResponse(BaseModel):
     discovered_ingredients: List[DiscoveredIngredient] = Field(..., description="List of discovered ingredients from Examine.com via Apify")
@@ -100,6 +94,20 @@ class MedGemmaIngredient(BaseModel):
 class MedGemmaResponse(BaseModel):
     """Response from MedGemma Medical Expert - matches task output format."""
     discovered_ingredients: List[MedGemmaIngredient] = Field(
-        ..., 
+        ...,
         description="List of evidence-based ingredient recommendations from MedGemma"
+    )
+
+
+# ── Phase 3 models ────────────────────────────────────────────────────────────
+class PrioritizedFocusArea(BaseModel):
+    cfa_code: str = Field(..., description="Focus area code (e.g., 'STR', 'CM', 'GA')")
+    cfa_name: str = Field(..., description="Full focus area name")
+    why: str = Field(..., description="Human-readable explanation addressing the user directly")
+    priority: conint(ge=1, le=9) = Field(..., description="Priority ranking 1 (highest) to 9 (lowest)")
+
+
+class PrioritizedFocusAreasResponse(BaseModel):
+    prioritized_focus_areas: List[PrioritizedFocusArea] = Field(
+        ..., description="All 9 focus areas ranked by priority with explanations"
     )

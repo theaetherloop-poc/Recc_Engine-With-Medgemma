@@ -8,6 +8,7 @@ from datetime import datetime
 from typing import Dict, Any
 
 from src.aether_2.crew import Aether2
+from src.aether_2.phase3.pipeline import run_phase3_refinement
 from src.aether_2.utils.auth_setup import initialize_auth
 from src.aether_2.utils.data_processing import clean_agent_output
 from src.aether_2.utils.logging_setup import logger
@@ -59,32 +60,43 @@ def _transform_api_data_to_preprocessing_format(patient_data: Dict[str, Any]) ->
     }
 
 
-def run_aether_pipeline(patient_data: Dict[str, Any]) -> Dict[str, Any]:
+def run_aether_pipeline(
+    patient_data: Dict[str, Any],
+    run_phase3: bool = False,
+) -> Dict[str, Any]:
     """
     Run the complete Aether AI pipeline.
-    
+
     Args:
         patient_data: Dictionary containing patient data with structure:
             {
                 "phase1_basic_intake": {...},
-                "phase2_blood_report": {...},
+                "phase2_detailed_intake": {...},
+                "latest_biomarker_results": {...},
+                "phase3_detailed_intake": {"questions": [...]}  # optional
                 "metadata": {...}
             }
-    
+        run_phase3: If True AND `phase3_detailed_intake` is present, run the
+            Phase 3 refinement crew after Phase 2. The Phase 2 baseline protocol
+            is always returned; Phase 3 output is added as `refined_protocol`.
+
     Returns:
         Dictionary with:
             {
                 "status": "success" | "error",
                 "user_id": str,
-                "protocol": dict,  # Cleaned final protocol JSON
+                "protocol": dict,                  # Phase 2 baseline (always)
+                "refined_protocol": dict | None,   # Phase 3 refined (if run)
                 "preprocessing_outputs": {
                     "biomarker_results": dict,
                     "user_profile": dict,
                     "focus_areas": dict
                 },
+                "phase3_execution_time_seconds": float | None,
+                "phase3_error": str | None,
                 "error": str (only if status == "error")
             }
-    
+
     Raises:
         Exception: If pipeline execution fails
     """
@@ -181,18 +193,45 @@ def run_aether_pipeline(patient_data: Dict[str, Any]) -> Dict[str, Any]:
         
         if final_protocol is None:
             raise Exception("Could not extract final protocol from CrewAI output")
-        
+
+        # ========== PHASE 3 REFINEMENT (optional) ==========
+        refined_protocol = None
+        phase3_duration = None
+        phase3_error = None
+        phase3_data = patient_data.get("phase3_detailed_intake")
+
+        if run_phase3 and phase3_data:
+            logger.info("🧪 Running Phase 3 refinement on baseline protocol")
+            phase3_result = run_phase3_refinement(
+                phase2_protocol=final_protocol,
+                user_profile=user_profile,
+                focus_areas_results=focus_areas_results,
+                patient_issues=patient_issues,
+                phase3_data=phase3_data,
+            )
+            if phase3_result.get("status") == "success":
+                refined_protocol = phase3_result["refined_protocol"]
+                phase3_duration = phase3_result.get("execution_time_seconds")
+            else:
+                phase3_error = phase3_result.get("error", "Phase 3 failed without an error message")
+                phase3_duration = phase3_result.get("execution_time_seconds")
+                logger.error(f"Phase 3 refinement failed: {phase3_error}")
+        elif run_phase3 and not phase3_data:
+            phase3_error = "run_phase3=True but no phase3_detailed_intake provided in patient_data"
+            logger.warning(phase3_error)
+
         # Calculate execution time
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
-        
+
         print(f"✅ Pipeline completed successfully in {duration:.2f} seconds")
-        
+
         # Return results
         return {
             "status": "success",
             "user_id": user_id,
             "protocol": final_protocol,
+            "refined_protocol": refined_protocol,
             "preprocessing_outputs": {
                 "biomarker_results": {
                     "flagged_biomarkers": biomarker_results.get("flagged_biomarkers", []),
@@ -205,7 +244,9 @@ def run_aether_pipeline(patient_data: Dict[str, Any]) -> Dict[str, Any]:
                     "markdown_output": focus_areas_results.get("markdown_output", "")
                 }
             },
-            "execution_time_seconds": duration
+            "execution_time_seconds": duration,
+            "phase3_execution_time_seconds": phase3_duration,
+            "phase3_error": phase3_error,
         }
         
     except Exception as e:

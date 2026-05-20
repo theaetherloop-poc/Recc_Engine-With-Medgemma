@@ -104,23 +104,25 @@ def compile_user_profile(
 def evaluate_focus_areas(patient_and_blood_data: Dict[str, Any]) -> Dict[str, Any]:
     """
     Evaluate focus areas using rule-based scoring.
-    
+
     Args:
         patient_and_blood_data: Dict with keys 'patient_form' and 'blood_report'
-    
+
     Returns:
         Dict with:
             - scores: FocusAreaScores (Pydantic model)
             - markdown_output: Formatted markdown text for file output
+            - reasons_data: Dict mapping each focus area code → list of contributing reasons
+              (loaded from the per-patient JSON the tool writes to disk)
     """
     try:
         tool = EvaluateFocusAreasTool()
         markdown_output = tool._run(patient_and_blood_data=patient_and_blood_data)
-        
+
         # Parse the markdown output to extract scores
         scores_dict = {}
         focus_area_codes = ["CM", "COG", "DTX", "IMM", "MITO", "SKN", "STR", "HRM", "GA"]
-        
+
         for line in markdown_output.split("\n"):
             for code in focus_area_codes:
                 if f"({code}):" in line:
@@ -131,20 +133,41 @@ def evaluate_focus_areas(patient_and_blood_data: Dict[str, Any]) -> Dict[str, An
                     except (ValueError, IndexError):
                         scores_dict[code] = 0.0
                     break
-        
+
         # Ensure all focus areas have a score (default to 0.0 if missing)
         for code in focus_area_codes:
             if code not in scores_dict:
                 scores_dict[code] = 0.0
-        
+
         # Validate with Pydantic
         focus_area_scores = FocusAreaScores(**scores_dict)
-        
+
+        # Load reasons data — EvaluateFocusAreasTool wrote this to disk via _save_reasons_file.
+        # Phase 3 needs it for the focus_areas_prioritizer agent. The tool derives the
+        # patient_id from email metadata: email → "{email}_at_{rest}_dot_{tld}".
+        reasons_data: Dict[str, Any] = {}
+        email = (
+            patient_and_blood_data.get("patient_form", {})
+            .get("patient_data", {})
+            .get("metadata", {})
+            .get("email")
+            or patient_and_blood_data.get("patient_form", {}).get("metadata", {}).get("email")
+            or patient_and_blood_data.get("metadata", {}).get("email")
+        )
+        patient_id = (
+            email.replace("@", "_at_").replace(".", "_") if email else "unknown"
+        )
+        reasons_path = os.path.join("outputs", patient_id, "focus_areas_reasons_phase2.json")
+        if os.path.exists(reasons_path):
+            with open(reasons_path, "r") as f:
+                reasons_data = json.load(f)
+
         return {
             "scores": focus_area_scores,
-            "markdown_output": markdown_output
+            "markdown_output": markdown_output,
+            "reasons_data": reasons_data,
         }
-        
+
     except Exception as e:
         print(f"❌ Focus areas evaluation failed: {str(e)}")
         raise

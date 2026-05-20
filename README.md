@@ -81,3 +81,75 @@ The agent when searching for ingredients associated with biomarkers, uses Serper
 | test_user_13 | 22 | 11 | 33 | 29 | 87.90% | 28 | 84.80% | 70% | 72% |
 | test_user_14 | 16 | 8 | 24 | 22 | 91.70% | 20 | 83.30% | 84% | 78% |
 | test_user_15 | 11 | 18 | 29 | 26 | 89.70% | 24 | 82.80% | 60% | 63% |
+
+
+---
+
+## Phase 3 refinement (optional)
+
+After Phase 2 produces a baseline `FinalSupplementProtocol`, an optional Phase 3 crew refines it against a 93-question coaching questionnaire and deduplicates to ≤10 supplements. Phase 3 does **not** rediscover ingredients or recompute focus areas — it only validates and prunes the Phase 2 output.
+
+### Input format
+
+Add a `phase3_detailed_intake` field to `combined_data.json` at the `user_full_data` level (peer of `metadata`, `patient_data`, `latest_biomarker_results`):
+
+```json
+{
+  "user_full_data": {
+    "metadata": { ... },
+    "patient_data": { ... },
+    "latest_biomarker_results": { ... },
+    "phase3_detailed_intake": {
+      "questions": [
+        {"id": "q001", "category": "goals", "question": "What is your primary health goal?", "value": "Better sleep"},
+        {"id": "q015", "category": "medications", "question": "...", "value": "..."},
+        ...
+      ]
+    }
+  }
+}
+```
+
+Questions are grouped into 6 chunks by `id` range: `q001-q014` (goals), `q015-q028` (meds/lifestyle/sleep), `q029-q045` (nutrition/stress), `q046-q063` (childhood/dental/environment), `q064-q075` (digestive systems), `q076-q093` (hormones/pain/skin).
+
+### CLI
+
+```bash
+python -m src.aether_2.main inputs/combined_data.json --run-phase3
+```
+
+Without `--run-phase3` the pipeline behaves exactly as before — Phase 2 only.
+
+### API
+
+```bash
+curl -X POST 'http://localhost:8000/generate-protocol?run_phase3=true' \
+  -H 'Content-Type: application/json' \
+  -d @inputs/combined_data.json
+```
+
+Response adds three fields when Phase 3 runs:
+- `refined_protocol` — the refined `FinalSupplementProtocol` (≤10 items)
+- `phase3_execution_time_seconds`
+- `phase3_error` — populated only if Phase 3 failed; Phase 2 protocol is still returned
+
+### Outputs
+
+When Phase 3 runs successfully, the CLI writes:
+
+```
+outputs/{user_id}/
+├── final_supplement_recommendations.json   # Phase 2 baseline (unchanged behavior)
+├── ...
+└── phase3/
+    ├── refined_protocol.json               # final ≤10 supplements
+    ├── prioritize_focus_areas.json
+    ├── refine_supplements_chunk1.json
+    ├── ...
+    ├── refine_supplements_chunk6.json
+    └── optimize_final_protocol.json
+```
+
+### Architecture
+
+Phase 3 reuses Phase 2's preprocessing (biomarker eval, focus areas, user profile, patient issues) verbatim — the rule-based preprocessing layer runs exactly once. Phase 3's 8 CrewAI tasks (1 focus-area prioritizer + 6 sequential refiners + 1 optimizer) consume the Phase 2 protocol plus the chunked questionnaire. Same Gemini 2.5 Flash LLM, same `temperature=0, seed=42`, so refinements are deterministic.

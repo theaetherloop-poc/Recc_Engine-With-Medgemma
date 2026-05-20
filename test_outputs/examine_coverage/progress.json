@@ -1,0 +1,1369 @@
+{
+  "Chronic kidney disease (CKD)": {
+    "found": true,
+    "condition_name": "Chronic Kidney Disease (CKD)",
+    "match_quality": "exact",
+    "supplement_count": 19,
+    "supplements": [
+      "Resveratrol",
+      "L-Carnitine",
+      "Resistant Starch",
+      "Sodium Bicarbonate",
+      "Vitamin C",
+      "Black seed",
+      "Chia seeds",
+      "Cocoa Extract",
+      "Coenzyme Q10",
+      "Creatine",
+      "Curcumin",
+      "Fiber",
+      "Fish Oil",
+      "Melatonin",
+      "Nicotinamide",
+      "Selenium",
+      "Soy Protein",
+      "Vitamin E",
+      "Vitamin K"
+    ],
+    "url": "https://examine.com/conditions/chronic-kidney-disease/",
+    "all_conditions_found": [
+      "Chronic Kidney Disease (CKD)"
+    ],
+    "dataset_id": "jIfdXsPJguINCruWu",
+    "error": null
+  },
+  "Acute kidney injury (AKI)": {
+    "found": true,
+    "condition_name": "Acute Bronchitis",
+    "match_quality": "partial",
+    "supplement_count": 2,
+    "supplements": [
+      "Umckaloabo",
+      "N-Acetylcysteine"
+    ],
+    "url": "https://examine.com/conditions/bronchitis/",
+    "all_conditions_found": [
+      "Acute Bronchitis",
+      "Acute Viral Hepatitis",
+      "Acute Respiratory Infection (ARI)"
+    ],
+    "dataset_id": "SypmUJUTkVSL1P49t",
+    "error": null
+  },
+  "Hypertensive nephrosclerosis": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "oDcf34aQSddBqHi1b",
+    "error": null
+  },
+  "Glomerulonephritis": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "VKtMM0BGygBlOT6gd",
+    "error": null
+  },
+  "Polycystic kidney disease": {
+    "found": true,
+    "condition_name": "Polycystic Ovary Syndrome (PCOS)",
+    "match_quality": "partial",
+    "supplement_count": 16,
+    "supplements": [
+      "Inositol",
+      "Chromium",
+      "Magnesium",
+      "Resveratrol",
+      "L-Carnitine",
+      "Berberine",
+      "Coenzyme Q10",
+      "Curcumin",
+      "N-Acetylcysteine",
+      "Vitamin D",
+      "Alpha-Linolenic Acid",
+      "Cinnamon",
+      "Fish Oil",
+      "Green Tea Extract",
+      "Licorice",
+      "Resistant Starch"
+    ],
+    "url": "https://examine.com/conditions/polycystic-ovary-syndrome/",
+    "all_conditions_found": [
+      "Polycystic Ovary Syndrome (PCOS)"
+    ],
+    "dataset_id": "3XtI3hSgxIy0GfpSR",
+    "error": null
+  },
+  "Obstructive uropathy / post-renal obstruction": {
+    "found": true,
+    "condition_name": "Obstructive Sleep Apnea (OSA)",
+    "match_quality": "partial",
+    "supplement_count": 1,
+    "supplements": [
+      "Melatonin"
+    ],
+    "url": "https://examine.com/conditions/obstructive-sleep-apnea-osa/",
+    "all_conditions_found": [
+      "Obstructive Sleep Apnea (OSA)",
+      "Chronic Obstructive Pulmonary Disease (COPD)"
+    ],
+    "dataset_id": "TfhiTxdrICnMRawWu",
+    "error": null
+  },
+  "Dehydration / hypovolemia": {
+    "found": true,
+    "condition_name": "Dehydration",
+    "match_quality": "exact",
+    "supplement_count": 1,
+    "supplements": [
+      "Rooibos"
+    ],
+    "url": "https://examine.com/conditions/dehydration/",
+    "all_conditions_found": [
+      "Dehydration"
+    ],
+    "dataset_id": "z3m9HF8FsMBPkib4r",
+    "error": null
+  },
+  "Exercise-induced dehydration": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "vBEd0NtXuew3Lia3u",
+    "error": null
+  },
+  "Rhabdomyolysis (esp. creatinine changes)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "bTZPLhknOofn6XK2A",
+    "error": null
+  },
+  "High-protein diet / catabolic state (BUN)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "fr493qQowv0pefP0J",
+    "error": null
+  },
+  "Prediabetes": {
+    "found": true,
+    "condition_name": "Prediabetes",
+    "match_quality": "exact",
+    "supplement_count": 19,
+    "supplements": [
+      "Vitamin D",
+      "Flaxseed",
+      "L-Carnitine",
+      "Saffron",
+      "Aloe Vera",
+      "Carnosine",
+      "Green Tea Extract",
+      "Berberine",
+      "Chromium",
+      "Curcumin",
+      "Inulin",
+      "Magnesium",
+      "Nicotinamide Mononucleotide",
+      "Panax Ginseng (Korean Ginseng)",
+      "Prebiotics",
+      "Probiotics",
+      "Resistant Starch",
+      "Resveratrol",
+      "Thiamine (Vitamin B1)"
+    ],
+    "url": "https://examine.com/conditions/prediabetes/",
+    "all_conditions_found": [
+      "Prediabetes",
+      "Obesity",
+      "Metabolic Health"
+    ],
+    "dataset_id": "a1oczkmWIQH3rgGhO",
+    "error": null
+  },
+  "Diabetes": {
+    "found": true,
+    "condition_name": "Gestational Diabetes",
+    "match_quality": "exact",
+    "supplement_count": 8,
+    "supplements": [
+      "Inositol",
+      "Fish Oil",
+      "Chromium",
+      "Fiber",
+      "Flaxseed",
+      "Iodine",
+      "Selenium",
+      "Zinc"
+    ],
+    "url": "https://examine.com/conditions/gestational-diabetes/",
+    "all_conditions_found": [
+      "Gestational Diabetes"
+    ],
+    "dataset_id": "lkmMl8kXVa9jxffE0",
+    "error": null
+  },
+  "Type 1 diabetes mellitus": {
+    "found": true,
+    "condition_name": "Type 1 Diabetes",
+    "match_quality": "exact",
+    "supplement_count": 17,
+    "supplements": [
+      "Magnesium",
+      "Vitamin C",
+      "Coenzyme Q10",
+      "Benfotiamine",
+      "Beta-Alanine",
+      "Bromelain",
+      "Chromium",
+      "D-Ribose",
+      "Fiber",
+      "Fish Oil",
+      "L-Carnitine",
+      "Resveratrol",
+      "Saffron",
+      "Taurine",
+      "Vitamin D",
+      "Vitamin E",
+      "Zinc"
+    ],
+    "url": "https://examine.com/conditions/type-1-diabetes/",
+    "all_conditions_found": [
+      "Type 1 Diabetes",
+      "Type 2 Diabetes"
+    ],
+    "dataset_id": "4T1pfTWe1Y2Tw4RRe",
+    "error": null
+  },
+  "Insulin resistance": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "rxRxhtuopHdTv6aAG",
+    "error": null
+  },
+  "Antiretroviral-induced insulin resistance": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "jZlx6hCAXR04OCI1M",
+    "error": null
+  },
+  "Hyperinsulinemia": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "cFm7ZPDb0SIdbSNvX",
+    "error": null
+  },
+  "Pancreatic beta-cell dysfunction / pancreatic insufficiency": {
+    "found": true,
+    "condition_name": "Pancreatic Cancer",
+    "match_quality": "partial",
+    "supplement_count": 1,
+    "supplements": [
+      "Vitamin D"
+    ],
+    "url": "https://examine.com/conditions/pancreatic-cancer/",
+    "all_conditions_found": [
+      "Pancreatic Cancer"
+    ],
+    "dataset_id": "Wcv4WpXqAPnbBdE8y",
+    "error": null
+  },
+  "Atherosclerotic cardiovascular disease (ASCVD)": {
+    "found": true,
+    "condition_name": "Atherosclerosis",
+    "match_quality": "unrelated",
+    "supplement_count": 7,
+    "supplements": [
+      "Berberine",
+      "Ginkgo Biloba",
+      "L-Carnitine",
+      "Niacin (Vitamin B3)",
+      "Nicotinamide Mononucleotide",
+      "Policosanol",
+      "Vitamin C"
+    ],
+    "url": "https://examine.com/conditions/atherosclerosis/",
+    "all_conditions_found": [
+      "Atherosclerosis"
+    ],
+    "dataset_id": "AZNo3VD9rqUgO6eJ5",
+    "error": null
+  },
+  "Coronary artery disease (CAD)": {
+    "found": true,
+    "condition_name": "Coronary Artery Disease (CAD)",
+    "match_quality": "exact",
+    "supplement_count": 19,
+    "supplements": [
+      "Fish Oil",
+      "Resveratrol",
+      "Coenzyme Q10",
+      "L-Carnitine",
+      "D-Ribose",
+      "Flaxseed",
+      "Vitamin D",
+      "Arginine",
+      "Berberine",
+      "Betaine",
+      "Black seed",
+      "Cocoa Extract",
+      "Conjugated Linoleic Acid",
+      "Creatine",
+      "Curcumin",
+      "Ginkgo Biloba",
+      "Magnesium",
+      "Niacin (Vitamin B3)",
+      "Probiotics"
+    ],
+    "url": "https://examine.com/conditions/coronary-artery-disease/",
+    "all_conditions_found": [
+      "Coronary Artery Disease (CAD)",
+      "Acute Coronary Syndrome (ACS)"
+    ],
+    "dataset_id": "V6iG5fBKUNBrxj5JN",
+    "error": null
+  },
+  "Myocardial infarction (risk association)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "0E80DVa3RqFv5bN6U",
+    "error": null
+  },
+  "Ischemic stroke (risk association)": {
+    "found": true,
+    "condition_name": "Ischemic Mitral Regurgitation",
+    "match_quality": "partial",
+    "supplement_count": 1,
+    "supplements": [
+      "Terminalia Arjuna"
+    ],
+    "url": "https://examine.com/conditions/ischemic-mitral-regurgitation/",
+    "all_conditions_found": [
+      "Ischemic Mitral Regurgitation",
+      "Ischemic Heart Disease"
+    ],
+    "dataset_id": "HIQzrDtggbhTRuohM",
+    "error": null
+  },
+  "Peripheral arterial disease (PAD)": {
+    "found": true,
+    "condition_name": "Peripheral Arterial Disease",
+    "match_quality": "exact",
+    "supplement_count": 9,
+    "supplements": [
+      "L-Carnitine",
+      "Ginkgo Biloba",
+      "Arginine",
+      "Cocoa Extract",
+      "Alpha-Lipoic Acid",
+      "Fish Oil",
+      "Omega-3 Fatty Acids",
+      "Policosanol",
+      "Resveratrol"
+    ],
+    "url": "https://examine.com/conditions/peripheral-arterial-disease/",
+    "all_conditions_found": [
+      "Peripheral Arterial Disease",
+      "Peripheral Arterial Occlusive Disease"
+    ],
+    "dataset_id": "or3x9H9uqY39XNWjJ",
+    "error": null
+  },
+  "Familial hypercholesterolemia": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "x5z1srDFkhOFw4MbG",
+    "error": null
+  },
+  "Familial combined hyperlipidemia": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "OfH7fmnH0Ge4cAfXW",
+    "error": null
+  },
+  "Hypertriglyceridemia": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "TczJrH6Id341Y65BJ",
+    "error": null
+  },
+  "Dyslipidemia((high triglycerides, LDL, VLDL)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "ExjCq1MIf8nx1jhsf",
+    "error": null
+  },
+  "Hyperlipidemia": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "JDlG1jUtpSxrqTvlh",
+    "error": null
+  },
+  "Chronic low-grade inflammation": {
+    "found": true,
+    "condition_name": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "match_quality": "partial",
+    "supplement_count": 14,
+    "supplements": [
+      "N-Acetylcysteine",
+      "Creatine",
+      "Nitrate",
+      "Cannabis",
+      "Curcumin",
+      "Glutamine",
+      "L-Carnitine",
+      "Nicotinamide Riboside",
+      "Omega-3 Fatty Acids",
+      "Resveratrol",
+      "Rhodiola Rosea",
+      "Umckaloabo",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "url": "https://examine.com/conditions/chronic-obstructive-pulmonary-disease/",
+    "all_conditions_found": [
+      "Myalgic Encephalomyelitis (Chronic Fatigue Syndrome)",
+      "Chronic Obstructive Pulmonary Disease (COPD)",
+      "Chronic Kidney Disease (CKD)"
+    ],
+    "dataset_id": "TGmVi6NMfJhDYQxQB",
+    "error": null
+  },
+  "Atherosclerosis (inflammatory risk phenotype)": {
+    "found": true,
+    "condition_name": "Atherosclerosis",
+    "match_quality": "exact",
+    "supplement_count": 7,
+    "supplements": [
+      "Berberine",
+      "Ginkgo Biloba",
+      "L-Carnitine",
+      "Niacin (Vitamin B3)",
+      "Nicotinamide Mononucleotide",
+      "Policosanol",
+      "Vitamin C"
+    ],
+    "url": "https://examine.com/conditions/atherosclerosis/",
+    "all_conditions_found": [
+      "Atherosclerosis"
+    ],
+    "dataset_id": "FPT2yxbg8z7ZLbJiL",
+    "error": null
+  },
+  "Acute infection": {
+    "found": true,
+    "condition_name": "Acute Respiratory Infection (ARI)",
+    "match_quality": "partial",
+    "supplement_count": 6,
+    "supplements": [
+      "Vitamin D",
+      "Umckaloabo",
+      "Echinacea",
+      "Elderberry",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "url": "https://examine.com/conditions/acute-respiratory-infection/",
+    "all_conditions_found": [
+      "Acute Respiratory Infection (ARI)"
+    ],
+    "dataset_id": "lGrEaGFOqWxbBS5eW",
+    "error": null
+  },
+  "Autoimmune disease / systemic inflammatory disease": {
+    "found": true,
+    "condition_name": "Autoimmune Disease",
+    "match_quality": "exact",
+    "supplement_count": 0,
+    "supplements": [],
+    "url": "https://examine.com/conditions/autoimmune-disease/",
+    "all_conditions_found": [
+      "Autoimmune Hepatitis",
+      "Autoimmune Disease"
+    ],
+    "dataset_id": "q82L80YgE0q6jktQZ",
+    "error": null
+  },
+  "Rheumatoid arthritis": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "hkV6ZTFGt04ychSsp",
+    "error": null
+  },
+  "Inflammatory bowel disease": {
+    "found": true,
+    "condition_name": "Diarrhea Predominant Irritable Bowel Syndrome (IBS-D)",
+    "match_quality": "partial",
+    "supplement_count": 1,
+    "supplements": [
+      "Glutamine"
+    ],
+    "url": "https://examine.com/conditions/Diarrhea-Predominant-Irritable-Bowel-Syndrome/",
+    "all_conditions_found": [
+      "Diarrhea Predominant Irritable Bowel Syndrome (IBS-D)"
+    ],
+    "dataset_id": "HdOS9uh6lBy0yVAVJ",
+    "error": null
+  },
+  "Periodontitis": {
+    "found": true,
+    "condition_name": "Periodontitis",
+    "match_quality": "exact",
+    "supplement_count": 2,
+    "supplements": [
+      "Probiotics",
+      "Resveratrol"
+    ],
+    "url": "https://examine.com/conditions/periodontitis/",
+    "all_conditions_found": [
+      "Periodontitis",
+      "Gingivitis"
+    ],
+    "dataset_id": "76iL13Wh3lE48wBuA",
+    "error": null
+  },
+  "Hepatitis (viral, autoimmune, toxic/drug-induced)": {
+    "found": true,
+    "condition_name": "Hepatitis C",
+    "match_quality": "partial",
+    "supplement_count": 5,
+    "supplements": [
+      "TUDCA",
+      "Black seed",
+      "S-adenosylmethionine",
+      "Silymarin",
+      "Spirulina"
+    ],
+    "url": "https://examine.com/conditions/hepatitis-c/",
+    "all_conditions_found": [
+      "Nonalcoholic Steatohepatitis (NASH)",
+      "Hepatitis C",
+      "Hepatitis B"
+    ],
+    "dataset_id": "T5WX8K2sirhVoeDAL",
+    "error": null
+  },
+  "Alcohol-associated liver disease": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "ztB7Tad3lrotjDnn6",
+    "error": null
+  },
+  "Metabolic dysfunction\u2013associated steatotic liver disease (MASLD)": {
+    "found": true,
+    "condition_name": "Metabolic Syndrome",
+    "match_quality": "partial",
+    "supplement_count": 19,
+    "supplements": [
+      "Resveratrol",
+      "Curcumin",
+      "L-Carnitine",
+      "Saffron",
+      "Black seed",
+      "Chromium",
+      "Inositol",
+      "Whey Protein",
+      "Zinc",
+      "Berberine",
+      "Betaine",
+      "Dill",
+      "Flaxseed",
+      "Magnesium",
+      "Spirulina",
+      "Alpha-Lipoic Acid",
+      "Astaxanthin",
+      "Casein",
+      "Cocoa Extract"
+    ],
+    "url": "https://examine.com/conditions/metabolic-syndrome/",
+    "all_conditions_found": [
+      "Metabolic Syndrome",
+      "Metabolic Health"
+    ],
+    "dataset_id": "LddnraW0yeOdEfxU5",
+    "error": null
+  },
+  "Nonalcoholic fatty liver disease (NAFLD)": {
+    "found": true,
+    "condition_name": "Nonalcoholic Fatty Liver Disease (NAFLD)",
+    "match_quality": "exact",
+    "supplement_count": 19,
+    "supplements": [
+      "Resveratrol",
+      "Curcumin",
+      "Silymarin",
+      "L-Carnitine",
+      "Synbiotics",
+      "Berberine",
+      "Chlorella",
+      "Fish Oil",
+      "Probiotics",
+      "Spirulina",
+      "Vitamin E",
+      "Artichoke Extract",
+      "Betaine",
+      "Black seed",
+      "Brown Seaweed Extract",
+      "Chromium",
+      "Citrulline",
+      "Fecal Transplant",
+      "Green Coffee Extract"
+    ],
+    "url": "https://examine.com/conditions/nonalcoholic-fatty-liver-disease/",
+    "all_conditions_found": [
+      "Nonalcoholic Fatty Liver Disease (NAFLD)"
+    ],
+    "dataset_id": "iWAbppUp1N7oQp0uB",
+    "error": null
+  },
+  "Nonalcoholic steatohepatitis (NASH/MASH)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "nwx1C4ckz7f1397rv",
+    "error": null
+  },
+  "Cirrhosis": {
+    "found": true,
+    "condition_name": "Cirrhosis",
+    "match_quality": "exact",
+    "supplement_count": 4,
+    "supplements": [
+      "L-Carnitine",
+      "Cocoa Extract",
+      "Silymarin",
+      "TUDCA"
+    ],
+    "url": "https://examine.com/conditions/cirrhosis/",
+    "all_conditions_found": [
+      "Cirrhosis",
+      "Liver Cancer"
+    ],
+    "dataset_id": "68Kur6hno08QSsBaB",
+    "error": null
+  },
+  "Cholestasis": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "6mTSvWmnbe3VxvVfM",
+    "error": null
+  },
+  "Biliary obstruction / gallstone disease": {
+    "found": true,
+    "condition_name": "Primary Biliary Cholangitis",
+    "match_quality": "partial",
+    "supplement_count": 1,
+    "supplements": [
+      "TUDCA"
+    ],
+    "url": "https://examine.com/conditions/primary-biliary-cholangitis/",
+    "all_conditions_found": [
+      "Primary Biliary Cholangitis"
+    ],
+    "dataset_id": "Z7Ey8xTiik4ismOzg",
+    "error": null
+  },
+  "Primary biliary cholangitis (PBC)": {
+    "found": true,
+    "condition_name": "Primary Biliary Cholangitis",
+    "match_quality": "exact",
+    "supplement_count": 1,
+    "supplements": [
+      "TUDCA"
+    ],
+    "url": "https://examine.com/conditions/primary-biliary-cholangitis/",
+    "all_conditions_found": [
+      "Primary Dysmenorrhea (Menstrual Cramps)",
+      "Primary Ovarian Insufficiency",
+      "Primary Biliary Cholangitis"
+    ],
+    "dataset_id": "ueYnS2RHVUbMRrMtD",
+    "error": null
+  },
+  "Primary sclerosing cholangitis (PSC)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "b7rgXC4tbuD9cxPld",
+    "error": null
+  },
+  "Hemolytic anemia (bilirubin elevation)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "Lt6AFzLWavMDrFzjB",
+    "error": null
+  },
+  "Gilbert syndrome (unconjugated hyperbilirubinemia)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "FK9dLEts4XVXz8wnW",
+    "error": null
+  },
+  "Muscle injury / myositis (AST can rise)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "6yZemJxUaggNcQBOf",
+    "error": null
+  },
+  "Proteins (Albumin, Total protein)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "UeIAKeM3ehqztjSfq",
+    "error": null
+  },
+  "Malnutrition / protein-calorie malnutrition": {
+    "found": true,
+    "condition_name": "Malnutrition",
+    "match_quality": "exact",
+    "supplement_count": 4,
+    "supplements": [
+      "Prebiotics",
+      "Prenatal Vitamins",
+      "Probiotics",
+      "Synbiotics"
+    ],
+    "url": "https://examine.com/conditions/malnutrition/",
+    "all_conditions_found": [
+      "Malnutrition"
+    ],
+    "dataset_id": "vYxNc6J41k6yIT2eR",
+    "error": null
+  },
+  "Chronic liver disease": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "W6cShxelOzYpjcLkg",
+    "error": null
+  },
+  "Nephrotic syndrome / protein-losing nephropathy": {
+    "found": true,
+    "condition_name": "Nephrotic Syndrome",
+    "match_quality": "exact",
+    "supplement_count": 1,
+    "supplements": [
+      "Spirulina"
+    ],
+    "url": "https://examine.com/conditions/nephrotic-syndrome/",
+    "all_conditions_found": [
+      "Nephrotic Syndrome"
+    ],
+    "dataset_id": "ns4odPhLqg3On3bpc",
+    "error": null
+  },
+  "Protein-losing enteropathy": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "E6UOF8l39BhUswMDF",
+    "error": null
+  },
+  "Chronic inflammation": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "fQpPmjgh9GhhjquyE",
+    "error": null
+  },
+  "Multiple myeloma (total protein context)": {
+    "found": true,
+    "condition_name": "Multiple Sclerosis (MS)",
+    "match_quality": "partial",
+    "supplement_count": 11,
+    "supplements": [
+      "Cannabis",
+      "Vitamin D",
+      "Biotin (Vitamin B7)",
+      "Coenzyme Q10",
+      "Melatonin",
+      "Cannabidiol (CBD)",
+      "Ginkgo Biloba",
+      "L-Carnitine",
+      "Panax Ginseng (Korean Ginseng)",
+      "Riboflavin (Vitamin B2)",
+      "Vitamin A"
+    ],
+    "url": "https://examine.com/conditions/multiple-sclerosis/",
+    "all_conditions_found": [
+      "Multiple Sclerosis (MS)",
+      "Arthritis (Multiple Kinds)"
+    ],
+    "dataset_id": "wRFvk1yp2TYApNHkp",
+    "error": null
+  },
+  "Iron Panel (Iron, Ferritin, UIBC)": {
+    "found": true,
+    "condition_name": "Iron Deficiency Anemia",
+    "match_quality": "unrelated",
+    "supplement_count": 6,
+    "supplements": [
+      "Iron",
+      "Chlorella",
+      "iron",
+      "Magnesium",
+      "Spirulina",
+      "Zinc"
+    ],
+    "url": "https://examine.com/conditions/iron-deficiency-anemia/",
+    "all_conditions_found": [
+      "Iron Deficiency Anemia"
+    ],
+    "dataset_id": "I3ulZcrtbsSPP4vUp",
+    "error": null
+  },
+  "Iron deficiency": {
+    "found": true,
+    "condition_name": "Iron Deficiency Anemia",
+    "match_quality": "exact",
+    "supplement_count": 6,
+    "supplements": [
+      "Iron",
+      "Chlorella",
+      "iron",
+      "Magnesium",
+      "Spirulina",
+      "Zinc"
+    ],
+    "url": "https://examine.com/conditions/iron-deficiency-anemia/",
+    "all_conditions_found": [
+      "Iron Deficiency Anemia"
+    ],
+    "dataset_id": "HGRJ3RJhorSLB53wD",
+    "error": null
+  },
+  "Iron deficiency anemia": {
+    "found": true,
+    "condition_name": "Iron Deficiency Anemia",
+    "match_quality": "exact",
+    "supplement_count": 6,
+    "supplements": [
+      "Iron",
+      "Chlorella",
+      "iron",
+      "Magnesium",
+      "Spirulina",
+      "Zinc"
+    ],
+    "url": "https://examine.com/conditions/iron-deficiency-anemia/",
+    "all_conditions_found": [
+      "Iron Deficiency Anemia"
+    ],
+    "dataset_id": "m2g2yzuuP86ieGAJB",
+    "error": null
+  },
+  "Anemia of chronic disease / anemia of inflammation": {
+    "found": true,
+    "condition_name": "Renal Anemia",
+    "match_quality": "partial",
+    "supplement_count": 1,
+    "supplements": [
+      "L-Carnitine"
+    ],
+    "url": "https://examine.com/conditions/renal-anemia/",
+    "all_conditions_found": [
+      "Renal Anemia",
+      "Iron Deficiency Anemia",
+      "Aplastic Anemia"
+    ],
+    "dataset_id": "YnMWd6DIBRxsYxwtp",
+    "error": null
+  },
+  "Hemochromatosis / iron overload": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "DlDvMwH2SBExm2EJU",
+    "error": null
+  },
+  "Chronic liver disease\u2013related iron abnormalities": {
+    "found": true,
+    "condition_name": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "match_quality": "partial",
+    "supplement_count": 14,
+    "supplements": [
+      "N-Acetylcysteine",
+      "Creatine",
+      "Nitrate",
+      "Cannabis",
+      "Curcumin",
+      "Glutamine",
+      "L-Carnitine",
+      "Nicotinamide Riboside",
+      "Omega-3 Fatty Acids",
+      "Resveratrol",
+      "Rhodiola Rosea",
+      "Umckaloabo",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "url": "https://examine.com/conditions/chronic-obstructive-pulmonary-disease/",
+    "all_conditions_found": [
+      "Myalgic Encephalomyelitis (Chronic Fatigue Syndrome)",
+      "Chronic Obstructive Pulmonary Disease (COPD)",
+      "Chronic Kidney Disease (CKD)"
+    ],
+    "dataset_id": "n7neiIIOy0aJWXHpS",
+    "error": null
+  },
+  "Thyroid (TSH)": {
+    "found": true,
+    "condition_name": "Thyroid Cancer",
+    "match_quality": "partial",
+    "supplement_count": 1,
+    "supplements": [
+      "Vitamin D"
+    ],
+    "url": "https://examine.com/conditions/thyroid-cancer/",
+    "all_conditions_found": [
+      "Hypothyroidism",
+      "Thyroid Cancer",
+      "Hyperthyroidism"
+    ],
+    "dataset_id": "vjpp5NesrAvFzDkZi",
+    "error": null
+  },
+  "Hypothyroidism": {
+    "found": true,
+    "condition_name": "Hypothyroidism",
+    "match_quality": "exact",
+    "supplement_count": 2,
+    "supplements": [
+      "Ashwagandha",
+      "L-Carnitine"
+    ],
+    "url": "https://examine.com/conditions/hypothyroidism/",
+    "all_conditions_found": [
+      "Hair Loss",
+      "Hypothyroidism",
+      "Constipation"
+    ],
+    "dataset_id": "eB9ji4V2FV1WdkrDp",
+    "error": null
+  },
+  "Subclinical hypothyroidism": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "taajYgdHAKAHVmbbe",
+    "error": null
+  },
+  "Hashimoto thyroiditis": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "m3JzUw2KeAVkn9TqZ",
+    "error": null
+  },
+  "Hyperthyroidism (if TSH suppressed)": {
+    "found": true,
+    "condition_name": "Hyperthyroidism",
+    "match_quality": "exact",
+    "supplement_count": 1,
+    "supplements": [
+      "L-Carnitine"
+    ],
+    "url": "https://examine.com/conditions/hyperthyroidism/",
+    "all_conditions_found": [
+      "Hyperthyroidism"
+    ],
+    "dataset_id": "Vn8z1A6VWmhxiagY8",
+    "error": null
+  },
+  "Subclinical hyperthyroidism": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "EwvaGWjHcZY9ZM26j",
+    "error": null
+  },
+  "Thyroiditis (painless/silent, subacute)": {
+    "found": true,
+    "condition_name": "Hashimoto's disease",
+    "match_quality": "unrelated",
+    "supplement_count": 3,
+    "supplements": [
+      "Selenium",
+      "Iodine",
+      "L-Carnitine"
+    ],
+    "url": "https://examine.com/conditions/hashimotos-disease/",
+    "all_conditions_found": [
+      "Hashimoto's disease"
+    ],
+    "dataset_id": "nP9zRbmGuJGwokPZ2",
+    "error": null
+  },
+  "Vitamin D deficiency": {
+    "found": true,
+    "condition_name": "Vitamin D Deficiency",
+    "match_quality": "exact",
+    "supplement_count": 1,
+    "supplements": [
+      "Vitamin D"
+    ],
+    "url": "https://examine.com/conditions/vitamin-d-deficiency/",
+    "all_conditions_found": [
+      "Vitamin D Deficiency"
+    ],
+    "dataset_id": "61ZzMkL9cexSk64Yg",
+    "error": null
+  },
+  "Vitamin D excess / hypervitaminosis D": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "L1BaVNXEblB1XnGl8",
+    "error": null
+  },
+  "Hypercalcemia": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "fpgOb3gwqrKMS0ti4",
+    "error": null
+  },
+  "Hypocalcemia": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "WU4qwPpb78VRU9TYQ",
+    "error": null
+  },
+  "Hypoparathyroidism": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "gkRfqqhSvTgGk6sGB",
+    "error": null
+  },
+  "Sarcoidosis / granulomatous disease (vit D\u2013calcium axis)": {
+    "found": true,
+    "condition_name": "Sarcoidosis",
+    "match_quality": "exact",
+    "supplement_count": 1,
+    "supplements": [
+      "Quercetin"
+    ],
+    "url": "https://examine.com/conditions/sarcoidosis/",
+    "all_conditions_found": [
+      "Sarcoidosis"
+    ],
+    "dataset_id": "4Sv69MMAwhaZwueQO",
+    "error": null
+  },
+  "Osteomalacia": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "iASuT9j4rIfS6Ps2N",
+    "error": null
+  },
+  "Osteoporosis (vitamin D context)": {
+    "found": true,
+    "condition_name": "Osteoporosis",
+    "match_quality": "exact",
+    "supplement_count": 4,
+    "supplements": [
+      "Vitamin K",
+      "Vitamin D",
+      "Horny Goat Weed",
+      "Soy Protein"
+    ],
+    "url": "https://examine.com/conditions/osteoporosis/",
+    "all_conditions_found": [
+      "Osteoporosis"
+    ],
+    "dataset_id": "fMA2eaDLZUbKTtBNl",
+    "error": null
+  },
+  "Nephrolithiasis / kidney stones (calcium context)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "5ryFs43Z9pUBRsdXs",
+    "error": null
+  },
+  "Hypogonadism (primary or secondary)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "d4ygZoC4ixSF7QASr",
+    "error": null
+  },
+  "Androgen deficiency (male)": {
+    "found": true,
+    "condition_name": "Hair Loss",
+    "match_quality": "unrelated",
+    "supplement_count": 3,
+    "supplements": [
+      "Probiotics",
+      "Saw Palmetto",
+      "Vitamin E"
+    ],
+    "url": "https://examine.com/conditions/hair-loss/",
+    "all_conditions_found": [
+      "Hair Loss"
+    ],
+    "dataset_id": "yzUNpXdqWSiU3tIwe",
+    "error": null
+  },
+  "Androgen excess": {
+    "found": true,
+    "condition_name": "Hair Loss",
+    "match_quality": "unrelated",
+    "supplement_count": 3,
+    "supplements": [
+      "Probiotics",
+      "Saw Palmetto",
+      "Vitamin E"
+    ],
+    "url": "https://examine.com/conditions/hair-loss/",
+    "all_conditions_found": [
+      "Hair Loss"
+    ],
+    "dataset_id": "hRhv2R7bfvAyDvZre",
+    "error": null
+  },
+  "Congenital adrenal hyperplasia (CAH)": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "Ftb5K1JhHgW9W1btE",
+    "error": null
+  },
+  "Adrenal tumor / adrenal hyperplasia": {
+    "found": true,
+    "condition_name": "Hypoadrenalism",
+    "match_quality": "unrelated",
+    "supplement_count": 1,
+    "supplements": [
+      "DHEA"
+    ],
+    "url": "https://examine.com/conditions/hypoadrenalism/",
+    "all_conditions_found": [
+      "Hypoadrenalism"
+    ],
+    "dataset_id": "YhkyRFLHRK3mn5M9u",
+    "error": null
+  },
+  "Polycystic ovary syndrome (PCOS)": {
+    "found": true,
+    "condition_name": "Polycystic Ovary Syndrome (PCOS)",
+    "match_quality": "exact",
+    "supplement_count": 16,
+    "supplements": [
+      "Inositol",
+      "Chromium",
+      "Magnesium",
+      "Resveratrol",
+      "L-Carnitine",
+      "Berberine",
+      "Coenzyme Q10",
+      "Curcumin",
+      "N-Acetylcysteine",
+      "Vitamin D",
+      "Alpha-Linolenic Acid",
+      "Cinnamon",
+      "Fish Oil",
+      "Green Tea Extract",
+      "Licorice",
+      "Resistant Starch"
+    ],
+    "url": "https://examine.com/conditions/polycystic-ovary-syndrome/",
+    "all_conditions_found": [
+      "Polycystic Ovary Syndrome (PCOS)"
+    ],
+    "dataset_id": "8Vpa8pp1jqNiyd9LX",
+    "error": null
+  },
+  "Insulin resistance\u2013associated low SHBG": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "o97n8YjVAfLtiaRK6",
+    "error": null
+  },
+  "Obesity-related androgen/SHBG alterations": {
+    "found": false,
+    "condition_name": null,
+    "match_quality": null,
+    "supplement_count": 0,
+    "supplements": [],
+    "url": null,
+    "all_conditions_found": [],
+    "dataset_id": "DySwVTHhWENp7DUp1",
+    "error": null
+  }
+}

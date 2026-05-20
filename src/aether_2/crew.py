@@ -23,7 +23,7 @@ from src.aether_2.models import (
 from crewai_tools import SerperDevTool
 
 llm = LLM(
-    model="vertex_ai/gemini-2.5-flash",
+    model="vertex_ai/gemini-2.5-pro",
     temperature=0,
     seed=42
 )
@@ -71,7 +71,8 @@ class Aether2():
         return Agent(
             config=self.agents_config['web_ingredient_discovery'],
             verbose=True,
-            tools=[SerperDevTool()],
+            tools=[SerperDevTool(n_results=3)],
+            max_iter=8,
             llm=llm
         )
 
@@ -118,11 +119,10 @@ class Aether2():
 
     @agent
     def final_supplement_compiler(self) -> Agent:
-        """Uses Serper for evidence-based dosage research"""
+        """Uses LLM clinical knowledge for dosage compilation (no web search)"""
         return Agent(
             config=self.agents_config['final_supplement_compiler'],
             verbose=True,
-            tools=[SerperDevTool()],
             llm=llm
         )
 
@@ -169,7 +169,9 @@ class Aether2():
         """Assigns focus area codes to each supplement"""
         return Task(
             config=self.tasks_config['assign_focus_areas'],
-            context=[self.generate_supplement_recommendations()],
+            # Patient profile included so focus area mapping can reason from the full
+            # clinical context, not just the supplement list.
+            context=[self.summarize_patient_profile(), self.generate_supplement_recommendations()],
             output_pydantic=SupplementsWithFocusAreas
         )
 
@@ -177,7 +179,9 @@ class Aether2():
     def compile_final_supplement_recommendations(self) -> Task:
         return Task(
             config=self.tasks_config['compile_final_supplement_recommendations'],
-            context=[self.assign_focus_areas()],
+            # Patient profile included so dosage/form choices can be personalised to
+            # demographics, biomarkers, and contraindications.
+            context=[self.summarize_patient_profile(), self.assign_focus_areas()],
             output_pydantic=FinalSupplementProtocol
         )
 

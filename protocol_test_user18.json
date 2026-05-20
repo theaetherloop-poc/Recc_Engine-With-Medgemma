@@ -1,0 +1,82 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Magnesium Glycinate",
+      "recommended_dosage": "300 mg elemental magnesium",
+      "frequency": "Once daily in the evening",
+      "focus_area": ["RES", "CM", "COG"],
+      "why": "Magnesium has well-documented bronchodilatory and airway-calming properties, directly supporting your asthma management alongside your current medications. Also supports muscle recovery given your 6-day/week training load as a personal trainer, and helps buffer the mild jitteriness from Albuterol use."
+    },
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "2000 IU",
+      "frequency": "Once daily with a fatty meal",
+      "focus_area": ["IMM", "RES"],
+      "why": "Your 25-(OH) Vitamin D is 41 ng/mL — within normal range but on the lower end of optimal for an asthmatic. Vitamin D has strong evidence for reducing airway inflammation and asthma exacerbation frequency. A maintenance dose is appropriate here rather than a corrective one given your good sunlight exposure."
+    },
+    {
+      "ingredient_name": "Vitamin K2 (MK-7)",
+      "recommended_dosage": "100 mcg",
+      "frequency": "Once daily with a fatty meal",
+      "focus_area": ["CM", "MSK"],
+      "why": "Pairs with your D3 to ensure calcium is directed to bones rather than soft tissues. Particularly useful for a high-training-volume individual to support bone density and vascular health over the long term."
+    },
+    {
+      "ingredient_name": "Omega-3 Fatty Acids (EPA/DHA)",
+      "recommended_dosage": "2000 mg combined EPA/DHA",
+      "frequency": "Once daily with a meal",
+      "focus_area": ["RES", "IMM", "CM"],
+      "why": "EPA and DHA reduce leukotriene production — a key inflammatory pathway in asthma — and can reduce bronchial hyperresponsiveness over time. Also supports your already healthy lipid panel (Triglycerides 92 mg/dL, HDL 58) and complements your Mediterranean diet."
+    },
+    {
+      "ingredient_name": "Bromelain",
+      "recommended_dosage": "500 mg",
+      "frequency": "Once daily on an empty stomach",
+      "focus_area": ["RES", "IMM"],
+      "why": "Has mucolytic and anti-inflammatory properties that directly support respiratory tract health in asthma, helping reduce mucus viscosity and airway inflammation. Works synergistically with your existing NAC and Quercetin stack."
+    },
+    {
+      "ingredient_name": "Vitamin C (Buffered)",
+      "recommended_dosage": "1000 mg",
+      "frequency": "Once daily with food",
+      "focus_area": ["RES", "IMM"],
+      "why": "Acts as an antioxidant in the airways, reduces exercise-induced bronchoconstriction — highly relevant for a personal trainer training 6 days/week — and supports immune defense. Buffered form is gentler on the digestive tract for daily use."
+    },
+    {
+      "ingredient_name": "Probiotics (Multi-strain)",
+      "recommended_dosage": "10 billion CFUs",
+      "frequency": "Once daily with a meal",
+      "focus_area": ["IMM", "RES"],
+      "why": "The gut-lung axis is well established: childhood antibiotic use (confirmed in your history) disrupts microbiome composition in ways that can increase atopic and allergic disease burden. A multi-strain probiotic supports immune regulation and may reduce asthma exacerbation frequency over time."
+    },
+    {
+      "ingredient_name": "Ashwagandha (KSM-66)",
+      "recommended_dosage": "300 mg standardized extract",
+      "frequency": "Once daily in the evening",
+      "focus_area": ["STR", "MSK"],
+      "why": "Your Daytime Cortisol is 17.5 mcg/dL — on the higher end of normal — which is consistent with your high physical training load and occupational demands as a personal trainer. Ashwagandha supports cortisol regulation, exercise recovery, and has emerging evidence for improving VO2 max relevant to your asthma management."
+    },
+    {
+      "ingredient_name": "Creatine Monohydrate",
+      "recommended_dosage": "5 g",
+      "frequency": "Once daily post-workout",
+      "focus_area": ["MSK", "COG"],
+      "why": "As a personal trainer exercising 6 days/week, creatine directly supports muscle performance, recovery, and ATP regeneration. Has a strong safety profile and also shows cognitive benefits. No interaction with your current asthma medications."
+    },
+    {
+      "ingredient_name": "Zinc Picolinate",
+      "recommended_dosage": "25 mg",
+      "frequency": "Once daily with food",
+      "focus_area": ["IMM", "RES"],
+      "why": "You are currently taking 50 mg Zinc daily, which is above the tolerable upper limit for long-term use and can interfere with copper absorption. Reducing to 25 mg in the more bioavailable picolinate form maintains your immune and respiratory benefits without the risk of copper depletion over time."
+    },
+    {
+      "ingredient_name": "Copper (Copper Bisglycinate)",
+      "recommended_dosage": "1 mg",
+      "frequency": "Once daily with food",
+      "focus_area": ["IMM"],
+      "why": "A direct companion recommendation to the Zinc dose correction above. Chronic high-dose Zinc supplementation depletes copper, which is essential for immune function, connective tissue integrity, and iron metabolism. Adding 1 mg copper restores the appropriate Zinc:Copper balance."
+    }
+  ]
+}
+

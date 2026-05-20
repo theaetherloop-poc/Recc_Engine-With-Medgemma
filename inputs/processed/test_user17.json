@@ -1,0 +1,252 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user17@example.com",
+        "phase_status": {
+          "id": "c3d4e5f6-a7b8-4931-c234-567890123456",
+          "user_id": "d4e5f6a7-b8c9-4932-d345-678901234567",
+          "created_at": "2024-02-05T12:30:45Z",
+          "updated_at": "2024-02-19T09:15:20Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": true,
+            "known_allergies": [
+              {
+                "allergen": "shellfish",
+                "reaction": "Vomiting and hives",
+                "allergen_other": null
+              }
+            ]
+          },
+          "medications": {
+            "has_medications": false,
+            "current_medications": []
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "500 mg",
+                "name": "Bromelain",
+                "purpose": "Inflammation and joint support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1500 mg",
+                "name": "Glucosamine Chondroitin",
+                "purpose": "Joint health and arthritis support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "200 mg",
+                "name": "Boswellia",
+                "purpose": "Anti-inflammatory for joint pain",
+                "frequency": "Twice daily"
+              },
+              {
+                "dose": "400 mg",
+                "name": "Magnesium",
+                "purpose": "Muscle relaxation and pain relief",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 60,
+            "ancestry": [
+              "african",
+              "caucasian"
+            ],
+            "weight_lbs": 176.4,
+            "height_feet": 5,
+            "height_inches": 9,
+            "ancestry_other": null,
+            "biological_sex": "female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "arthritis"
+            ],
+            "surgeries": "Hip replacement in 2019, Knee replacement in 2021",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "arthritis": 2015
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": false,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": false,
+            "selected_approaches": [],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 2,
+              "caps_crowns": 7,
+              "root_canals": 3,
+              "gold_fillings": 1,
+              "silver_mercury_fillings": 5
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": 2016,
+            "mercury_fillings_removed": true
+          },
+          "dietary_habits": {
+            "diet_style": "Balanced diet",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "greater_than_10",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": null,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": true,
+            "night_urination_frequency": null
+          },
+          "systems_review": {
+            "digestive_symptoms": "none"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "monthly",
+              "typical_amount": "1 glass of wine on special occasions"
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 3
+          },
+          "sunlight_exposure": {
+            "days_per_week": 5,
+            "average_minutes_per_day": "40-50 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Retired Teacher",
+            "work_stress_level": 2
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": "Chronic joint pain in hands, wrists, and knees due to arthritis. Pain worse in mornings and with weather changes. Managed with supplements and gentle exercise.",
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"arthritis\": [\"mother\", \"father\", \"grand-parent\"], \"heart_disease\": [\"father\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Minimal, retired lifestyle",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "menstrual_concerns": null,
+              "concern_details": "Post-menopausal since 2015, no current concerns"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "75 ug/dL",
+        "eGFR": "62 mL/min/1.73 m2",
+        "Gender": "female",
+        "Calcium": "9.6 mg/dL",
+        "Ferritin": "88 ng/mL",
+        "Order ID": 1017,
+        "C-Peptide": "2.0 ng/mL",
+        "Test Date": "2024-02-15T08:45:00Z",
+        "Creatinine": "0.92 mg/dL",
+        "LH:FSH Ratio": "0.6",
+        "AST:ALT Ratio": "0.91",
+        "Total Protein": "7.2 g/dL",
+        "Triglycerides": "138 mg/dL",
+        "HDL Cholesterol": "55 mg/dL",
+        "Lipoprotein (a)": "33 mg/dL",
+        "Total Bilirubin": "0.75 mg/dL",
+        "% Hemoglobin A1C": "5.6 %",
+        "ApoB:ApoA1 Ratio": "0.72",
+        "Daytime Cortisol": "12.2 ug/dL",
+        "Direct Bilirubin": "0.28 mg/dL",
+        "LDL-C:ApoB Ratio": "1.16",
+        "Total Biomarkers": 40,
+        "25-(OH) Vitamin D": "28 ng/mL",
+        "LDL-C:HDL-C Ratio": "2.4",
+        "Total Cholesterol": "198 mg/dL",
+        "BUN:Creatinine Ratio": "18",
+        "Estim. Avg Glu (eAG)": "115 mg/dL",
+        "High-Sensitivity CRP": "6.2 mg/L",
+        "Estradiol (Sensitive)": "12 pg/mL",
+        "Apolipoprotein B (APOB)": "108 mg/dL",
+        "Triglycerides:HDL Ratio": "2.5",
+        "VLDL Cholesterol (Calc)": "28 mg/dL",
+        "Luteinizing Hormone (LH)": "28.5 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "150 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "17 mg/dL",
+        "Alkaline Phosphatase (ALP)": "95 U/L",
+        "Calculated LDL-Cholesterol": "115 mg/dL",
+        "Total Cholesterol:HDL Ratio": "3.6",
+        "Alanine Aminotransferase (ALT)": "32 U/L",
+        "Aspartate Aminotransferase (AST)": "29 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "3.0 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "47.5 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "118 ug/dL"
+      }
+    }
+  }
+]

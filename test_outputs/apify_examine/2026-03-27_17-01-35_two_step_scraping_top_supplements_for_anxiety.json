@@ -1,0 +1,85 @@
+{
+  "label": "Two-step: scraping top supplements for anxiety",
+  "input": {
+    "supplementUrls": [
+      "https://examine.com/supplements/kava/",
+      "https://examine.com/supplements/ashwagandha/",
+      "https://examine.com/supplements/saffron/"
+    ]
+  },
+  "apify_dataset_id": "j9uci9hzAx1XufvAh",
+  "items": [
+    {
+      "searchType": "supplements",
+      "query": "",
+      "resultCount": 3,
+      "results": [
+        {
+          "type": "supplement",
+          "url": "https://examine.com/supplements/ashwagandha/",
+          "name": "Ashwagandha",
+          "summary": "Ashwagandha has been called the king of Ayurvedic herbs. It\u2019s best known for reducing stress and anxiety. It may also modestly enhance various aspects of physical performance, increase testosterone levels, and improve reproductive health, but more research is needed to confirm these effects.",
+          "dosage": "Dosage InformationMedical disclaimerFormulation:\nVarious parts of the ashwagandha plant are used, but the most common supplemental form is an extract of its roots that may come in a capsule, liquid extraction, tablets, or tea. When ashwagandha is used as part of the Ayurvedic system, it usually involves more than just the herb alone. \nBecause withanolides are considered to be the major active component in ashwagandha, some extracts are standardized to contain a certain or minimum amount. Clinical trials have used standardized extracts containing anywhere from 1.5% to 35% withanolides, but many studies do not disclose this information, and the optimal amount of withanolides is not yet clear.[1][2][3][4][5][6][7] Note that while studies may use standardized extracts or proprietary formulas, variations in extraction methods, formulation, or composition can affect the physiological response.\nRange of dosages studied:\nStudies on ashwagandha have used daily dosages ranging from 120 to 12,000",
+          "safety": "Safety Information",
+          "researchSummaries": [
+            "In this 6-week randomized controlled trial in 56 team-sport athletes, ashwagandha improved exercise recovery, muscle soreness, and fatigue in the women, but not in the men."
+          ],
+          "citationCount": 37,
+          "categories": [
+            "#Dietitians",
+            "#ConflictOfInterest",
+            "#SportsNutrition",
+            "Muscle Gain & Exercise",
+            "Wrestling Performance",
+            "Immunity & Infectious Disease",
+            "COVID-19",
+            "Ashwagandha",
+            "Men\u2019s Health",
+            "Fat Loss"
+          ],
+          "scrapedAt": "2026-03-27T22:03:15.213Z",
+          "source": "Examine.com"
+        },
+        {
+          "type": "supplement",
+          "url": "https://examine.com/supplements/kava/?show_conditions=true",
+          "name": "Kava",
+          "summary": "Kava (Piper methysticum) is a plant that has had many traditional uses throughout history, especially among South Pacific Islanders. It is best known for anxiety reduction but comes with some serious safety concerns when used in excess.",
+          "dosage": "Dosage InformationMedical disclaimer\n\u26a0\ufe0f Caution: Risk of Liver Injury\nNo optimal dosages or durations for kava consumption have been determined at this point.[8] Kava dosing, especially in standardized formulations, may be done with reference to the kavalactone (specifically, kavapyrone; all known kavalactones are pyrones) content. Clinical trials have used dosages ranging from 100 to 400 mg/day of kava, and from 60 to 630 mg of kavalactones, per day.[9][10][11][12][13] \nAs with any plant or herbal preparation, factors such as plant part, growth conditions, and extraction methods may affect the bioactivity of kava supplements. Ideally, supplements will identify a standardized kavalactone content to improve consistency of results.[14][15][16][17][18][19] There appears to be some potential for substance abuse of kava, but when it is taken at the more commonly seen dosages, this is rare.[20] \nSome of kava\u2019s active ingredients may be secreted in breast milk. Since the effects of kava in in",
+          "safety": "Safety Information",
+          "citationCount": 13,
+          "scrapedAt": "2026-03-27T22:03:16.084Z",
+          "source": "Examine.com"
+        },
+        {
+          "type": "supplement",
+          "url": "https://examine.com/supplements/saffron/?show_conditions=true",
+          "name": "Saffron",
+          "summary": "Saffron is a spice with antioxidant properties derived from the flowering plant Crocus sativus. When used as a supplement, saffron seems to be effective at reducing symptoms of depression and possibly anxiety.",
+          "dosage": "Dosage InformationMedical disclaimerSaffron is usually taken at a dosage of 15 mg twice daily, for a total of 30 mg daily. While higher doses have been used, there is no clear benefit to this, and there may be an increased risk of side effects. Doses above 5 grams (5,000 mg) are considered toxic and doses above 20 grams (20,000 mg) may be lethal.[1]\nSaffron supplements usually contain saffron stigma extract, which is the most studied form. However, whole dehydrated stigma or petals are sometimes used, and preliminary research suggests they may also be effective.",
+          "safety": "Safety Information",
+          "researchSummaries": [
+            "In this 12-week randomized controlled trial in 92 participants with Parkinson\u2019s disease, saffron improved several non-motor symptoms, including cognition, fatigue, and sleep quality, compared to a placebo."
+          ],
+          "citationCount": 80,
+          "categories": [
+            "#Dietitians",
+            "Brain Health",
+            "Healthy Aging & Longevity",
+            "Energy & Fatigue",
+            "Herbal Supplements",
+            "Mental Health",
+            "Saffron",
+            "Joints & Bones",
+            "Osteoarthritis (OA)",
+            "Diabetes & Blood Sugar"
+          ],
+          "scrapedAt": "2026-03-27T22:03:18.401Z",
+          "source": "Examine.com"
+        }
+      ],
+      "scrapedAt": "2026-03-27T22:03:18.868Z",
+      "source": "Examine.com"
+    }
+  ]
+}

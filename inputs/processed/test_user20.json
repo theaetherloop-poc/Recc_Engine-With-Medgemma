@@ -1,0 +1,256 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user20@example.com",
+        "phase_status": {
+          "id": "b9c0d1e2-f3a4-4937-b890-123456789012",
+          "user_id": "c0d1e2f3-a4b5-4938-c901-234567890123",
+          "created_at": "2024-03-10T08:15:30Z",
+          "updated_at": "2024-03-24T13:50:20Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": true,
+            "known_allergies": [
+              {
+                "allergen": "peanuts",
+                "reaction": "Anaphylaxis and swelling",
+                "allergen_other": null
+              }
+            ]
+          },
+          "medications": {
+            "has_medications": false,
+            "current_medications": []
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "1000 mg",
+                "name": "Turmeric",
+                "purpose": "Anti-inflammatory support",
+                "frequency": "Twice daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Ginger",
+                "purpose": "Digestive health and inflammation",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "200 mg",
+                "name": "CoQ10",
+                "purpose": "Cardiovascular and energy support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "L-Carnitine",
+                "purpose": "Energy metabolism and exercise performance",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Alpha-Lipoic Acid",
+                "purpose": "Antioxidant and blood sugar support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 28,
+            "ancestry": [
+              "pacific_islander",
+              "asian"
+            ],
+            "weight_lbs": 172.8,
+            "height_feet": 5,
+            "height_inches": 10,
+            "ancestry_other": null,
+            "biological_sex": "male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "none"
+            ],
+            "surgeries": "Appendectomy in 2015",
+            "diagnoses_other": null,
+            "diagnoses_years": {}
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": true,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": false,
+            "selected_approaches": [],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 0,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Paleo",
+            "diet_style_other": null,
+            "eating_out_frequency": "more_than_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "8_to_10",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 0,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": true,
+            "night_urination_frequency": 0
+          },
+          "systems_review": {
+            "digestive_symptoms": "none"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "sometimes",
+              "typical_amount": "2-3 beers on weekends"
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 5
+          },
+          "sunlight_exposure": {
+            "days_per_week": 7,
+            "average_minutes_per_day": "60-90 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Marine Biologist",
+            "work_stress_level": 5
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": false
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "no"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{}",
+            "has_family_history": false,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Ocean water exposure, minimal chemical contact",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": null,
+            "has_adverse_reactions": false
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": null,
+              "hormonal_concerns": "no"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "105 ug/dL",
+        "eGFR": "102 mL/min/1.73 m2",
+        "Gender": "male",
+        "Calcium": "10.1 mg/dL",
+        "Ferritin": "142 ng/mL",
+        "Order ID": 1020,
+        "C-Peptide": "1.6 ng/mL",
+        "Test Date": "2024-03-20T07:30:00Z",
+        "Creatinine": "0.88 mg/dL",
+        "LH:FSH Ratio": "1.2",
+        "AST:ALT Ratio": "0.92",
+        "Total Protein": "7.5 g/dL",
+        "Triglycerides": "78 mg/dL",
+        "HDL Cholesterol": "62 mg/dL",
+        "Lipoprotein (a)": "12 mg/dL",
+        "Total Bilirubin": "0.9 mg/dL",
+        "% Hemoglobin A1C": "5.1 %",
+        "ApoB:ApoA1 Ratio": "0.48",
+        "Daytime Cortisol": "16.2 ug/dL",
+        "Direct Bilirubin": "0.32 mg/dL",
+        "LDL-C:ApoB Ratio": "1.35",
+        "Total Biomarkers": 38,
+        "25-(OH) Vitamin D": "48 ng/mL",
+        "LDL-C:HDL-C Ratio": "1.3",
+        "Total Cholesterol": "152 mg/dL",
+        "BUN:Creatinine Ratio": "15",
+        "Estim. Avg Glu (eAG)": "100 mg/dL",
+        "High-Sensitivity CRP": "0.6 mg/L",
+        "Estradiol (Sensitive)": "28 pg/mL",
+        "Apolipoprotein B (APOB)": "78 mg/dL",
+        "Triglycerides:HDL Ratio": "1.3",
+        "VLDL Cholesterol (Calc)": "16 mg/dL",
+        "Luteinizing Hormone (LH)": "7.8 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "162 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "13 mg/dL",
+        "Alkaline Phosphatase (ALP)": "68 U/L",
+        "Calculated LDL-Cholesterol": "74 mg/dL",
+        "Total Cholesterol:HDL Ratio": "2.5",
+        "Alanine Aminotransferase (ALT)": "24 U/L",
+        "Aspartate Aminotransferase (AST)": "22.1 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "1.8 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "6.5 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "245 ug/dL"
+      }
+    }
+  }
+]

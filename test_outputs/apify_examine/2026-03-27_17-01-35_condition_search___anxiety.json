@@ -1,0 +1,117 @@
+{
+  "label": "Condition search - Anxiety",
+  "input": {
+    "query": "anxiety",
+    "searchType": "conditions",
+    "maxResults": 3
+  },
+  "apify_dataset_id": "2DI8qupZwshF0FeCx",
+  "items": [
+    {
+      "searchType": "conditions",
+      "query": "anxiety",
+      "resultCount": 3,
+      "results": [
+        {
+          "type": "supplement",
+          "url": "https://examine.com/supplements/",
+          "name": "Supplements",
+          "summary": "Examine simplifies nutrition and supplementation \u2014 through meticulous analysis of the latest scientific research \u2014 to help answer your questions on how to be healthier.",
+          "citationCount": 0,
+          "scrapedAt": "2026-03-27T22:02:33.494Z",
+          "source": "Examine.com"
+        },
+        {
+          "type": "condition",
+          "url": "https://examine.com/conditions/anxiety/",
+          "name": "Anxiety Disorders (Other)",
+          "description": "Anxiety Disorders (Other) falls under the Mental Health category. The Examine Database covers Kava, Ashwagandha, and 10 other interventions.",
+          "recommendedSupplements": [
+            {
+              "name": "Supplements",
+              "url": "https://examine.com/supplements/"
+            },
+            {
+              "name": "Kava",
+              "url": "https://examine.com/supplements/kava/"
+            },
+            {
+              "name": "Ashwagandha",
+              "url": "https://examine.com/supplements/ashwagandha/"
+            },
+            {
+              "name": "Saffron",
+              "url": "https://examine.com/supplements/saffron/"
+            },
+            {
+              "name": "Lavender",
+              "url": "https://examine.com/supplements/lavender/"
+            },
+            {
+              "name": "Black Cohosh",
+              "url": "https://examine.com/supplements/black-cohosh/"
+            },
+            {
+              "name": "Curcumin",
+              "url": "https://examine.com/supplements/curcumin/"
+            },
+            {
+              "name": "Lemon Balm",
+              "url": "https://examine.com/supplements/lemon-balm/"
+            },
+            {
+              "name": "Omega-3 Fatty Acids",
+              "url": "https://examine.com/supplements/omega-3-fatty-acids/"
+            },
+            {
+              "name": "Prebiotics",
+              "url": "https://examine.com/supplements/prebiotics/"
+            },
+            {
+              "name": "Probiotics",
+              "url": "https://examine.com/supplements/probiotics/"
+            },
+            {
+              "name": "Synbiotics",
+              "url": "https://examine.com/supplements/synbiotics/"
+            },
+            {
+              "name": "prebiotics",
+              "url": "https://examine.com/supplements/prebiotics/"
+            },
+            {
+              "name": "probiotics",
+              "url": "https://examine.com/supplements/probiotics/"
+            },
+            {
+              "name": "synbiotics",
+              "url": "https://examine.com/supplements/synbiotics/"
+            },
+            {
+              "name": "UTLdrQjvoahovsHJgs vJpeTZRCq",
+              "url": "https://examine.com/supplements/lacticaseibacillus-paracasei/"
+            }
+          ],
+          "scrapedAt": "2026-03-27T22:02:34.292Z",
+          "source": "Examine.com"
+        },
+        {
+          "type": "condition",
+          "url": "https://examine.com/conditions/",
+          "name": "Health Conditions and Goals",
+          "description": "Examine delves into a large number of common and uncommon health conditions and goals, along with the latest research for nonmedical interventions like supplements and diet.",
+          "recommendedSupplements": [
+            {
+              "name": "Supplements",
+              "url": "https://examine.com/supplements/"
+            }
+          ],
+          "scrapedAt": "2026-03-27T22:02:39.792Z",
+          "source": "Examine.com"
+        }
+      ],
+      "scrapedAt": "2026-03-27T22:02:40.699Z",
+      "source": "Examine.com"
+    }
+  ]
+}

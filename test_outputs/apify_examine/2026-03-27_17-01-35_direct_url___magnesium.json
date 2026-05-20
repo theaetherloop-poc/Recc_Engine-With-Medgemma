@@ -1,0 +1,46 @@
+{
+  "label": "Direct URL - Magnesium",
+  "input": {
+    "supplementUrls": [
+      "https://examine.com/supplements/magnesium/"
+    ]
+  },
+  "apify_dataset_id": "cWJbidX86u6f38mTr",
+  "items": [
+    {
+      "searchType": "supplements",
+      "query": "",
+      "resultCount": 1,
+      "results": [
+        {
+          "type": "supplement",
+          "url": "https://examine.com/supplements/magnesium/?show_conditions=true",
+          "name": "Magnesium",
+          "summary": "Magnesium is an essential dietary mineral that is involved in energy production, nervous system function, blood pressure regulation, and blood glucose control. A lack of magnesium in the diet \u2014 which is common in modern societies \u2014 is associated with an increased risk of diabetes, cardiovascular disease, and other health conditions.",
+          "dosage": "Dosage InformationMedical disclaimerFormulation:\nDosage forms of magnesium include oral preparations such as tablets, capsules, powders, liquids, and effervescent tablets as well as topical preparations. \nMagnesium supplements come in a variety of salt forms that differ in how well they\u2019re absorbed (their bioavailability), the amount of elemental magnesium they provide, and their physiological effect. Common forms include magnesium oxide, magnesium citrate, magnesium glycinate, magnesium bisglycinate, and magnesium chloride. \nWhich form of magnesium is best for increasing magnesium levels?\nMagnesium citrate is one of the most-studied forms of magnesium and consistently shows good bioavailability.[1] Magnesium chloride, magnesium gluconate, magnesium lactate, magnesium glycinate, and magnesium aspartate also appear to have good bioavailability.[1][2][3] On the other hand, magnesium oxide and magnesium carbonate have extremely poor absorption and aren\u2019t recommended for the purpose of inc",
+          "safety": "Safety Information",
+          "researchSummaries": [
+            "In this 6-week randomized controlled trial in 100 participants (average age of 37) with self-reported sleep problems, magnesium L-threonate improved cognition, but not sleep quality."
+          ],
+          "citationCount": 96,
+          "categories": [
+            "#ConflictOfInterest",
+            "Sleep",
+            "Brain Health",
+            "Sleep Health",
+            "Cognitive Improvement",
+            "Magnesium",
+            "Zinc",
+            "Omega-3 Fatty Acids",
+            "Tryptophan",
+            "Antioxidants"
+          ],
+          "scrapedAt": "2026-03-27T22:02:04.432Z",
+          "source": "Examine.com"
+        }
+      ],
+      "scrapedAt": "2026-03-27T22:02:04.906Z",
+      "source": "Examine.com"
+    }
+  ]
+}

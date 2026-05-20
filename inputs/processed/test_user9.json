@@ -1,0 +1,249 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user9@example.com",
+        "phase_status": {
+          "id": "e7f8a9b0-c1d2-4915-e678-901234567890",
+          "user_id": "f8a9b0c1-d2e3-4916-f789-012345678901",
+          "created_at": "2024-01-25T15:40:10Z",
+          "updated_at": "2024-02-08T12:15:25Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Venlafaxine",
+                "dose": "150 mg",
+                "frequency": "Daily",
+                "purpose": "Depression and anxiety management"
+              },
+              {
+                "name": "Propranolol",
+                "dose": "40 mg",
+                "frequency": "Twice daily",
+                "purpose": "Anxiety and migraine prevention"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "400 mg",
+                "name": "Magnesium",
+                "purpose": "Anxiety and muscle tension relief",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "200 mg",
+                "name": "L-Theanine",
+                "purpose": "Stress and anxiety management",
+                "frequency": "Twice daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Ashwagandha",
+                "purpose": "Stress adaptation and cortisol support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Omega-3",
+                "purpose": "Brain health and mood support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 27,
+            "ancestry": [
+              "african"
+            ],
+            "weight_lbs": 142.8,
+            "height_feet": 5,
+            "height_inches": 6,
+            "ancestry_other": null,
+            "biological_sex": "female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "anxiety_disorder"
+            ],
+            "surgeries": "None",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "anxiety_disorder": 2021
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": "Garmin Vivosmart 5",
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "functional_medicine"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 0,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Whole foods plant-based",
+            "diet_style_other": null,
+            "eating_out_frequency": "more_than_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "less_than_6",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 2,
+            "trouble_falling_asleep": true,
+            "trouble_staying_asleep": true,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": 0
+          },
+          "systems_review": {
+            "digestive_symptoms": "stomach_rumbles/borborygmus"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "rarely",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 7
+          },
+          "sunlight_exposure": {
+            "days_per_week": 5,
+            "average_minutes_per_day": "25-35 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Graphic Designer",
+            "work_stress_level": 5
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": "Frequent migraines, 4-5 times per month, often triggered by stress, weather changes, and lack of sleep",
+              "frequent_headaches_migraines": true
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": false
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "no"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"anxiety\": [\"mother\"], \"depression\": [\"mother\", \"sister\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Minimal, home office environment",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Mild nausea and dizziness initially with Venlafaxine, resolved after 3 weeks",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "menstrual_concerns": "Irregular cycles, severe PMS with mood swings and anxiety",
+              "concern_details": "Cycles range from 25-35 days, heavy bleeding days 1-2"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Gender": "female",
+        "Order ID": 1009,
+        "Test Date": "2024-02-04T11:30:00Z",
+        "Alanine Aminotransferase (ALT)": "19 U/L",
+        "Aspartate Aminotransferase (AST)": "16.7 U/L",
+        "Albumin": "4.2 g/dL",
+        "Blood Urea Nitrogen (BUN)": "8.6 mg/dL",
+        "Creatinine": "0.72 mg/dL",
+        "Total Bilirubin": "0.55 mg/dL",
+        "eGFR": "96 mL/min/1.73 m\u00b2",
+        "Estim. Avg Glu (eAG)": "97 mg/dL",
+        "Lipoprotein (a)": "12 mg/dL",
+        "Ferritin": "42 ng/mL",
+        "Homocysteine (HCY)": "7.2 umol/L",
+        "High-Sensitivity CRP": "1.5 mg/L",
+        "25-(OH) Vitamin D": "32 ng/mL",
+        "% Hemoglobin A1C": "5.0 %",
+        "Fasting Insulin": "5.8 uIU/mL",
+        "Total Cholesterol:HDL Ratio": "2.2",
+        "Triglycerides:HDL Ratio": "1.1",
+        "Daytime Cortisol": "24.2 mcg/dL",
+        "Thyroid Stimulating Hormone (TSH)": "1.8 uIU/mL",
+        "Apolipoprotein A1 (APOA1)": "179 mg/dL",
+        "Apolipoprotein B (APOB)": "68 mg/dL",
+        "ApoB:ApoA1 Ratio": "0.38",
+        "Calculated LDL-Cholesterol": "73 mg/dL",
+        "HDL Cholesterol": "71 mg/dL",
+        "Total Cholesterol": "158 mg/dL",
+        "Triglycerides": "78 mg/dL",
+        "Estradiol (Sensitive)": "132 pg/mL",
+        "Follicle-Stimulating Hormone (FSH)": "6.6 mIU/mL",
+        "Total Biomarkers": 28
+      }
+    }
+  }
+]

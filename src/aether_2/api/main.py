@@ -100,6 +100,10 @@ class PatientDataRequest(BaseModel):
         None,
         description="Latest biomarker results (alternative format)"
     )
+    phase3_detailed_intake: Optional[Dict[str, Any]] = Field(
+        None,
+        description="Phase 3 coaching questionnaire data: {\"questions\": [{\"id\", \"category\", \"question\", \"value\", ...}, ...]}. Required when run_phase3=true."
+    )
 
     class Config:
         json_schema_extra = {
@@ -169,6 +173,18 @@ class ProtocolResponse(BaseModel):
         None,
         description="Excel file information (only present if generate_excel=true)"
     )
+    refined_protocol: Optional[Dict[str, Any]] = Field(
+        None,
+        description="Phase 3 refined protocol (≤10 supplements). Only present when run_phase3=true and a questionnaire was provided."
+    )
+    phase3_execution_time_seconds: Optional[float] = Field(
+        None,
+        description="Phase 3 refinement execution time in seconds (null if Phase 3 wasn't run)."
+    )
+    phase3_error: Optional[str] = Field(
+        None,
+        description="Error message from Phase 3 refinement (null on success or when not run). Phase 2 result is still returned even if Phase 3 fails."
+    )
 
 
 class ErrorResponse(BaseModel):
@@ -225,6 +241,10 @@ async def generate_protocol(
     generate_excel: bool = Query(
         False,
         description="Generate Excel file and upload to GCS. Returns signed URL in response."
+    ),
+    run_phase3: bool = Query(
+        False,
+        description="Run Phase 3 refinement (requires phase3_detailed_intake in request body). Phase 2 protocol is always returned; Phase 3 output added as `refined_protocol`."
     )
 ):
     """
@@ -250,12 +270,16 @@ async def generate_protocol(
 
         # Normalize data structure to match what pipeline expects
         # Handle nested format: {metadata, patient_data: {phase1_basic_intake, phase2_detailed_intake}, latest_biomarker_results}
+        # phase3_detailed_intake is accepted at the top level of the request and forwarded as-is.
+        phase3_payload = raw_data.get("phase3_detailed_intake")
+
         if raw_data.get("patient_data"):
             patient_data = {
                 "metadata": raw_data.get("metadata", {}),
                 "phase1_basic_intake": raw_data["patient_data"].get("phase1_basic_intake", {}),
                 "phase2_detailed_intake": raw_data["patient_data"].get("phase2_detailed_intake", {}),
-                "latest_biomarker_results": raw_data.get("latest_biomarker_results", {})
+                "latest_biomarker_results": raw_data.get("latest_biomarker_results", {}),
+                "phase3_detailed_intake": phase3_payload,
             }
         # Handle direct format: {phase1_basic_intake, phase2_blood_report, metadata}
         elif raw_data.get("phase1_basic_intake"):
@@ -263,7 +287,8 @@ async def generate_protocol(
                 "metadata": raw_data.get("metadata", {}),
                 "phase1_basic_intake": raw_data.get("phase1_basic_intake", {}),
                 "phase2_detailed_intake": raw_data.get("phase2_detailed_intake", {}),
-                "latest_biomarker_results": raw_data.get("phase2_blood_report", {})
+                "latest_biomarker_results": raw_data.get("phase2_blood_report", {}),
+                "phase3_detailed_intake": phase3_payload,
             }
         else:
             raise HTTPException(
@@ -286,8 +311,8 @@ async def generate_protocol(
         print(f"{'='*60}")
         
         # Run pipeline
-        result = run_aether_pipeline(patient_data)
-        
+        result = run_aether_pipeline(patient_data, run_phase3=run_phase3)
+
         # Check if pipeline succeeded
         if result["status"] == "error":
             raise HTTPException(
@@ -301,7 +326,10 @@ async def generate_protocol(
             "user_id": result["user_id"],
             "protocol": result["protocol"],
             "execution_time_seconds": result.get("execution_time_seconds"),
-            "message": f"Protocol generated successfully for user {result['user_id']}"
+            "message": f"Protocol generated successfully for user {result['user_id']}",
+            "refined_protocol": result.get("refined_protocol"),
+            "phase3_execution_time_seconds": result.get("phase3_execution_time_seconds"),
+            "phase3_error": result.get("phase3_error"),
         }
 
         # Only include preprocessing outputs if requested

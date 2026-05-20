@@ -1,0 +1,267 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user19@example.com",
+        "phase_status": {
+          "id": "f7a8b9c0-d1e2-4935-f678-901234567890",
+          "user_id": "a8b9c0d1-e2f3-4936-a789-012345678901",
+          "created_at": "2024-01-18T16:45:00Z",
+          "updated_at": "2024-02-28T11:20:45Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Levothyroxine",
+                "dose": "75 mcg",
+                "frequency": "Daily",
+                "purpose": "Hypothyroidism management"
+              },
+              {
+                "name": "Metformin",
+                "dose": "1000 mg",
+                "frequency": "Twice daily",
+                "purpose": "Type 2 diabetes and insulin resistance"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "200 mcg",
+                "name": "Selenium",
+                "purpose": "Thyroid function support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Berberine",
+                "purpose": "Blood sugar regulation",
+                "frequency": "Twice daily with meals"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Inositol",
+                "purpose": "Insulin sensitivity and PCOS support",
+                "frequency": "Twice daily"
+              },
+              {
+                "dose": "400 mg",
+                "name": "Magnesium",
+                "purpose": "Insulin sensitivity and sleep",
+                "frequency": "Daily at bedtime"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 34,
+            "ancestry": [
+              "south_asian",
+              "caucasian"
+            ],
+            "weight_lbs": 198.2,
+            "height_feet": 5,
+            "height_inches": 4,
+            "ancestry_other": null,
+            "biological_sex": "female",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "diabetes",
+              "hypothyroidism",
+              "pcos"
+            ],
+            "surgeries": "Laparoscopic ovarian cyst removal in 2020",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "diabetes": 2021,
+              "hypothyroidism": 2019,
+              "pcos": 2018
+            }
+          },
+          "wearable_devices": {
+            "fitbit": true,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": true,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "ayurveda",
+              "functional_medicine",
+              "yoga"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": false
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 2,
+              "root_canals": 1,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 3
+            },
+            "daily_brush_floss": "brush_only",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Low-carb",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 2,
+            "trouble_falling_asleep": true,
+            "trouble_staying_asleep": true,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": 1
+          },
+          "systems_review": {
+            "digestive_symptoms": "bloating"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "rarely",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 4
+          },
+          "sunlight_exposure": {
+            "days_per_week": 3,
+            "average_minutes_per_day": "20-30 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Software Engineer",
+            "work_stress_level": 7
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": "Occasional tension headaches, especially during work deadlines",
+              "frequent_headaches_migraines": true
+            },
+            "skin_health": {
+              "has_skin_issues": true,
+              "skin_condition_details": "Acne and hirsutism related to PCOS, dark patches (acanthosis nigricans) on neck"
+            },
+            "chronic_pain": {
+              "pain_details": "Lower back pain, pelvic pain related to PCOS",
+              "has_chronic_pain": true
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "yes",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"diabetes\": [\"mother\", \"father\", \"grand-parent\"], \"hypothyroidism\": [\"mother\", \"sister\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Office environment, minimal direct exposure",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Mild gastrointestinal upset with Metformin initially, resolved with extended-release formulation",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": null,
+            "female_specific": {
+              "menstrual_concerns": "Irregular cycles, 45-60 day cycles, heavy bleeding when periods occur, severe PMS",
+              "concern_details": "PCOS diagnosis in 2018, trying to conceive, insulin resistance affecting fertility"
+            }
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "68 ug/dL",
+        "eGFR": "78 mL/min/1.73 m2",
+        "Gender": "female",
+        "Calcium": "9.4 mg/dL",
+        "Ferritin": "45 ng/mL",
+        "Order ID": 1019,
+        "C-Peptide": "4.2 ng/mL",
+        "Test Date": "2024-02-25T10:00:00Z",
+        "Creatinine": "0.78 mg/dL",
+        "LH:FSH Ratio": "2.8",
+        "AST:ALT Ratio": "0.88",
+        "Total Protein": "7.0 g/dL",
+        "Triglycerides": "185 mg/dL",
+        "HDL Cholesterol": "42 mg/dL",
+        "Lipoprotein (a)": "28 mg/dL",
+        "Total Bilirubin": "0.6 mg/dL",
+        "% Hemoglobin A1C": "6.9 %",
+        "ApoB:ApoA1 Ratio": "0.85",
+        "Daytime Cortisol": "19.8 ug/dL",
+        "Direct Bilirubin": "0.24 mg/dL",
+        "LDL-C:ApoB Ratio": "1.12",
+        "Total Biomarkers": 41,
+        "25-(OH) Vitamin D": "22 ng/mL",
+        "LDL-C:HDL-C Ratio": "3.2",
+        "Total Cholesterol": "212 mg/dL",
+        "BUN:Creatinine Ratio": "17",
+        "Estim. Avg Glu (eAG)": "161 mg/dL",
+        "High-Sensitivity CRP": "4.8 mg/L",
+        "Estradiol (Sensitive)": "85 pg/mL",
+        "Apolipoprotein B (APOB)": "125 mg/dL",
+        "Triglycerides:HDL Ratio": "4.4",
+        "VLDL Cholesterol (Calc)": "37 mg/dL",
+        "Luteinizing Hormone (LH)": "14.2 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "147 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "14 mg/dL",
+        "Alkaline Phosphatase (ALP)": "88 U/L",
+        "Calculated LDL-Cholesterol": "133 mg/dL",
+        "Total Cholesterol:HDL Ratio": "5.0",
+        "Alanine Aminotransferase (ALT)": "38 U/L",
+        "Aspartate Aminotransferase (AST)": "33.4 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "4.2 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "5.1 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "285 ug/dL"
+      }
+    }
+  }
+]

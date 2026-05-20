@@ -1,0 +1,261 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user18@example.com",
+        "phase_status": {
+          "id": "e5f6a7b8-c9d0-4933-e456-789012345678",
+          "user_id": "f6a7b8c9-d0e1-4934-f567-890123456789",
+          "created_at": "2024-02-22T10:20:30Z",
+          "updated_at": "2024-03-07T14:35:15Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Albuterol",
+                "dose": "90 mcg",
+                "frequency": "As needed",
+                "purpose": "Asthma rescue inhaler"
+              },
+              {
+                "name": "Fluticasone/Salmeterol",
+                "dose": "250/50 mcg",
+                "frequency": "Twice daily",
+                "purpose": "Asthma maintenance and prevention"
+              },
+              {
+                "name": "Montelukast",
+                "dose": "10 mg",
+                "frequency": "Daily at bedtime",
+                "purpose": "Asthma and allergy control"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "600 mg",
+                "name": "N-Acetyl Cysteine",
+                "purpose": "Respiratory health and mucus thinning",
+                "frequency": "Twice daily"
+              },
+              {
+                "dose": "1000 mg",
+                "name": "Quercetin",
+                "purpose": "Allergy and inflammation support",
+                "frequency": "Daily"
+              },
+              {
+                "dose": "50 mg",
+                "name": "Zinc",
+                "purpose": "Immune system support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 39,
+            "ancestry": [
+              "middle_eastern",
+              "caucasian"
+            ],
+            "weight_lbs": 158.6,
+            "height_feet": 5,
+            "height_inches": 6,
+            "ancestry_other": null,
+            "biological_sex": "male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "asthma"
+            ],
+            "surgeries": "None",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "asthma": 2014
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": true,
+            "other_device": null,
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "functional_medicine"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 1,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Mediterranean",
+            "diet_style_other": null,
+            "eating_out_frequency": "more_than_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "6_to_8",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 0,
+            "trouble_falling_asleep": false,
+            "trouble_staying_asleep": false,
+            "wake_feeling_refreshed": true,
+            "night_urination_frequency": 0
+          },
+          "systems_review": {
+            "digestive_symptoms": "none"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "rarely",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 6
+          },
+          "sunlight_exposure": {
+            "days_per_week": 6,
+            "average_minutes_per_day": "45-60 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Personal Trainer",
+            "work_stress_level": 4
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": null,
+              "frequent_headaches_migraines": false
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "no",
+            "high_sugar_childhood_diet": "no"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"asthma\": [\"father\", \"brother\"], \"allergies\": [\"mother\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Gym environment, exposure to cleaning products and equipment",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Mild jitteriness with Albuterol if used too frequently",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": null,
+              "hormonal_concerns": "no"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "91 ug/dL",
+        "eGFR": "93 mL/min/1.73 m2",
+        "Gender": "male",
+        "Calcium": "9.9 mg/dL",
+        "Ferritin": "118 ng/mL",
+        "Order ID": 1018,
+        "C-Peptide": "1.9 ng/mL",
+        "Test Date": "2024-03-03T09:30:00Z",
+        "Creatinine": "0.96 mg/dL",
+        "LH:FSH Ratio": "1.3",
+        "AST:ALT Ratio": "0.94",
+        "Total Protein": "7.4 g/dL",
+        "Triglycerides": "92 mg/dL",
+        "HDL Cholesterol": "58 mg/dL",
+        "Lipoprotein (a)": "17 mg/dL",
+        "Total Bilirubin": "0.7 mg/dL",
+        "% Hemoglobin A1C": "5.3 %",
+        "ApoB:ApoA1 Ratio": "0.52",
+        "Daytime Cortisol": "17.5 ug/dL",
+        "Direct Bilirubin": "0.26 mg/dL",
+        "LDL-C:ApoB Ratio": "1.28",
+        "Total Biomarkers": 39,
+        "25-(OH) Vitamin D": "41 ng/mL",
+        "LDL-C:HDL-C Ratio": "1.6",
+        "Total Cholesterol": "168 mg/dL",
+        "BUN:Creatinine Ratio": "16",
+        "Estim. Avg Glu (eAG)": "106 mg/dL",
+        "High-Sensitivity CRP": "1.1 mg/L",
+        "Estradiol (Sensitive)": "31 pg/mL",
+        "Apolipoprotein B (APOB)": "88 mg/dL",
+        "Triglycerides:HDL Ratio": "1.6",
+        "VLDL Cholesterol (Calc)": "18 mg/dL",
+        "Luteinizing Hormone (LH)": "8.6 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "169 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "15 mg/dL",
+        "Alkaline Phosphatase (ALP)": "72 U/L",
+        "Calculated LDL-Cholesterol": "92 mg/dL",
+        "Total Cholesterol:HDL Ratio": "2.9",
+        "Alanine Aminotransferase (ALT)": "26 U/L",
+        "Aspartate Aminotransferase (AST)": "24.4 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "2.3 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "6.6 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "202 ug/dL"
+      }
+    }
+  }
+]

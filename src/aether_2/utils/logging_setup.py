@@ -6,40 +6,32 @@ from datetime import datetime
 # Setup logging for file-based debugging (minimal console output)
 def setup_logging():
     """Setup logging to files only, minimal console output"""
-    # Create logs directory if it doesn't exist
     log_dir = "logs"
     os.makedirs(log_dir, exist_ok=True)
-    
-    # Configure logging to files only (no console handler)
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        handlers=[
-            # File handler for detailed logs only
-            logging.FileHandler(os.path.join(log_dir, 'crewai_debug.log'))
-        ]
-    )
-    
+
+    log_file = os.path.join(log_dir, 'crewai_debug.log')
+    formatter = logging.Formatter('%(asctime)s - %(thread)d - %(name)s-%(filename)s:%(funcName)s:%(lineno)d - %(levelname)s: %(message)s')
+
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(formatter)
+
+    # Attach directly to the root logger — works even if basicConfig was already called
+    root_logger = logging.getLogger()
+    # Avoid adding duplicate handlers on re-import
+    if not any(isinstance(h, logging.FileHandler) and getattr(h, 'baseFilename', None) and h.baseFilename.endswith('crewai_debug.log') for h in root_logger.handlers):
+        root_logger.addHandler(file_handler)
+    root_logger.setLevel(logging.DEBUG)
+
     # Set specific loggers to DEBUG level for file logging
-    loggers_to_debug = [
-        'crewai',
-        'crewai.agent',
-        'crewai.task',
-        'crewai.crew',
-        'openai',
-        'anthropic',
-        'google.cloud',
-        'httpx',
-        'urllib3'
-    ]
-    
-    for logger_name in loggers_to_debug:
+    for logger_name in ['crewai', 'crewai.agent', 'crewai.task', 'crewai.crew',
+                        'openai', 'anthropic', 'google.cloud', 'httpx', 'urllib3']:
         logging.getLogger(logger_name).setLevel(logging.DEBUG)
-    
-    # Create a custom logger for our application (file only)
+
+    # Create a custom logger for our application
     app_logger = logging.getLogger('aether_2')
     app_logger.setLevel(logging.INFO)
-    
+
     return app_logger
 
 # Setup CSV logging for execution tracking

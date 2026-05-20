@@ -1,0 +1,255 @@
+[
+  {
+    "user_full_data": {
+      "metadata": {
+        "email": "test_user15@example.com",
+        "phase_status": {
+          "id": "e9f0a1b2-c3d4-4927-e890-123456789012",
+          "user_id": "f0a1b2c3-d4e5-4928-f901-234567890123",
+          "created_at": "2024-01-20T14:10:30Z",
+          "updated_at": "2024-02-03T11:25:45Z",
+          "phase1_status": "completed",
+          "phase2_status": "completed",
+          "phase3_status": "pending"
+        }
+      },
+      "patient_data": {
+        "phase1_basic_intake": {
+          "allergies": {
+            "has_allergies": false,
+            "known_allergies": []
+          },
+          "medications": {
+            "has_medications": true,
+            "current_medications": [
+              {
+                "name": "Escitalopram",
+                "dose": "20 mg",
+                "frequency": "Daily",
+                "purpose": "Depression and anxiety management"
+              },
+              {
+                "name": "Trazodone",
+                "dose": "50 mg",
+                "frequency": "Before bedtime",
+                "purpose": "Sleep aid"
+              }
+            ]
+          },
+          "supplements": {
+            "has_supplements": true,
+            "current_supplements": [
+              {
+                "dose": "300 mg",
+                "name": "5-HTP",
+                "purpose": "Mood and sleep support",
+                "frequency": "Before bedtime"
+              },
+              {
+                "dose": "400 mg",
+                "name": "Magnesium Glycinate",
+                "purpose": "Sleep and anxiety support",
+                "frequency": "Before bedtime"
+              },
+              {
+                "dose": "500 mg",
+                "name": "Probiotics",
+                "purpose": "Gut-brain axis support",
+                "frequency": "Daily"
+              }
+            ]
+          },
+          "demographics": {
+            "age": 35,
+            "ancestry": [
+              "hispanic_latino",
+              "native_american"
+            ],
+            "weight_lbs": 165.8,
+            "height_feet": 5,
+            "height_inches": 8,
+            "ancestry_other": null,
+            "biological_sex": "male",
+            "biological_sex_other": null
+          },
+          "medical_history": {
+            "diagnoses": [
+              "anxiety_disorder"
+            ],
+            "surgeries": "None",
+            "diagnoses_other": null,
+            "diagnoses_years": {
+              "anxiety_disorder": 2020
+            }
+          },
+          "wearable_devices": {
+            "fitbit": false,
+            "oura_ring": false,
+            "apple_watch": false,
+            "other_device": "Whoop 4.0",
+            "has_any_wearables": true,
+            "google_pixel_watch": false,
+            "samsung_galaxy_watch": false
+          },
+          "complementary_approaches": {
+            "ayurveda": false,
+            "homeopathy": false,
+            "korean_medicine": false,
+            "functional_medicine": true,
+            "selected_approaches": [
+              "functional_medicine"
+            ],
+            "traditional_chinese_medicine": false
+          }
+        },
+        "phase2_detailed_intake": {
+          "pets_animals": {
+            "has_pets": true
+          },
+          "dental_health": {
+            "dental_work": {
+              "implants": 0,
+              "caps_crowns": 0,
+              "root_canals": 0,
+              "gold_fillings": 0,
+              "silver_mercury_fillings": 0
+            },
+            "daily_brush_floss": "both_daily",
+            "removal_timeframe": null,
+            "mercury_fillings_removed": false
+          },
+          "dietary_habits": {
+            "diet_style": "Mediterranean",
+            "diet_style_other": null,
+            "eating_out_frequency": "1_2_per_week"
+          },
+          "sleep_patterns": {
+            "hours_category": "less_than_6",
+            "snoring_sleep_apnea": "No snoring",
+            "night_wake_frequency": 3,
+            "trouble_falling_asleep": true,
+            "trouble_staying_asleep": true,
+            "wake_feeling_refreshed": false,
+            "night_urination_frequency": 0
+          },
+          "systems_review": {
+            "digestive_symptoms": "constipation"
+          },
+          "lifestyle_factors": {
+            "alcohol": {
+              "frequency": "rarely",
+              "typical_amount": null
+            },
+            "tobacco": {
+              "quit_year": null,
+              "use_status": "never",
+              "duration_category": null
+            },
+            "recreational_drugs": {
+              "uses_substances": false,
+              "substance_details": null
+            }
+          },
+          "physical_activity": {
+            "exercise_days_per_week": 4
+          },
+          "sunlight_exposure": {
+            "days_per_week": 5,
+            "average_minutes_per_day": "30-40 minutes"
+          },
+          "occupation_wellness": {
+            "job_title": "Social Worker",
+            "work_stress_level": 9
+          },
+          "pain_and_skin_health": {
+            "headaches": {
+              "headache_details": "Frequent tension headaches, stress-related, 3-4 times per week",
+              "frequent_headaches_migraines": true
+            },
+            "skin_health": {
+              "has_skin_issues": false,
+              "skin_condition_details": null
+            },
+            "chronic_pain": {
+              "pain_details": null,
+              "has_chronic_pain": false
+            }
+          },
+          "childhood_antibiotics": {
+            "took_antibiotics_as_child": true
+          },
+          "childhood_development": {
+            "born_via_c_section": "unsure",
+            "high_sugar_childhood_diet": "yes"
+          },
+          "family_medical_history": {
+            "conditions_detail": "{\"anxiety\": [\"mother\"], \"depression\": [\"mother\", \"sister\"]}",
+            "has_family_history": true,
+            "other_conditions_text": null
+          },
+          "environmental_exposures": {
+            "mold_exposure": false,
+            "chemical_exposures": "Minimal office environment",
+            "chemical_exposure_other": null
+          },
+          "medication_side_effects": {
+            "reaction_details": "Mild drowsiness with Trazodone initially, resolved after 2 weeks",
+            "has_adverse_reactions": true
+          },
+          "reproductive_hormonal_health": {
+            "male_specific": {
+              "concern_details": null,
+              "hormonal_concerns": "no"
+            },
+            "female_specific": null
+          }
+        }
+      },
+      "latest_biomarker_results": {
+        "Iron": "82 ug/dL",
+        "eGFR": "90 mL/min/1.73 m2",
+        "Gender": "male",
+        "Calcium": "9.7 mg/dL",
+        "Ferritin": "95 ng/mL",
+        "Order ID": 1015,
+        "C-Peptide": "1.8 ng/mL",
+        "Test Date": "2024-01-30T09:15:00Z",
+        "Creatinine": "0.94 mg/dL",
+        "LH:FSH Ratio": "1.4",
+        "AST:ALT Ratio": "0.92",
+        "Total Protein": "7.3 g/dL",
+        "Triglycerides": "108 mg/dL",
+        "HDL Cholesterol": "53 mg/dL",
+        "Lipoprotein (a)": "24 mg/dL",
+        "Total Bilirubin": "0.68 mg/dL",
+        "% Hemoglobin A1C": "5.4 %",
+        "ApoB:ApoA1 Ratio": "0.61",
+        "Daytime Cortisol": "22.8 ug/dL",
+        "Direct Bilirubin": "0.25 mg/dL",
+        "LDL-C:ApoB Ratio": "1.22",
+        "Total Biomarkers": 39,
+        "25-(OH) Vitamin D": "33 ng/mL",
+        "LDL-C:HDL-C Ratio": "2.0",
+        "Total Cholesterol": "177 mg/dL",
+        "BUN:Creatinine Ratio": "17",
+        "Estim. Avg Glu (eAG)": "108 mg/dL",
+        "High-Sensitivity CRP": "2.1 mg/L",
+        "Estradiol (Sensitive)": "30 pg/mL",
+        "Apolipoprotein B (APOB)": "92 mg/dL",
+        "Triglycerides:HDL Ratio": "2.0",
+        "VLDL Cholesterol (Calc)": "22 mg/dL",
+        "Luteinizing Hormone (LH)": "8.8 mIU/mL",
+        "Apolipoprotein A1 (APOA1)": "151 mg/dL",
+        "Blood Urea Nitrogen (BUN)": "16 mg/dL",
+        "Alkaline Phosphatase (ALP)": "73 U/L",
+        "Calculated LDL-Cholesterol": "102 mg/dL",
+        "Total Cholesterol:HDL Ratio": "3.3",
+        "Alanine Aminotransferase (ALT)": "28 U/L",
+        "Aspartate Aminotransferase (AST)": "25.8 U/L",
+        "Thyroid Stimulating Hormone (TSH)": "2.6 uIU/mL",
+        "Follicle-Stimulating Hormone (FSH)": "6.3 mIU/mL",
+        "Dehydroepiandrosterone Sulfate (DHEA-S)": "188 ug/dL"
+      }
+    }
+  }
+]

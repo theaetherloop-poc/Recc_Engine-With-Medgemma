@@ -1,0 +1,82 @@
+{
+  "supplement_recommendations": [
+    {
+      "ingredient_name": "Vitamin D3",
+      "recommended_dosage": "5000 IU",
+      "frequency": "Once daily with a fatty meal",
+      "focus_area": ["IMM", "CM", "MSK"],
+      "why": "Your 25-(OH) Vitamin D is low at 28 ng/mL (optimal is 40-60 ng/mL). Critical for a 60-year-old post-menopausal woman — supports bone density, immune modulation, and helps reduce joint inflammation worsening your arthritis."
+    },
+    {
+      "ingredient_name": "Vitamin K2 (MK-7)",
+      "recommended_dosage": "180 mcg",
+      "frequency": "Once daily with a fatty meal",
+      "focus_area": ["CM", "MSK"],
+      "why": "Works synergistically with your D3 supplementation to direct calcium into bones rather than soft tissues and arteries — especially important given your elevated Lp(a) (33 mg/dL), family history of heart disease, and post-surgical joint health needs."
+    },
+    {
+      "ingredient_name": "Omega-3 Fatty Acids (EPA/DHA)",
+      "recommended_dosage": "3000 mg combined EPA/DHA",
+      "frequency": "Once daily with a meal",
+      "focus_area": ["IMM", "CM", "MSK"],
+      "why": "Your hs-CRP is significantly elevated at 6.2 mg/L, indicating active systemic inflammation — a key driver of your arthritis pain. Also targets your borderline Triglycerides:HDL ratio of 2.5 and elevated ApoB (108 mg/dL). Note: sourced from algae or fish (not shellfish) given your shellfish allergy."
+    },
+    {
+      "ingredient_name": "Curcumin (with Piperine)",
+      "recommended_dosage": "500 mg",
+      "frequency": "Twice daily with meals",
+      "focus_area": ["IMM", "MSK"],
+      "why": "Directly targets your high hs-CRP (6.2 mg/L) and chronic joint pain in hands, wrists, and knees. A clinically validated anti-inflammatory that complements your existing Boswellia without overlap, with piperine ensuring adequate absorption."
+    },
+    {
+      "ingredient_name": "Collagen Peptides (Type II)",
+      "recommended_dosage": "10 g",
+      "frequency": "Once daily in the morning on an empty stomach",
+      "focus_area": ["MSK"],
+      "why": "Supports cartilage repair and joint integrity — directly relevant given your arthritis diagnosis since 2015 and both hip and knee replacement history. Type II collagen specifically targets articular cartilage, complementing your existing Glucosamine Chondroitin."
+    },
+    {
+      "ingredient_name": "Berberine",
+      "recommended_dosage": "500 mg",
+      "frequency": "Twice daily with meals",
+      "focus_area": ["CM"],
+      "why": "Your HbA1c of 5.6% and eAG of 115 mg/dL sit at the high end of normal, with a C-Peptide of 2.0 ng/mL suggesting compensatory insulin activity. Berberine improves insulin sensitivity and glucose metabolism, and also helps address your Triglycerides (138 mg/dL) and ApoB (108 mg/dL)."
+    },
+    {
+      "ingredient_name": "Niacin (Inositol Hexanicotinate)",
+      "recommended_dosage": "500 mg",
+      "frequency": "Twice daily with food",
+      "focus_area": ["CM"],
+      "why": "Your Lp(a) is elevated at 33 mg/dL — a largely genetically determined cardiovascular risk marker — and your father has a history of heart disease. Inositol hexanicotinate (flush-free niacin) is one of the few supplements with evidence for Lp(a) reduction."
+    },
+    {
+      "ingredient_name": "Magnesium Glycinate",
+      "recommended_dosage": "200 mg elemental magnesium",
+      "frequency": "Once daily in the evening",
+      "focus_area": ["MSK", "CM"],
+      "why": "You're already taking 400 mg Magnesium, but switching to the glycinate form provides better bioavailability and gentler absorption. Supports muscle relaxation around arthritic joints, cardiovascular health, and glucose regulation — all directly relevant to your profile."
+    },
+    {
+      "ingredient_name": "DHEA",
+      "recommended_dosage": "25 mg",
+      "frequency": "Once daily in the morning with food",
+      "focus_area": ["HRM", "IMM"],
+      "why": "Your DHEA-S is low at 118 ug/dL for a 60-year-old post-menopausal woman (expected decline post-menopause). DHEA supports adrenal function, immune resilience, bone density, and has shown benefit for joint inflammation. Recommend discussing with your physician given your hormonal profile."
+    },
+    {
+      "ingredient_name": "Coenzyme Q10 (Ubiquinol)",
+      "recommended_dosage": "200 mg",
+      "frequency": "Once daily with a fatty meal",
+      "focus_area": ["CM", "MSK"],
+      "why": "Supports mitochondrial energy production — particularly relevant for reducing fatigue associated with chronic pain and post-surgical recovery. Also beneficial for cardiovascular health given your elevated ApoB and family history of heart disease. Ubiquinol form preferred for absorption at age 60."
+    },
+    {
+      "ingredient_name": "Zinc Picolinate",
+      "recommended_dosage": "25 mg",
+      "frequency": "Once daily with food",
+      "focus_area": ["IMM", "MSK"],
+      "why": "Supports immune function, wound and tissue healing relevant to your joint replacement history, and has anti-inflammatory properties that can help modulate the elevated hs-CRP. Picolinate form ensures better absorption."
+    }
+  ]
+}
+
